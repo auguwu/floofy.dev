@@ -1,7 +1,7 @@
 {
-  "name": "@august/augu.me",
+  "name": "@auguwu/augu.me",
   "description": "The website for augu.me",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "express": "4.16.3",
     "ejs": "2.6.1"

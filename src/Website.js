@@ -13,5 +13,6 @@ app
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('index.ejs'))
+  .get('/', (_, res) => res.render('index.ejs'))
+  .get('*', (_, res) => res.redirect('/'))
   .listen(3000, () => console.log(`[Seed ${process.seed}] [Process ${process.pid}] >> ${options.PROTOCOL === 'http' ? 'http://' : "https://"}${options.dev === false ? 'augu.me' : "localhost:3000"} is now live.`));
