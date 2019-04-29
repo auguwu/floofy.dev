@@ -1,9 +1,9 @@
 {
-  "name": "@auguwu/augu.me",
-  "description": "The website for augu.me",
-  "version": "0.1.1",
-  "dependencies": {
-    "express": "4.16.3",
-    "ejs": "2.6.1"
-  }
+    "name": "augu.me",
+    "description": "My website's source code!",
+    "version": "0.2.0",
+    "main": "src/index.js",
+    "dependencies": {
+        "kirbe": "0.0.4"
+    }
 }
