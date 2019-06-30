@@ -1,9 +1,20 @@
 {
-    "name": "augu.me",
-    "description": "My website's source code!",
-    "version": "0.2.0",
-    "main": "src/index.js",
+    "name": "augu.dev",
+    "description": "Source code of my website made in Vue and Nuxt",
+    "version": "0.3.0",
+    "private": true,
+    "author": "auguwu <augu@voided.pw>",
+    "repository": { "url": "https://github.com/auguwu/augu.dev" },
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development node server/index.js",
+        "build": "nuxt build",
+        "start": "cross-env NODE_ENV=production node server/index.js",
+        "generate": "nuxt generate"
+    },
     "dependencies": {
-        "kirbe": "0.0.4"
+        "cross-env": "5.2.0",
+        "express": "4.17.1",
+        "nuxt-buefy": "0.3.7",
+        "nuxt": "2.8.1"
     }
 }
