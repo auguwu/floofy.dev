@@ -1,5 +1,5 @@
 <table style="width: 100%; border-style: none;"><tr>
-<td style="width: 140px; text-align: center;"><img width="128px" src="./assets/icon.png" alt="August">
+<td style="width: 140px; text-align: center;"><img width="128px" src="./assets/icon.jpg" alt="August">
 </td>
 <td style="width: 140px; text-align: center;">
 <strong>augu.dev</strong><br/>
