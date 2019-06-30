@@ -8,11 +8,10 @@ module.exports = {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'Website of the Yamashiro discord bot' }
+            { hid: 'description', name: 'description', content: 'Web and Software Developer based in the United States' }
         ],
         link: [
-            { rel: 'icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Pacifico&display=swap' }
+            { rel: 'icon', href: '/favicon.ico' }
         ]
     },
     loading: { color: '#fff' },
