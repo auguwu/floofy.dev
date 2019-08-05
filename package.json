@@ -1,20 +1,29 @@
 {
     "name": "augu.dev",
-    "description": "Source code of my website made in Vue and Nuxt",
+    "description": "Source code of my website made in Vue",
     "version": "0.3.0",
     "private": true,
     "author": "auguwu <augu@voided.pw>",
-    "repository": { "url": "https://github.com/auguwu/augu.dev" },
+    "repository": {
+        "url": "https://github.com/auguwu/augu.dev"
+    },
     "scripts": {
-        "dev": "cross-env NODE_ENV=development node server/index.js",
-        "build": "nuxt build",
-        "start": "cross-env NODE_ENV=production node server/index.js",
-        "generate": "nuxt generate"
+        "dev": "",
+        "prod": "",
+        "lint": "eslint --fix --ext .js,.jsx src"
     },
     "dependencies": {
-        "cross-env": "5.2.0",
-        "express": "4.17.1",
-        "nuxt-buefy": "0.3.7",
-        "nuxt": "2.8.1"
+        "@babel/preset-react": "^7.0.0",
+        "bulma": "0.7.5",
+        "react": "16.8.6",
+        "react-dom": "16.8.6"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.5.5",
+        "@babel/core": "7.5.5",
+        "@babel/preset-env": "7.5.5",
+        "babel-eslint": "10.0.2",
+        "eslint": "6.1.0",
+        "node-sass": "4.12.0"
     }
 }

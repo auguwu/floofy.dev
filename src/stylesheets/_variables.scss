@@ -1,0 +1,34 @@
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+
+// Color schemes
+$primary: #AC62A3;
+$discord: #7289DA;
+$github: #333;
+$react: #00D8FF;
+$bulma: #00D1B2;
+
+// Colors inverted
+$primary-invert: findColorInvert($primary);
+$discord-invert: findColorInvert($discord);
+$github-invert: findColorInvert($github);
+$react-invert: findColorInvert($react);
+$bulma-invert: findColorInvert($bulma);
+
+$link: $primary;
+$link-invert: $primary-invert;
+
+// Colors for "is-github" as an example
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "bulma": ($bulma, $bulma-invert),
+    "github": ($github, $github-invert),
+    "react": ($react, $github-react)
+);
