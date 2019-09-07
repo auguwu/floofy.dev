@@ -1,6 +1,6 @@
 {
     "name": "augu.dev",
-    "description": "Source code of my website made in Vue",
+    "description": "Source code of my website.",
     "version": "0.3.0",
     "private": true,
     "author": "auguwu <augu@voided.pw>",
@@ -8,21 +8,16 @@
         "url": "https://github.com/auguwu/augu.dev"
     },
     "scripts": {
-        "dev": "",
-        "prod": "",
-        "lint": "eslint --fix --ext .js,.jsx src"
+        "lint": "eslint --fix .",
+        "sass": "sass src/static/scss:src/static/css --no-source-map"
     },
     "dependencies": {
-        "@babel/preset-react": "^7.0.0",
         "bulma": "0.7.5",
-        "react": "16.8.6",
-        "react-dom": "16.8.6"
+        "ejs": "2.6.1",
+        "express": "4.17.1",
+        "js-yaml": "3.13.1"
     },
     "devDependencies": {
-        "@babel/cli": "7.5.5",
-        "@babel/core": "7.5.5",
-        "@babel/preset-env": "7.5.5",
-        "babel-eslint": "10.0.2",
         "eslint": "6.1.0",
         "node-sass": "4.12.0"
     }

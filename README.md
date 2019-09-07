@@ -1,33 +1,15 @@
 <table style="width: 100%; border-style: none;"><tr>
-<td style="width: 140px; text-align: center;"><img width="128px" src="./assets/icon.jpg" alt="August">
+<td style="width: 140px; text-align: center;"><img width="128px" src="./src/static/images/furry.jpg" alt="August">
 </td>
 <td style="width: 140px; text-align: center;">
 <strong>augu.dev</strong><br/>
-<i>Website source code for my website using <a href="https://vuejs.org">Vue.js</a> and <a href="https://nuxtjs.org">Nuxt.js</a></i>
+<i>Website source code for my website. (<a href="https://github.com/Bowser65/bowser65.xyz">credit for redesign, ily bowser 💖</a>)</i>
 </td>
 </tr></table>
 
-## Scripts
-
-```sh
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
 ## License
-
 ```
-Copyright (c) 2018-present auguwu
+Copyright (c) 2018-2019 August
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
