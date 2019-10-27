@@ -1,11 +1,7 @@
-<table style="width: 100%; border-style: none;"><tr>
-<td style="width: 140px; text-align: center;"><img width="128px" src="./src/static/images/furry.jpg" alt="August">
-</td>
-<td style="width: 140px; text-align: center;">
-<strong>augu.dev</strong><br/>
-<i>Website source code for my website. (<a href="https://github.com/Bowser65/bowser65.xyz">credit for redesign, ily bowser 💖</a>)</i>
-</td>
-</tr></table>
+<img src="https://is-going-to-rickroll.me/api/image/user/280158289667555328" alt="Avatar on Discord" style="align: left;" width="150px" height="150px" />
+
+# augu.dev
+> :computer: **| Source code of [augu.dev](https://augu.dev)**
 
 ## License
 ```
