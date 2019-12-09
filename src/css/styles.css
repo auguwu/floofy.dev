@@ -1,0 +1,71 @@
+/**
+ * == LIST OF CREDITS =
+ *
+ * Bowser65: Base design
+ * Google Fonts: Fonts, duh!
+ */
+
+ @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+.about {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.about .avatar {
+   border: 5px solid #8763B9;
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+}
+.about .me {
+   margin-left: 25px;
+   letter-spacing: 1px;
+}
+.about .me .name {
+   font-weight: 300;
+   font-size: 3rem;
+   margin: 0 0 10px;
+   filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.4));
+}
+.about .me .desc {
+   font-size: 1.5rem;
+   filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.4));
+}
+ 
+* {
+   box-sizing: border-box;
+}
+ 
+html, body {
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+   color: #fff;
+   font-family: "Montserrat", sans-serif;
+   background-color: #303030;
+}
+ 
+body:before {
+   content: "";
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 0;
+   filter: blur(5px) brightness(50%);
+   background-image: url(../images/background.jpg);
+   background-attachment: fixed;
+}
+ 
+.contents {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   position: relative;
+   z-index: 1;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}

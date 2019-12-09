@@ -1,7 +1,5 @@
-<img src="https://is-going-to-rickroll.me/api/image/user/280158289667555328" alt="Avatar on Discord" style="align: left;" width="150px" height="150px" />
-
 # augu.dev
-> :computer: **| Source code of [augu.dev](https://augu.dev)**
+> :electric_plug: **| Source code of [augu.dev](https://augu.dev)**
 
 ## License
 ```

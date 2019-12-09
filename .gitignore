@@ -1,4 +1,5 @@
 node_modules/
-src/application.yml
-*.lock
-*.log
+build/
+
+package-lock.json
+yarn.lock
