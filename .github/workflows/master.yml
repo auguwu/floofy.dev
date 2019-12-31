@@ -3,13 +3,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    - name: Runs the process
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: 22
-        script: |
-          cd /var/www/augu.dev
-          git pull
+    steps:
+      - name: Runs the process
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /var/www/augu.dev
+            git pull
