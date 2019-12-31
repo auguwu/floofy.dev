@@ -1,5 +1,7 @@
 # augu.dev
 > :electric_plug: **| Source code of [augu.dev](https://augu.dev)**
+>
+> [Credits](https://github.com/bowser65/bowser65.xyz)
 
 ## License
 ```
