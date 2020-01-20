@@ -1,71 +1,94 @@
 /**
  * == LIST OF CREDITS =
  *
- * Bowser65: Base design
- * Google Fonts: Fonts, duh!
+ * Google Fonts: What did you expect, fonts!
+ * Boostrap: Main stuff
  */
+@import './fontawesome.min.css';
+@import './fonts/asap.css';
+@import './fonts/muli.css';
+@import './bulma.min.css';
+@import './icons.css';
 
- @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-.about {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-}
-.about .avatar {
-   border: 5px solid #8763B9;
-   width: 150px;
-   height: 150px;
-   border-radius: 50%;
-}
-.about .me {
-   margin-left: 25px;
-   letter-spacing: 1px;
-}
-.about .me .name {
-   font-weight: 300;
-   font-size: 3rem;
-   margin: 0 0 10px;
-   filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.4));
-}
-.about .me .desc {
-   font-size: 1.5rem;
-   filter: drop-shadow(3px 3px 0 rgba(0, 0, 0, 0.4));
-}
- 
-* {
-   box-sizing: border-box;
-}
- 
+/**
+ * Main CSS for all of the HTML
+ */
 html, body {
-   width: 100%;
-   height: 100%;
-   padding: 0;
-   margin: 0;
-   color: #fff;
-   font-family: "Montserrat", sans-serif;
-   background-color: #303030;
+	background-color: #111;
+  height: 100%;
+  width: 100%;
 }
- 
-body:before {
-   content: "";
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   z-index: 0;
-   filter: blur(5px) brightness(50%);
-   background-image: url(../images/background.jpg);
-   background-attachment: fixed;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
- 
-.contents {
-   width: 100%;
-   height: 100%;
-   display: flex;
-   position: relative;
-   z-index: 1;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
+
+/**
+ * Miscellaneous stuff like images
+ */
+.avatar {
+	border-radius: 50%;
+	height: 250px;
+	border: 5px solid #8763B9;
+	width: 250px;
+}
+
+.is-dark {
+	background-color: #111;
+}
+
+h1.title,
+p.subtitle {
+	font-family: Asap, sans-serif;
+	color: white;
+}
+
+.github {
+	background-color: #333;
+	color: white;
+}
+
+.discord {
+	background-color: #7289DA;
+	color: white;
+}
+
+.plain {
+	background-color: #8763B9;
+	color: white;
+}
+
+.twitter {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.reddit {
+  background-color: #FF4500;
+  color: white;
+}
+
+.spotify {
+  background-color: #1DB954;
+  color: #111;
+}
+
+.steam {
+  background-color: #000;
+  color: white;
+}
+
+.github:hover,
+.discord:hover,
+.plain:hover,
+.twitter:hover,
+.reddit:hover,
+.steam:hover {
+	color: white;
+}
+
+.spotify:hover {
+  color: #111;
 }
