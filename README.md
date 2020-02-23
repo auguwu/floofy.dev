@@ -1,11 +1,9 @@
 # augu.dev
 > :electric_plug: **| Source code of [augu.dev](https://augu.dev)**
->
-> [Credits](https://github.com/bowser65/bowser65.xyz)
 
 ## License
 ```
-Copyright (c) 2018-2020 August
+Copyright (c) 2018-2020 Noel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -1,14 +1,11 @@
 /**
  * == LIST OF CREDITS =
- *
  * Google Fonts: What did you expect, fonts!
- * Boostrap: Main stuff
  */
 @import './fontawesome.min.css';
 @import './fonts/asap.css';
 @import './fonts/muli.css';
 @import './bulma.min.css';
-@import './icons.css';
 
 /**
  * Main CSS for all of the HTML
@@ -80,12 +77,18 @@ p.subtitle {
   color: white;
 }
 
+.twitch {
+  background-color: #6441A4;
+  color: white;
+}
+
 .github:hover,
 .discord:hover,
 .plain:hover,
 .twitter:hover,
 .reddit:hover,
-.steam:hover {
+.steam:hover,
+.twitch:hover {
 	color: white;
 }
 
