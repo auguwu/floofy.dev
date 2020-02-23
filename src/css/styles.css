@@ -20,12 +20,20 @@ html, body {
 .avatar {
 	border-radius: 50%;
 	height: 250px;
-	border: 5px solid #8763B9;
+	border: 5px solid #0FDAFF;
 	width: 250px;
 }
 
 .is-dark {
 	background-color: #111;
+}
+
+.is-light-dark {
+  background-color: #333;
+}
+
+.is-white {
+  color: white;
 }
 
 h1.title,
@@ -75,13 +83,19 @@ p.subtitle {
   color: white;
 }
 
+.website {
+  background-color: #6A6CD2;
+  color: white;
+}
+
 .github:hover,
 .discord:hover,
 .plain:hover,
 .twitter:hover,
 .reddit:hover,
 .steam:hover,
-.twitch:hover {
+.twitch:hover,
+.website:hover {
 	color: white;
 }
 
