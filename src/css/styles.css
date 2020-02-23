@@ -1,15 +1,9 @@
-/**
- * == LIST OF CREDITS =
- * Google Fonts: What did you expect, fonts!
- */
 @import './fontawesome.min.css';
 @import './fonts/asap.css';
 @import './fonts/muli.css';
 @import './bulma.min.css';
 
-/**
- * Main CSS for all of the HTML
- */
+/* Main CSS for all of the HTML */
 html, body {
 	background-color: #111;
   height: 100%;
@@ -22,9 +16,7 @@ html, body {
 	margin: 0;
 }
 
-/**
- * Miscellaneous stuff like images
- */
+/* Miscellaneous stuff like images */
 .avatar {
 	border-radius: 50%;
 	height: 250px;
@@ -42,6 +34,7 @@ p.subtitle {
 	color: white;
 }
 
+/* Colors */
 .github {
 	background-color: #333;
 	color: white;
