@@ -19,5 +19,6 @@ function testConfetti() {
   confetti.start();
   setTimeout(() => {
     console.log('[Birthday] Stopping confetti');
+    confetti.stop();
   }, 2000);
 }
