@@ -83,8 +83,8 @@ p.subtitle {
   color: white;
 }
 
-.website {
-  background-color: #6A6CD2;
+.tele {
+  background-color: #0088CC;
   color: white;
 }
 
@@ -95,7 +95,7 @@ p.subtitle {
 .reddit:hover,
 .steam:hover,
 .twitch:hover,
-.website:hover {
+.tele:hover {
 	color: white;
 }
 
