@@ -9,13 +9,13 @@ if (d.getMonth() === 2 && d.getDate() === 24) {
   setTimeout(() => {
     console.log('[Birthday] Stopping confetti!');
     confetti.stop();
-  }, 2000);
+  }, 9000);
 } else {
   console.log('[Birthday] It is not March 24th.');
 }
 
-function testConfetti(timeout = 3000) {
-  const time = timeout < 1000 ? timeout * 1000 : timeout;
+function testConfetti(timeout) {
+  const time = timeout ? timeout * 1000 : 3000;
 
   console.log('[Birthday] User wanted to test confetti');
   confetti.start();
