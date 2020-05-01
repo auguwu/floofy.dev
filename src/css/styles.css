@@ -102,3 +102,22 @@ p.subtitle {
 .spotify:hover {
   color: #111;
 }
+
+.card {
+  background-color: #333;
+  color: white;
+}
+
+.hoverable {
+  text-decoration: none;
+  padding-left: 5px;
+  color: #777;
+}
+
+.hoverable:hover {
+  color: #999;
+}
+
+.round {
+  border-radius: 50%;
+}
