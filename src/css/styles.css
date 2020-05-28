@@ -121,3 +121,16 @@ p.subtitle {
 .round {
   border-radius: 50%;
 }
+
+.subtitle-c {
+  padding-bottom: 15px;
+  padding-top: 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 25px;
+  color: white;
+}
+
+.title {
+  font-family: 'Asap', sans-serif;
+  color: white;
+}

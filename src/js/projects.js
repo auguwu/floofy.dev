@@ -18,7 +18,7 @@ const projects = [
       }
     ],
     name: 'Nino',
-    role: 'Lead Developer'
+    role: 'Lead Dev'
   },
   {
     description: 'Lightweight and feature-rich audio player made for the modern world.',
@@ -43,7 +43,7 @@ const projects = [
       }
     ],
     name: 'Kashima',
-    role: 'Founder and Lead Developer'
+    role: 'Founder'
   },
   {
     description: 'Fast, open and free-to-use new tab page for most modern browsers.',
@@ -68,17 +68,30 @@ const projects = [
       }
     ],
     name: 'Mue Tab',
-    role: 'Backend Developer'
+    role: 'Backend Dev'
+  },
+  {
+    description: 'Python package for the unofficial Azur Lane API',
+    language: 'Python',
+    image: 'https://raw.githubusercontent.com/AzurAPI/azurapi.github.io/setup/source/images/logo.png',
+    links: [
+      {
+        icon: ['fab', 'python'],
+        url: 'https://pypi.org/project/azurlane'
+      },
+      {
+        icon: ['fab', 'github'],
+        url: 'https://github.com/AzurAPI/azurapi-py'
+      },
+      {
+        icon: ['fab', 'discord'],
+        url: 'https://discord.gg/aAEdys8'
+      }
+    ],
+    name: 'Azur API',
+    role: 'Library Dev'
   }
 ];
-
-/**
- * Object of the colors (from GitHub) that represent the language the project uses
- */
-const LanguageColors = {
-  javascript: '#F1E05A',
-  typescript: '#2B7489'
-};
 
 /**
  * Function to implement a DOM element to the body
@@ -87,7 +100,7 @@ const LanguageColors = {
  */
 function createElement(type, attributes = {}) {
   const element = document.createElement(type);
-  if (attributes) {
+  if (Object.keys(attributes).length > 0) {
     for (const [name, attr] of Object.entries(attributes)) {
       element.setAttribute(name, attr);
     }
@@ -137,7 +150,11 @@ function createCard(project) {
 
   mediaContent.innerHTML = `
     <p class='title is-4'>${project.name}</p>
-    <p class='subtitle is-6'>Role: ${project.role}</p>
+    <p class='subtitle is-6'>
+      Language: ${project.language}
+      <br />
+      Role: ${project.role}
+    </p>
   `;
 
   mediaFigure.appendChild(mediaImage);
@@ -146,7 +163,7 @@ function createCard(project) {
   media.appendChild(mediaContent);
 
   const cardContent = createElement('div', { class: 'content' });
-  cardContent.innerHTML = `${project.description}<br />`;
+  cardContent.innerHTML = `${project.description}<br /><br />`;
 
   for (const link of project.links) {
     cardContent.innerHTML += `<a class='hoverable' href='${link.url}'><i class='${link.icon[0]} fa-${link.icon[1]}'></i></a>`;
