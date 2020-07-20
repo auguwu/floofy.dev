@@ -21,31 +21,6 @@ const projects = [
     role: 'Lead Dev'
   },
   {
-    description: 'Lightweight and feature-rich audio player made for the modern world.',
-    language: 'TypeScript',
-    image: 'https://augu.dev/images/Kashima.png',
-    links: [
-      {
-        icon: ['fab', 'github'],
-        url: 'https://github.com/kashima-org/desktop-app'
-      },
-      {
-        icon: ['fas', 'home'],
-        url: 'https://kashima.app'
-      },
-      {
-        icon: ['fab', 'discord'],
-        url: 'https://discord.gg/Sxt74yD'
-      },
-      {
-        icon: ['fab', 'twitter'],
-        url: 'https://twitter.com/kashima_org'
-      }
-    ],
-    name: 'Kashima',
-    role: 'Founder'
-  },
-  {
     description: 'Fast, open and free-to-use new tab page for most modern browsers.',
     language: 'JavaScript',
     image: 'https://raw.githubusercontent.com/mue/branding/master/logo/logo_round.png',
@@ -90,6 +65,44 @@ const projects = [
     ],
     name: 'Azur API',
     role: 'Library Dev'
+  },
+  {
+    description: 'Free, better collaboration for professional businesses (WIP)',
+    language: 'JavaScript, TypeScript',
+    image: 'https://avatars1.githubusercontent.com/u/68462047',
+    links: [
+      {
+        icon: ['fab', 'github'],
+        url: 'https://github.com/spaces-gg'
+      }
+    ],
+    name: 'Spaces',
+    role: 'Backend Dev'
+  },
+  {
+    description: 'All your social profiles in one place. (WIP)',
+    language: 'JavaScript',
+    image: 'https://profile.place/assets/img/logo.png',
+    links: [
+      {
+        icon: ['fas', 'home'],
+        url: 'https://profile.place'
+      },
+      {
+        icon: ['fab', 'discord'],
+        url: 'https://discord.profile.place'
+      },
+      {
+        icon: ['fab', 'github'],
+        url: 'https://github.com/profile-place'
+      },
+      {
+        icon: ['fab', 'twitter'],
+        url: 'https://twitter.profile.place'
+      }
+    ],
+    name: 'profile.place',
+    role: 'Backend Dev'
   }
 ];
 
@@ -165,8 +178,10 @@ function createCard(project) {
   const cardContent = createElement('div', { class: 'content' });
   cardContent.innerHTML = `${project.description}<br /><br />`;
 
-  for (const link of project.links) {
-    cardContent.innerHTML += `<a class='hoverable' href='${link.url}'><i class='${link.icon[0]} fa-${link.icon[1]}'></i></a>`;
+  if (project.links.length) {
+    for (const link of project.links) {
+      cardContent.innerHTML += `<a class='hoverable' href='${link.url}'><i class='${link.icon[0]} fa-${link.icon[1]}'></i></a>`;
+    }
   }
 
   content.appendChild(media);
@@ -192,7 +207,6 @@ if (parentElement === null) {
     });
   
     const card = createCard(project);
-
     otherParent.appendChild(card);
     parentElement.appendChild(otherParent);
   }
