@@ -21,31 +21,6 @@ const projects = [
     role: 'Lead Dev'
   },
   {
-    description: 'Fast, open and free-to-use new tab page for most modern browsers.',
-    language: 'JavaScript',
-    image: 'https://raw.githubusercontent.com/mue/branding/master/logo/logo_round.png',
-    links: [
-      {
-        icon: ['fab', 'github'],
-        url: 'https://github.com/mue/mue'
-      },
-      {
-        icon: ['fas', 'home'],
-        url: 'https://muetab.xyz'
-      },
-      {
-        icon: ['fab', 'discord'],
-        url: 'https://discord.gg/zv8C9F8'
-      },
-      {
-        icon: ['fab', 'twitter'],
-        url: 'https://twitter.com/getmue'
-      }
-    ],
-    name: 'Mue Tab',
-    role: 'Backend Dev'
-  },
-  {
     description: 'Python package for the unofficial Azur Lane API',
     language: 'Python',
     image: 'https://raw.githubusercontent.com/AzurAPI/azurapi.github.io/setup/source/images/logo.png',
