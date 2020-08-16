@@ -149,6 +149,14 @@ p.subtitle {
   background-color: #333;
 }
 
+.sponsor-title {
+  color: white;
+}
+
+.sponsor-title:hover {
+  color: white;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }

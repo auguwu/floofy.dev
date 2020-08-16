@@ -166,8 +166,8 @@ function createCard(project) {
   return card;
 }
 
-const parentElement = document.getElementById('projects');
-if (parentElement === null) {
+const el = document.getElementById('projects');
+if (el === null) {
   console.log('Unable to find parent element "#projects"');
 } else {
   for (const project of projects) {
@@ -183,7 +183,7 @@ if (parentElement === null) {
   
     const card = createCard(project);
     otherParent.appendChild(card);
-    parentElement.appendChild(otherParent);
+    el.appendChild(otherParent);
   }
 }
 
