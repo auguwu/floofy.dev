@@ -7,7 +7,6 @@ const element = document.getElementById('flower');
 if (d.getMonth() === 2 && d.getDate() === 24) {
   console.log('[Birthday] It is March 24th!');
   confetti.start();
-  element.innerText = '🎉';
 
   setTimeout(() => {
     console.log('[Birthday] Stopping confetti!');
@@ -15,7 +14,6 @@ if (d.getMonth() === 2 && d.getDate() === 24) {
   }, 9000);
 } else {
   console.log('[Birthday] It is not March 24th.');
-  element.innerHTML = '🌺';
 }
 
 function testConfetti(timeout) {

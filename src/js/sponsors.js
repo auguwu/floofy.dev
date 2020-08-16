@@ -43,8 +43,6 @@ function getSponsors(callback) {
   request.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
       const { data } = JSON.parse(this.responseText);
-      console.log(data[0]);
-
       return callback(null, data);
     }
   };
@@ -133,8 +131,6 @@ if (parentElement === null) {
 } else {
   getSponsors((error, data) => {
     if (error) return console.error(error);
-    console.log(data);
-
     for (const sponsor of data) {
       const name = sponsor.sponsor.name.toLowerCase();
       const parent = createElement('div', { class: 'column is-3', id: `sponsor-${name}` });
