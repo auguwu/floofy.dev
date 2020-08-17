@@ -77,7 +77,7 @@ const projects = [
       }
     ],
     name: 'profile.place',
-    role: 'Backend Dev'
+    role: 'Frontend Dev'
   }
 ];
 

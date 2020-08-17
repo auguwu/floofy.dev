@@ -37,7 +37,7 @@ const query = `
  */
 function getSponsors(callback) {
   const request = new XMLHttpRequest();
-  request.open('GET', 'https://api.augu.dev/sponsors?login=auguwu&first=5');
+  request.open('GET', 'https://api.augu.dev/sponsors?login=auguwu&first=10');
   request.send();
 
   request.onreadystatechange = function () {
@@ -114,12 +114,7 @@ function createSponsorCard(sponsor) {
   mediaLeft.appendChild(mediaFigure);
   media.appendChild(mediaLeft);
   media.appendChild(mediaContent);
-
-  const cardContent = createElement('div', { class: 'content' });
-  cardContent.innerHTML = sponsor.sponsor.bio;
-
   content.appendChild(media);
-  content.appendChild(cardContent);
   card.appendChild(content);
 
   return card;
