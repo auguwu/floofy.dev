@@ -18,7 +18,7 @@ html, body {
 
 /* Miscellaneous stuff like images */
 .avatar {
-	border-radius: 50%;
+  border-radius: 50%;
 	height: 242px;
 	border: 5px solid #EFABCF;
 	width: 242px;
@@ -88,6 +88,11 @@ p.subtitle {
   color: white;
 }
 
+.lastfm {
+  background-color: red;
+  color: white;
+}
+
 .github:hover,
 .discord:hover,
 .plain:hover,
@@ -95,7 +100,8 @@ p.subtitle {
 .reddit:hover,
 .steam:hover,
 .twitch:hover,
-.tele:hover {
+.tele:hover,
+.lastfm:hover {
 	color: white;
 }
 
@@ -141,14 +147,6 @@ p.subtitle {
   color: #B4AA7F;
 }
 
-.subtitle {
-  padding-bottom: 7px;
-}
-
-.grayed {
-  background-color: #333;
-}
-
 .sponsor-title {
   color: white;
 }
@@ -163,4 +161,17 @@ p.subtitle {
 
 ::-webkit-scrollbar-track-piece {
   background-color: transparent;
+}
+
+body::before {
+  background-attachment: fixed;
+  background-image: url(../images/background.jpg);
+  position: fixed;
+  content: '';
+  z-index: 0;
+  filter: blur(3px) brightness(50%);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
 }

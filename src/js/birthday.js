@@ -1,8 +1,6 @@
 console.log('[Birthday] Checking if it\'s March 24th...');
 const d = new Date();
 
-const element = document.getElementById('flower');
-
 // Months are 0-indexed (0 = Jan, 11 = Dec)
 if (d.getMonth() === 2 && d.getDate() === 24) {
   console.log('[Birthday] It is March 24th!');

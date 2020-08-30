@@ -1,51 +1,29 @@
-// Grabs a list of Sponsors
-const query = `
-  query { 
-    user(login: "auguwu") {
-      sponsorshipsAsMaintainer(first: 10) {
-        nodes {
-          privacyLevel
-          createdAt
-          tier {
-            monthlyPriceInCents
-            name
-          }
-          sponsorEntity {
-            ... on User {
-              avatarUrl(size: 1024)
-              name
-              bio
-              url
-            }
-            
-            ... on Organization {
-              avatarUrl(size: 1024)
-              login
-              description
-              url
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 /**
  * Gets a list of sponsors
  * @param {(error: Error, data?: Sponsor[]) => void} callback The callback function
  */
 function getSponsors(callback) {
-  const request = new XMLHttpRequest();
-  request.open('GET', 'https://api.augu.dev/sponsors?login=auguwu&first=10');
-  request.send();
+  if (window.fetch) {
+    console.log('-> Browser does support window.fetch, opting to use window.fetch');
+    window.fetch('https://api.augu.dev/sponsors?login=auguwu&first=10')
+      .then((res) => res.json()
+        .then((data) => callback(null, data.data))
+        .catch(error => callback(error))
+      ).catch((error) => callback(error))
+  } else {
+    console.log('-> Browser doesn\'t support window.fetch, opting to XMLHttpRequest...');
 
-  request.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      const { data } = JSON.parse(this.responseText);
-      return callback(null, data);
-    }
-  };
+    const request = new XMLHttpRequest();
+    request.open('GET', 'https://api.augu.dev/sponsors?login=auguwu&first=10');
+    request.send();
+  
+    request.onreadystatechange = function () {
+      if (this.readyState === 4 && this.status === 200) {
+        const { data } = JSON.parse(this.responseText);
+        return callback(null, data);
+      }
+    };
+  }
 }
 
 /**
@@ -125,7 +103,21 @@ if (parentElement === null) {
   console.log('Unable to find parent element "#sponsors"');
 } else {
   getSponsors((error, data) => {
-    if (error) return console.error(error);
+    if (error) {
+      console.error(`-> Unable to fetch sponsors:\n${error.stack || error.message}`);
+      const errorEl = createElement('h2', { class: 'subtitle-c' });
+      const brEl = createElement('br');
+
+      errorEl.innerHTML = `
+        Unable to fetch sponsors: <br />
+        ${error.name}: ${error.message.slice(error.message.indexOf(error.name) + 1)}
+      `;
+
+      parentElement.appendChild(errorEl);
+      parentElement.appendChild(brEl);
+      return;
+    }
+
     for (const sponsor of data) {
       const name = sponsor.sponsor.name.toLowerCase();
       const parent = createElement('div', { class: 'column is-3', id: `sponsor-${name}` });
