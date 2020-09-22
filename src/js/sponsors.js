@@ -49,7 +49,8 @@ function createElement(type, attributes = {}) {
 function createSponsorCard(sponsor) {
   // This feels redundant but you'll see!
   const card = createElement('div', {
-    class: 'card'
+    class: 'card',
+    style: 'height:100%;'
   });
 
   const image = createElement('div', {
@@ -77,7 +78,8 @@ function createSponsorCard(sponsor) {
   const mediaImage = createElement('img', {
     class: 'round',
     src: sponsor.sponsor.avatar,
-    alt: sponsor.sponsor.name
+    alt: sponsor.sponsor.name,
+    draggable: 'false'
   });
   const mediaContent = createElement('div', { class: 'media-content' });
 

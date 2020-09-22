@@ -5,7 +5,7 @@
 const projects = [
   {
     description: 'Advanced and cute moderation discord bot as an entry of Discord\'s Hack Week!',
-    language: 'TypeScript',
+    language: 'TypeScript, Kotlin',
     image: 'https://augu.dev/images/Nino.png',
     links: [
       {
@@ -21,8 +21,8 @@ const projects = [
     role: 'Lead Dev'
   },
   {
-    description: 'Python package for the unofficial Azur Lane API',
-    language: 'Python',
+    description: 'C# package for the unofficial Azur Lane API',
+    language: 'C#',
     image: 'https://raw.githubusercontent.com/AzurAPI/azurapi.github.io/setup/source/images/logo.png',
     links: [
       {
@@ -40,19 +40,6 @@ const projects = [
     ],
     name: 'Azur API',
     role: 'Library Dev'
-  },
-  {
-    description: 'Free, better collaboration for professional businesses (WIP)',
-    language: 'JavaScript, TypeScript',
-    image: 'https://avatars1.githubusercontent.com/u/68462047',
-    links: [
-      {
-        icon: ['fab', 'github'],
-        url: 'https://github.com/spaces-gg'
-      }
-    ],
-    name: 'Spaces',
-    role: 'Backend Dev'
   },
   {
     description: 'All your social profiles in one place. (WIP)',
@@ -104,7 +91,8 @@ function createElement(type, attributes = {}) {
 function createCard(project) {
   // This feels redundant but you'll see!
   const card = createElement('div', {
-    class: 'card'
+    class: 'card',
+    style: 'height:100%;'
   });
 
   const image = createElement('div', {
@@ -132,7 +120,8 @@ function createCard(project) {
   const mediaImage = createElement('img', {
     class: 'round',
     src: project.image,
-    alt: project.name
+    alt: project.name,
+    draggable: 'false'
   });
   const mediaContent = createElement('div', { class: 'media-content' });
 
