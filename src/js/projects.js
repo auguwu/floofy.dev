@@ -144,7 +144,7 @@ function createCard(project) {
 
   if (project.links.length) {
     for (const link of project.links) {
-      cardContent.innerHTML += `<a class='hoverable' href='${link.url}'><i class='${link.icon[0]} fa-${link.icon[1]}'></i></a>`;
+      cardContent.innerHTML += `<a class='hoverable' href='${link.url}'><i class='${link.icon[0]} fa-${link.icon[1]} fa-2x'></i></a>`;
     }
   }
 
@@ -169,7 +169,7 @@ if (el === null) {
       class: 'column is-3',
       id: `project-${id}`
     });
-  
+
     const card = createCard(project);
     otherParent.appendChild(card);
     el.appendChild(otherParent);
@@ -184,7 +184,7 @@ if (el === null) {
  * @prop {ProjectLink[]} links A list of links to provide
  * @prop {string} name The project's name
  * @prop {string} role The role I partake in
- * 
+ *
  * @typedef {object} ProjectLink
  * @prop {['fab' | 'fas', string]} icon The icon to display from Font Awesome
  * @prop {string} url The URL to redirect to
