@@ -182,3 +182,11 @@ body::before {
   padding-top: 0;
   padding: 5%;
 }
+
+.sponsored {
+  color: #B4AA7F;
+}
+
+.sponsored:hover {
+  color: #948c68;
+}
