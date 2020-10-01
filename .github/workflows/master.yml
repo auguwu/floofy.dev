@@ -8,7 +8,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: august
+          username: ci
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |

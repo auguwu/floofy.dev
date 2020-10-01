@@ -18,11 +18,11 @@ html, body {
 /* Miscellaneous stuff like images */
 .avatar {
   border-radius: 50%;
+  display: block;
+  margin: auto;
   height: 242px;
   border: 5px solid #E597CE;
   width: 242px;
-  display:block;
-  margin:auto;
 }
 
 .is-dark {
@@ -177,8 +177,8 @@ body::before {
   left: 0;
   top: 0;
 }
+
 .container {
-  padding: 5%;
   padding-top: 0;
-  
+  padding: 5%;
 }
