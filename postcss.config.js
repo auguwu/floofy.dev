@@ -1,6 +1,10 @@
 module.exports = {
   plugins: [
-    require('autoprefixer'),
-    require('tailwindcss')
+    require('@csstools/postcss-sass')({
+      includePaths: ['./node_modules']
+    }),
+    require('postcss-import'),
+    require('tailwindcss'),
+    //require('autoprefixer')
   ]
 };
