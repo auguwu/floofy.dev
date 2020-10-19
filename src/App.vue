@@ -1,8 +1,6 @@
 <template>
   <div id='app'>
-    <div class='container mx-auto py-10 px-12 text-center justify-center'>
-      <h1 class='text-white'>Hi!</h1>
-    </div>
+    
   </div>
 </template>
 <script lang='ts'>
@@ -80,19 +78,13 @@ import { Vue, Component } from 'vue-property-decorator';
 
       return {
         birthday,
-        age: (date.getFullYear() - 2004 + (
-          date.getMonth() >= 2
-            ? date.getDate() === 24
-              ? 1
-              : 0
-            : 0
-        ))
+        age: (date.getFullYear() - 2004 + (date.getMonth() && date.getDate() === 24 ? 1 : 0))
       };
     },
 
     getCopyrightYear() {
       const date = new Date();
-      return date.getFullYear() === 2018 ? '2018' : `2018-${date.getFullYear()}`;
+      return `2018-${date.getFullYear()}`;
     },
 
     async getTopStarredRepos() {
@@ -109,6 +101,3 @@ import { Vue, Component } from 'vue-property-decorator';
 })
 export default class Application extends Vue {}
 </script>
-<style lang='scss'>
-
-</style>
