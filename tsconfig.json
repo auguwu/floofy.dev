@@ -16,11 +16,12 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "baseUrl": ".",
-    "typeRoots": ["./src/@types", "webpack-env"],
+    "typeRoots": ["./src/@types", "node"],
+    "noEmit": true, // lets snowpack build it, not typescript
     "paths": {
       "~/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx", "src/main.j"],
   "exclude": ["node_modules"]
 }

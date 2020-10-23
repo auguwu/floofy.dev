@@ -5,33 +5,33 @@
   "author": "Chris \"August\" Hernandez <august@augu.dev>",
   "license": "MIT",
   "scripts": {
-    "serve": "yarn lint && yarn vue-cli-service serve",
-    "build": "yarn lint && yarn vue-cli-service build",
-    "lint": "yarn vue-cli-service lint"
+    "serve": "yarn lint && yarn snowpack dev",
+    "build": "yarn lint && yarn snowpack build",
+    "lint": "eslint src --ext .ts,.tsx,.vue --fix"
   },
   "dependencies": {
     "tailwindcss": "1.9.5",
-    "vue": "2.6.12",
-    "vue-class-component": "7.2.6",
-    "vue-property-decorator": "9.0.0",
-    "vue-router": "3.4.5"
+    "vue": "3.0.0"
   },
   "devDependencies": {
     "@augu/eslint-config": "1.8.3",
     "@csstools/postcss-sass": "4.0.0",
+    "@snowpack/plugin-postcss": "1.0.4",
+    "@snowpack/plugin-sass": "1.1.1",
+    "@snowpack/plugin-typescript": "1.0.2",
+    "@snowpack/plugin-vue": "2.2.1",
+    "@types/node": "14.14.2",
     "@typescript-eslint/eslint-plugin": "4.4.1",
     "@typescript-eslint/parser": "4.4.1",
-    "@vue/cli-plugin-eslint": "4.5.6",
-    "@vue/cli-plugin-typescript": "4.5.6",
-    "@vue/cli-plugin-pwa": "4.5.6",
-    "@vue/cli-service": "4.5.6",
     "eslint": "7.11.0",
     "eslint-plugin-vue": "7.0.1",
     "postcss": "8.1.1",
+    "postcss-cli": "^8.1.0",
     "postcss-import": "12.0.1",
     "postcss-loader": "4.0.4",
     "sass": "1.26.11",
     "sass-loader": "10.0.2",
+    "snowpack": "2.15.1",
     "typescript": "4.0.3",
     "vue-template-compiler": "2.6.12"
   }

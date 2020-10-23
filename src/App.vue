@@ -1,107 +1,55 @@
 <template>
   <div id='app'>
     <div class='container mx-auto h-screen'>
-      <p>uwu my owo</p>
+      <p class='text-black'>uwu my owo</p>
     </div>
   </div>
 </template>
 <script lang='ts'>
 import type { GitHubSponsorResponse, Sponsorship } from '~/interfaces/GitHubSponsor';
 import type { GitHubRepoResponse } from '~/interfaces/GitHubRepository';
-import { Vue, Component } from 'vue-property-decorator';
-//import Hero from '~/components/Hero.vue';
+import { defineComponent, reactive } from 'vue';
 
-@Component({
-  name: 'application',
-  //components: { Hero },
-  data() {
-    return {
+interface ApplicationState {
+  sponsors: GitHubSponsorResponse | null;
+  topRepos: GitHubRepoResponse;
+  birthday: Date;
+  age: number;
+}
+
+export default defineComponent({
+  setup() {
+    const current = new Date();
+    const birthday = new Date(2004, 2, 24);
+
+    const state = reactive<ApplicationState>({
+      sponsors: null,
       topRepos: [],
-      sponsors: [],
-      projects: [
-        {
-          description: 'Advanced and cute moderation discord bot as an entry of Discord\'s Hack Week!',
-          language: 'TypeScript, Kotlin',
-          image: 'https://augu.dev/images/Nino.png',
-          links: [
-            {
-              icon: ['fab', 'github'],
-              url: 'https://github.com/NinoDiscord/Nino'
-            },
-            {
-              icon: ['fas', 'home'],
-              url: 'https://nino.augu.dev'
-            }
-          ],
-          name: 'Nino',
-          role: 'Lead Dev'
-        },
-        {
-          description: 'All your social profiles in one place. (WIP)',
-          language: 'JavaScript',
-          image: 'https://profile.place/assets/img/logo.png',
-          links: [
-            {
-              icon: ['fas', 'home'],
-              url: 'https://profile.place'
-            },
-            {
-              icon: ['fab', 'discord'],
-              url: 'https://discord.profile.place'
-            },
-            {
-              icon: ['fab', 'github'],
-              url: 'https://github.com/profile-place'
-            },
-            {
-              icon: ['fab', 'twitter'],
-              url: 'https://twitter.profile.place'
-            }
-          ],
-          name: 'profile.place',
-          role: 'Frontend Dev'
-        }
-      ]
-    };
+      birthday,
+      age: (current.getFullYear() - 2004 + (current.getMonth() && current.getDate() === 24 ? 1 : 0))
+    });
+
+    return state;
   },
-  async beforeMount(this: any) {
-    await this.getTopStarredRepos();
-    await this.getSponsors();
+  async beforeMount() {
+    await this.getMostStarredRepos();
+    await this.getSponsorships();
   },
   methods: {
-    async getSponsors() {
-      const res = await fetch('https://api.augu.dev/sponsors?login=auguwu&first=10');
-      const data: GitHubSponsorResponse = await res.json();
+    async getSponsorships() {
+      const resp = await fetch('https://api.augu.dev/sponsors?login=auguwu&first=10');
+      const data: GitHubSponsorResponse = await resp.json();
 
-      (this as any).sponsors = data.data;
+      this.sponsors = data;
+      console.log(`[Application] Received ${resp.statusText} on "/sponsors?login=auguwu&first=10" (success: ${resp.ok ? 'yes' : 'no'})`);
     },
 
-    getAge() {
-      const date = new Date();
-      const birthday = new Date(2004, 2, 24);
+    async getMostStarredRepos() {
+      const resp = await fetch('https://api.github.com/users/auguwu/repos');
+      const data: GitHubRepoResponse = await resp.json();
 
-      return {
-        birthday,
-        age: (date.getFullYear() - 2004 + (date.getMonth() && date.getDate() === 24 ? 1 : 0))
-      };
-    },
-
-    getCopyrightYear() {
-      const date = new Date();
-      return `2018-${date.getFullYear()}`;
-    },
-
-    async getTopStarredRepos() {
-      const res = await fetch('https://api.github.com/users/auguwu/repos');
-      const data: GitHubRepoResponse = await res.json();
-
-      const top = data.sort((uno, dos) =>
-        dos.stargazers_count - uno.stargazers_count
-      ).slice(0, 5);
-
-      (this as any).topRepos = top;
+      this.topRepos = data.sort((uno, dos) => dos.stargazers_count - uno.stargazers_count);
     }
   }
-})
-export default class Application extends Vue {}
+});
 </script>

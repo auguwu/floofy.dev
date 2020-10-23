@@ -1,6 +1,6 @@
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-@import 'tailwindcss/base';
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
 
 // Removes anything else
 * {
