@@ -1,15 +1,19 @@
 <template>
   <div id='app'>
-    
+    <div class='container mx-auto h-screen'>
+      <p>uwu my owo</p>
+    </div>
   </div>
 </template>
 <script lang='ts'>
 import type { GitHubSponsorResponse, Sponsorship } from '~/interfaces/GitHubSponsor';
 import type { GitHubRepoResponse } from '~/interfaces/GitHubRepository';
 import { Vue, Component } from 'vue-property-decorator';
+//import Hero from '~/components/Hero.vue';
 
 @Component({
   name: 'application',
+  //components: { Hero },
   data() {
     return {
       topRepos: [],
