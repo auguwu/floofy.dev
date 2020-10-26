@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "yarn lint && yarn snowpack dev",
     "build": "yarn lint && yarn snowpack build",
-    "lint": "eslint src --ext .ts,.tsx,.vue --fix"
+    "lint": "eslint src --ext .ts,.tsx,.vue,.js --fix"
   },
   "dependencies": {
     "tailwindcss": "1.9.5",

@@ -11,25 +11,26 @@
 
 // Height/Width stuff
 html, body {
+  background-color: #212121;
   height: 100%;
   width: 100%;
 }
 
 // Scrollbar
 ::-webkit-scrollbar {
-  background-color: #212121;
+  background: #212121;
   overflow: visible;
   height: 15px;
   width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #111111;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(45deg, #A5B8F2, #FFD0D5);
+  background-color: #333333;
   border-radius: 10px;
 }
 
@@ -39,6 +40,6 @@ html, body {
   display: block;
   margin: auto;
   height: 242px;
-  border: 5px solid #ffffff;
+  border: 5px solid #B4B2D3;
   width: auto;
 }
