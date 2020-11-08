@@ -1,45 +1,4 @@
-@tailwind components;
-@tailwind utilities;
-@tailwind base;
+@import './util';
+@import './dom';
 
-// Removes anything else
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-// Height/Width stuff
-html, body {
-  background-color: #212121;
-  height: 100%;
-  width: 100%;
-}
-
-// Scrollbar
-::-webkit-scrollbar {
-  background: #212121;
-  overflow: visible;
-  height: 15px;
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #111111;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #333333;
-  border-radius: 10px;
-}
-
-// Utility classes
-.avatar {
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  height: 242px;
-  border: 5px solid #B4B2D3;
-  width: auto;
-}
+@import '../../../node_modules/bulma/bulma.sass';

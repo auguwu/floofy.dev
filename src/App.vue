@@ -1,19 +1,6 @@
 <template>
   <div id='app'>
-    <div class='container mx-auto pb-16 pt-24 mt-8 mb-8 pl-32 center'>
-      <div class='sm:hidden md:flex md:mb-4'>
-        <div class='w-1/2 h-12'>
-          <img src='https://cdn.floofy.dev/images/August.png' draggable='false' class='avatar' alt='augustpfp' />
-        </div>
-        <div class='w-1/2 h-12 pr-48'>
-          <p class='text-white pb-4 pt-10 font-bold text-2xl'>Chris Hernandez</p>
-          <p class='text-white text-xl'>uwu my owo?</p>
-        </div>
-      </div>
-      <div class='sm:mb-4 md:hidden'>
-        <p class='text-white'>hi</p>
-      </div>
-    </div>
+    <h1>Bulma</h1>
   </div>
 </template>
 <script lang='ts'>

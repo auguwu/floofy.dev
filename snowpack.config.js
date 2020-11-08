@@ -14,6 +14,6 @@ module.exports = {
     '@snowpack/plugin-vue'
   ],
   devOptions: {
-    port: 6969
+    port: 3621
   }
 };
