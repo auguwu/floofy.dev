@@ -10,3 +10,14 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+// Selectors
+::-moz-selection {
+  background: #D961A3;
+  color: #EEEEEE;
+}
+
+::selection {
+  background: #D961A3;
+  color: #EEEEEE;
+}

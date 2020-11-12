@@ -1,14 +1,18 @@
+/* eslint-disable @typescript-eslint/array-type */
 /* eslint-disable camelcase */
 
 export interface GitHubSponsorResponse {
-  user_sponsors: Sponsorship[];
-  sponsors: Sponsorship[];
+  user_sponsors: Sponsorship;
+  sponsors: Sponsorship;
 }
 
 export interface Sponsorship {
-  createdAt: string;
-  sponsor: Sponsor;
-  tier: SponsorTier;
+  total_count: number;
+  data: Array<{
+    createdAt: string;
+    sponsor: Sponsor;
+    tier: SponsorTier;
+  }>;
 }
 
 interface Sponsor {
