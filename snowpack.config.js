@@ -3,6 +3,7 @@
  * @type {import('snowpack').SnowpackConfig}
  */
 module.exports = {
+  exclude: ['**/node_modules', '**/*.d.ts'],
   mount: {
     public: '/',
     src: '/dist'
@@ -15,5 +16,8 @@ module.exports = {
   ],
   devOptions: {
     port: 3621
+  },
+  buildOptions: {
+    clean: true
   }
 };
