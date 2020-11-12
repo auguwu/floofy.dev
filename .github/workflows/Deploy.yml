@@ -1,4 +1,4 @@
-name: ESLint
+name: Deploy Script
 on:
   push:
     branches:
