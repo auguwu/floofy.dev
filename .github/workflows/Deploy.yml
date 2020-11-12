@@ -14,17 +14,14 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 13.x, 14.x]
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
-      - name: Uses Node.js v${{ matrix.node-version }}
+      - name: Uses Node.js v14.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
 
       - name: Installs global dependencies
         run: npm i -g eslint
