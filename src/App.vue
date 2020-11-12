@@ -1,22 +1,6 @@
 <template>
   <div id='app'>
     <section class='hero is-fullheight is-dark'>
-      <noscript>
-        <div class='hero-body'>
-          <div class='container'>
-            <h1 class='title'>⚠️ Notice</h1>
-            <h2 class='subtitle'>
-              Noticed that you disabled JavaScript, and I will say -- I get it.<br />
-
-              But don't worry! This website is FoSS under the MIT License, so you can
-              see what goes on behind the scenes!<br /><br />
-
-              Source code is available on <a href='https://github.com/auguwu/augu.dev' ref='noreferrer'>GitHub</a> to view.
-            </h2>
-          </div>
-        </div>
-      </noscript>
-
       <div class='hero-body is-fullheight'>
         <div class='container blurred is-fullhd'>
           <div class='columns is-centered'>
