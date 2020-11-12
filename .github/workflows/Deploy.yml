@@ -1,0 +1,51 @@
+name: ESLint
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.github/**'
+      - '.vscode/**'
+      - '.browserlistsrc'
+      - '.eslintignore'
+      - '.gitignore'
+      - 'LICENSE'
+      - '**.md'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 13.x, 14.x]
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+
+      - name: Uses Node.js v${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Installs global dependencies
+        run: npm i -g eslint
+
+      - name: Installs local dependencies
+        run: npm i
+
+      - name: Lints the repository
+        run: npm run lint
+
+      - name: Updates the site in real-time
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ci
+          password: ${{ secrets.PASSWORD }}
+          port: 22
+          script: |
+            cd /var/www/augu-site
+            git pull
+            rm -fr node_modules
+            rm yarn.lock
+            yarn
+            yarn build
