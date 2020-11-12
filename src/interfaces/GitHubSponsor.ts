@@ -1,6 +1,8 @@
+/* eslint-disable camelcase */
+
 export interface GitHubSponsorResponse {
-  statusCode: number;
-  data: Sponsorship[];
+  user_sponsors: Sponsorship[];
+  sponsors: Sponsorship[];
 }
 
 export interface Sponsorship {
@@ -10,14 +12,18 @@ export interface Sponsorship {
 }
 
 interface Sponsor {
-  profile: string;
-  avatar: string;
+  following: number;
+  followers: number;
+  websiteUrl: string;
+  avatarUrl: string;
+  company: string;
   login: string;
   name: string;
   bio: string;
+  url: string;
 }
 
 interface SponsorTier {
-  monthlyPriceInCents: number;
+  monthlyPriceInDollars: number;
   name: string;
 }
