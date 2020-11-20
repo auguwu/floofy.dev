@@ -12,7 +12,7 @@ on:
       - 'LICENSE'
       - '**.md'
 jobs:
-  lint:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
