@@ -58,32 +58,10 @@
     <script src='https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js'></script>
     <script type='module' src='/dist/main.js'></script>
     <script>
-      // This script block is made like this
-      // on purpose. Sorry!
+      // This script block is made like this on purpose. Sorry!
       //
       // ~ Chris
-
-      var current=new Date();
-      if (current.getMonth()===2&&current.getDate()===24){
-        console.log('[Birthday] It is currently March 24th, adding confetti!');
-        confetti.start();
-
-        setTimeout(()=>{
-          console.log('[Birthday] Clearing confetti...');
-          confetti.stop();
-        },9000);
-      }else{
-        console.log('[Birthday] It is not March 24th. :(');
-      }
-
-      function testConfetti(time=5000){
-        var t=time<1000?time*1000:time;
-        confetti.start();
-
-        setTimeout(()=>{
-          confetti.stop();
-        },t);
-      }
+      var current=new Date();if(current.getMonth()===2&&current.getDate()===24){console.log('[Birthday] It is currently March 24th, adding confetti!');confetti.start();setTimeout(()=>{console.log('[Birthday] Clearing confetti...');confetti.stop();},9000);}else{console.log('[Birthday] It is not March 24th. :(');}function testConfetti(time=5000){var t=time<1000?time*1000:time;confetti.start();setTimeout(()=>{confetti.stop();},t);}
     </script>
   </body>
 </html>

@@ -48,10 +48,13 @@
                       <p class='subtitle is-6'>{{ project.description }}</p>
                     </div>
                   </div>
+                  <!-- i know using br is bad but :shrug: -->
                   <div class='content'>
-                    Technologies: {{ project.technologies }}<br />
-                    Languages: {{ project.languages }}<br />
-                    Roles: {{ project.role }}<br />
+                    Technologies: {{ project.technologies }}<br /><br />
+
+                    Languages: {{ project.languages }}<br /><br />
+
+                    Roles: {{ project.role }}<br /><br />
                   </div>
                 </div>
               </div>
@@ -98,7 +101,7 @@
                     </p>
                     <p class='subtitle is-6'>
                       Tier: {{ sponsor.tier.name }}<br />
-                      Joined At: {{ this.formatJoinedAt(new Date(sponsor.created_at)) }}
+                      Sponsored At: {{ this.formatJoinedAt(new Date(sponsor.created_at)) }}
                     </p>
                   </div>
                 </div>
@@ -154,7 +157,7 @@
                       </p>
                       <p class='subtitle is-6'>
                         Tier: {{ sponsor.tier.name }}<br />
-                        Joined At: {{ this.formatJoinedAt(new Date(sponsor.created_at)) }}
+                        Sponsored At: {{ this.formatJoinedAt(new Date(sponsor.created_at)) }}
                       </p>
                     </div>
                   </div>
@@ -178,8 +181,8 @@
   </div>
 </template>
 <script lang='ts'>
-import type { GitHubSponsorResponse, Sponsorship } from '~/interfaces/GitHubSponsor';
 import { defineComponent, onMounted, reactive, Ref, ref } from 'vue';
+import type { GitHubSponsorResponse, Sponsorship } from '~/interfaces/GitHubSponsor';
 
 interface ApplicationState {
   sponsorships: Ref<GitHubSponsorResponse['user_sponsors'] | null>;
