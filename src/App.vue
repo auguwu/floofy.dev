@@ -78,13 +78,13 @@
               {{ transaction.error }}
             </p>
             <p v-else>
-              Total Sponsors: {{ sponsors?.total_count || 0 }}
+              Total Sponsors: {{ sponsors.total_count }}
             </p>
           </h2>
           <div class='columns is-multiline'>
             <div
               class='column is-3'
-              v-for='(sponsor, idx) of sponsors?.data || []'
+              v-for='(sponsor, idx) of sponsors.data'
               :key='idx'
             >
             <div class='card' style='height:100%;'>
@@ -134,13 +134,13 @@
               {{ transaction.error }}
             </p>
             <p v-else>
-              Total Sponsors: {{ sponsorships?.total_count || 0 }}
+              Total Sponsors: {{ sponsorships.total_count }}
             </p>
           </h2>
           <div class='columns is-multiline'>
             <div
               class='column is-3'
-              v-for='(sponsor, idx) of sponsorships?.data || []'
+              v-for='(sponsor, idx) of sponsorships.data'
               :key='idx'
             >
               <div class='card' style='height:100%;'>
@@ -249,10 +249,10 @@ export default defineComponent({
     const current = new Date();
     const birthday = new Date(2004, 2, 24);
 
-    const sponsors = ref<GitHubSponsorResponse['sponsors'] | null>(null);
+    const sponsors = ref<GitHubSponsorResponse['sponsors'] | null>({ total_count: 0, data: [] }); //eslint-disable-line
     const isLoading = ref(true);
     const transaction = ref({ success: true, error: null });
-    const userSponsors = ref<GitHubSponsorResponse['user_sponsors'] | null>(null);
+    const userSponsors = ref<GitHubSponsorResponse['user_sponsors'] | null>({ total_count: 0, data: [] }); //eslint-disable-line
 
     function fetchSponsorships() {
       isLoading.value = true;

@@ -1,7 +1,7 @@
 {
   "name": "@august/augu.dev",
   "description": "🔌 Professional-like website made in Vue.js and TailwindCSS",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "author": "Chris \"August\" Hernandez <august@augu.dev>",
   "license": "MIT",
   "scripts": {
