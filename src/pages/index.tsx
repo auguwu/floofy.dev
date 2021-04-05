@@ -22,81 +22,9 @@
 
 /* eslint-disable camelcase */
 
-import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import Image from 'next/image';
 
-interface FloofSponsorResult {
-  user_sponsors: SponsorResult;
-  sponsors: SponsorResult;
-}
-
-interface SponsorResult {
-  total_count: number;
-  data: Sponsor[];
-}
-
-interface Sponsor {
-  created_at: string;
-  user: Sponsorable;
-  tier: SponsorTier;
-}
-
-interface Sponsorable {
-  website_url: string | null;
-  avatar_url: string;
-  following: number;
-  followers: number;
-  company: string | null;
-  login: string;
-  name: string | null;
-  bio: string | null;
-  url: string | null;
-}
-
-interface SponsorTier {
-  monthlyPriceInDollars?: number;
-  monthlyPriceInCents?: number;
-  name: string;
-}
-
-interface ProjectListing {
-  open_issues_count: number;
-  stargazers_count: number;
-  description: string;
-  updated_at: string;
-  fork_count: number;
-  full_name: string;
-  homepage: string | null;
-  license: ProjectLicense | null;
-}
-
-interface ProjectLicense {
-  name: string;
-}
-
-interface HomepageProps {
-  self_sponsors: SponsorResult;
-  projects: ProjectListing[];
-  sponsors: SponsorResult;
-}
-
-export const getStaticProps = async (ctx: GetStaticPropsContext): Promise<GetStaticPropsResult<HomepageProps>> => {
-  const sponsorRes = await fetch('https://api.floofy.dev/sponsors/auguwu');
-  const sponsors: FloofSponsorResult = await sponsorRes.json();
-
-  const projectsRes = await fetch('https://api.github.com/users/auguwu/repos');
-  const repositories: ProjectListing[] = await projectsRes.json();
-
-  return {
-    props: {
-      self_sponsors: sponsors.user_sponsors,
-      projects: repositories.sort((a, b) => a.stargazers_count - b.stargazers_count),
-      sponsors: sponsors.sponsors
-    }
-  };
-};
-
-export default function Homepage({ self_sponsors, sponsors, projects }: HomepageProps) {
+export default function Homepage() {
   return <>
     {/* widescreen here, credit: https://github.com/dondish/personal-site/blob/master/src/components/MainHero.vue */}
     <div className='flex flex-col relative h-screen lg:p-16 z-50 justify-center'>
