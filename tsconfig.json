@@ -1,27 +1,15 @@
 {
+  "extends": "@augu/tsconfig/dom.json",
   "compilerOptions": {
-    "target": "ES5",
-    "module": "ESNext",
-    "lib": ["ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020", "ESNext", "DOM", "DOM.Iterable", "ScriptHost"],
-    "declaration": false,
-    "strict": true,
-    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
     "moduleResolution": "node",
-    "types": ["node"],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "jsx": "preserve",
-    "importHelpers": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "typeRoots": ["./src/@types", "node"],
-    "noEmit": true, // lets snowpack build it, not typescript
-    "paths": {
-      "~/*": ["src/*"]
-    }
+    "allowJs": true,
+    "module": "ESNext",
+    "noEmit": true,
+    "jsx": "preserve"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules", "src/@types/**.d.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

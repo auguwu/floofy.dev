@@ -1,0 +1,31 @@
+@tailwind components;
+@tailwind utilities;
+@tailwind base;
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #D961A3;
+  color: #EEEEEE;
+}
+
+::selection {
+  background: #D961A3;
+  color: #EEEEEE;
+}
+
+html, body {
+  background-color: #2A2D3C;
+}
+
+a:hover {
+  background-color: #2A2D3C;
+}
+
+.avatar {
+  border-radius: 50%;
+  margin: auto;
+  border: 5px solid #D961A3;
+}
