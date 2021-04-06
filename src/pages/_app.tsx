@@ -23,7 +23,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import '../styles/style.scss';
+import '../styles/style.css';
 
 export default function PawApp({ Component, pageProps }: AppProps) {
   return <>
