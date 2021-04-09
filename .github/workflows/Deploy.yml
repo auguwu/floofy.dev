@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build-container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to registry.floofy.dev
+        run: echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login registry.floofy.dev -u august --password-stdin
+      - name: Build container
+        run: docker build --no-cache -t registry.floofy.dev/auguwu/paw:${{github.sha}} .
+      - name: Push to the registry
+        run: docker push registry.floofy.dev/auguwu/paw:${{github.sha}}
+
+  deploy:
+    needs: build-container
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login
+        run: |
+          mkdir ~/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+      - name: Set image
+        run: kubectl set image deployment/paw gingerbot=registry.floofy.dev/auguwu/paw:${{github.sha}}
+
+      - name: Deploy!
+        run: kubectl rollout status deployment/paw
