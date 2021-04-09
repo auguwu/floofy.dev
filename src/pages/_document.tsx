@@ -35,6 +35,7 @@ export default class PawDocument extends Document {
         <link rel='icon' href='https://cdn.floofy.dev/images/trans.png' />
         <meta charSet='UTF-8' />
         <meta name='description' content='Student, Developer in the United States creating projects no one will use except for myself. (^・ω・^ )' />
+        <meta name='theme-color' content='#DAA2C6' />
         <meta property='og:description' content='Student, Developer in the United States creating projects no one will use except for myself. (^・ω・^ )' />
         <meta property='og:title' content='Noel 🌺' />
         <meta property='og:image' content='https://cdn.floofy.dev/images/trans.png' />

@@ -26,7 +26,7 @@ import Image from 'next/image';
 
 export default function Homepage() {
   return <>
-    {/* widescreen here, credit: https://github.com/dondish/personal-site/blob/master/src/components/MainHero.vue */}
+    {/* credit: https://github.com/dondish/personal-site/blob/master/src/components/MainHero.vue */}
     <div className='flex flex-col relative h-screen lg:p-16 z-50 justify-center'>
       <div
         className='lg:shadow-lg lg:text-left lg:container lg:grid lg:grid-cols-4 lg:rounded lg:pt-8 lg:h-auto lg:mx-auto text-center w-full block pt-12 p-8 gap-3 h-screen'
@@ -54,7 +54,7 @@ export default function Homepage() {
             <br />
             <br />
             Oh hey there, my name is Chris and I am a 17 year old developer and student. I like <a href='https://last.fm/user/auguwu' target='_blank'>music</a>, <a href='https://wakatime.com/@auguwu' target='_blank'>coding</a>,
-            and playing <a href='https://steamcommunity.com/id/auguwu'>video games</a>! View below about my projects I maintain and people who have sponsored me on <a href='https://github.com/sponsors/auguwu'>GitHub</a>!
+            and playing <a href='https://steamcommunity.com/id/auguwu' target='_blank'>video games</a>! View below about my projects I maintain and people who have sponsored me on <a href='https://github.com/sponsors/auguwu' target='_blank'>GitHub</a>!
           </p>
         </div>
       </div>

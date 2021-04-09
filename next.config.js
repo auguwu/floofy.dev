@@ -1,4 +1,5 @@
 module.exports = {
+  productionBrowserSourceMaps: true,
   poweredByHeader: false,
   trailingSlash: true,
   future: {
@@ -7,7 +8,6 @@ module.exports = {
   images: {
     domains: ['cdn.floofy.dev']
   },
-
   redirects: async() => [
     {
       destination: 'https://twitter.com/auguuwu',
@@ -17,7 +17,7 @@ module.exports = {
     {
       destination: 'https://discord.gg/JjHGR6vhcG',
       permanent: true,
-      source: '/discord',
+      source: '/discord'
     }
   ]
 };
