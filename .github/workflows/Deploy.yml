@@ -23,8 +23,9 @@ jobs:
         run: |
           mkdir ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+
       - name: Set image
-        run: kubectl set image deployment/paw gingerbot=registry.floofy.dev/auguwu/paw:${{github.sha}}
+        run: kubectl set image deployment/paw paw=registry.floofy.dev/auguwu/paw:${{github.sha}}
 
       - name: Deploy!
         run: kubectl rollout status deployment/paw
