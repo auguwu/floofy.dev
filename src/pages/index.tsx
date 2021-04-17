@@ -23,41 +23,46 @@
 /* eslint-disable camelcase */
 
 import Image from 'next/image';
+import Twemoji from '../components/Twemoji';
 
 export default function Homepage() {
+  const current = new Date();
+  const year = `2018-${current.getFullYear()}`;
+
   return <>
-    {/* credit: https://github.com/dondish/personal-site/blob/master/src/components/MainHero.vue */}
-    <div className='flex flex-col relative h-screen lg:p-16 z-50 justify-center'>
-      <div
-        className='lg:shadow-lg lg:text-left lg:container lg:grid lg:grid-cols-4 lg:rounded lg:pt-8 lg:h-auto lg:mx-auto text-center w-full block pt-12 p-8 gap-3 h-screen'
-        style={{ backgroundColor: '#383B47' }}
-      >
-        <div className='flex justify-center mx-auto'>
+    <div className='container'>
+      <div className='container-content'>
+        <div className='container-left'>
           <Image
             src='https://cdn.floofy.dev/images/trans.png'
             className='avatar'
             alt='trans heart'
-            width={242}
-            height={242}
+            width={234}
+            height={234}
             draggable='false'
           />
         </div>
+        <div className='container-right'>
+          <h1 className='heading-1'>
+            Noel <Twemoji emoji='🌺' />
+          </h1>
+          <h2 className='heading-2'>
+            Student, Developer in the United States creating projects no one
+            <br />
+            will use except for myself.     (^・ω・^ )
+          </h2>
 
-        <div className='lg:justify-none lg:col-span-3 justify-center'>
-          <h1 className='lg:inline lg:my-2 lg:text-5xl align-baseline mt-2 text-white text-2xl'>Noel 🌺</h1>
-          <br />
-          <span className='lg:inline lg:ml-2 lg:text-3xl mb-6 align-baseline text-xl text-gray-300'><i>blep!</i></span>
-          <br />
-          <br />
-          <p className='mb-4 text-white font-mono text-justify'>
-            Student, Developer in the United States creating projects no one will use except for myself. (^・ω・^ )
-            <br />
-            <br />
-            Oh hey there, my name is Chris and I am a 17 year old developer and student. I like <a href='https://last.fm/user/auguwu' target='_blank'>music</a>, <a href='https://wakatime.com/@auguwu' target='_blank'>coding</a>,
-            and playing <a href='https://steamcommunity.com/id/auguwu' target='_blank'>video games</a>! View below about my projects I maintain and people who have sponsored me on <a href='https://github.com/sponsors/auguwu' target='_blank'>GitHub</a>!
-          </p>
+          <div className='social-row'>
+
+          </div>
         </div>
       </div>
     </div>
+
+    <footer className='footer'>
+      <p>
+        pawbs uwu | &copy; {year} <Twemoji emoji='💖' /> (art is not by me)
+      </p>
+    </footer>
   </>;
 }
