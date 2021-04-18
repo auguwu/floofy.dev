@@ -42,7 +42,11 @@ export default class PawDocument extends Document {
         <meta property='og:image' content='https://cdn.floofy.dev/images/trans.png' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://floofy.dev' />
-
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+        <script src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js' crossOrigin='anonymous'></script>
         <script
           data-do-not-track='true'
           data-website-id='02893e86-fbd6-427c-9b77-7c7317cb45f7'
@@ -51,12 +55,6 @@ export default class PawDocument extends Document {
           defer
           src='https://analytics.floofy.dev/umami.js'
         ></script>
-
-        <script src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js' crossOrigin='anonymous'></script>
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
       </body>
     </Html>;
   }
