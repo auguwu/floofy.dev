@@ -26,7 +26,7 @@
     "@augu/eslint-config": "2.0.3",
     "@augu/tsconfig": "1.1.0",
     "@types/node": "14.14.41",
-    "@types/react": "17.0.3",
+    "@types/react": "17.0.4",
     "@types/twemoji": "12.1.1",
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
