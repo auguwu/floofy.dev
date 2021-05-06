@@ -22,8 +22,8 @@
 
 /* eslint-disable camelcase */
 
-import Image from 'next/image';
 import Twemoji from '../components/Twemoji';
+import Image from 'next/image';
 
 export default function Homepage() {
   const current = new Date();
@@ -44,12 +44,12 @@ export default function Homepage() {
         </div>
         <div className='container-right'>
           <h1 className='heading-1'>
-            Noel <Twemoji emoji='🌺' />
+            Noel <Twemoji emoji='🥀' />
           </h1>
           <h2 className='heading-2'>
-            Student, Developer in the United States creating projects no one
+            Student, Developer in the United States creating
             <br />
-            will use except for myself.     (^・ω・^ )
+            projects no one will use except for myself. (^・ω・^ )
           </h2>
 
           <div className='social-row'>

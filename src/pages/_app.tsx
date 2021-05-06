@@ -28,7 +28,7 @@ import '../styles/style.scss';
 export default function PawApp({ Component, pageProps }: AppProps) {
   return <>
     <Head>
-      <title>Noel 🌺 ~ Homepage</title>
+      <title>Noel 🥀</title>
       <meta httpEquiv='X-UA-Comatible' content='IE=edge' />
       <meta name='viewport' content='width=device-width, initial-scale=1' />
     </Head>

@@ -47,14 +47,6 @@ export default class PawDocument extends Document {
         <Main />
         <NextScript />
         <script src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js' crossOrigin='anonymous'></script>
-        <script
-          data-do-not-track='true'
-          data-website-id='02893e86-fbd6-427c-9b77-7c7317cb45f7'
-          type='text/javascript'
-          async
-          defer
-          src='https://analytics.floofy.dev/umami.js'
-        ></script>
       </body>
     </Html>;
   }
