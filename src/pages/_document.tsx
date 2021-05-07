@@ -21,7 +21,6 @@
  */
 
 import Document, { NextScript, Head, Html, Main, DocumentContext } from 'next/document';
-import twemoji from 'twemoji';
 
 export default class PawDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
