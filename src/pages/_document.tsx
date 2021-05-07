@@ -47,6 +47,7 @@ export default class PawDocument extends Document {
         <Main />
         <NextScript />
         <script src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js' crossOrigin='anonymous'></script>
+        <script async src='https://arc.io/widget.min.js#4YKnkhjP'></script>
       </body>
     </Html>;
   }
