@@ -23,7 +23,7 @@
     "twemoji": "13.0.2"
   },
   "devDependencies": {
-    "@augu/eslint-config": "2.0.3",
+    "@augu/eslint-config": "2.1.0",
     "@augu/tsconfig": "1.1.0",
     "@types/node": "14.14.45",
     "@types/react": "17.0.5",
