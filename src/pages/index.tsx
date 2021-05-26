@@ -34,9 +34,9 @@ export default function Homepage() {
       <div className='container-content'>
         <div className='container-left'>
           <Image
-            src='https://cdn.floofy.dev/images/trans.png'
+            src='https://cdn.floofy.dev/images/August.png'
             className='avatar'
-            alt='trans heart'
+            alt='avy'
             width={234}
             height={234}
             draggable='false'

@@ -38,14 +38,13 @@ export default class PawDocument extends Document {
         <meta name='theme-color' content='#DAA2C6' />
         <meta property='og:description' content='Student, Developer in the United States creating projects no one will use except for myself. (^・ω・^ )' />
         <meta property='og:title' content='Noel 🌺' />
-        <meta property='og:image' content='https://cdn.floofy.dev/images/trans.png' />
+        <meta property='og:image' content='https://cdn.floofy.dev/images/August.png' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://floofy.dev' />
       </Head>
       <body>
         <Main />
         <NextScript />
-        <script src='https://twemoji.maxcdn.com/v/latest/twemoji.min.js' crossOrigin='anonymous'></script>
         <script async src='https://arc.io/widget.min.js#4YKnkhjP'></script>
       </body>
     </Html>;

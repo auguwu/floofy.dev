@@ -15,22 +15,21 @@
     "dev": "npm run lint && next dev"
   },
   "dependencies": {
-    "@fortawesome/react-fontawesome": "0.1.14",
-    "autoprefixer": "10.2.5",
-    "next": "10.2.2",
+    "autoprefixer": "10.2.6",
+    "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "1.33.0",
+    "sass": "1.34.0",
     "twemoji": "13.0.2"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.1.0",
     "@augu/tsconfig": "1.1.0",
-    "@types/node": "14.17.0",
-    "@types/react": "17.0.6",
+    "@types/node": "14.17.1",
+    "@types/react": "17.0.8",
     "@types/twemoji": "12.1.1",
-    "@typescript-eslint/eslint-plugin": "4.24.0",
-    "@typescript-eslint/parser": "4.24.0",
+    "@typescript-eslint/eslint-plugin": "4.25.0",
+    "@typescript-eslint/parser": "4.25.0",
     "eslint": "7.27.0",
     "typescript": "4.2.4"
   }
