@@ -34,7 +34,9 @@ core.library.add(
   brands.faTwitter,
   brands.faTelegram,
   brands.faPaypal,
-  brands.faGithub
+  brands.faGithub,
+  brands.faSteam,
+  brands.faLastfm
 );
 
 const socials = {
@@ -57,6 +59,14 @@ const socials = {
   paypal: {
     icon: ['fab', 'paypal'],
     link: 'https://paypal.me/auguwu'
+  },
+  steam: {
+    icon: ['fab', 'steam'],
+    link: 'https://steamcommunity.com/id/auguwu'
+  },
+  lastfm: {
+    icon: ['fab', 'lastfm'],
+    link: 'https://last.fm/user/auguwu'
   }
 };
 
@@ -92,7 +102,7 @@ export default function Homepage() {
           </h2>
 
           <div className='social-row'>
-            {Object.entries(socials).map(([key, social]) => 
+            {Object.entries(socials).map(([key, social]) =>
               <a href={social.link} className={`button-${key}`} key={`social-button-${key}`}>
                 <FontAwesomeIcon icon={social.icon as any} size='2x' />
               </a>

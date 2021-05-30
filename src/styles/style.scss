@@ -9,9 +9,11 @@ $fixed-height: 85vh;
 $colors: (
   "discord": #7289DA,
   "github": #333333,
-  "twitter": #05ABF6,
+  "twitter": #1DA1F2,
   "paypal": #00457C,
-  "telegram": #1F97C9
+  "telegram": #0088CC,
+  "steam": #000000,
+  "lastfm": red
 );
 
 * {
@@ -116,7 +118,8 @@ body {
 }
 
 .footer > p {
-  padding-left: 2.33rem;
+  text-align: center;
+  margin-left: 2.33rem;
   font-family: 'Indie Flower', cursive;
   font-size: 1.6rem;
   color: white;
@@ -148,7 +151,7 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .social-row {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(7, minmax(0, 1fr));
     margin: -0.20rem;
     text-align: center;
     position: absolute;
