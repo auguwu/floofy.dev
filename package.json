@@ -1,7 +1,7 @@
 {
   "name": "@august/paw",
   "description": "踶 (\"paw\") is a personalized website about myself and my projects",
-  "version": "7.0.2",
+  "version": "7.2.0",
   "private": true,
   "author": "August <cutie@floofy.dev>",
   "homepage": "https://floofy.dev",
@@ -15,7 +15,11 @@
     "dev": "npm run lint && next dev"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.35",
+    "@fortawesome/free-brands-svg-icons": "5.15.3",
+    "@fortawesome/react-fontawesome": "0.1.14",
     "autoprefixer": "10.2.6",
+    "luxon": "1.27.0",
     "next": "10.2.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -25,6 +29,7 @@
   "devDependencies": {
     "@augu/eslint-config": "2.1.0",
     "@augu/tsconfig": "1.1.0",
+    "@types/luxon": "1.26.5",
     "@types/node": "14.17.1",
     "@types/react": "17.0.8",
     "@types/twemoji": "12.1.1",

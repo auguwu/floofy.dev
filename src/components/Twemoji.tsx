@@ -24,7 +24,7 @@ import { memo } from 'react';
 import twemoji from 'twemoji';
 
 export default memo(({ emoji }: { emoji: string }) =>
-  <span dangerouslySetInnerHTML={{
+  <span className='emoji' dangerouslySetInnerHTML={{
     __html: twemoji.parse(emoji, {
       folder: 'svg',
       ext: '.svg'

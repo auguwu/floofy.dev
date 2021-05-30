@@ -22,12 +22,51 @@
 
 /* eslint-disable camelcase */
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as brands from '@fortawesome/free-brands-svg-icons';
+import * as luxon from 'luxon';
+import * as core from '@fortawesome/fontawesome-svg-core';
 import Twemoji from '../components/Twemoji';
 import Image from 'next/image';
+
+core.library.add(
+  brands.faDiscord,
+  brands.faTwitter,
+  brands.faTelegram,
+  brands.faPaypal,
+  brands.faGithub
+);
+
+const socials = {
+  discord: {
+    icon: ['fab', 'discord'],
+    link: 'https://discord.gg/JjHGR6vhcG'
+  },
+  github: {
+    icon: ['fab', 'github'],
+    link: 'https://github.com/auguwu'
+  },
+  twitter: {
+    icon: ['fab', 'twitter'],
+    link: 'https://twitter.com/rainyynoel'
+  },
+  telegram: {
+    icon: ['fab', 'telegram'],
+    link: 'https://t.me/auguwu'
+  },
+  paypal: {
+    icon: ['fab', 'paypal'],
+    link: 'https://paypal.me/auguwu'
+  }
+};
 
 export default function Homepage() {
   const current = new Date();
   const year = `2018-${current.getFullYear()}`;
+
+  const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
+  const now = luxon.DateTime.fromJSDate(current);
+  const age = Math.floor(now.diff(birthday, ['years']).years);
 
   return <>
     <div className='container'>
@@ -47,13 +86,17 @@ export default function Homepage() {
             Noel <Twemoji emoji='🥀' />
           </h1>
           <h2 className='heading-2'>
-            Student, Developer in the United States creating
-            <br />
-            projects no one will use except for myself. (^・ω・^ )
+            {age} year old student and developer in the United States <br />
+            who makes projects that no one will use. <br />
+            ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆
           </h2>
 
           <div className='social-row'>
-
+            {Object.entries(socials).map(([key, social]) => 
+              <a href={social.link} className={`button-${key}`} key={`social-button-${key}`}>
+                <FontAwesomeIcon icon={social.icon as any} size='2x' />
+              </a>
+            )}
           </div>
         </div>
       </div>
@@ -61,7 +104,7 @@ export default function Homepage() {
 
     <footer className='footer'>
       <p>
-        pawbs uwu | &copy; {year} <Twemoji emoji='💖' /> (art is not by me)
+        pawbs uwu ~ &copy; {year} <Twemoji emoji='💖' /> (art is not by me)
       </p>
     </footer>
   </>;
