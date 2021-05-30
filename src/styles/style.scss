@@ -47,13 +47,14 @@ body {
   justify-content: center;
   font-family: 'Nunito', sans-serif;
   align-items: center;
-  padding-top: 2.35rem;
+  //padding-top: 2.35rem;
   display: flex;
   height: $fixed-height;
   color: white;
 }
 
 .container-content {
+  margin-bottom: 0.25rem;
   text-align: center;
   gap: 0.75rem;
 }
@@ -110,6 +111,15 @@ body {
     cursor: pointer;
     margin: 5px;
   }
+
+  @media only screen and (max-width: 1024px) {
+    .button-#{$key} {
+      margin-bottom: 0.05rem;
+      margin-top: 0.15rem;
+      padding: 0.35rem;
+      width: 3.2rem;
+    }
+  }
 }
 
 .footer {
@@ -138,7 +148,7 @@ body {
 }
 
 @media only screen and (max-width: 694px) {
-  .footer > .emoji {
+  .footer > p > .emoji {
     height: 12px;
     width: 12px;
   }
@@ -159,18 +169,26 @@ body {
   }
 }
 
+a {
+  color: white;
+}
+
 a:link {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
   text-decoration: none;
+  color: white;
 }
 
 a:active {
   text-decoration: none;
+  color: white;
 }
 
 a:visited {
   text-decoration: none;
+  color: white;
 }

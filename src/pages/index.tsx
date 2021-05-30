@@ -93,7 +93,7 @@ export default function Homepage() {
         </div>
         <div className='container-right'>
           <h1 className='heading-1'>
-            Noel <Twemoji emoji='🥀' />
+            Noel <Twemoji emoji='🎀' />
           </h1>
           <h2 className='heading-2'>
             {age} year old student and developer in the United States <br />
@@ -103,7 +103,7 @@ export default function Homepage() {
 
           <div className='social-row'>
             {Object.entries(socials).map(([key, social]) =>
-              <a href={social.link} className={`button-${key}`} key={`social-button-${key}`}>
+              <a href={social.link} className={`button-${key}`} key={`social-button-${key}`} target='_blank' rel='noreferrer'>
                 <FontAwesomeIcon icon={social.icon as any} size='2x' />
               </a>
             )}
@@ -114,7 +114,7 @@ export default function Homepage() {
 
     <footer className='footer'>
       <p>
-        pawbs uwu ~ &copy; {year} <Twemoji emoji='💖' /> (art is not by me)
+        pawbs uwu ~ &copy; {year} (art is not by me) ~ <a href='https://github.com/auguwu/paw' target='_blank' rel='noreferrer'>Source Code</a>
       </p>
     </footer>
   </>;
