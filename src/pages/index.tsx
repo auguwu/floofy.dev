@@ -82,7 +82,7 @@ export default function Homepage() {
     <div className='container'>
       <div className='container-content'>
         <div className='container-left'>
-          <Image
+          <img
             src='https://cdn.floofy.dev/images/August.png'
             className='avatar'
             alt='avy'

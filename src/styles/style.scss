@@ -47,7 +47,7 @@ body {
   justify-content: center;
   font-family: 'Nunito', sans-serif;
   align-items: center;
-  //padding-top: 2.35rem;
+  padding-top: 2.35rem;
   display: flex;
   height: $fixed-height;
   color: white;
@@ -84,14 +84,38 @@ body {
   font-size: 2.3rem;
 }
 
+@media only screen and (max-width: 1024px) {
+  .heading-1 {
+    font-size: 1.3rem;
+
+    .emoji {
+      height: 17px;
+      width: 17px;
+    }
+  }
+}
+
 .heading-2 {
   font-family: 'Quicksand', sans-serif;
+}
+
+@media only screen and (max-width: 1024px) {
+  .heading-2 {
+    font-size: 1.2rem;
+  }
 }
 
 .avatar {
   border-radius: 50%;
   display: block;
   margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+  .avatar {
+    height: 125px;
+    width: 125px;
+  }
 }
 
 @each $key, $val in $colors {
@@ -114,8 +138,7 @@ body {
 
   @media only screen and (max-width: 1024px) {
     .button-#{$key} {
-      margin-bottom: 0.05rem;
-      margin-top: 0.15rem;
+      margin-top: 0.25rem;
       padding: 0.35rem;
       width: 3.2rem;
     }
@@ -125,14 +148,13 @@ body {
 .footer {
   bottom: 0;
   left: 0;
-}
 
-.footer > p {
-  text-align: center;
-  margin-left: 2.33rem;
-  font-family: 'Indie Flower', cursive;
-  font-size: 1.6rem;
-  color: white;
+  p {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.6rem;
+    color: white;
+  }
 }
 
 @media only screen and (max-width: 694px) {
