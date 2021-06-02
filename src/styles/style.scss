@@ -70,12 +70,12 @@ body {
 
 .container-right {
   justify-content: center;
-  margin-left: 2.3rem;
 }
 
 @media only screen and (min-width: 1024px) {
   .container-right {
     grid-column: span 3 / span 3;
+    margin-left: 2.3rem;
   }
 }
 
@@ -113,8 +113,8 @@ body {
 
 @media only screen and (max-width: 1024px) {
   .avatar {
-    height: 125px;
-    width: 125px;
+    height: 175px;
+    width: 175px;
   }
 }
 
@@ -158,8 +158,12 @@ body {
 }
 
 @media only screen and (max-width: 694px) {
-  .footer > p {
-    font-size: 1.3rem;
+  .footer {
+    padding-bottom: 0.253rem;
+
+    p {
+      font-size: 1.3rem;
+    }
   }
 }
 
