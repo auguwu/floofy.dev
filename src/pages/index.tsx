@@ -94,11 +94,13 @@ export default function Homepage() {
         <div className='container-right'>
           <h1 className='heading-1'>
             Noel <Twemoji emoji='🎀' />
+
+            <img src='https://img.shields.io/endpoint?url=https://pronoundb.org/shields/6004d014406af11e4593a013' alt='pronouns :3' draggable='false' />
+            <img src='https://nocache.advaith.workers.dev/?url=https://img.shields.io/endpoint?url=https://dev.discordprofiles.me/api/badge/status/280158289667555328' alt='am i online?' draggable='false' />
           </h1>
           <h2 className='heading-2'>
             {age} year old student and developer in the United States <br />
-            who makes projects that no one will use. <br />
-            ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆
+            who makes projects that no one will use. o((*^▽^*))o
           </h2>
 
           <div className='social-row'>

@@ -82,6 +82,10 @@ body {
 .heading-1 {
   font-family: 'Nunito', sans-serif;
   font-size: 2.3rem;
+
+  img {
+    margin-right: 0.75rem;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -89,6 +93,7 @@ body {
     font-size: 1.3rem;
 
     .emoji {
+      margin-right: 0.25rem;
       height: 17px;
       width: 17px;
     }
