@@ -29,7 +29,7 @@
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
     "@augu/tsconfig": "1.1.1",
-    "@types/luxon": "1.27.1",
+    "@types/luxon": "2.0.0",
     "@types/node": "14.17.9",
     "@types/react": "17.0.16",
     "@types/twemoji": "12.1.2",
