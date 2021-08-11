@@ -20,17 +20,7 @@
  * SOFTWARE.
  */
 
-import { memo } from 'react';
-import twemoji from 'twemoji';
-
-export default memo(({ emoji }: { emoji: string }) => (
-  <span
-    className="emoji"
-    dangerouslySetInnerHTML={{
-      __html: twemoji.parse(emoji, {
-        folder: 'svg',
-        ext: '.svg',
-      }),
-    }}
-  ></span>
-));
+module.exports = {
+  siteUrl: 'https://floofy.dev',
+  generateRobotsTxt: true,
+};

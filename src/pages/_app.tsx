@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018-2021 August
+ * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,15 +23,17 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import '../styles/style.scss';
+import '../styles/style.css';
 
 export default function PawApp({ Component, pageProps }: AppProps) {
-  return <>
-    <Head>
-      <title>Noel 🥀</title>
-      <meta httpEquiv='X-UA-Comatible' content='IE=edge' />
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
-    </Head>
-    <Component {...pageProps} />
-  </>;
+  return (
+    <>
+      <Head>
+        <title>Noel 🥀</title>
+        <meta httpEquiv="X-UA-Comatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }

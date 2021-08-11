@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018-2021 August
+ * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,6 @@ import * as brands from '@fortawesome/free-brands-svg-icons';
 import * as luxon from 'luxon';
 import * as core from '@fortawesome/fontawesome-svg-core';
 import Twemoji from '../components/Twemoji';
-import Image from 'next/image';
 
 core.library.add(
   brands.faDiscord,
@@ -42,32 +41,32 @@ core.library.add(
 const socials = {
   discord: {
     icon: ['fab', 'discord'],
-    link: 'https://discord.gg/JjHGR6vhcG'
+    link: 'https://discord.gg/JjHGR6vhcG',
   },
   github: {
     icon: ['fab', 'github'],
-    link: 'https://github.com/auguwu'
+    link: 'https://github.com/auguwu',
   },
   twitter: {
     icon: ['fab', 'twitter'],
-    link: 'https://twitter.com/rainyynoel'
+    link: 'https://twitter.com/rainyynoel',
   },
   telegram: {
     icon: ['fab', 'telegram'],
-    link: 'https://t.me/auguwu'
+    link: 'https://t.me/auguwu',
   },
   paypal: {
     icon: ['fab', 'paypal'],
-    link: 'https://paypal.me/auguwu'
+    link: 'https://paypal.me/auguwu',
   },
   steam: {
     icon: ['fab', 'steam'],
-    link: 'https://steamcommunity.com/id/auguwu'
+    link: 'https://steamcommunity.com/id/auguwu',
   },
   lastfm: {
     icon: ['fab', 'lastfm'],
-    link: 'https://last.fm/user/auguwu'
-  }
+    link: 'https://last.fm/user/auguwu',
+  },
 };
 
 export default function Homepage() {
@@ -78,46 +77,64 @@ export default function Homepage() {
   const now = luxon.DateTime.fromJSDate(current);
   const age = Math.floor(now.diff(birthday, ['years']).years);
 
-  return <>
-    <div className='container'>
-      <div className='container-content'>
-        <div className='container-left'>
-          <img
-            src='https://cdn.floofy.dev/images/August.png'
-            className='avatar'
-            alt='avy'
-            width={234}
-            height={234}
-            draggable='false'
-          />
-        </div>
-        <div className='container-right'>
-          <h1 className='heading-1'>
-            Noel <Twemoji emoji='🎀' />
+  return (
+    <>
+      <div className="container">
+        <div className="container-content">
+          <div className="container-left">
+            <img
+              src="https://cdn.floofy.dev/images/August.png"
+              className="avatar"
+              alt="avy"
+              width={234}
+              height={234}
+              draggable="false"
+            />
+          </div>
+          <div className="container-right">
+            <h1 className="heading-1">
+              Noel <Twemoji emoji="🎀" />
+              <img
+                src="https://img.shields.io/endpoint?url=https://pronoundb.org/shields/6004d014406af11e4593a013"
+                alt="pronouns :3"
+                draggable="false"
+              />
+              <img
+                src="https://nocache.advaith.workers.dev/?url=https://img.shields.io/endpoint?url=https://dev.discordprofiles.me/api/badge/status/280158289667555328"
+                alt="am i online?"
+                draggable="false"
+              />
+            </h1>
+            <h2 className="heading-2">
+              {age} year old student and developer in the United States <br />
+              who makes projects that no one will use. o((*^▽^*))o
+            </h2>
 
-            <img src='https://img.shields.io/endpoint?url=https://pronoundb.org/shields/6004d014406af11e4593a013' alt='pronouns :3' draggable='false' />
-            <img src='https://nocache.advaith.workers.dev/?url=https://img.shields.io/endpoint?url=https://dev.discordprofiles.me/api/badge/status/280158289667555328' alt='am i online?' draggable='false' />
-          </h1>
-          <h2 className='heading-2'>
-            {age} year old student and developer in the United States <br />
-            who makes projects that no one will use. o((*^▽^*))o
-          </h2>
-
-          <div className='social-row'>
-            {Object.entries(socials).map(([key, social]) =>
-              <a href={social.link} className={`button-${key}`} key={`social-button-${key}`} target='_blank' rel='noreferrer'>
-                <FontAwesomeIcon icon={social.icon as any} size='2x' />
-              </a>
-            )}
+            <div className="social-row">
+              {Object.entries(socials).map(([key, social]) => (
+                <a
+                  href={social.link}
+                  className={`button-${key}`}
+                  key={`social-button-${key}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={social.icon as any} size="2x" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <footer className='footer'>
-      <p>
-        pawbs uwu ~ &copy; {year} (art is not by me) ~ <a href='https://github.com/auguwu/paw' target='_blank' rel='noreferrer'>Source Code</a>
-      </p>
-    </footer>
-  </>;
+      <footer className="footer">
+        <p>
+          pawbs uwu ~ &copy; {year} (art is not by me) ~{' '}
+          <a href="https://github.com/auguwu/paw" target="_blank" rel="noreferrer">
+            Source Code
+          </a>
+        </p>
+      </footer>
+    </>
+  );
 }

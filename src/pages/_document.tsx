@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018-2021 August
+ * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,23 +29,31 @@ export default class PawDocument extends Document {
   }
 
   render() {
-    return <Html lang='en'>
-      <Head>
-        <link rel='shortcut icon' href='https://cdn.floofy.dev/images/trans.png' />
-        <link rel='icon' href='https://cdn.floofy.dev/images/trans.png' />
-        <meta charSet='UTF-8' />
-        <meta name='description' content='Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆' />
-        <meta name='theme-color' content='#DAA2C6' />
-        <meta property='og:description' content='Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆' />
-        <meta property='og:title' content='Noel 🥀' />
-        <meta property='og:image' content='https://cdn.floofy.dev/images/August.png' />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://floofy.dev' />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>;
+    return (
+      <Html lang="en">
+        <Head>
+          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/trans.png" />
+          <link rel="icon" href="https://cdn.floofy.dev/images/trans.png" />
+          <meta charSet="UTF-8" />
+          <meta
+            name="description"
+            content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+          />
+          <meta name="theme-color" content="#DAA2C6" />
+          <meta
+            property="og:description"
+            content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+          />
+          <meta property="og:title" content="Noel 🥀" />
+          <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://floofy.dev" />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
   }
 }
