@@ -49,7 +49,7 @@ jobs:
         run: npm i -g eslint
 
       - name: Installs all local dependencies
-        run: npm i
+        run: yarn
 
       - name: Lints the repository for any code-checking errors
-        run: npm run lint
+        run: eslint src --ext .ts,.tsx
