@@ -2,9 +2,6 @@
 
 $background-colour: #262336;
 $selection-colour: #D961A3;
-$document-height: 95%;
-$document-width: 99.75%;
-$fixed-height: 85vh;
 
 $colors: (
   "discord": #7289DA,
@@ -49,7 +46,7 @@ body {
   align-items: center;
   padding-top: 2.35rem;
   display: flex;
-  height: $fixed-height;
+  height: 100vh;
   color: white;
 }
 
@@ -126,7 +123,8 @@ body {
 @each $key, $val in $colors {
   .button-#{$key} {
     background-color: $val;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     border-radius: 0.75rem;
     color: white;
     text-align: center;
