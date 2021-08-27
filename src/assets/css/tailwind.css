@@ -1,0 +1,25 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+@layer base {
+  @import url('./fonts');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #d961a3;
+  color: white;
+}
+
+::selection {
+  background: #d961a3;
+  color: white;
+}
