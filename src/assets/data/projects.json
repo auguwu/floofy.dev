@@ -1,1 +1,31 @@
-{}
+[
+  {
+    "title": "Nino",
+    "icon": "https://cdn.discordapp.com/avatars/531613242473054229/6054e09052b4f285ae560a1c53f729d4.png?size=1024",
+    "links": [
+      {
+        "icon": "computer",
+        "url": "https://nino.sh"
+      },
+      {
+        "icon": "discord",
+        "url": "https://discord.com/oauth2/authorize?client_id=531613242473054229&scope=bot"
+      }
+    ],
+    "description": "Cute, advanced discord moderation bot made in Eris. Make your server cute and automated with utilities for you and your server moderators!",
+    "role": ["Project Lead", "Fullstack Developer"]
+  },
+  {
+    "title": "Arisu",
+    "icon": null,
+    "links": [
+      {
+        "icon": "computer",
+        "url": "https://arisu.land"
+      }
+    ],
+    "description": "Translation made with simplicity, yet robust.",
+    "role": ["Project Lead", "Fullstack Developer"],
+    "indev": true
+  }
+]

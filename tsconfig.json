@@ -3,13 +3,16 @@
   "compilerOptions": {
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowJs": true,
-    "module": "ESNext",
+    "sourceMap": true,
+    "strict": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "baseUrl": ".",
+    "types": ["node", "@nuxt/types"],
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
   },
   "exclude": ["node_modules"]

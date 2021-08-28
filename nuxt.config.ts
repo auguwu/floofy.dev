@@ -51,6 +51,9 @@ const config: NuxtConfig = {
   target: 'static',
   modern: process.env.NODE_ENV === 'production' && 'client',
   srcDir: 'src',
+  dir: {
+    pages: 'views',
+  },
 
   head: {
     title: 'Noel 🐾',
@@ -94,6 +97,10 @@ const config: NuxtConfig = {
     },
   },
 
+  tailwindcss: {
+    exposeConfig: true,
+  },
+
   pwa: {
     description: '✧ ─=≡Σ((( つ•̀ω•́)つ nyoom!!!',
     theme_color: '#C54B8C',
@@ -108,8 +115,16 @@ const config: NuxtConfig = {
   fontawesome: {
     component: 'fa',
     icons: {
-      solid: ['faHeart'],
+      solid: ['faHeart', 'faLaptop'],
       brand: ['faDiscord', 'faGitHub', 'faTelegram', 'faSteam', 'faTwitter'],
+    },
+  },
+
+  build: {
+    postcss: {
+      plugins: {
+        autoprefixer: {},
+      },
     },
   },
 };

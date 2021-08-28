@@ -1,13 +1,28 @@
 {
   "extends": ["prettier", "@augu/eslint-config/ts.js"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "nuxt", "vue"],
+
+  // https://eslint.vuejs.org/user-guide/#how-to-use-a-custom-parser
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+
   "rules": {
+    // TypeScript
     "@typescript-eslint/indent": "off",
     "quote-props": ["error", "consistent-as-needed"],
-    "quotes": [
-      "error",
-      "single",
-      { "avoidEscape": true, "allowTemplateLiterals": true }
-    ]
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+
+    // Nuxt.js
+    "nuxt/no-timing-in-fetch-data": "error",
+    "nuxt/no-env-in-context": "error",
+
+    // Vue.js
+    "vue/no-arrow-functions-in-watch": "error",
+    "vue/no-dupe-v-else-if": "warn",
+    "vue/no-parsing-error": "error",
+    "vue/no-unused-components": "error",
+    "vue/require-v-for-key": "error"
   }
 }
