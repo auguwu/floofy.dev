@@ -20,40 +20,48 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import { Global, css } from '@emotion/react';
-import Footer from '../components/Footer';
-import theme from '../theme';
-import Head from 'next/head';
+/* eslint-disable camelcase */
 
-export default function PawApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Noel 🎀</title>
-        <meta httpEquiv="X-UA-Comatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+import { useState, useEffect } from 'react';
+import {} from '@chakra-ui/react';
+import * as luxon from 'luxon';
 
-      <ChakraProvider resetCSS theme={theme}>
-        <Global
-          styles={css`
-            ::selection {
-              background: #d961a3;
-              color: white;
-            }
+interface Sponsor {
+  joined_at: string;
+  tier: SponsorTier;
+  tier_selected_at: string | null;
+  followers: number;
+  following: number;
+  status: SponsorStatus;
+  website_url: string;
+  twitter_handle: string | null;
+  has_sponsors_listing: boolean;
+  avatar_url: string;
+  company: string;
+  login: string;
+  name: string | null;
+  bio: string;
+}
 
-            ::moz-selection {
-              background: #d961a3;
-              color: white;
-            }
-          `}
-        />
+interface SponsorTier {
+  custom_amount: boolean;
+  created_at: string;
+  name: string;
+}
 
-        <Component {...pageProps} />
-        <Footer />
-      </ChakraProvider>
-    </>
-  );
+interface SponsorStatus {
+  emoji: string;
+  message: string;
+  expires_at: string | null;
+}
+
+export default function Sponsors() {
+  const [sponsors, setSponsors] = useState<Sponsor[]>([]);
+  useEffect(() => {
+    fetch('https://api.floofy.dev/sponsors/auguwu')
+      .then((res) => res.json())
+      .then((data) => setSponsors(data.sponsors.data));
+  }, []);
+
+  return <></>;
 }

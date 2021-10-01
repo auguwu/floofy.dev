@@ -20,40 +20,35 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import { Global, css } from '@emotion/react';
-import Footer from '../components/Footer';
-import theme from '../theme';
-import Head from 'next/head';
+import * as luxon from 'luxon';
 
-export default function PawApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Noel 🎀</title>
-        <meta httpEquiv="X-UA-Comatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+const projects: Record<string, any>[] = [
+  {
+    name: 'Nino',
+    roles: ['Project Lead'],
+    languages: ['TypeScript', 'Elixir', 'Go', 'React'],
+    description:
+      "Cute, advanced discord moderation bot made in Eris. Make your server cute and automated with utilities for you and your server moderators! ☆ ～('▽^人)",
+    icon: 'https://cdn.floofy.dev/images/Nino.png',
+  },
 
-      <ChakraProvider resetCSS theme={theme}>
-        <Global
-          styles={css`
-            ::selection {
-              background: #d961a3;
-              color: white;
-            }
+  {
+    name: 'Arisu',
+    roles: ['Founder', 'Project Lead'],
+    languages: ['TypeScript', 'Go', 'React', 'GraphQL'],
+    description: 'Translation made with simplicity, yet robust.',
+    icon: 'https://cdn.arisu.land/lotus.png',
+  },
 
-            ::moz-selection {
-              background: #d961a3;
-              color: white;
-            }
-          `}
-        />
+  {
+    name: 'profile.place',
+    roles: ['Frontend'],
+    languages: ['TypeScript', 'Elixir', 'Vue'],
+    description: 'All your social profiles in one place.',
+    icon: 'https://profile.place/assets/img/logo.png',
+  },
+];
 
-        <Component {...pageProps} />
-        <Footer />
-      </ChakraProvider>
-    </>
-  );
+export default function Portfolio() {
+  return <></>;
 }

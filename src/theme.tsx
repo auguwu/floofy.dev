@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018-2021 August
+ * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,14 +20,36 @@
  * SOFTWARE.
  */
 
-import { memo } from 'react';
-import twemoji from 'twemoji';
+import { theme as _theme, extendTheme } from '@chakra-ui/react';
+import { createBreakpoints } from '@chakra-ui/theme-tools';
 
-export default memo(({ emoji }: { emoji: string }) =>
-  <span className='emoji' dangerouslySetInnerHTML={{
-    __html: twemoji.parse(emoji, {
-      folder: 'svg',
-      ext: '.svg'
-    })
-  }}></span>
-);
+const theme: Record<string, any> = {
+  config: {
+    useSystemColorMode: true,
+    initialThemeColor: 'dark',
+  },
+
+  fonts: {
+    ..._theme.fonts,
+    body: 'Ubuntu',
+  },
+
+  breakpoints: createBreakpoints({
+    sm: '640px',
+    md: '750px',
+    lg: '1024px',
+    xl: '1150px',
+    '2xl': '1280px',
+  }),
+
+  colors: {
+    background: '#1A1423',
+    discord: '#7289DA', // old colour > new colour - discord sue me (dont please)
+    twitter: '#1DA1F2',
+    github: '#333333',
+    telegram: '#0088CC',
+  },
+};
+
+const overriden = extendTheme(theme);
+export default overriden;

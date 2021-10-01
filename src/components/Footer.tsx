@@ -20,40 +20,18 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import { Global, css } from '@emotion/react';
-import Footer from '../components/Footer';
-import theme from '../theme';
-import Head from 'next/head';
+import { Box, Flex, Text } from '@chakra-ui/react';
 
-export default function PawApp({ Component, pageProps }: AppProps) {
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <>
-      <Head>
-        <title>Noel 🎀</title>
-        <meta httpEquiv="X-UA-Comatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      <ChakraProvider resetCSS theme={theme}>
-        <Global
-          styles={css`
-            ::selection {
-              background: #d961a3;
-              color: white;
-            }
-
-            ::moz-selection {
-              background: #d961a3;
-              color: white;
-            }
-          `}
-        />
-
-        <Component {...pageProps} />
-        <Footer />
-      </ChakraProvider>
-    </>
+    <Box h="100%" w="100%">
+      <Flex direction={{ base: 'column-reverse', lg: 'row' }}>
+        <Text mt={{ base: '4', lg: '0' }} mb={{ base: '4', lg: '0' }}>
+          floofy.dev (c) 2018-{currentYear} Noel
+        </Text>
+      </Flex>
+    </Box>
   );
 }

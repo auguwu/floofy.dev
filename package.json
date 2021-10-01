@@ -1,7 +1,7 @@
 {
   "name": "@august/paw",
   "description": "踶 (\"paw\") is a personalized website about myself and my projects",
-  "version": "7.3.0",
+  "version": "8.0.0",
   "private": true,
   "author": "August <cutie@floofy.dev>",
   "homepage": "https://floofy.dev",
@@ -12,19 +12,23 @@
     "start": "next start",
     "build": "next build",
     "lint": "eslint src --ext .ts,.tsx --fix",
-    "dev": "npm run lint && next dev"
+    "dev": "npm run lint && next dev -p 3621",
+    "fmt": "prettier --config ./.prettierrc.json --write ."
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.36",
-    "@fortawesome/free-brands-svg-icons": "5.15.4",
-    "@fortawesome/react-fontawesome": "0.1.15",
+    "@chakra-ui/react": "1.6.7",
+    "@chakra-ui/theme-tools": "1.2.0",
+    "@emotion/react": "11.4.1",
+    "@emotion/styled": "11.3.0",
+    "@fontsource/ubuntu": "4.5.0",
     "autoprefixer": "10.3.4",
+    "framer-motion": "4.1.17",
     "luxon": "2.0.2",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "1.41.1",
-    "twemoji": "13.1.0"
+    "react-icons": "4.2.0",
+    "sass": "1.41.1"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
@@ -36,6 +40,8 @@
     "@typescript-eslint/eslint-plugin": "4.31.1",
     "@typescript-eslint/parser": "4.31.1",
     "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "prettier": "2.4.1",
     "typescript": "4.4.3"
   }
 }
