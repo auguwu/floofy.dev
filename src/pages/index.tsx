@@ -22,19 +22,74 @@
 
 /* eslint-disable camelcase */
 
-import { FaDiscord, FaTwitter, FaTelegram, FaGithub } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import * as brands from '@fortawesome/free-brands-svg-icons';
 import * as luxon from 'luxon';
+import * as core from '@fortawesome/fontawesome-svg-core';
 import Image from 'next/image';
 
-const socials = {
-  discord: 'https://discord.gg/JjHGR6vhcG',
-  github: 'https://github.com/auguwu',
-  twitter: 'https://twitter.com/auguuwu',
-  telegram: 'https://t.me/auguwu',
-};
+core.library.add(brands.faDiscord, brands.faTwitter, brands.faTelegram, brands.faGithub, brands.faSteam);
 
 export default function NoelSite() {
   const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
   const now = luxon.DateTime.fromJSDate(new Date());
   const age = Math.floor(now.diff(birthday, ['years']).years);
+
+  return (
+    <>
+      <div className="flex text-white h-screen justify-center items-center">
+        <div className="container-content">
+          <div>
+            <Image
+              src="https://cdn.floofy.dev/images/August.png"
+              width="175px"
+              height="175px"
+              draggable="false"
+              className="rounded-[50%] block m-auto"
+            />
+          </div>
+
+          <div className="container-right">
+            <h1 className="heading-1">Noel 🎀</h1>
+            <h2 className="heading-2">
+              {age} year old developer and furry, creating projects no one will use.
+              <br />
+              Loves coffee, coding, and music.
+            </h2>
+
+            <div className="lg:text-center lg:gap-3 lg:grid-cols-5 lg:m-[-0.20rem] lg:absolute lg:grid lg:mt-3 hidden">
+              <a className="button-discord" href="https://discord.com/users/280158289667555328">
+                <FontAwesomeIcon icon={['fab', 'discord']} size="2x" />
+              </a>
+              <a className="button-twitter" href="https://twitter.com/auguuwu">
+                <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
+              </a>
+              <a className="button-telegram" href="https://t.me/auguwu">
+                <FontAwesomeIcon icon={['fab', 'telegram']} size="2x" />
+              </a>
+              <a className="button-github" href="https://github.com/auguwu">
+                <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
+              </a>
+              <a className="button-steam" href="https://steamcommunity.com/id/auguwu">
+                <FontAwesomeIcon icon={['fab', 'steam']} size="2x" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="left-[0] bottom-[0]"></div>
+
+      <style jsx global>{`
+        body {
+          background-blend-mode: overlay;
+          background-attachment: fixed;
+          background-position: center;
+          background-image: url(https://cdn.floofy.dev/bg.jpg);
+          background-color: #232323;
+          background-size: cover;
+        }
+      `}</style>
+    </>
+  );
 }

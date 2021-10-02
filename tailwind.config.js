@@ -20,48 +20,31 @@
  * SOFTWARE.
  */
 
-/* eslint-disable camelcase */
+/**
+ * Tailwind configuration for floofy.dev
+ */
+module.exports = {
+  purge: ['./src/components/**.{ts,tsx}', './src/pages/**.{ts,tsx}'],
+  darkMode: 'media', // or 'media' or 'class'
+  mode: 'jit',
+  theme: {
+    extend: {
+      colors: {
+        discord: '#7289DA',
+        github: '#333333',
+        twitter: '#1DA1F2',
+        telegram: '#0088CC',
+        steam: '#000000',
+      },
 
-import { useState, useEffect } from 'react';
-import {} from '@chakra-ui/react';
-import * as luxon from 'luxon';
-
-interface Sponsor {
-  joined_at: string;
-  tier: SponsorTier;
-  tier_selected_at: string | null;
-  followers: number;
-  following: number;
-  status: SponsorStatus;
-  website_url: string;
-  twitter_handle: string | null;
-  has_sponsors_listing: boolean;
-  avatar_url: string;
-  company: string;
-  login: string;
-  name: string | null;
-  bio: string;
-}
-
-interface SponsorTier {
-  custom_amount: boolean;
-  created_at: string;
-  name: string;
-}
-
-interface SponsorStatus {
-  emoji: string;
-  message: string;
-  expires_at: string | null;
-}
-
-export default function Sponsors() {
-  const [sponsors, setSponsors] = useState<Sponsor[]>([]);
-  useEffect(() => {
-    fetch('https://api.floofy.dev/sponsors/auguwu')
-      .then((res) => res.json())
-      .then((data) => setSponsors(data.sponsors.data));
-  }, []);
-
-  return <></>;
-}
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
+        quicksand: ['Quicksand', 'sans-serif'],
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};

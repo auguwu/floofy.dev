@@ -20,35 +20,71 @@
  * SOFTWARE.
  */
 
+/* eslint-disable camelcase */
+
 import * as luxon from 'luxon';
 
 const projects: Record<string, any>[] = [
   {
     name: 'Nino',
     roles: ['Project Lead'],
-    languages: ['TypeScript', 'Elixir', 'Go', 'React'],
+    languages: ['TypeScript', 'Kotlin', 'Go'],
+    tech_stack: ['Docker', 'Kubernetes', 'React'],
     description:
       "Cute, advanced discord moderation bot made in Eris. Make your server cute and automated with utilities for you and your server moderators! ☆ ～('▽^人)",
     icon: 'https://cdn.floofy.dev/images/Nino.png',
+    created_at: luxon.DateTime.fromJSDate(new Date(2019, 5, 23)),
   },
 
   {
     name: 'Arisu',
     roles: ['Founder', 'Project Lead'],
-    languages: ['TypeScript', 'Go', 'React', 'GraphQL'],
+    languages: ['TypeScript', 'Go', 'GraphQL'],
+    tech_stack: ['Docker', 'Kubernetes', 'React'],
     description: 'Translation made with simplicity, yet robust.',
     icon: 'https://cdn.arisu.land/lotus.png',
+    created_at: luxon.DateTime.fromJSDate(new Date(2020, 4, 31)),
   },
 
   {
     name: 'profile.place',
     roles: ['Frontend'],
-    languages: ['TypeScript', 'Elixir', 'Vue'],
+    languages: ['TypeScript', 'Elixir'],
+    tech_stack: ['Docker', 'Kubernetes', 'Vue'],
     description: 'All your social profiles in one place.',
     icon: 'https://profile.place/assets/img/logo.png',
+    created_at: luxon.DateTime.fromJSDate(new Date(2020, 6, 17)),
   },
 ];
 
+const colors = {
+  TypeScript: '#2b7489',
+  Go: '#00ADD8',
+  Elixir: '#6e4a7e',
+  Vue: '#41b883',
+  React: '#61dbfb',
+  GraphQL: '#e10098',
+  Kotlin: '#A97BFF',
+  Kubernetes: '#326ce5',
+  Docker: '#0db7ed',
+};
+
+const icons = {
+  TypeScript: <i className="devicon-typescript-plain" />,
+  Docker: <i className="devicon-docker-plain" />,
+  Go: <i className="devicon-go-plain" />,
+  Elixir: <i className="devicon-elixir-plain" />,
+  Kubernetes: <i className="devicon-kubernetes-plain" />,
+  Vue: <i className="devicon-vuejs-plain" />,
+  React: <i className="devicon-react-original" />,
+  Kotlin: <i className="devicon-graphql-plain" />,
+  GraphQL: <i className="devicon-graphql-plain" />,
+};
+
 export default function Portfolio() {
-  return <></>;
+  return (
+    <pre>
+      <code>{JSON.stringify(projects)}</code>
+    </pre>
+  );
 }

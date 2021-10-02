@@ -20,36 +20,9 @@
  * SOFTWARE.
  */
 
-import { theme as _theme, extendTheme } from '@chakra-ui/react';
-import { createBreakpoints } from '@chakra-ui/theme-tools';
-
-const theme: Record<string, any> = {
-  config: {
-    useSystemColorMode: true,
-    initialThemeColor: 'dark',
-  },
-
-  fonts: {
-    ..._theme.fonts,
-    body: 'Ubuntu',
-  },
-
-  breakpoints: createBreakpoints({
-    sm: '640px',
-    md: '750px',
-    lg: '1024px',
-    xl: '1150px',
-    '2xl': '1280px',
-  }),
-
-  colors: {
-    background: '#1A1423',
-    discord: '#7289DA', // old colour > new colour - discord sue me (dont please)
-    twitter: '#1DA1F2',
-    github: '#333333',
-    telegram: '#0088CC',
+module.exports = {
+  plugins: {
+    autoprefixer: {},
+    tailwindcss: {},
   },
 };
-
-const overriden = extendTheme(theme);
-export default overriden;

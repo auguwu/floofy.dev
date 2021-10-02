@@ -20,12 +20,10 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
-import { Global, css } from '@emotion/react';
-import Footer from '../components/Footer';
-import theme from '../theme';
 import Head from 'next/head';
+
+import '../styles/style.scss';
 
 export default function PawApp({ Component, pageProps }: AppProps) {
   return (
@@ -36,24 +34,7 @@ export default function PawApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <ChakraProvider resetCSS theme={theme}>
-        <Global
-          styles={css`
-            ::selection {
-              background: #d961a3;
-              color: white;
-            }
-
-            ::moz-selection {
-              background: #d961a3;
-              color: white;
-            }
-          `}
-        />
-
-        <Component {...pageProps} />
-        <Footer />
-      </ChakraProvider>
+      <Component {...pageProps} />
     </>
   );
 }
