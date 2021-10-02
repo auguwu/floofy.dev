@@ -29,9 +29,9 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "1.41.1",
-    "styled-jsx": "^4.0.1",
+    "styled-jsx": "4.0.1",
     "tailwindcss": "2.2.16",
-    "yarn": "^1.22.15"
+    "yarn": "1.22.15"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
