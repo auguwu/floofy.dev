@@ -36,7 +36,7 @@
     "@augu/eslint-config": "2.2.0",
     "@augu/tsconfig": "1.1.1",
     "@types/luxon": "2.0.4",
-    "@types/node": "14.17.20",
+    "@types/node": "14.17.21",
     "@types/react": "17.0.27",
     "@types/twemoji": "12.1.2",
     "@typescript-eslint/eslint-plugin": "4.33.0",
