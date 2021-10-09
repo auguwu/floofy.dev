@@ -22,13 +22,15 @@
 
 /* eslint-disable camelcase */
 
+import { faDiscord, faTwitter, faTelegram, faGithub, faSteam } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as brands from '@fortawesome/free-brands-svg-icons';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import * as luxon from 'luxon';
 import * as core from '@fortawesome/fontawesome-svg-core';
 import Image from 'next/image';
+import Link from 'next/link';
 
-core.library.add(brands.faDiscord, brands.faTwitter, brands.faTelegram, brands.faGithub, brands.faSteam);
+core.library.add(faDiscord, faTwitter, faTelegram, faGithub, faSteam, faBriefcase);
 
 export default function NoelSite() {
   const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
@@ -50,28 +52,36 @@ export default function NoelSite() {
           </div>
 
           <div className="container-right">
-            <h1 className="heading-1">Noel 🎀</h1>
-            <h2 className="heading-2">
+            <h1 className="heading-1 font-bold">Noel 🎀</h1>
+            <h2 className="heading-2 font-semibold">
               {age} year old developer and furry, creating projects no one will use.
               <br />
               Loves coffee, coding, and music.
             </h2>
 
-            <div className="lg:text-center lg:gap-3 lg:grid-cols-5 lg:m-[-0.20rem] lg:absolute lg:grid lg:mt-3 hidden">
-              <a className="button-discord" href="https://discord.com/users/280158289667555328">
+            <div className="lg:text-center lg:gap-3 lg:grid-cols-6 lg:m-[-0.20rem] lg:absolute lg:grid lg:mt-3 hidden">
+              <a
+                className="button-discord"
+                href="https://discord.com/users/280158289667555328"
+                target="_blank"
+                rel="noopener"
+              >
                 <FontAwesomeIcon icon={['fab', 'discord']} size="2x" />
               </a>
-              <a className="button-twitter" href="https://twitter.com/auguuwu">
+              <a className="button-twitter" href="https://twitter.com/auguuwu" target="_blank" rel="noopener">
                 <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
               </a>
-              <a className="button-telegram" href="https://t.me/auguwu">
+              <a className="button-telegram" href="https://t.me/auguwu" target="_blank" rel="noopener">
                 <FontAwesomeIcon icon={['fab', 'telegram']} size="2x" />
               </a>
-              <a className="button-github" href="https://github.com/auguwu">
+              <a className="button-github" href="https://github.com/auguwu" target="_blank" rel="noopener">
                 <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
               </a>
-              <a className="button-steam" href="https://steamcommunity.com/id/auguwu">
+              <a className="button-steam" href="https://steamcommunity.com/id/auguwu" target="_blank" rel="noopener">
                 <FontAwesomeIcon icon={['fab', 'steam']} size="2x" />
+              </a>
+              <a className="button-portfolio" href="/portfolio/" target="_blank" rel="noopener">
+                <FontAwesomeIcon icon={['fas', 'briefcase']} size="2x" />
               </a>
             </div>
           </div>
