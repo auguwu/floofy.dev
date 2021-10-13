@@ -31,7 +31,7 @@
     "react-dom": "17.0.2",
     "sass": "1.41.1",
     "styled-jsx": "4.0.1",
-    "tailwindcss": "2.2.16"
+    "tailwindcss": "2.2.17"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
