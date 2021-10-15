@@ -30,7 +30,7 @@ export default function PawApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Noel 🎀</title>
-        <meta httpEquiv="X-UA-Comatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
