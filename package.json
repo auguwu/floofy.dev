@@ -29,7 +29,7 @@
     "postcss": "8.3.11",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "sass": "1.43.2",
+    "sass": "1.43.3",
     "styled-jsx": "4.0.1",
     "tailwindcss": "2.2.17"
   },
