@@ -156,12 +156,11 @@ export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
 
         <span className="font-quicksand text-3xl mt-4 font-semibold">Chris Hernandez (also known as Noel, August)</span>
         <span className="font-nunito text-lg mt-2 font-medium">
-          Fullstack Developer, Intermediate DevOps, gay furry at night. <br />
-          If you were curious, I am self-taught.
+          Fullstack Developer and Intermediate DevOps by day; gay furry at night.
         </span>
       </div>
 
-      <div className="text-white flex flex-row container mx-32 mt-12">
+      <div className="text-white flex flex-row container mx-auto mt-7">
         <div className="my-2 overflow-hidden w-1/2 md:w-1/3">
           <span className="font-quicksand text-2xl font-semibold">Who are you exactly?</span>
           <p className="font-nunito text-lg font-normal w-[75%] break-words mt-4">
@@ -198,13 +197,35 @@ export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
 
       <div className="text-white flex flex-col container mx-32 mt-16">
         <h1 className="font-nunito text-4xl font-semibold">Sponsors</h1>
-        <h2 className="font-quicksand text-2xl">Here is some lovely people who have donated to me!</h2>
+        <h2 className="font-quicksand text-2xl">
+          Here is some lovely people who have donated to me! You can sponsor me on{' '}
+          <a href="https://github.com/sponsors/auguwu" target="_blank" rel="noopenner">
+            GitHub
+          </a>
+          ~
+        </h2>
+        {/* <div className="container mx-auto flex flex-row relative mt-5">
+          {sponsors.map((sponsor) => (
+            <div className="rounded-3xl overflow-hidden shadow-xl w-full my-3 bg-gray-500 mr-5">
+              <div className="flex flex-col container mx-auto my-6">
+                <img
+                  src={sponsor.avatarUrl}
+                  alt={`${sponsor.name ?? sponsor.login}'s avatar on GitHub`}
+                  width="95px"
+                  height="95px"
+                  className="rounded-[50%]"
+                />
+              </div>
+
+              <h3 className="font-nunito font-semibold text-lg">{sponsor.name ?? sponsor.login}</h3>
+            </div>
+          ))}
+        </div> */}
       </div>
 
       <div className="text-white flex flex-col container mx-32 mt-16">
         <h1 className="font-nunito text-4xl font-semibold">Projects</h1>
         <h2 className="font-quicksand text-2xl">Finally, here is a list of projects I am involved in.</h2>
-        <hr className="bg-gradient-to-tr from-purple-500 to-pink-500 w-[33.2rem] mt-3" />
       </div>
 
       <div className="mb-24" />
