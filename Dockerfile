@@ -14,4 +14,4 @@ RUN yarn
 RUN NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production yarn build
 RUN rm -rf src
 
-ENTRYPOINT [ "next", "start" ]
+ENTRYPOINT [ "yarn", "start" ]
