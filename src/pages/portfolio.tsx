@@ -175,7 +175,7 @@ export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
           <p className="font-nunito text-lg font-normal w-[75%] break-words mt-4">
             Funny story that you mention it, or I have... since I am writing this alone in my bedroom as we speak.
             Anyway, it started back in Febuary of 2017 (wow, it's been {programmingAge} years already?), when I joined
-            Discord around that time, and I keep seeing fancy Discord bots (back then it was like Ayana and such.) and I
+            Discord around that time, and I keep seeing fancy Discord bots (back then it was like Ayana and such) and I
             wanted to create one, so I learned JavaScript and it has been {programmingAge} years, and this is where I am
             headed in the future. Damn, switching from an actor towards a software engineer and business leader, mark
             that off the bucket list!
