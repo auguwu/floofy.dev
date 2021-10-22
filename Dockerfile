@@ -5,7 +5,7 @@ RUN apk update && apk add git ca-certificates
 
 WORKDIR /opt/pawb
 COPY . .
-RUN yarn global add typescript eslint next
+RUN yarn global add typescript eslint
 RUN yarn
 
 # Why `NODE_OPTIONS`?
