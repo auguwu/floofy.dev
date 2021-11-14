@@ -16,7 +16,7 @@
     "fmt": "prettier --config ./.prettierrc.json --write ."
   },
   "dependencies": {
-    "@fontsource/inter": "4.5.0",
+    "@fontsource/inter": "4.5.1",
     "@fontsource/nunito": "4.5.0",
     "@fontsource/quicksand": "4.5.1",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
