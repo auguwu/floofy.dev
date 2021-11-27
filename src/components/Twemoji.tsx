@@ -20,16 +20,17 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import Footer from '../components/Footer';
-import theme from '../theme';
+import { memo } from 'react';
+import twemoji from 'twemoji';
 
-export default function PawApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-      <Footer />
-    </ChakraProvider>
-  );
-}
+export default memo(({ emoji }: { emoji: string }) => (
+  <span
+    className="emoji"
+    dangerouslySetInnerHTML={{
+      __html: twemoji.parse(emoji, {
+        folder: 'svg',
+        ext: '.svg',
+      }),
+    }}
+  ></span>
+));

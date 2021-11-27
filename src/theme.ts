@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,31 +20,16 @@
  * SOFTWARE.
  */
 
-/**
- * Tailwind configuration for floofy.dev
- */
-module.exports = {
-  purge: ['./src/components/**.{ts,tsx}', './src/pages/**.{ts,tsx}'],
-  darkMode: 'media', // or 'media' or 'class'
-  mode: 'jit',
-  theme: {
-    extend: {
-      colors: {
-        discord: '#7289DA',
-        github: '#333333',
-        twitter: '#1DA1F2',
-        telegram: '#0088CC',
-        steam: '#000000',
-      },
+import { extendTheme } from '@chakra-ui/react';
 
-      fontFamily: {
-        nunito: ['Nunito', 'sans-serif'],
-        quicksand: ['Quicksand', 'sans-serif'],
-      },
-    },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+const fonts = {
+  body: 'Inter, system-ui, sans-serif',
+  heading: 'Inter, serif',
+  mono: '"JetBrains Mono", "Fira Code", Menlo, monospace',
 };
+
+export default extendTheme({
+  fonts,
+  initialColorMode: 'dark',
+  useSystemColorMode: true,
+});

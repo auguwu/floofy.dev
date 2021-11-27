@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,16 +22,44 @@
 
 /* eslint-disable camelcase */
 
-import { faDiscord, faTwitter, faTelegram, faGithub, faSteam } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import * as luxon from 'luxon';
-import * as core from '@fortawesome/fontawesome-svg-core';
+import { useState, useEffect } from 'react';
+import Twemoji from '../components/Twemoji';
 import Image from 'next/image';
+import Head from 'next/head';
 import Link from 'next/link';
+import { Box } from '@chakra-ui/react';
 
-core.library.add(faDiscord, faTwitter, faTelegram, faGithub, faSteam, faBriefcase);
+export default function MainPage() {
+  // const [discordInfo, setDiscordInfo] = useState<any>(null);
+  // const [weather, setWeather] = useState<any>(null);
 
+  return (
+    <>
+      <Head>
+        <title>Noel 🎀</title>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+        />
+        <meta name="theme-color" content="#bb7fda" />
+        <meta
+          property="og:description"
+          content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+        />
+        <meta property="og:title" content="Noel 🎀" />
+        <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://floofy.dev" />
+      </Head>
+
+      <Box>hewo world~</Box>
+    </>
+  );
+}
+
+/*
 export default function NoelSite() {
   const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
   const now = luxon.DateTime.fromJSDate(new Date());
@@ -103,3 +131,4 @@ export default function NoelSite() {
     </>
   );
 }
+*/

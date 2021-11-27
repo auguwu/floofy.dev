@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -34,21 +34,7 @@ export default class PawDocument extends Document {
         <Head>
           <link rel="shortcut icon" href="https://cdn.floofy.dev/images/trans.png" />
           <link rel="icon" href="https://cdn.floofy.dev/images/trans.png" />
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css" />
           <meta charSet="UTF-8" />
-          <meta
-            name="description"
-            content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
-          />
-          <meta name="theme-color" content="#bb7fda" />
-          <meta
-            property="og:description"
-            content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
-          />
-          <meta property="og:title" content="Noel 🎀" />
-          <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://floofy.dev" />
         </Head>
         <body>
           <Main />

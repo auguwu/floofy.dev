@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) 2018-2021 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,9 +20,30 @@
  * SOFTWARE.
  */
 
-module.exports = {
-  plugins: {
-    autoprefixer: {},
-    tailwindcss: {},
-  },
-};
+import { Box, Container, Stack, useColorModeValue, Text } from '@chakra-ui/react';
+import Twemoji from './Twemoji';
+import Link from 'next/link';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <Box bg={useColorModeValue('gray.50', 'gray.900')} color={useColorModeValue('gray.700', 'gray.200')}>
+      <Container
+        as={Stack}
+        maxW="6xl"
+        py={4}
+        direction={{ base: 'column', md: 'row' }}
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}
+      >
+        <Text>
+          Created with <Twemoji emoji="💖" /> by Noel - &copy; 2018-{currentYear}{' '}
+          <Text size="md">
+            <Link href="https://github.com/auguwu/paw">source code</Link>
+          </Text>
+        </Text>
+      </Container>
+    </Box>
+  );
+}

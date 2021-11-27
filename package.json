@@ -16,22 +16,19 @@
     "fmt": "prettier --config ./.prettierrc.json --write ."
   },
   "dependencies": {
+    "@chakra-ui/react": "1.7.2",
+    "@emotion/react": "11.7.0",
+    "@emotion/styled": "11.6.0",
     "@fontsource/inter": "4.5.0",
-    "@fontsource/nunito": "4.5.0",
-    "@fontsource/quicksand": "4.5.1",
-    "@fortawesome/fontawesome-svg-core": "1.2.36",
-    "@fortawesome/free-brands-svg-icons": "5.15.4",
-    "@fortawesome/free-solid-svg-icons": "5.15.4",
-    "@fortawesome/react-fontawesome": "0.1.16",
-    "autoprefixer": "10.3.7",
+    "@fontsource/jetbrains-mono": "4.5.0",
+    "framer-motion": "5.3.3",
     "luxon": "2.0.2",
     "next": "11.1.2",
-    "postcss": "8.3.11",
     "react": "17.0.2",
+    "react-devicons": "2.14.0",
     "react-dom": "17.0.2",
-    "sass": "1.43.3",
     "styled-jsx": "4.0.1",
-    "tailwindcss": "2.2.17"
+    "twemoji": "13.1.0"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
