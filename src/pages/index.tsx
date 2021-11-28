@@ -22,16 +22,46 @@
 
 /* eslint-disable camelcase */
 
+import { Box, Container, Stack, Text, Flex, useColorModeValue, Center } from '@chakra-ui/react';
+
 import { useState, useEffect } from 'react';
-import Twemoji from '../components/Twemoji';
-import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Navbar, { NavLink } from '../components/Navbar';
+import * as luxon from 'luxon';
+import Footer from '../components/Footer';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Box } from '@chakra-ui/react';
 
 export default function MainPage() {
-  // const [discordInfo, setDiscordInfo] = useState<any>(null);
-  // const [weather, setWeather] = useState<any>(null);
+  // const [discordInfo, setDiscordInfo] = useState<Lanyard.Response | null>(null);
+  const [weather, setWeather] = useState<Weather.Data | null>(null);
+  const [faren, setFaren] = useState(false);
+
+  useEffect(() => {
+    // const getDiscordInfo = async () => {
+    //   const data = await fetch('https://api.lanyard.rest/v1/users/280158289667555328').then((res) => res.json());
+
+    //   setDiscordInfo(data);
+    // };
+
+    const getWeatherInfo = async () => {
+      const data = await fetch('https://proxy.floof.gay/weather').then((res) => res.json());
+
+      setWeather(data);
+    };
+
+    getWeatherInfo();
+  }, []);
+
+  const toggleFaren = () => {
+    setFaren(!faren);
+  };
+
+  const calcWeather = (temp: number) => (faren ? (temp - 273.15) * 1.8 + 32 : temp - 273.15);
+
+  const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
+  const takenSince = luxon.DateTime.fromMillis(1615421280000);
+  const now = luxon.DateTime.now();
+  const age = Math.floor(now.diff(birthday, ['years']).years);
 
   return (
     <>
@@ -54,81 +84,80 @@ export default function MainPage() {
         <meta property="og:url" content="https://floofy.dev" />
       </Head>
 
-      <Box>hewo world~</Box>
+      <Box
+        bg={useColorModeValue('gray.50', 'gray.900')}
+        color={useColorModeValue('gray.700', 'gray.200')}
+        height={{ base: '87.8vh', md: '92.9vh' }}
+      >
+        <Navbar />
+
+        <Container
+          as={Stack}
+          maxW="6xl"
+          py={4}
+          direction={{ base: 'column', md: 'row' }}
+          justify={{ base: 'center', md: 'space-between' }}
+          align={{ base: 'center', md: 'center' }}
+          mt={{ base: '4rem', md: '2rem' }}
+        >
+          <Flex h={16} flexDirection="column" alignItems="center" justifyContent="center" placeItems="flex-start">
+            <Text fontSize="2.4rem" fontWeight="800">
+              Noel{' '}
+              <Text as="span" fontSize="1.2rem">
+                he/him
+              </Text>
+            </Text>
+
+            <Text fontSize="1.5rem" fontWeight="700">
+              {age} year old developer - fullstack, intermediate devops, certified cutie.
+            </Text>
+
+            <Flex ml="-0.6em">
+              <NavLink href="https://discord.com/users/280158289667555328">
+                <FontAwesomeIcon icon={['fab', 'discord']} color="#5865F2" size="2x" />
+              </NavLink>
+
+              <NavLink href="https://twitter.com/auguuwu">
+                <FontAwesomeIcon icon={['fab', 'twitter']} color="#1DA1F2" size="2x" />
+              </NavLink>
+
+              <NavLink href="https://t.me/auguwu">
+                <FontAwesomeIcon icon={['fab', 'telegram']} color="#0088CC" size="2x" />
+              </NavLink>
+
+              <NavLink href="https://github.com/auguwu">
+                <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.100')} size="2x" />
+              </NavLink>
+            </Flex>
+          </Flex>
+        </Container>
+
+        <Container
+          as={Stack}
+          maxW="6xl"
+          py={4}
+          direction={{ base: 'column', md: 'row' }}
+          justify={{ base: 'center', md: 'space-between' }}
+          align={{ base: 'center', md: 'center' }}
+          mt={{ base: '4rem', md: '2rem' }}
+        >
+          <Flex h={16} flexDirection="column" alignItems="center" justifyContent="center" placeItems="flex-start">
+            <Text>
+              <FontAwesomeIcon icon={['fas', 'heart']} /> since {Math.floor(now.diff(takenSince, ['months']).months)}{' '}
+              months ago :3
+            </Text>
+
+            {weather !== null ? (
+              <Text onMouseOver={toggleFaren}>
+                <FontAwesomeIcon icon={['fas', 'cloud']} /> {Math.floor(calcWeather(weather.main.temp))} °
+                {faren ? 'F' : 'C'} ~ {weather.name}, AZ
+              </Text>
+            ) : null}
+          </Flex>
+        </Container>
+      </Box>
+
+      <Footer />
     </>
   );
 }
-
-/*
-export default function NoelSite() {
-  const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
-  const now = luxon.DateTime.fromJSDate(new Date());
-  const age = Math.floor(now.diff(birthday, ['years']).years);
-
-  return (
-    <>
-      <div className="flex text-white h-screen justify-center items-center">
-        <div className="container-content">
-          <div>
-            <Image
-              src="https://cdn.floofy.dev/images/August.png"
-              width="175px"
-              height="175px"
-              draggable="false"
-              className="rounded-[50%] block m-auto"
-            />
-          </div>
-
-          <div className="container-right">
-            <h1 className="heading-1 font-bold">Noel 🎀</h1>
-            <h2 className="heading-2 font-semibold">
-              {age} year old developer and furry, creating projects no one will use.
-              <br />
-              Loves coffee, coding, and music.
-            </h2>
-
-            <div className="lg:text-center lg:gap-3 lg:grid-cols-6 lg:m-[-0.20rem] lg:absolute lg:grid lg:mt-3 hidden">
-              <a
-                className="button-discord"
-                href="https://discord.com/users/280158289667555328"
-                target="_blank"
-                rel="noopener"
-              >
-                <FontAwesomeIcon icon={['fab', 'discord']} size="2x" />
-              </a>
-              <a className="button-twitter" href="https://twitter.com/auguuwu" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
-              </a>
-              <a className="button-telegram" href="https://t.me/auguwu" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={['fab', 'telegram']} size="2x" />
-              </a>
-              <a className="button-github" href="https://github.com/auguwu" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
-              </a>
-              <a className="button-steam" href="https://steamcommunity.com/id/auguwu" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={['fab', 'steam']} size="2x" />
-              </a>
-              <a className="button-portfolio" href="/portfolio/" target="_blank" rel="noopener">
-                <FontAwesomeIcon icon={['fas', 'briefcase']} size="2x" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="left-[0] bottom-[0]"></div>
-
-      <style jsx global>{`
-        body {
-          background-blend-mode: overlay;
-          background-attachment: fixed;
-          background-position: center;
-          background-image: url(https://cdn.floofy.dev/bg.jpg);
-          background-color: #232323;
-          background-size: cover;
-        }
-      `}</style>
-    </>
-  );
-}
-*/

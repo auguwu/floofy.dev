@@ -20,16 +20,18 @@
  * SOFTWARE.
  */
 
+import { faHome, faBriefcase, faCloudMoonRain, faHeart, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faDiscord, faTwitter, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { ChakraProvider } from '@chakra-ui/react';
+import * as fa from '@fortawesome/fontawesome-svg-core';
 import type { AppProps } from 'next/app';
-import Footer from '../components/Footer';
 import theme from '../theme';
 
+fa.library.add(faDiscord, faTwitter, faTelegram, faGithub, faHome, faBriefcase, faCloudMoonRain, faHeart, faCloud);
 export default function PawApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />
-      <Footer />
     </ChakraProvider>
   );
 }

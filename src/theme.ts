@@ -20,8 +20,11 @@
  * SOFTWARE.
  */
 
-import { extendTheme } from '@chakra-ui/react';
+import '@fontsource/jetbrains-mono/index.css';
+import '@fontsource/handlee/index.css';
+import '@fontsource/inter/index.css';
 
+import { extendTheme } from '@chakra-ui/react';
 const fonts = {
   body: 'Inter, system-ui, sans-serif',
   heading: 'Inter, serif',

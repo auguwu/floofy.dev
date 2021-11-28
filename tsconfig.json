@@ -8,7 +8,9 @@
     "allowJs": true,
     "module": "ESNext",
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true,
+    "typeRoots": ["./node_modules/@types", "./src/typings"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

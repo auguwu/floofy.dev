@@ -21,8 +21,6 @@
  */
 
 import { Box, Container, Stack, useColorModeValue, Text } from '@chakra-ui/react';
-import Twemoji from './Twemoji';
-import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,11 +35,11 @@ export default function Footer() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text>
-          Created with <Twemoji emoji="💖" /> by Noel - &copy; 2018-{currentYear}{' '}
-          <Text size="md">
-            <Link href="https://github.com/auguwu/paw">source code</Link>
-          </Text>
+        <Text fontFamily='"Handlee"' fontWeight="800" fontSize="15px">
+          Created with 💖 by Noel - &copy; 2018-{currentYear} |{' '}
+          <a href="https://github.com/auguwu/paw" target="_blank">
+            source code
+          </a>
         </Text>
       </Container>
     </Box>

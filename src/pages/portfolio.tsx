@@ -22,10 +22,23 @@
 
 /* eslint-disable camelcase */
 
+import {
+  Box,
+  Container,
+  Stack,
+  Text,
+  Flex,
+  useColorModeValue,
+  useColorMode,
+  HStack,
+  Link,
+  Button,
+} from '@chakra-ui/react';
+import type { GetStaticProps } from 'next';
 import * as luxon from 'luxon';
-import Image from 'next/image';
 import Head from 'next/head';
-import { GetStaticProps } from 'next';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const projects: Record<string, any>[] = [
   {
@@ -124,13 +137,6 @@ export const getStaticProps: GetStaticProps<{ sponsors: SponsorData[] }> = async
 };
 
 export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
-  const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
-  const now = luxon.DateTime.fromJSDate(new Date());
-  const age = Math.floor(now.diff(birthday, ['years']).years);
-
-  const programmingDate = luxon.DateTime.fromJSDate(new Date(2017, 1));
-  const programmingAge = Math.floor(now.diff(programmingDate, ['years']).years);
-
   return (
     <>
       <Head>
@@ -145,96 +151,23 @@ export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
         <meta property="og:url" content="https://floofy.dev/portfolio" />
       </Head>
 
-      <div className="text-white flex flex-col container mx-auto justify-center items-center mt-6">
-        <Image
-          src="https://cdn.floofy.dev/images/August.png"
-          width="175px"
-          height="175px"
-          draggable="false"
-          className="rounded-[50%] block m-auto"
-        />
+      <Box
+        bg={useColorModeValue('gray.50', 'gray.900')}
+        color={useColorModeValue('gray.700', 'gray.200')}
+        height={{ base: '87.8vh', md: '92.9vh' }}
+      >
+        <Navbar />
+        <Container
+          as={Stack}
+          maxW="6xl"
+          py={4}
+          direction={{ base: 'column', md: 'row' }}
+          justify={{ base: 'center', md: 'space-between' }}
+          align={{ base: 'center', md: 'center' }}
+        ></Container>
+      </Box>
 
-        <span className="font-quicksand text-3xl mt-4 font-semibold">Chris Hernandez (also known as Noel, August)</span>
-        <span className="font-nunito text-lg mt-2 font-medium">
-          Fullstack Developer and Intermediate DevOps by day; gay furry at night.
-        </span>
-      </div>
-
-      <div className="text-white flex flex-row container mx-auto mt-7">
-        <div className="my-2 overflow-hidden w-1/2 md:w-1/3">
-          <span className="font-quicksand text-2xl font-semibold">Who are you exactly?</span>
-          <p className="font-nunito text-lg font-normal w-[75%] break-words mt-4">
-            I'm glad you asked! I wish I knew also. :( All jokes aside, my name is Chris! I am a {age} year old
-            fullstack developer learning programming, like your average teenager... right? Is that how it works?
-            Probably not, guess I am just weird.
-          </p>
-        </div>
-
-        <div className="my-2 overflow-hidden w-1/2 md:w-1/3">
-          <span className="font-quicksand text-2xl font-semibold">So, how did you get into programming?</span>
-          <p className="font-nunito text-lg font-normal w-[75%] break-words mt-4">
-            Funny story that you mention it, or I have... since I am writing this alone in my bedroom as we speak.
-            Anyway, it started back in Febuary of 2017 (wow, it's been {programmingAge} years already?), when I joined
-            Discord around that time, and I keep seeing fancy Discord bots (back then it was like Ayana and such) and I
-            wanted to create one, so I learned JavaScript and it has been {programmingAge} years, and this is where I am
-            headed in the future. Damn, switching from an actor towards a software engineer and business leader, mark
-            that off the bucket list!
-            <a href="https://cute.floofy.dev/images/bcfe9a7a.png" className="cursor-pointer" target="_blank">
-              <img src="https://cute.floofy.dev/images/bcfe9a7a.png" alt="fuck they know my secret" draggable="false" />
-            </a>
-          </p>
-        </div>
-
-        <div className="my-2 overflow-hidden w-1/2 md:w-1/3">
-          <span className="font-quicksand text-2xl font-semibold">So, what the heck do you do in your spare time?</span>
-          <p className="font-nunito text-lg font-normal w-[75%] break-words mt-4">
-            It's easy! I go into a big depression. Nah, I'm just joking. All I do is go to school, work, eat, and sleep.
-            All that repeated until I am done graduating high school, I am in my 4th year and plan to go to college in
-            California for Computer Science and Business, don't know where to go yet.
-          </p>
-        </div>
-      </div>
-
-      <div className="text-white flex flex-col container mx-32 mt-16">
-        <h1 className="font-nunito text-4xl font-semibold">Sponsors</h1>
-        <h2 className="font-quicksand text-2xl">
-          Here is some lovely people who have donated to me! You can sponsor me on{' '}
-          <a href="https://github.com/sponsors/auguwu" target="_blank" rel="noopenner">
-            GitHub
-          </a>
-          ~
-        </h2>
-        {/* <div className="container mx-auto flex flex-row relative mt-5">
-          {sponsors.map((sponsor) => (
-            <div className="rounded-3xl overflow-hidden shadow-xl w-full my-3 bg-gray-500 mr-5">
-              <div className="flex flex-col container mx-auto my-6">
-                <img
-                  src={sponsor.avatarUrl}
-                  alt={`${sponsor.name ?? sponsor.login}'s avatar on GitHub`}
-                  width="95px"
-                  height="95px"
-                  className="rounded-[50%]"
-                />
-              </div>
-
-              <h3 className="font-nunito font-semibold text-lg">{sponsor.name ?? sponsor.login}</h3>
-            </div>
-          ))}
-        </div> */}
-      </div>
-
-      <div className="text-white flex flex-col container mx-32 mt-16">
-        <h1 className="font-nunito text-4xl font-semibold">Projects</h1>
-        <h2 className="font-quicksand text-2xl">Finally, here is a list of projects I am involved in.</h2>
-      </div>
-
-      <div className="mb-24" />
-
-      <style jsx global>{`
-        body {
-          background-color: #282d40;
-        }
-      `}</style>
+      <Footer />
     </>
   );
 }
