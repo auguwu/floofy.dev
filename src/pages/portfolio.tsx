@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2021 Noel
+ * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,23 +22,12 @@
 
 /* eslint-disable camelcase */
 
-import {
-  Box,
-  Container,
-  Stack,
-  Text,
-  Flex,
-  useColorModeValue,
-  useColorMode,
-  HStack,
-  Link,
-  Button,
-} from '@chakra-ui/react';
+import { Box, Container, Stack, Text, Flex, Image, Center, Link, Grid, GridItem } from '@chakra-ui/react';
+
 import type { GetStaticProps } from 'next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as luxon from 'luxon';
 import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 const projects: Record<string, any>[] = [
   {
@@ -151,23 +140,191 @@ export default function Portfolio({ sponsors }: { sponsors: SponsorData[] }) {
         <meta property="og:url" content="https://floofy.dev/portfolio" />
       </Head>
 
-      <Box
-        bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}
-        height={{ base: '87.8vh', md: '92.9vh' }}
-      >
-        <Navbar />
+      <Box height="87.8vh">
+        <Container as={Stack} maxW="6xl" py={4} justifyContent="center" alignItems="center">
+          <Image
+            src="https://cdn.floofy.dev/images/August.png"
+            width="164px"
+            height="164px"
+            draggable="false"
+            rounded="full"
+          />
+
+          <Center>
+            <Text fontSize="4xl" fontFamily="Inter">
+              Chris Hernandez{' '}
+              <Text fontSize="large" fontFamily="Handlee">
+                (also known as "Noel", "August")
+              </Text>
+            </Text>
+          </Center>
+        </Container>
+
+        <Flex direction={{ base: 'column', md: 'row' }} mt="4" maxW="100%">
+          <Container my="2" overflow="hidden" w={{ base: '1/2', md: '1/3' }}>
+            <Center>
+              <Text fontSize="2xl" fontWeight="800">
+                Who are you?
+              </Text>
+            </Center>
+
+            <Center>
+              <Text fontSize="large" w="75%" wordBreak="break-word" mt="4">
+                Welcome to my portfolio! I am Chris, also known as Noel or August on the internet! (you can call me
+                anything, I don't mind!) I am a developer that mainly writes in TypeScript, Kotlin, and Go! I use
+                TypeScript for my frontend work, Kotlin for anything miscellaneous, and Go for server-side applications.
+                I live in Arizona, with my family in Phoenix. I wish it had real seasons, but that'll never happen. :(
+              </Text>
+            </Center>
+          </Container>
+
+          <Container my="2" overflow="hidden" w={{ base: '1/2', md: '1/3' }}>
+            <Center>
+              <Text fontSize="2xl" fontWeight="800">
+                What made you want to code?
+              </Text>
+            </Center>
+
+            <Center>
+              <Text fontSize="large" w="75%" wordBreak="break-word" mt="4">
+                Honestly, being a software developer wasn't in my career choices as a child, I didn't even know that in
+                2012 when I first joined the internet that you can write code with specific instructions and it'll just
+                do it, without any warning and I thought that was so cool. I wanted to be an actor that does
+                performances and such, though I am taking theater classes in my high school, which is fun!
+                <br />
+                <br />I discovered programming in general within the Discord Bot community back in 2017, when it was
+                cool to create bots, but right now, it's really... bad at the moment. (within my experience)
+                <br />I taught myself JavaScript back in 2017 on a mini laptop I was using for miscellanous stuff, I
+                couldn't really do any gaming on it, which was kinda sad. I made my first Discord Bot, "Ayane" (was
+                renamed to YumiBoat), and that's really what jump started me to code.
+              </Text>
+            </Center>
+          </Container>
+
+          <Container my="2" overflow="hidden" w={{ base: '1/2', md: '1/3' }}>
+            <Center>
+              <Text fontSize="2xl" fontWeight="800">
+                What are your plans for the future?
+              </Text>
+            </Center>
+
+            <Center>
+              <Text fontSize="large" w="75%" wordBreak="break-word" mt="4">
+                Honestly, I plan to go to college to further out know more about the software field and business, in
+                general. I been building out a company, as in, planning what to release and how I can be successful.
+              </Text>
+            </Center>
+          </Container>
+        </Flex>
+
         <Container
           as={Stack}
-          maxW="6xl"
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}
-        ></Container>
-      </Box>
+          mt={{ base: '2rem', md: '8rem' }}
+          maxW="container.xl"
+          py="8"
+          px="4"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Flex>
+            <FontAwesomeIcon icon={['fas', 'bookmark']} size="2x" style={{ marginTop: '0.5rem' }} />
+            <Text fontSize="4xl" fontFamily="Handlee" ml="4">
+              Projects
+            </Text>
+          </Flex>
 
-      <Footer />
+          <Text fontSize="2xl">This is a list of projects that I am currently working on.</Text>
+
+          <Flex direction="column">
+            <Stack mt={6} direction="row" spacing={4} align="center" shadow="lg" py={4} px={4}>
+              <Image src="https://cdn.arisu.land/lotus.png" width="64px" height="64px" draggable="false" />
+              <Stack direction="column" spacing={0} fontSize="sm">
+                <Link href="https://github.com/auguwu/Arisu" target="_blank">
+                  <Text fontWeight={800} fontSize="2xl" fontFamily="Handlee">
+                    Arisu
+                  </Text>
+                </Link>
+                <Text fontSize="large">Open source translation site made with simplicity and fast in mind</Text>
+              </Stack>
+            </Stack>
+
+            <Stack mt={6} direction="row" spacing={4} align="center" shadow="lg" py={4} px={4}>
+              <Image src="https://cdn.floofy.dev/images/Nino.png" width="64px" height="64px" draggable="false" />
+              <Stack direction="column" spacing={0} fontSize="sm">
+                <Link href="https://nino.sh" target="_blank">
+                  <Text fontWeight={800} fontSize="2xl" fontFamily="Handlee">
+                    Nino
+                  </Text>
+                </Link>
+                <Text fontSize="large">
+                  Advanced and cute Discord moderation bot made in{' '}
+                  <Link href="https://github.com/kordlib/kord">Kord</Link>.
+                </Text>
+              </Stack>
+            </Stack>
+
+            <Stack mt={6} direction="row" spacing={4} align="center" shadow="lg" py={4} px={4}>
+              <Image src="https://profile.place/assets/img/logo.svg" width="64px" height="64px" draggable="false" />
+              <Stack direction="column" spacing={0} fontSize="sm">
+                <Link href="https://profile.place" target="_blank">
+                  <Text fontWeight={800} fontSize="2xl" fontFamily="Handlee">
+                    profile.place
+                  </Text>
+                </Link>
+                <Text fontSize="large">All your social profiles in one place.</Text>
+              </Stack>
+            </Stack>
+          </Flex>
+        </Container>
+
+        <Container
+          as={Stack}
+          mt={{ base: '2rem', md: '4rem' }}
+          maxW="container.xl"
+          py="8"
+          px="4"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Flex maxW="75%" wordBreak="break-word">
+            <FontAwesomeIcon icon={['fas', 'heart']} size="2x" style={{ marginTop: '0.5rem' }} />
+            <Text fontSize="4xl" fontFamily="Handlee" ml="4">
+              Sponsors
+            </Text>
+          </Flex>
+
+          <Text fontSize="2xl">
+            I would like to thank these individuals who have sponsored me on{' '}
+            <Link href="https://github.com/sponsors/auguwu">GitHub</Link>!
+          </Text>
+
+          <Grid gap="6" templateColumns="repeat(3, 1fr)">
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+
+            <GridItem>
+              <Text>blep</Text>
+            </GridItem>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
 }

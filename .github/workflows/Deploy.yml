@@ -2,30 +2,51 @@ name: Deploy
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches:
+      - master
+
+    paths-ignore:
+      - '.github/**'
+      - '.dockerignore'
+      - '.gitignore'
+      - '.prettierrignore'
+      - '.prettierrc.json'
+      - 'LICENSE'
+      - '**.md'
+      - 'renovate.json'
+      - '*.lock'
 jobs:
-  build-container:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Login to registry.floofy.dev
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Login into Docker Registry
         run: echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login registry.floofy.dev -u august --password-stdin
-      - name: Build container
-        run: docker build --no-cache -t registry.floofy.dev/auguwu/paw:${{github.sha}} .
-      - name: Push to the registry
-        run: docker push registry.floofy.dev/auguwu/paw:${{github.sha}}
+
+      - name: Build the container
+        run: docker build . -t registry.floofy.dev/noel/site:${{github.sha}}
+
+      - name: Publish to registry
+        run: docker push registry.floofy.dev/noel/site:${{github.sha}}
 
   deploy:
-    needs: build-container
     runs-on: ubuntu-latest
     steps:
-      - name: Login
+      - name: Pull from repository
+        uses: actions/checkout@v2
+
+      - name: Install jq
+        run: apt install jq
+
+      - name: Add kube config
         run: |
           mkdir ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
 
       - name: Set image
-        run: kubectl set image deployment/paw paw=registry.floofy.dev/auguwu/paw:${{github.sha}}
+        run: kubectl set image deployment/paw paw=registry.floofy.dev/noel/site:${{github.sha}}
 
       - name: Deploy!
         run: kubectl rollout status deployment/paw

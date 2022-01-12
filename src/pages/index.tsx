@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2021 Noel
+ * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,44 +22,14 @@
 
 /* eslint-disable camelcase */
 
-import { Box, Container, Stack, Text, Flex, useColorModeValue, Center } from '@chakra-ui/react';
-
-import { useState, useEffect } from 'react';
+import { Box, Container, Stack, Text, Flex, useColorModeValue, Image, Link, Center } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Navbar, { NavLink } from '../components/Navbar';
+import { NavLink } from '../components/Navbar';
 import * as luxon from 'luxon';
-import Footer from '../components/Footer';
 import Head from 'next/head';
 
 export default function MainPage() {
-  // const [discordInfo, setDiscordInfo] = useState<Lanyard.Response | null>(null);
-  const [weather, setWeather] = useState<Weather.Data | null>(null);
-  const [faren, setFaren] = useState(false);
-
-  useEffect(() => {
-    // const getDiscordInfo = async () => {
-    //   const data = await fetch('https://api.lanyard.rest/v1/users/280158289667555328').then((res) => res.json());
-
-    //   setDiscordInfo(data);
-    // };
-
-    const getWeatherInfo = async () => {
-      const data = await fetch('https://proxy.floof.gay/weather').then((res) => res.json());
-
-      setWeather(data);
-    };
-
-    getWeatherInfo();
-  }, []);
-
-  const toggleFaren = () => {
-    setFaren(!faren);
-  };
-
-  const calcWeather = (temp: number) => (faren ? (temp - 273.15) * 1.8 + 32 : temp - 273.15);
-
   const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
-  const takenSince = luxon.DateTime.fromMillis(1615421280000);
   const now = luxon.DateTime.now();
   const age = Math.floor(now.diff(birthday, ['years']).years);
 
@@ -84,22 +54,49 @@ export default function MainPage() {
         <meta property="og:url" content="https://floofy.dev" />
       </Head>
 
-      <Box
-        bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}
-        height={{ base: '87.8vh', md: '92.9vh' }}
-      >
-        <Navbar />
+      <Box height="87.8vh">
+        <Container as={Stack} maxW="6xl" py={4} justifyContent="center" alignItems="center">
+          <Link href="https://twitter.com/rrinuwu" target="_blank">
+            <Image src="https://cdn.floofy.dev/images/noel_winter_gay.png" width="300px" draggable="false" />
+          </Link>
 
-        <Container
-          as={Stack}
-          maxW="6xl"
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}
-          mt={{ base: '4rem', md: '2rem' }}
-        >
+          <Text fontSize="4xl" fontFamily="Handlee">
+            Noel{' '}
+            <Text as="span" fontSize="1.2rem">
+              he/him
+            </Text>
+          </Text>
+
+          <Center as={Stack}>
+            <Text fontSize="1.5rem" fontWeight="700" maxW={{ base: '35%', md: '54%' }} wordBreak="break-word">
+              Fullstack developer at age {age}, intermediate dev-ops.
+            </Text>
+          </Center>
+
+          <Flex ml="-0.6em">
+            <NavLink href="https://discord.com/users/280158289667555328">
+              <FontAwesomeIcon icon={['fab', 'discord']} color="#5865F2" size="2x" />
+            </NavLink>
+
+            <NavLink href="https://twitter.com/auguuwu">
+              <FontAwesomeIcon icon={['fab', 'twitter']} color="#1DA1F2" size="2x" />
+            </NavLink>
+
+            <NavLink href="https://t.me/auguwu">
+              <FontAwesomeIcon icon={['fab', 'telegram']} color="#0088CC" size="2x" />
+            </NavLink>
+
+            <NavLink href="https://github.com/auguwu">
+              <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.100')} size="2x" />
+            </NavLink>
+          </Flex>
+        </Container>
+      </Box>
+    </>
+  );
+}
+
+/*
           <Flex h={16} flexDirection="column" alignItems="center" justifyContent="center" placeItems="flex-start">
             <Text fontSize="2.4rem" fontWeight="800">
               Noel{' '}
@@ -158,6 +155,4 @@ export default function MainPage() {
       </Box>
 
       <Footer />
-    </>
-  );
-}
+*/

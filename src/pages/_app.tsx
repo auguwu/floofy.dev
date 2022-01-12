@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2021 Noel
+ * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,17 +20,31 @@
  * SOFTWARE.
  */
 
-import { faHome, faBriefcase, faCloudMoonRain, faHeart, faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faBriefcase, faCloudMoonRain, faHeart, faCloud, faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { faDiscord, faTwitter, faTelegram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { ChakraProvider } from '@chakra-ui/react';
-import * as fa from '@fortawesome/fontawesome-svg-core';
 import type { AppProps } from 'next/app';
+import * as fa from '@fortawesome/fontawesome-svg-core';
+import Navbar from '../components/Navbar';
 import theme from '../theme';
 
-fa.library.add(faDiscord, faTwitter, faTelegram, faGithub, faHome, faBriefcase, faCloudMoonRain, faHeart, faCloud);
+fa.library.add(
+  faDiscord,
+  faTwitter,
+  faTelegram,
+  faGithub,
+  faHome,
+  faBriefcase,
+  faCloudMoonRain,
+  faHeart,
+  faCloud,
+  faBookmark
+);
+
 export default function PawApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
+      <Navbar />
       <Component {...pageProps} />
     </ChakraProvider>
   );
