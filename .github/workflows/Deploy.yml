@@ -37,9 +37,6 @@ jobs:
       - name: Pull from repository
         uses: actions/checkout@v2
 
-      - name: Install jq
-        run: apt install jq
-
       - name: Add kube config
         run: |
           mkdir ~/.kube
