@@ -1,8 +1,8 @@
-# Paw
+# 🐾 Paw
 
-> 🐾 **Paw is a personalized website about myself and my projects, source code for [floofy.dev](https://floofy.dev)**.
+> _Paw is a personalized website about myself and my projects, source code for [floofy.dev](https://floofy.dev)_.
 
-![page uwu](https://i-am.floof.gay/images/ade0a3d1.png)
+![page uwu](https://i-am.floof.gay/images/ee65f836.png)
 
 ## License
 
