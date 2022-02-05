@@ -16,7 +16,7 @@
     "fmt": "prettier --config ./.prettierrc.json --write ."
   },
   "dependencies": {
-    "@chakra-ui/react": "1.7.4",
+    "@chakra-ui/react": "1.8.3",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
     "@fontsource/handlee": "4.5.0",
