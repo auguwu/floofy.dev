@@ -60,12 +60,6 @@ export default function Navbar() {
             </Text>
           </NavLink>
 
-          <NavLink href="/portfolio">
-            <Text fontWeight="400" fontSize="1rem">
-              Portfolio
-            </Text>
-          </NavLink>
-
           <Button onClick={toggleColorMode} size="sm">
             <FontAwesomeIcon icon={['fas', 'cloud-moon-rain']} />
           </Button>

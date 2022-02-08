@@ -1,7 +1,7 @@
 {
   "name": "@noel/paw",
-  "description": "踶 (\"paw\") is a personalized website about myself and my projects",
-  "version": "9.1.0",
+  "description": "🐾 (\"paw\") is a personalized website about myself and my projects",
+  "version": "10.0.0",
   "private": true,
   "author": "Noel <cutie@floofy.dev>",
   "homepage": "https://floofy.dev",
@@ -16,37 +16,36 @@
     "fmt": "prettier --config ./.prettierrc.json --write ."
   },
   "dependencies": {
-    "@chakra-ui/react": "1.7.4",
+    "@chakra-ui/react": "1.8.3",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
-    "@fontsource/handlee": "4.5.0",
-    "@fontsource/inter": "4.5.0",
-    "@fontsource/jetbrains-mono": "4.5.0",
+    "@fontsource/handlee": "4.5.1",
+    "@fontsource/inter": "4.5.3",
+    "@fontsource/jetbrains-mono": "4.5.2",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.16",
-    "framer-motion": "5.5.5",
+    "framer-motion": "6.2.4",
     "luxon": "2.3.0",
-    "next": "12.0.7",
+    "next": "12.0.9",
     "react": "17.0.2",
     "react-devicons": "2.14.0",
     "react-dom": "17.0.2",
-    "styled-jsx": "4.0.1",
     "twemoji": "13.1.0"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
     "@augu/tsconfig": "1.1.1",
-    "@types/luxon": "2.0.8",
+    "@types/luxon": "2.0.9",
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
     "@types/twemoji": "12.1.2",
-    "@typescript-eslint/eslint-plugin": "5.8.0",
-    "@typescript-eslint/parser": "5.8.0",
-    "eslint": "8.5.0",
+    "@typescript-eslint/eslint-plugin": "5.11.0",
+    "@typescript-eslint/parser": "5.11.0",
+    "eslint": "8.8.0",
     "eslint-config-prettier": "8.3.0",
     "prettier": "2.5.1",
-    "typescript": "4.5.4"
+    "typescript": "4.5.5"
   }
 }

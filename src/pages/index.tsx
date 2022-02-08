@@ -43,7 +43,7 @@ export default function MainPage() {
           name="description"
           content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
         />
-        <meta name="theme-color" content="#bb7fda" />
+        <meta name="theme-color" content="#FF69BD" />
         <meta
           property="og:description"
           content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
@@ -55,23 +55,27 @@ export default function MainPage() {
       </Head>
 
       <Box height="87.8vh">
-        <Container as={Stack} maxW="6xl" py={4} justifyContent="center" alignItems="center">
-          <Link href="https://twitter.com/rrinuwu" target="_blank">
-            <Image src="https://cdn.floofy.dev/images/noel_winter_gay.png" width="300px" draggable="false" />
-          </Link>
+        <Container as={Stack} maxW="7xl">
+          <Image
+            src="https://cdn.floofy.dev/images/August.png"
+            width="250px"
+            height="250px"
+            draggable="false"
+            rounded="full"
+            alt="noel avatar by @SevernSamuel on twitter!"
+          />
 
-          <Text fontSize="4xl" fontFamily="Handlee">
+          <Text fontSize="4xl" fontFamily="Cantarell">
             Noel{' '}
             <Text as="span" fontSize="1.2rem">
-              he/him
+              [he/him]
             </Text>
           </Text>
 
-          <Center as={Stack}>
-            <Text fontSize="1.5rem" fontWeight="700" maxW={{ base: '35%', md: '54%' }} wordBreak="break-word">
-              Fullstack developer at age {age}, intermediate dev-ops.
-            </Text>
-          </Center>
+          <Text fontSize="2xl" fontFamily="Inter">
+            i wish i did things better but i ruined it for the both of us, now i must suffer the consequences. thanks
+            for being there, you know who you are. promise me you'll be happy, for me, please?
+          </Text>
 
           <Flex ml="-0.6em">
             <NavLink href="https://discord.com/users/280158289667555328">
@@ -86,8 +90,8 @@ export default function MainPage() {
               <FontAwesomeIcon icon={['fab', 'telegram']} color="#0088CC" size="2x" />
             </NavLink>
 
-            <NavLink href="https://github.com/auguwu">
-              <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.100')} size="2x" />
+            <NavLink href="https://discord.com/users/280158289667555328">
+              <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.400')} size="2x" />
             </NavLink>
           </Flex>
         </Container>
@@ -95,64 +99,3 @@ export default function MainPage() {
     </>
   );
 }
-
-/*
-          <Flex h={16} flexDirection="column" alignItems="center" justifyContent="center" placeItems="flex-start">
-            <Text fontSize="2.4rem" fontWeight="800">
-              Noel{' '}
-              <Text as="span" fontSize="1.2rem">
-                he/him
-              </Text>
-            </Text>
-
-            <Text fontSize="1.5rem" fontWeight="700">
-              {age} year old developer - fullstack, intermediate devops, certified cutie.
-            </Text>
-
-            <Flex ml="-0.6em">
-              <NavLink href="https://discord.com/users/280158289667555328">
-                <FontAwesomeIcon icon={['fab', 'discord']} color="#5865F2" size="2x" />
-              </NavLink>
-
-              <NavLink href="https://twitter.com/auguuwu">
-                <FontAwesomeIcon icon={['fab', 'twitter']} color="#1DA1F2" size="2x" />
-              </NavLink>
-
-              <NavLink href="https://t.me/auguwu">
-                <FontAwesomeIcon icon={['fab', 'telegram']} color="#0088CC" size="2x" />
-              </NavLink>
-
-              <NavLink href="https://github.com/auguwu">
-                <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.100')} size="2x" />
-              </NavLink>
-            </Flex>
-          </Flex>
-        </Container>
-
-        <Container
-          as={Stack}
-          maxW="6xl"
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}
-          mt={{ base: '4rem', md: '2rem' }}
-        >
-          <Flex h={16} flexDirection="column" alignItems="center" justifyContent="center" placeItems="flex-start">
-            <Text>
-              <FontAwesomeIcon icon={['fas', 'heart']} /> since {Math.floor(now.diff(takenSince, ['months']).months)}{' '}
-              months ago :3
-            </Text>
-
-            {weather !== null ? (
-              <Text onMouseOver={toggleFaren}>
-                <FontAwesomeIcon icon={['fas', 'cloud']} /> {Math.floor(calcWeather(weather.main.temp))} °
-                {faren ? 'F' : 'C'} ~ {weather.name}, AZ
-              </Text>
-            ) : null}
-          </Flex>
-        </Container>
-      </Box>
-
-      <Footer />
-*/

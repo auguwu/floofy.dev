@@ -1,4 +1,5 @@
 /*
+ * 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
  * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,6 +26,7 @@ import '@fontsource/handlee/index.css';
 import '@fontsource/inter/index.css';
 
 import { extendTheme } from '@chakra-ui/react';
+
 const fonts = {
   body: 'Inter, system-ui, sans-serif',
   heading: 'Inter, serif',
