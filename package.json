@@ -1,7 +1,7 @@
 {
   "name": "@noel/paw",
   "description": "🐾 (\"paw\") is a personalized website about myself and my projects",
-  "version": "10.0.0",
+  "version": "10.1.0",
   "private": true,
   "author": "Noel <cutie@floofy.dev>",
   "homepage": "https://floofy.dev",
@@ -32,7 +32,8 @@
     "react": "17.0.2",
     "react-devicons": "2.14.0",
     "react-dom": "17.0.2",
-    "twemoji": "13.1.0"
+    "twemoji": "13.1.0",
+    "use-lanyard": "1.0.5"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",

@@ -22,8 +22,9 @@
 
 /* eslint-disable camelcase */
 
-import { Box, Container, Stack, Text, Flex, useColorModeValue, Image, Link, Center } from '@chakra-ui/react';
+import { Box, Container, Stack, Text, Flex, useColorModeValue, Image } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useLanyard } from 'use-lanyard';
 import { NavLink } from '../components/Navbar';
 import * as luxon from 'luxon';
 import Head from 'next/head';
@@ -32,6 +33,10 @@ export default function MainPage() {
   const birthday = luxon.DateTime.fromJSDate(new Date(2004, 2, 24));
   const now = luxon.DateTime.now();
   const age = Math.floor(now.diff(birthday, ['years']).years);
+  const discord = useLanyard('280158289667555328');
+
+  // this happens on the server
+  if (!discord.data) return null;
 
   return (
     <>
@@ -41,12 +46,12 @@ export default function MainPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+          content={`${age} year old developer tinkering with code, and sometimes it works! ପ(๑•ᴗ•๑)ଓ ♡`}
         />
         <meta name="theme-color" content="#FF69BD" />
         <meta
           property="og:description"
-          content="Student and developer in the United States who makes projects that no one will use. ☆*✲୧( ○ ╹ 〰 ╹ ○ )୨✲*☆"
+          content={`${age} year old developer tinkering with code, and sometimes it works! ପ(๑•ᴗ•๑)ଓ ♡`}
         />
         <meta property="og:title" content="Noel 🎀" />
         <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
@@ -73,8 +78,7 @@ export default function MainPage() {
           </Text>
 
           <Text fontSize="2xl" fontFamily="Inter">
-            i wish i did things better but i ruined it for the both of us, now i must suffer the consequences. thanks
-            for being there, you know who you are. promise me you'll be happy, for me, please?
+            {age} year old developer tinkering with code, and sometimes... it works! or maybe not? who knows!
           </Text>
 
           <Flex ml="-0.6em">
@@ -90,7 +94,7 @@ export default function MainPage() {
               <FontAwesomeIcon icon={['fab', 'telegram']} color="#0088CC" size="2x" />
             </NavLink>
 
-            <NavLink href="https://discord.com/users/280158289667555328">
+            <NavLink href="https://github.com/auguwu">
               <FontAwesomeIcon icon={['fab', 'github']} color={useColorModeValue('#333333', 'gray.400')} size="2x" />
             </NavLink>
           </Flex>
