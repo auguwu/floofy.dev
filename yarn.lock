@@ -757,15 +757,15 @@
   resolved "https://registry.yarnpkg.com/@fontsource/handlee/-/handlee-4.5.1.tgz#c7604254a9519dcf6fb3c92a955d870b715f4a14"
   integrity sha512-2He9XIewytgx3PtEd7HtOrPhUyabBvamajqVE51ETV9Zf4EfJHQwoVUEdSeM68Sth/v7sYQpcrApWXHb3SDaPw==
 
-"@fontsource/inter@4.5.3":
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.3.tgz#56d5969c4cb9db81d9c58f667f0eb1dc8631c660"
-  integrity sha512-2PC2tEv3Qvzp6z9vDKrcxiGh6woaQB/wi5adkgLLX9bXr8rcwY/zAQGcZhhWZPal5rO5KTdAfuCTH9lwguy5ZA==
+"@fontsource/inter@4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.4.tgz#d6906fdaaf81242d975a1f9b6dedab7bfba77997"
+  integrity sha512-D0icTFpt9bWvB/OEXMztYf0bhUQZoDIYpsco5C7GVfxgKDRl8Jdn3N2aHHQqwjgRUUvRuyMv8HrRM8Hrt4U52w==
 
-"@fontsource/jetbrains-mono@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.2.tgz#f30181e875f78f39c60b3ba54937220bc95494e6"
-  integrity sha512-qjxgC4d4ghgxfcvauRzm+/lXes3Awgb3TfWSrK5U0/nCtOsLgz3XrmfMewP5ztBkBYa0YDNs+avbF0vNeS6R6w==
+"@fontsource/jetbrains-mono@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.3.tgz#2e909e7d831398f2cdd7c1c2be72b1b29fa80357"
+  integrity sha512-R+dpCzt9b7O6ldKFXLvjZNQ2F+5i2/ctRgauRGvEj/3zBQVmnrjPeqPndYsZ1vz6Jg0K8TOS9JeMQavjoBHPwA==
 
 "@fortawesome/fontawesome-common-types@^0.3.0":
   version "0.3.0"
