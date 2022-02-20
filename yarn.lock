@@ -758,10 +758,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/handlee@4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/handlee/-/handlee-4.5.1.tgz#c7604254a9519dcf6fb3c92a955d870b715f4a14"
-  integrity sha512-2He9XIewytgx3PtEd7HtOrPhUyabBvamajqVE51ETV9Zf4EfJHQwoVUEdSeM68Sth/v7sYQpcrApWXHb3SDaPw==
+"@fontsource/handlee@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/handlee/-/handlee-4.5.2.tgz#611ddda3338507802bf71de8e8243e6f53ad135f"
+  integrity sha512-TBMAaksD+PFNf88nrctM/Qa8g1X3uDhACVHLjgRnOBCDTAaZKcBelt0hl7ZtTqwSaJg2WUGNAFL/4kTbVR8jhQ==
 
 "@fontsource/inter@4.5.4":
   version "4.5.4"
