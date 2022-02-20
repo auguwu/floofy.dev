@@ -33,7 +33,7 @@
     "react-devicons": "2.14.0",
     "react-dom": "17.0.2",
     "twemoji": "13.1.0",
-    "use-lanyard": "1.0.5"
+    "use-lanyard": "1.1.0"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
