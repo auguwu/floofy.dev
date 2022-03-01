@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Login into Docker Registry
         run: echo "${{ secrets.REGISTRY_PASSWORD }}" | docker login registry.floofy.dev -u august --password-stdin
@@ -36,7 +36,7 @@ jobs:
     needs: build
     steps:
       - name: Pull from repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Add kube config
         run: |
