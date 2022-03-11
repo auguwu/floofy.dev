@@ -758,15 +758,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/handlee@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/handlee/-/handlee-4.5.2.tgz#611ddda3338507802bf71de8e8243e6f53ad135f"
-  integrity sha512-TBMAaksD+PFNf88nrctM/Qa8g1X3uDhACVHLjgRnOBCDTAaZKcBelt0hl7ZtTqwSaJg2WUGNAFL/4kTbVR8jhQ==
+"@fontsource/handlee@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/handlee/-/handlee-4.5.3.tgz#02f0c41dca03c3ace7a5f2f70aadbefda55af0de"
+  integrity sha512-NocIUWtWVBcr1iuuj5Zbjy6jKpNubVWwqXnkki9dQc1YmZIIRJLfbcD+XRX30m/qTuqdU71vw8KVyU63Lc0K2Q==
 
-"@fontsource/inter@4.5.4":
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.4.tgz#d6906fdaaf81242d975a1f9b6dedab7bfba77997"
-  integrity sha512-D0icTFpt9bWvB/OEXMztYf0bhUQZoDIYpsco5C7GVfxgKDRl8Jdn3N2aHHQqwjgRUUvRuyMv8HrRM8Hrt4U52w==
+"@fontsource/inter@4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.5.tgz#d4e52e8a0c84b93abae46efd4c43bd7a7f23907f"
+  integrity sha512-mWnePEroLfaJQWmynipzOVcH6JwT8Jta3+yLsC5Pm/snHBXnOiAOnjBqYjKnvXwJ4eUPt2AaAhyrtwCgWQRGOg==
 
 "@fontsource/jetbrains-mono@4.5.3":
   version "4.5.3"
