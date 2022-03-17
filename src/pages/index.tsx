@@ -125,14 +125,14 @@ export default function MainPage() {
           content={`${age} year old developer tinkering with code, and sometimes it works! ପ(๑•ᴗ•๑)ଓ ♡`}
         />
         <meta property="og:title" content="Chris 🌺" />
-        <meta property="og:image" content="https://cdn.floofy.dev/images/noel%20alt.jpg" />
+        <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://floofy.dev" />
       </Head>
 
       <Container maxW={{ lg: '7xl', base: '3xl' }} rowGap="1em">
         <Center maxW="7xl" mt="2em" flexDirection="column" rowGap="1em" textAlign="center">
-          <Avatar src="https://cdn.floofy.dev/images/noel%20alt.jpg" width="185px" height="185px" draggable="false">
+          <Avatar src="https://cdn.floofy.dev/images/August.png" width="185px" height="185px" draggable="false">
             <AvatarBadge boxSize="50px" bg={statusColor} mb="0.95em" />
           </Avatar>
 

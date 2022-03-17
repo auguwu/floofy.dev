@@ -34,8 +34,8 @@ export default class PawDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/noel%20alt.jpg" />
-          <link rel="icon" href="https://cdn.floofy.dev/images/noel%20alt.jpg" />
+          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
+          <link rel="icon" href="https://cdn.floofy.dev/images/August.png" />
           <meta charSet="UTF-8" />
         </Head>
         <body>
