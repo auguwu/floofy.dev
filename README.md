@@ -1,4 +1,4 @@
-# 🐾 Paw
+# 🐾 floofy.dev
 
 > _Paw is a personalized website about myself and my projects, source code for [floofy.dev](https://floofy.dev)_.
 

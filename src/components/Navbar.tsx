@@ -1,4 +1,5 @@
 /*
+ * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
  * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,51 +21,66 @@
  * SOFTWARE.
  */
 
-import { Container, Stack, Text, Flex, HStack, Link, Button, useColorMode } from '@chakra-ui/react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { type LinkProps, Link, useColorMode, Box, Flex, IconButton, useColorModeValue } from '@chakra-ui/react';
+import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 import type { FC } from 'react';
 
-export const NavLink: FC<{ href: string }> = ({ children, href }) => (
+interface NavLinkProps extends LinkProps {
+  href: string;
+}
+
+export const NavLink: FC<NavLinkProps> = ({ children, href, ...props }) => (
   <Link
-    px={2}
-    py={2}
+    px={4}
+    py={4}
     rounded="md"
     href={href}
     target={href.startsWith('/') ? undefined : '_blank'}
     _hover={{
       textDecoration: 'none',
+      backgroundColor: useColorModeValue('gray.300', '#232323'),
     }}
+    {...props}
   >
     {children}
   </Link>
 );
 
-export default function Navbar() {
-  const { toggleColorMode } = useColorMode();
+const Navbar: FC = () => {
+  const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <Container
-      as={Stack}
-      maxW="6xl"
-      py={4}
-      direction={{ base: 'column', md: 'row' }}
-      justify={{ base: 'center', md: 'space-between' }}
-      align={{ base: 'center', md: 'center' }}
-    >
-      <Flex h={16} alignItems="center" justifyContent="space-between">
-        <HStack spacing={4} alignItems="center" as="nav" display="flex">
-          <NavLink href="/">
-            <Text fontWeight="400" fontSize="1rem">
-              Home
-            </Text>
-          </NavLink>
+    <Box h="100%" w="100%">
+      <Flex
+        direction="row"
+        h="100%"
+        w="100%"
+        alignItems={{ base: 'center', lg: 'right' }}
+        justifyContent={{ base: 'center', lg: 'right' }}
+      >
+        <NavLink href="/" mr="12">
+          Home
+        </NavLink>
 
-          <Button onClick={toggleColorMode} size="sm">
-            <FontAwesomeIcon icon={['fas', 'cloud-moon-rain']} />
-          </Button>
-        </HStack>
+        <NavLink href="https://twitter.com/auguuwu" mr="12">
+          Twitter
+        </NavLink>
+
+        <NavLink href="https://github.com/auguwu" mr="12">
+          GitHub
+        </NavLink>
+
+        <IconButton
+          aria-label="icon button"
+          icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
+          onClick={toggleColorMode}
+          bg={useColorModeValue('gray.200', '#191919')}
+          px={4}
+          py={4}
+        />
       </Flex>
-    </Container>
+    </Box>
   );
-}
+};
+
+export default Navbar;

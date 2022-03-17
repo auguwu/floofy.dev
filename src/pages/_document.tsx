@@ -1,4 +1,5 @@
 /*
+ * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
  * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,6 +22,7 @@
  */
 
 import Document, { NextScript, Head, Html, Main, DocumentContext } from 'next/document';
+import { ColorModeScript } from '@chakra-ui/react';
 
 export default class PawDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -32,11 +34,12 @@ export default class PawDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/trans.png" />
-          <link rel="icon" href="https://cdn.floofy.dev/images/trans.png" />
+          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/noel%20alt.jpg" />
+          <link rel="icon" href="https://cdn.floofy.dev/images/noel%20alt.jpg" />
           <meta charSet="UTF-8" />
         </Head>
         <body>
+          <ColorModeScript />
           <Main />
           <NextScript />
         </body>

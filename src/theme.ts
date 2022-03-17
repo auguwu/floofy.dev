@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
+ * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
  * Copyright (c) 2018-2022 Noel
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,20 +21,46 @@
  * SOFTWARE.
  */
 
-import '@fontsource/jetbrains-mono/index.css';
-import '@fontsource/handlee/index.css';
+import '@fontsource/cantarell/index.css';
 import '@fontsource/inter/index.css';
 
 import { extendTheme } from '@chakra-ui/react';
+import { mode } from '@chakra-ui/theme-tools';
 
-const fonts = {
-  body: 'Inter, system-ui, sans-serif',
-  heading: 'Inter, serif',
-  mono: '"JetBrains Mono", "Fira Code", Menlo, monospace',
-};
+const DEFAULT_SANS_FONT = [
+  'ui-sans-serif',
+  'system-ui',
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  'Roboto',
+  '"Helvetica Neue"',
+  'Arial',
+  '"Noto Sans"',
+  'sans-serif',
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+  '"Noto Color Emoji"',
+  'sans-serif',
+];
+
+const DEFAULT_SERIF_FONTS = ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'];
 
 export default extendTheme({
-  fonts,
-  initialColorMode: 'dark',
+  fonts: {
+    heading: `Cantarell, ${DEFAULT_SERIF_FONTS.join(', ')}`,
+    body: `Inter, ${DEFAULT_SANS_FONT.join(', ')}`,
+  },
+
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: mode('gray.200', '#191919')(props),
+      },
+    }),
+  },
+
+  initialColorMode: 'system',
   useSystemColorMode: true,
 });
