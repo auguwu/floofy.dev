@@ -753,15 +753,15 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/cantarell@4.5.3":
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.3.tgz#d611345f857c65ddc6d336e3ccbbb05d73554512"
-  integrity sha512-TaZdvQFkFvuNDAHTeILygBjBiZ7XaRWR8w+ISj88isavdXImf2s54kFicBR+/EnZmHCdu87KQz/WIsf/xyTESA==
-
-"@fontsource/inter@4.5.5":
+"@fontsource/cantarell@4.5.5":
   version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.5.tgz#d4e52e8a0c84b93abae46efd4c43bd7a7f23907f"
-  integrity sha512-mWnePEroLfaJQWmynipzOVcH6JwT8Jta3+yLsC5Pm/snHBXnOiAOnjBqYjKnvXwJ4eUPt2AaAhyrtwCgWQRGOg==
+  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.5.tgz#751508197236dfe8233ecc789a25f51a7b2f0684"
+  integrity sha512-KcHup/shpSEsC6Y3mrJh8SI75Uj/7ecSvMvW5LQtfZQuDzbQvQAdOcdd5LKV9ooJYl2ta/ch9CW52EwkPorUog==
+
+"@fontsource/inter@4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.7.tgz#f0657c52105ed51e04ac636a25d6016896c5ee9d"
+  integrity sha512-25k3thupaOEBexuU+jAkGqieKPbuhSuA+sinDwp1iBNhqQPiJ9QHDvsXgoCgCbZ4sGlE8aCwZmSlDJrPdJHNkw==
 
 "@heroicons/react@1.0.6":
   version "1.0.6"
