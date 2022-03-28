@@ -23,7 +23,7 @@
     "@fontsource/inter": "4.5.7",
     "@heroicons/react": "1.0.6",
     "@mui/icons-material": "5.5.1",
-    "@mui/material": "5.5.2",
+    "@mui/material": "5.5.3",
     "@react-hook/media-query": "1.1.1",
     "framer-motion": "6.2.8",
     "luxon": "2.3.1",
