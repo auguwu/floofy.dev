@@ -753,10 +753,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/cantarell@4.5.5":
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.5.tgz#751508197236dfe8233ecc789a25f51a7b2f0684"
-  integrity sha512-KcHup/shpSEsC6Y3mrJh8SI75Uj/7ecSvMvW5LQtfZQuDzbQvQAdOcdd5LKV9ooJYl2ta/ch9CW52EwkPorUog==
+"@fontsource/cantarell@4.5.6":
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.6.tgz#2c3c4501ab5bde007c2e381f6e93634ec07e68b5"
+  integrity sha512-FGLsTVOjWQJT6PZPfT5rmqevgmWOUHtiZlNvzx8m00Kfo3+wdWk/GJauUuxTWNvUTEhzVWv+a066xjb3I6k+2Q==
 
 "@fontsource/inter@4.5.7":
   version "4.5.7"
