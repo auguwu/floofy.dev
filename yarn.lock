@@ -764,10 +764,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/cantarell@4.5.6":
-  version "4.5.6"
-  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.6.tgz#2c3c4501ab5bde007c2e381f6e93634ec07e68b5"
-  integrity sha512-FGLsTVOjWQJT6PZPfT5rmqevgmWOUHtiZlNvzx8m00Kfo3+wdWk/GJauUuxTWNvUTEhzVWv+a066xjb3I6k+2Q==
+"@fontsource/cantarell@4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.7.tgz#86e9f379eb697a8cc7493defed7707dd7273da34"
+  integrity sha512-EmPzQzy5udLCVIdRR7RsN5fG4O1eBp6cMvOhQ1GHOE4f9b3uyLaxPIcFS19mStLoidQ5JiZocGSj/4Z0q9TWIA==
 
 "@fontsource/inter@4.5.7":
   version "4.5.7"

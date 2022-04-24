@@ -19,7 +19,7 @@
     "@chakra-ui/react": "1.8.8",
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
-    "@fontsource/cantarell": "4.5.6",
+    "@fontsource/cantarell": "4.5.7",
     "@fontsource/inter": "4.5.7",
     "@heroicons/react": "1.0.6",
     "@mui/icons-material": "5.6.2",
