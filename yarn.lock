@@ -769,10 +769,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.7.tgz#86e9f379eb697a8cc7493defed7707dd7273da34"
   integrity sha512-EmPzQzy5udLCVIdRR7RsN5fG4O1eBp6cMvOhQ1GHOE4f9b3uyLaxPIcFS19mStLoidQ5JiZocGSj/4Z0q9TWIA==
 
-"@fontsource/inter@4.5.7":
-  version "4.5.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.7.tgz#f0657c52105ed51e04ac636a25d6016896c5ee9d"
-  integrity sha512-25k3thupaOEBexuU+jAkGqieKPbuhSuA+sinDwp1iBNhqQPiJ9QHDvsXgoCgCbZ4sGlE8aCwZmSlDJrPdJHNkw==
+"@fontsource/inter@4.5.9":
+  version "4.5.9"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.9.tgz#ae3d49935172684c39a75f1ec9d405d015ac5959"
+  integrity sha512-EwLZGA8De5r/EFokSNU+JKZRcpC9SlqBCg/2XhNzt9QWS3aPR6Xdo1oHJ8LhhGkgOReRo1sgpIrdcz9UMtUcOQ==
 
 "@heroicons/react@1.0.6":
   version "1.0.6"
