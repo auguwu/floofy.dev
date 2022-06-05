@@ -32,12 +32,12 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: true,
   images: {
-    domains: ['cdn.floofy.dev', 'profile.place', 'cdn.arisu.land'],
+    domains: ['cdn.floofy.dev', 'profile.place', 'cdn.arisu.land']
   },
   eslint: {
     // It is already linting in workflow, so this isn't needed
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true
+  }
 };
 
 module.exports = nextConfig;

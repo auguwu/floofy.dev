@@ -1,7 +1,7 @@
 {
   "name": "@noel/paw",
   "description": "🐾 (\"paw\") is a personalized website about myself and my projects",
-  "version": "11.0.0",
+  "version": "11.1.0",
   "private": true,
   "author": "Noel <cutie@floofy.dev>",
   "homepage": "https://floofy.dev",
@@ -21,7 +21,6 @@
     "@emotion/styled": "11.8.1",
     "@fontsource/cantarell": "4.5.7",
     "@fontsource/inter": "4.5.11",
-    "@heroicons/react": "1.0.6",
     "@mui/icons-material": "5.8.2",
     "@mui/material": "5.8.2",
     "@react-hook/media-query": "1.1.1",
@@ -48,5 +47,6 @@
     "eslint-config-prettier": "8.5.0",
     "prettier": "2.6.2",
     "typescript": "4.7.3"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }

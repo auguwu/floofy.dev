@@ -1,15 +1,45 @@
+# 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
+# Copyright (c) 2018-2022 Noel
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+FROM node:18-alpine AS builder
+
+RUN apk update && apk add git ca-certificates
+WORKDIR /build/floofy.dev
+
+COPY . .
+RUN yarn install --frozen-lockfile
+RUN yarn global add typescript eslint
+ENV \
+  NEXT_TELEMETRY_DISABLED=1 \
+  NODE_OPTIONS=--openssl-legacy-provider \
+  NODE_ENV=production
+
+RUN yarn build
+
 FROM node:18-alpine
 
-LABEL MAINTAINER="Noel <cutie@floofy.dev>"
-RUN apk update && apk add git ca-certificates
+RUN apk update && apk add tini
+WORKDIR /app/noel/floofy.dev
 
-WORKDIR /opt/pawb
-COPY . .
-RUN yarn global add typescript eslint
-RUN yarn
+COPY --from=builder /build/floofy.dev/.next .
+COPY --from=builder /build/floofy.dev/node_modules .
 
-# https://github.com/webpack/webpack/issues/14532
-RUN NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production yarn build
-RUN rm -rf src
-
-ENTRYPOINT [ "yarn", "start" ]
+CMD ["tini", "-s", "'yarn start'"]

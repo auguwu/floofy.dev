@@ -35,7 +35,7 @@ import {
   Flex,
   useColorModeValue,
   Link,
-  Spacer,
+  Spacer
 } from '@chakra-ui/react';
 
 import { KotlinPlainIcon, TypescriptOriginalIcon, GoOriginalIcon, JavascriptOriginalIcon } from 'react-devicons';
@@ -46,18 +46,13 @@ import { DateTime } from 'luxon';
 import Head from 'next/head';
 import useSwr from 'swr';
 
-// const sponsorsFetcher = (_: any) =>
-//   fetch('https://api.floofy.dev/sponsors/auguwu')
-//     .then((res) => res.json())
-//     .then((json) => json.data);
-
 const githubFetcher = (key: string) => fetch(`https://api.github.com/users/${key}/repos`).then((res) => res.json());
 
 const languageIcon = {
   kotlin: <KotlinPlainIcon style={{ marginTop: '0.21em' }} />,
   typescript: <TypescriptOriginalIcon style={{ marginTop: '0.21em' }} />,
   go: <GoOriginalIcon style={{ marginTop: '0.21em' }} />,
-  javascript: <JavascriptOriginalIcon style={{ marginTop: '0.21em' }} />,
+  javascript: <JavascriptOriginalIcon style={{ marginTop: '0.21em' }} />
 };
 
 export default function MainPage() {
@@ -66,27 +61,24 @@ export default function MainPage() {
   const age = Math.floor(now.diff(birthday, ['years']).years);
   const discord = useLanyard('280158289667555328');
   const repos = useSwr('auguwu', githubFetcher);
-  const ninoRepos = useSwr('ninodiscord', githubFetcher);
-  const arisuRepos = useSwr('arisuland', githubFetcher);
   const hidden = useMediaQuery('(max-width: 1024px)');
-  // const sponsors = useSwr('sponsors', sponsorsFetcher);
 
   // this happens on the server
   if (!discord.data) return null;
-  if (!repos.data || !ninoRepos.data || !arisuRepos.data) return null;
+  if (!repos.data) return null;
 
   // if (!sponsors.data) return null;
 
-  const repositories = [...(repos.data ?? []), ...(ninoRepos.data ?? []), ...(arisuRepos.data ?? [])]
-    .sort((a, b) => b.stargazers_count - a.stargazers_count)
-    .filter((s) => !s.archived)
-    .filter((s) => s.name !== 'auguwu') // remove readme.md thingy
-    .map((s) => ({
+  const repositories = (repos.data ?? [])
+    .sort((a: any, b: any) => b.stargazers_count - a.stargazers_count)
+    .filter((s: any) => !s.archived)
+    .filter((s: any) => s.name !== 'auguwu') // remove readme.md thingy
+    .map((s: any) => ({
       ...s,
-      name: s.full_name.startsWith('auguwu') ? s.full_name.slice('auguwu/'.length) : s.full_name,
-      actual_full: s.full_name,
+      name: s.full_name.slice('auguwu/'.length),
+      actual_full: s.full_name
     }))
-    .slice(0, 8);
+    .slice(0, 6);
 
   let statusColor: string;
   switch (discord.data?.discord_status) {
@@ -167,7 +159,7 @@ export default function MainPage() {
 
         {/* mobile and desktop have different layouts for this */}
         <Grid gridGap={['1rem', '1rem']} gap={['1rem', '1rem']} mt="1.2rem" hidden={!hidden}>
-          {repositories.map((repo) => (
+          {repositories.map((repo: any) => (
             <Box
               key={`repo-${repo.full_name}`}
               bg={useColorModeValue('gray.300', '#232323')}
@@ -191,7 +183,7 @@ export default function MainPage() {
               </Text>
 
               <Center>
-                <Flex direction="row" gap={2}>
+                <Flex direction="row" gap={2} alignSelf="flex-end">
                   <Star /> {repo.stargazers_count}
                 </Flex>
               </Center>
@@ -207,7 +199,7 @@ export default function MainPage() {
           mt="1.2rem"
           hidden={hidden}
         >
-          {repositories.map((repo) => (
+          {repositories.map((repo: any) => (
             <Box
               key={`repo-${repo.full_name}`}
               bg={useColorModeValue('gray.300', '#232323')}
@@ -231,7 +223,7 @@ export default function MainPage() {
                 {repo.description}
               </Text>
 
-              <Center bottom="0" position="relative">
+              <Center bottom="0" position="relative" alignSelf="flex-end">
                 <Flex direction="row" gap={2}>
                   <Star /> {repo.stargazers_count}
                 </Flex>

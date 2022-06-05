@@ -42,7 +42,7 @@ const DEFAULT_SANS_FONT = [
   '"Segoe UI Emoji"',
   '"Segoe UI Symbol"',
   '"Noto Color Emoji"',
-  'sans-serif',
+  'sans-serif'
 ];
 
 const DEFAULT_SERIF_FONTS = ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'];
@@ -50,17 +50,17 @@ const DEFAULT_SERIF_FONTS = ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman
 export default extendTheme({
   fonts: {
     heading: `Cantarell, ${DEFAULT_SERIF_FONTS.join(', ')}`,
-    body: `Inter, ${DEFAULT_SANS_FONT.join(', ')}`,
+    body: `Inter, ${DEFAULT_SANS_FONT.join(', ')}`
   },
 
   styles: {
     global: (props) => ({
       body: {
-        bg: mode('gray.200', '#191919')(props),
-      },
-    }),
+        bg: mode('gray.200', '#191919')(props)
+      }
+    })
   },
 
   initialColorMode: 'system',
-  useSystemColorMode: true,
+  useSystemColorMode: true
 });
