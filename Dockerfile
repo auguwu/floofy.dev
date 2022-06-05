@@ -40,5 +40,6 @@ WORKDIR /app/noel/floofy.dev
 
 COPY --from=builder /build/floofy.dev/.next .
 COPY --from=builder /build/floofy.dev/node_modules .
+COPY --from=builder /build/floofy.dev/package.json .
 
 CMD ["yarn", "start"]
