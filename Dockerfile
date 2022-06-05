@@ -26,7 +26,6 @@ WORKDIR /build/floofy.dev
 
 COPY . .
 RUN yarn install --immutable
-RUN yarn global add typescript eslint
 ENV \
   NEXT_TELEMETRY_DISABLED=1 \
   NODE_OPTIONS=--openssl-legacy-provider \
