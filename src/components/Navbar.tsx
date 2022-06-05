@@ -57,6 +57,7 @@ const Navbar: FC = () => {
         w="100%"
         alignItems={{ base: 'center', lg: 'right' }}
         justifyContent={{ base: 'center', lg: 'right' }}
+        overflow="auto"
       >
         <NavLink href="/" mr="12">
           Home
