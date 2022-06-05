@@ -25,7 +25,7 @@ RUN apk update && apk add git ca-certificates
 WORKDIR /build/floofy.dev
 
 COPY . .
-RUN yarn install --frozen-lockfile
+RUN yarn install --immutable
 RUN yarn global add typescript eslint
 ENV \
   NEXT_TELEMETRY_DISABLED=1 \
@@ -39,7 +39,6 @@ FROM node:18-alpine
 RUN apk update
 WORKDIR /app/noel/floofy.dev
 
-# owo
 COPY --from=builder /build/floofy.dev/.next .
 COPY --from=builder /build/floofy.dev/node_modules .
 
