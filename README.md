@@ -2,7 +2,7 @@
 
 > _Paw is a personalized website about myself and my projects, source code for [floofy.dev](https://floofy.dev)_.
 
-![page](https://i-am.floof.gay/images/2b09fc01.png)
+![page](https://noel-is.gay/images/49ccbd62.png)
 
 ## License
 

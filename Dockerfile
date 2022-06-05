@@ -39,6 +39,7 @@ FROM node:18-alpine
 RUN apk update
 WORKDIR /app/noel/floofy.dev
 
+# owo
 COPY --from=builder /build/floofy.dev/.next .
 COPY --from=builder /build/floofy.dev/node_modules .
 
