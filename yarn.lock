@@ -1452,7 +1452,7 @@ __metadata:
     "@typescript-eslint/parser": 5.27.1
     eslint: 8.17.0
     eslint-config-prettier: 8.5.0
-    framer-motion: 6.3.10
+    framer-motion: 6.3.11
     luxon: 2.4.0
     next: 12.1.6
     prettier: 2.6.2
@@ -2395,9 +2395,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.3.10":
-  version: 6.3.10
-  resolution: "framer-motion@npm:6.3.10"
+"framer-motion@npm:6.3.11":
+  version: 6.3.11
+  resolution: "framer-motion@npm:6.3.11"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     framesync: 6.0.1
@@ -2411,7 +2411,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 19d21425a674bafdd22560a069455ef965d78f8e6201791b38174a632e39c0fc1313d92f3b36249074b42dfa17f148e39bb19f8a48bb70a850c4926a863242ae
+  checksum: 2333b296a109ec0ef86421453f66a92b63e07930a491102f1007bbe48f40594d8c51a96ca937f8f3f013ba658147049bf1fa9feebc44487b8e7617bb674fb254
   languageName: node
   linkType: hard
 
