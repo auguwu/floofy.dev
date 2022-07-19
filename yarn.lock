@@ -1554,7 +1554,7 @@ __metadata:
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.1
     "@react-hook/media-query": 1.1.1
-    "@types/luxon": 2.4.0
+    "@types/luxon": 3.0.0
     "@types/node": 17.0.8
     "@types/react": 18.0.15
     "@types/twemoji": 13.1.1
@@ -1624,10 +1624,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:2.4.0":
-  version: 2.4.0
-  resolution: "@types/luxon@npm:2.4.0"
-  checksum: eeb16a1bfe5440464c1a9635700d103cd18d3cd8da6063a1938478e435cfba6ab8e893aa80c95a407e541187c1e997c3e4481322726bc1258551cb8606d0e5ad
+"@types/luxon@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@types/luxon@npm:3.0.0"
+  checksum: 7738d3f4b91097a8139eca966ab53c6b40bb417b2cc2014c3bbd0aee033d6ff54af14c62046c2eb042434923b6bf796874f24b2af90e07ef422e6d841463d4b2
   languageName: node
   linkType: hard
 
