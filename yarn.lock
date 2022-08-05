@@ -1609,7 +1609,7 @@ __metadata:
     swr: 1.3.0
     twemoji: 14.0.2
     typescript: 4.7.4
-    use-lanyard: 1.1.0
+    use-lanyard: 1.2.0
   languageName: unknown
   linkType: soft
 
@@ -3677,7 +3677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swr@npm:1.3.0, swr@npm:^1.2.2":
+"swr@npm:1.3.0, swr@npm:^1.3.0":
   version: 1.3.0
   resolution: "swr@npm:1.3.0"
   peerDependencies:
@@ -3834,14 +3834,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-lanyard@npm:1.1.0":
-  version: 1.1.0
-  resolution: "use-lanyard@npm:1.1.0"
+"use-lanyard@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-lanyard@npm:1.2.0"
   dependencies:
-    swr: ^1.2.2
+    swr: ^1.3.0
   peerDependencies:
     react: ">=17"
-  checksum: 382c409ebd263a7cf690c83ce3613c35b92f03840110fe49cf3ecf556f6dd6f650f5485fa0abc0713830b8c6b5248b6d1d5ae672fdef58b56e27cfc2627f754a
+  checksum: b6e1a8018eadc96cc0464cdd3db3e8e474be9a882c4caad24fb067a603632553e488d2ba406c42f177c953fad28801399ab50339561bcf605fff7718dbd0e96f
   languageName: node
   linkType: hard
 
