@@ -1184,17 +1184,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/cantarell@npm:4.5.7":
-  version: 4.5.7
-  resolution: "@fontsource/cantarell@npm:4.5.7"
-  checksum: 3235d0bef8cd4513607a07f173c785be8ec914660f12123020d041ad76d8bb144711cf0ed0e11b992e61c8914590869c45223e3909769c47f98ea0b301440b47
+"@fontsource/cantarell@npm:4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/cantarell@npm:4.5.8"
+  checksum: acb2242142d47da18281a6d7e49c3a0bb3b5554e659a025991f062e7c268611c2268a18b27bed244b483312307f259dfa8a4ce041f630c7811e5d3a31c06c5e9
   languageName: node
   linkType: hard
 
-"@fontsource/inter@npm:4.5.11":
-  version: 4.5.11
-  resolution: "@fontsource/inter@npm:4.5.11"
-  checksum: 5d30b0c40f04b4bfc74cbae0ba87aceba1204ee43706d779ef2183959a01fe56b724cadad996ecca920f5be30058c75ca9eb0b58957d57982a3d6711341150b0
+"@fontsource/inter@npm:4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/inter@npm:4.5.12"
+  checksum: 7637978d4355f52cf348bbe40a2e1bfa535c290057bef27c022343234b00c07b138c86a2b52260825c1ecc5cc9f59c68fd6ff08311111c70c04f82ace592920b
   languageName: node
   linkType: hard
 
@@ -1586,8 +1586,8 @@ __metadata:
     "@chakra-ui/react": 2.2.6
     "@emotion/react": 11.10.0
     "@emotion/styled": 11.10.0
-    "@fontsource/cantarell": 4.5.7
-    "@fontsource/inter": 4.5.11
+    "@fontsource/cantarell": 4.5.8
+    "@fontsource/inter": 4.5.12
     "@mui/icons-material": 5.8.4
     "@mui/material": 5.9.3
     "@react-hook/media-query": 1.1.1
