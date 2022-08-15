@@ -1694,7 +1694,7 @@ __metadata:
     "@typescript-eslint/parser": 5.33.0
     eslint: 8.22.0
     eslint-config-prettier: 8.5.0
-    framer-motion: 7.1.0
+    framer-motion: 7.1.1
     luxon: 3.0.1
     next: 12.2.5
     prettier: 2.7.1
@@ -2687,24 +2687,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.1.0":
-  version: 7.1.0
-  resolution: "framer-motion@npm:7.1.0"
+"framer-motion@npm:7.1.1":
+  version: 7.1.1
+  resolution: "framer-motion@npm:7.1.1"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
-    framesync: 6.1.1
+    framesync: 6.1.2
     hey-listen: ^1.0.8
-    popmotion: 11.0.4
-    style-value-types: 5.1.1
-    tslib: ^2.1.0
+    popmotion: 11.0.5
+    style-value-types: 5.1.2
+    tslib: 2.4.0
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 499eddd14a0d72c41ddb0e9a3ced5021c1cd25695f98ab7b81659df60e14380f62e5bf45d2c49466a85ce64b33ae79b3fd760374f215abdb3818450d54f3f9be
+  checksum: beb53ee4bc98043f7522a0b63f772385949d3c817452c371ae5f710bc1f0ee52240f596da04e1b1e38eea64c74aab63fd82aeff2ab78b457a78e2b6de7206039
   languageName: node
   linkType: hard
 
@@ -2717,12 +2717,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framesync@npm:6.1.1":
-  version: 6.1.1
-  resolution: "framesync@npm:6.1.1"
+"framesync@npm:6.1.2":
+  version: 6.1.2
+  resolution: "framesync@npm:6.1.2"
   dependencies:
-    tslib: ^2.3.1
-  checksum: f75f77bb3fcb1874fd05e5d254c075c97f431cb74e1d11982661a77248bba442f7d2f251e0c4a019ba9293336bc941b42c7f760b926bd1ff3d3c269c0c7f1a8a
+    tslib: 2.4.0
+  checksum: 250dec78c351b087a47558b8bcf85a91a878507a73f05c095f7728617d40432b8ca0cb21deee98026d582c67610e961f83e535990035f6c9902e721580daff76
   languageName: node
   linkType: hard
 
@@ -3336,15 +3336,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"popmotion@npm:11.0.4":
-  version: 11.0.4
-  resolution: "popmotion@npm:11.0.4"
+"popmotion@npm:11.0.5":
+  version: 11.0.5
+  resolution: "popmotion@npm:11.0.5"
   dependencies:
-    framesync: 6.1.1
+    framesync: 6.1.2
     hey-listen: ^1.0.8
-    style-value-types: 5.1.1
-    tslib: ^2.1.0
-  checksum: ecfa6fbfcbb418386ddab7ee10b52b848c163586bcc8c31a322d09c3b897d1833415729567b0ee252f5c23007382a6d6cfe3458b9af1f2367a3389cccb7bc65f
+    style-value-types: 5.1.2
+    tslib: 2.4.0
+  checksum: f6990d7a59eff402356efd3c9874c3b32bdfd0890ef1da97c71b20ea5ca8f85c17e2daaf11d1328d2756999b0f8222b3b4ec73b4558246843f100053b5a389d7
   languageName: node
   linkType: hard
 
@@ -3713,13 +3713,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-value-types@npm:5.1.1":
-  version: 5.1.1
-  resolution: "style-value-types@npm:5.1.1"
+"style-value-types@npm:5.1.2":
+  version: 5.1.2
+  resolution: "style-value-types@npm:5.1.2"
   dependencies:
     hey-listen: ^1.0.8
-    tslib: ^2.3.1
-  checksum: 108ff80c7b94e7345b708cdb4870efb9286c89ceb17398f157dd797b1ccb3252476517a10b43c4ad4136401946a190b1f50ea9b31c01ccce20a04542a14a2c3f
+    tslib: 2.4.0
+  checksum: 262d89aa3131d9076f8699cb38119740beadff901732c5f71bd3a34fcc398246a398d74057ca4ed3c06aeb44d8c5022839f6203a9a1bc7fdde2965674e3eaa31
   languageName: node
   linkType: hard
 
@@ -3815,17 +3815,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:2.4.0, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^1.0.0, tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
   languageName: node
   linkType: hard
 
