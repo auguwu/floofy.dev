@@ -22,7 +22,7 @@
     "@fontsource/cantarell": "4.5.8",
     "@fontsource/inter": "4.5.12",
     "@mui/icons-material": "5.8.4",
-    "@mui/material": "5.10.0",
+    "@mui/material": "5.10.1",
     "@react-hook/media-query": "1.1.1",
     "framer-motion": "7.2.0",
     "luxon": "3.0.1",
