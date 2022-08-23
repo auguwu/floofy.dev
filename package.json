@@ -24,7 +24,7 @@
     "@mui/icons-material": "5.8.4",
     "@mui/material": "5.10.1",
     "@react-hook/media-query": "1.1.1",
-    "framer-motion": "7.2.0",
+    "framer-motion": "7.2.1",
     "luxon": "3.0.1",
     "next": "12.2.5",
     "react": "18.2.0",
