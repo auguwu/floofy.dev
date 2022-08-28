@@ -1826,7 +1826,7 @@ __metadata:
     eslint: 8.23.0
     eslint-config-prettier: 8.5.0
     framer-motion: 7.2.1
-    luxon: 3.0.1
+    luxon: 3.0.2
     next: 12.2.5
     prettier: 2.7.1
     react: 18.2.0
@@ -3211,10 +3211,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:3.0.1":
-  version: 3.0.1
-  resolution: "luxon@npm:3.0.1"
-  checksum: aa966eb919bf95b1bd819cda784d1f6f66e3fb65bd9ec7bf68b6a978eeb4e3e14f7e2275021b473f93b15b6b7ba2e5a30471e53add3929a7e695fcfd6dd40ec8
+"luxon@npm:3.0.2":
+  version: 3.0.2
+  resolution: "luxon@npm:3.0.2"
+  checksum: 39a29b225cb951530cfec0a18b336841c427edd29af0a26649179b892a5bb9c9134012c0d985a3a3a7667612c84db0a54fa353ca152c80033d5acb78a7ba80da
   languageName: node
   linkType: hard
 
