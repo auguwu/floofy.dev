@@ -866,9 +866,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/react@npm:2.3.1":
-  version: 2.3.1
-  resolution: "@chakra-ui/react@npm:2.3.1"
+"@chakra-ui/react@npm:2.3.2":
+  version: 2.3.2
+  resolution: "@chakra-ui/react@npm:2.3.2"
   dependencies:
     "@chakra-ui/accordion": 2.0.12
     "@chakra-ui/alert": 2.0.9
@@ -911,8 +911,8 @@ __metadata:
     "@chakra-ui/tabs": 2.1.1
     "@chakra-ui/tag": 2.0.9
     "@chakra-ui/textarea": 2.0.10
-    "@chakra-ui/theme": 2.1.10
-    "@chakra-ui/toast": 3.0.9
+    "@chakra-ui/theme": 2.1.11
+    "@chakra-ui/toast": 3.0.10
     "@chakra-ui/tooltip": 2.0.10
     "@chakra-ui/transition": 2.0.9
     "@chakra-ui/utils": 2.0.9
@@ -923,7 +923,7 @@ __metadata:
     framer-motion: ">=4.0.0"
     react: ">=18"
     react-dom: ">=18"
-  checksum: 0e2d7a6e9bf5cb1a3db93b3e936e223e2bebab10dce684c95706e2baabd5266027ec599c26269ec6426b2978dc4e20903ffae26cecb6a29143d6a587d362773f
+  checksum: 3f8a8dac6fe243b02b75b4682c7fc2cc8a4b91481d8336bae8af262cfbd3199a7aecaf945ba8b5a60dda8e8466232b9e8a997c13cd80e4174b3cbad537365b87
   languageName: node
   linkType: hard
 
@@ -1110,34 +1110,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chakra-ui/theme@npm:2.1.10":
-  version: 2.1.10
-  resolution: "@chakra-ui/theme@npm:2.1.10"
+"@chakra-ui/theme@npm:2.1.11":
+  version: 2.1.11
+  resolution: "@chakra-ui/theme@npm:2.1.11"
   dependencies:
     "@chakra-ui/anatomy": 2.0.6
     "@chakra-ui/theme-tools": 2.0.11
   peerDependencies:
     "@chakra-ui/styled-system": ">=2.0.0"
-  checksum: 38329863817128b37147c97294327b4a40da5e9b270483c5fd9deb0ffda7d6abc850a7be806fbe6f7624469b3ec15029a2c38ad6cbca68a19e24c003f4ad5f1e
+  checksum: 516c66b970fb7431ba63dcd763c11c0888ba5e429f08be7675818680e90d1a6b32d6ebfbacd18eb2c5615f15dcf405be0643a97823fbae922d4a9a0f12ccb530
   languageName: node
   linkType: hard
 
-"@chakra-ui/toast@npm:3.0.9":
-  version: 3.0.9
-  resolution: "@chakra-ui/toast@npm:3.0.9"
+"@chakra-ui/toast@npm:3.0.10":
+  version: 3.0.10
+  resolution: "@chakra-ui/toast@npm:3.0.10"
   dependencies:
     "@chakra-ui/alert": 2.0.9
     "@chakra-ui/close-button": 2.0.9
     "@chakra-ui/portal": 2.0.9
     "@chakra-ui/react-use-timeout": 2.0.1
     "@chakra-ui/react-use-update-effect": 2.0.3
-    "@chakra-ui/theme": 2.1.10
+    "@chakra-ui/theme": 2.1.11
   peerDependencies:
     "@chakra-ui/system": 2.2.9
     framer-motion: ">=4.0.0"
     react: ">=18"
     react-dom: ">=18"
-  checksum: 697f73dc91b53742884aaeb6ba7fb44708d62c80b57b6692e6e6d700f8f8f68be6f79e81cd807e47589c3dea09158f5b281b747c0a261206c848f4dfc113c02b
+  checksum: f9f921ea761a362083df719161cdb4d5baf33b4b0473e4633189e00e8f41ac4d59de2ddc1702b9ff63c1b8bc07693bca95bf3fc31549c98e847b303f7996aeeb
   languageName: node
   linkType: hard
 
@@ -1814,7 +1814,7 @@ __metadata:
   dependencies:
     "@augu/eslint-config": 3.0.0
     "@augu/tsconfig": 1.1.1
-    "@chakra-ui/react": 2.3.1
+    "@chakra-ui/react": 2.3.2
     "@emotion/react": 11.10.4
     "@emotion/styled": 11.10.4
     "@fontsource/cantarell": 4.5.8
