@@ -1511,9 +1511,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/base@npm:5.0.0-alpha.96":
-  version: 5.0.0-alpha.96
-  resolution: "@mui/base@npm:5.0.0-alpha.96"
+"@mui/base@npm:5.0.0-alpha.97":
+  version: 5.0.0-alpha.97
+  resolution: "@mui/base@npm:5.0.0-alpha.97"
   dependencies:
     "@babel/runtime": ^7.18.9
     "@emotion/is-prop-valid": ^1.2.0
@@ -1530,14 +1530,14 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 5e35d2c0d5777ea7085f65e45955262ee2d213d62c5a2c2776a234d0c446cbf1f1ed9d19a571359f8ef9b0f9f983c17772041eb5f947b6d9abd06ed9b1dccef0
+  checksum: 89e395c0cabfe749eff72b61cb07124f7928f6fa40e0924330a76699538f0ef185f7387b278781f62f09131d2618877813a1988e86adf017fda368896a90dcce
   languageName: node
   linkType: hard
 
-"@mui/core-downloads-tracker@npm:^5.10.4":
-  version: 5.10.4
-  resolution: "@mui/core-downloads-tracker@npm:5.10.4"
-  checksum: a4249d4cd02a50f353e7718d14becc9e03b0b5438420d840b49ea4a177b62f90a1953df17ed4126f729b3b180cd853f50d4343a37013631d72e7578cc1b9bc60
+"@mui/core-downloads-tracker@npm:^5.10.5":
+  version: 5.10.5
+  resolution: "@mui/core-downloads-tracker@npm:5.10.5"
+  checksum: 9320bfe44cb761215efed768250f8e57aaf63ee1465d760cbc767f7bd149d8cebcc6461bc6a39d2e00329a26aa24e6984233dfcfccd0c03666b8189ceb6876f7
   languageName: node
   linkType: hard
 
@@ -1557,14 +1557,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/material@npm:5.10.4":
-  version: 5.10.4
-  resolution: "@mui/material@npm:5.10.4"
+"@mui/material@npm:5.10.5":
+  version: 5.10.5
+  resolution: "@mui/material@npm:5.10.5"
   dependencies:
     "@babel/runtime": ^7.18.9
-    "@mui/base": 5.0.0-alpha.96
-    "@mui/core-downloads-tracker": ^5.10.4
-    "@mui/system": ^5.10.4
+    "@mui/base": 5.0.0-alpha.97
+    "@mui/core-downloads-tracker": ^5.10.5
+    "@mui/system": ^5.10.5
     "@mui/types": ^7.2.0
     "@mui/utils": ^5.10.3
     "@types/react-transition-group": ^4.4.5
@@ -1586,7 +1586,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: dfee653ca623608c32d78c4281b2be3bc07eaa3dea3198d0e6cdd03fdfad1296053d02078e27202c5e88a133298438253aa68196dc9ef7d4760121753cd135fb
+  checksum: 6d412d94676a38a87acff2646f6bce883aec11d85893e1a6b42a3cfac6d4d372223c4b14f0eaa9838202ecf56c7029f264b7a8db7e083edb8913f585a3e9b39d
   languageName: node
   linkType: hard
 
@@ -1607,9 +1607,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/styled-engine@npm:^5.10.4":
-  version: 5.10.4
-  resolution: "@mui/styled-engine@npm:5.10.4"
+"@mui/styled-engine@npm:^5.10.5":
+  version: 5.10.5
+  resolution: "@mui/styled-engine@npm:5.10.5"
   dependencies:
     "@babel/runtime": ^7.18.9
     "@emotion/cache": ^11.10.3
@@ -1624,17 +1624,17 @@ __metadata:
       optional: true
     "@emotion/styled":
       optional: true
-  checksum: d9bbb38c4bef00e214d5eb5ccdce1cc98935292e4dff94315c81d77fc36d673fc69b128fa234a702fc5822a22b55ce880bb0e0da10849727df4b54a55587e650
+  checksum: a509f37d395afeb8a9630897ef20094a6f1cc167e9a3b3d1f0d7ac46c4c92a5884cb1912adc94e4840051fe2e1554bc05d7490ad3addbe2faef65fdfdc767bfc
   languageName: node
   linkType: hard
 
-"@mui/system@npm:^5.10.4":
-  version: 5.10.4
-  resolution: "@mui/system@npm:5.10.4"
+"@mui/system@npm:^5.10.5":
+  version: 5.10.5
+  resolution: "@mui/system@npm:5.10.5"
   dependencies:
     "@babel/runtime": ^7.18.9
     "@mui/private-theming": ^5.10.3
-    "@mui/styled-engine": ^5.10.4
+    "@mui/styled-engine": ^5.10.5
     "@mui/types": ^7.2.0
     "@mui/utils": ^5.10.3
     clsx: ^1.2.1
@@ -1652,7 +1652,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: ae14f4d05c45fba5e5c52e79d9e2a02c002fa03a8ea7636800a3715fe6c598c24db52c9e60206c0e0ffc0aaa76054598e15d8a547370d23e89bedb54c136dcee
+  checksum: 1f4f2b15309eda177889523f73b9f140cac56105e787b366e2aeab3ffda2bcbecce64ccbe151486a18e4979ce8a418c16e5699b635bbe33d58b74091a3c3707f
   languageName: node
   linkType: hard
 
@@ -1820,7 +1820,7 @@ __metadata:
     "@fontsource/cantarell": 4.5.8
     "@fontsource/inter": 4.5.12
     "@mui/icons-material": 5.10.3
-    "@mui/material": 5.10.4
+    "@mui/material": 5.10.5
     "@react-hook/media-query": 1.1.1
     "@types/luxon": 3.0.1
     "@types/node": 17.0.8
