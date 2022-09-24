@@ -25,7 +25,7 @@
     "@mui/material": "5.10.6",
     "@react-hook/media-query": "1.1.1",
     "framer-motion": "7.3.6",
-    "luxon": "3.0.3",
+    "luxon": "3.0.4",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-devicons": "2.14.0",
