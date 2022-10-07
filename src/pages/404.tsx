@@ -26,17 +26,14 @@
 import {
   Container,
   Center,
-  Avatar,
-  AvatarBadge,
   Heading,
   Text,
 } from '@chakra-ui/react';
 
-import { KotlinPlainIcon, TypescriptOriginalIcon, GoOriginalIcon, JavascriptOriginalIcon } from 'react-devicons';
 import { DateTime } from 'luxon';
 import Head from 'next/head';
 
-export default function MainPage() {
+export default function NotFound() {
   const birthday = DateTime.fromJSDate(new Date(2004, 2, 24));
   const now = DateTime.now();
   const age = Math.floor(now.diff(birthday, ['years']).years);
