@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "2.3.6",
-    "@emotion/react": "11.10.4",
-    "@emotion/styled": "11.10.4",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
     "@fontsource/cantarell": "4.5.9",
     "@fontsource/inter": "4.5.14",
     "@mui/icons-material": "5.10.6",
