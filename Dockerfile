@@ -38,8 +38,9 @@ FROM node:18-alpine
 RUN apk update
 WORKDIR /app/noel/floofy.dev
 
-COPY --from=builder /build/floofy.dev/.next .
-COPY --from=builder /build/floofy.dev/node_modules .
-COPY --from=builder /build/floofy.dev/package.json .
+COPY --from=builder /build/floofy.dev/.next        /app/noel/floofy.dev/.next
+COPY --from=builder /build/floofy.dev/yarn.lock    /app/noel/floofy.dev/yarn.lock
+COPY --from=builder /build/floofy.dev/node_modules /app/noel/floofy.dev/node_modules
+COPY --from=builder /build/floofy.dev/package.json /app/noel/floofy.dev/package.json
 
 CMD ["yarn", "start"]

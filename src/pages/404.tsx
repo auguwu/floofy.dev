@@ -24,7 +24,6 @@
 /* eslint-disable camelcase */
 
 import { Container, Center, Heading, Text } from '@chakra-ui/react';
-
 import { DateTime } from 'luxon';
 import Head from 'next/head';
 

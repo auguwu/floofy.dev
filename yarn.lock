@@ -1826,9 +1826,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@noel/paw@workspace:.":
+"@noel/floof@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@noel/paw@workspace:."
+  resolution: "@noel/floof@workspace:."
   dependencies:
     "@augu/eslint-config": 3.0.0
     "@augu/tsconfig": 1.1.1

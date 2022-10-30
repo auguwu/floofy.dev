@@ -89,11 +89,8 @@ const Navbar: FC = () => {
         }}
       >
         <NavLink href="/">Home</NavLink>
-
         <NavLink href="https://twitter.com/auguuwu">Twitter</NavLink>
-
         <NavLink href="https://github.com/auguwu">GitHub</NavLink>
-
         <IconButton
           aria-label="icon button"
           icon={colorMode === 'dark' ? <SunIcon /> : <MoonIcon />}
