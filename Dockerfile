@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM node:18-alpine AS builder
+FROM node:19-alpine AS builder
 
 RUN apk update && apk add git ca-certificates
 WORKDIR /build/floofy.dev
@@ -33,7 +33,7 @@ ENV \
 
 RUN yarn build
 
-FROM node:18-alpine
+FROM node:19-alpine
 
 RUN apk update
 WORKDIR /app/noel/floofy.dev
