@@ -126,7 +126,13 @@ export default function MainPage() {
 
       <Container maxW={{ lg: '7xl', base: '3xl' }} rowGap="1em">
         <Center maxW="7xl" mt="2em" flexDirection="column" rowGap="1em" textAlign="center">
-          <Avatar src="https://cdn.floofy.dev/images/August.png" width="185px" height="185px" draggable="false" name="August">
+          <Avatar
+            src="https://cdn.floofy.dev/images/August.png"
+            width="185px"
+            height="185px"
+            draggable="false"
+            name="August"
+          >
             <AvatarBadge boxSize="50px" bg={statusColor} mb="0.95em" />
           </Avatar>
 
