@@ -23,12 +23,7 @@
 
 /* eslint-disable camelcase */
 
-import {
-  Container,
-  Center,
-  Heading,
-  Text,
-} from '@chakra-ui/react';
+import { Container, Center, Heading, Text } from '@chakra-ui/react';
 
 import { DateTime } from 'luxon';
 import Head from 'next/head';
@@ -67,9 +62,7 @@ export default function NotFound() {
             404
           </Heading>
 
-          <Text fontSize="x-large">
-            Page Not Found
-          </Text>
+          <Text fontSize="x-large">Page Not Found</Text>
         </Center>
       </Container>
     </>
