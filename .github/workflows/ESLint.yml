@@ -55,42 +55,21 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x, 17.x, 18.x]
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
       
-      - name: Uses Node.js v${{ matrix.node-version }}
+      - name: Uses Node.js 19
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 19.x
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Setup Yarn Cache
-        uses: actions/cache@v3
+      - name: Setup Yarn and node-modules cache
         id: yarn-cache
-        with:
-          path: ${{steps.yarn-cache-dir-path.outputs.dir}}
-          key: ${{ runner.OS }}-yarn-cache-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.OS }}-yarn-cache-
-
-      - name: Cache node_modules
-        id: cache-node-modules
-        uses: actions/cache@v3
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+        uses: auguwu/node-pm-action@master
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true' || steps.cache-node-modules.outputs.cache-hit != 'true'
+        if: steps.yarn-cache.outputs.cache-hit != 'true' || steps.yarn-cache.outputs.node-modules-cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Lint project with ESLint
