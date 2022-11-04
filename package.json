@@ -39,7 +39,7 @@
     "@augu/tsconfig": "1.1.1",
     "@types/luxon": "3.0.3",
     "@types/node": "18.11.9",
-    "@types/react": "18.0.24",
+    "@types/react": "18.0.25",
     "@types/twemoji": "13.1.1",
     "@typescript-eslint/eslint-plugin": "5.42.0",
     "@typescript-eslint/parser": "5.42.0",
