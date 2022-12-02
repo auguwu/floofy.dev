@@ -1856,7 +1856,7 @@ __metadata:
     "@typescript-eslint/parser": 5.45.0
     eslint: 8.25.0
     eslint-config-prettier: 8.5.0
-    framer-motion: 7.6.17
+    framer-motion: 7.6.18
     luxon: 3.1.1
     next: 13.0.6
     prettier: 2.8.0
@@ -2767,15 +2767,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.6.17":
-  version: 7.6.17
-  resolution: "framer-motion@npm:7.6.17"
+"framer-motion@npm:7.6.18":
+  version: 7.6.18
+  resolution: "framer-motion@npm:7.6.18"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
     framesync: 6.1.2
     hey-listen: ^1.0.8
-    popmotion: 11.0.5
     style-value-types: 5.1.2
     tslib: 2.4.0
   peerDependencies:
@@ -2784,7 +2783,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: ade093932028818ca3ddd2bb82ea5af25c9e977b7298b86f73cbed76923dc42ed578398539b704c2a85ec0375ba77cfc7332393d94f910826cdf669d1315f548
+  checksum: b09b1d6edfa687fa5ac0c41cd45aab7a9ea83f1b6c4c910faa9b9aa74867da3bab86d09d6aea48fb445562abfda361a98924be2bd39a4b9075a102e8179578cc
   languageName: node
   linkType: hard
 
@@ -3419,18 +3418,6 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
-  languageName: node
-  linkType: hard
-
-"popmotion@npm:11.0.5":
-  version: 11.0.5
-  resolution: "popmotion@npm:11.0.5"
-  dependencies:
-    framesync: 6.1.2
-    hey-listen: ^1.0.8
-    style-value-types: 5.1.2
-    tslib: 2.4.0
-  checksum: f6990d7a59eff402356efd3c9874c3b32bdfd0890ef1da97c71b20ea5ca8f85c17e2daaf11d1328d2756999b0f8222b3b4ec73b4558246843f100053b5a389d7
   languageName: node
   linkType: hard
 
