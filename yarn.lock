@@ -1864,7 +1864,7 @@ __metadata:
     swr: 2.0.0
     twemoji: 14.0.2
     typescript: 4.9.4
-    use-lanyard: 1.3.7
+    use-lanyard: 1.3.8
   languageName: unknown
   linkType: soft
 
@@ -3987,10 +3987,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-lanyard@npm:1.3.7":
-  version: 1.3.7
-  resolution: "use-lanyard@npm:1.3.7"
-  checksum: 4734370950e1caaa3518060acc6756170abd7c5c35bd87f75553177b018a73b3999cef837dd3f4334de026093d30c6b3d185adeb1b999182dab4ee7afe8f20f0
+"use-lanyard@npm:1.3.8":
+  version: 1.3.8
+  resolution: "use-lanyard@npm:1.3.8"
+  checksum: fcbe30dc4c2767528fc2b5858df3c1dba05f3433daccc8ac90c7ddd71c0538f1457dabb4b1a8bd327ea13960ad1cd3a307505bbd709c71e0084c4b702a6e6fae
   languageName: node
   linkType: hard
 
