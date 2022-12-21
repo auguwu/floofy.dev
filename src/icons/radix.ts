@@ -21,6 +21,7 @@
  * SOFTWARE.
  */
 
+// @ts-ignore hec u ts
 import { createIconPack } from 'astro-icon/pack';
 
 export default createIconPack({
