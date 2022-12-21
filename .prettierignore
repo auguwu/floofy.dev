@@ -1,4 +1,1 @@
-.github
-node_modules
-public
-.next
+.gitignore

@@ -19,24 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM node:19-alpine3.17 AS builder
-
-RUN apk update
-WORKDIR /build
-
-COPY .yarn/ /build/.yarn
-COPY .yarnrc.yml /build/.yarnrc.yml
-COPY yarn.lock /build/yarn.lock
-COPY package.json /build/package.json
-
-RUN yarn install --immutable
-
-COPY . .
-RUN yarn build
-
-FROM caddy:2.6.2-alpine
-
-WORKDIR /app/noel/floofy.dev
-
-COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=builder /build/dist /app/noel/floofy.dev
+localhost:6789 {
+  root * /app/noel/floofy.dev
+  file_server
+}

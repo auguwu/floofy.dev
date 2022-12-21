@@ -1,5 +1,5 @@
-# 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
-# Copyright (c) 2018-2022 Noel
+# 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+# Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,6 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
-
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -88,7 +87,6 @@ jobs:
         run: |
           mkdir ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
-
       - name: Set image
         run: kubectl set image deployment/paw paw=registry.floofy.dev/noel/site:${{steps.tag.outputs.tag}}
 

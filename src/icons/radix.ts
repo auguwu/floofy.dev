@@ -1,6 +1,6 @@
 /*
- * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
- * Copyright (c) 2018-2022 Noel
+ * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,46 +21,8 @@
  * SOFTWARE.
  */
 
-import '@fontsource/cantarell/index.css';
-import '@fontsource/inter/index.css';
+import { createIconPack } from 'astro-icon/pack';
 
-import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
-
-const DEFAULT_SANS_FONT = [
-  'ui-sans-serif',
-  'system-ui',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  '"Segoe UI"',
-  'Roboto',
-  '"Helvetica Neue"',
-  'Arial',
-  '"Noto Sans"',
-  'sans-serif',
-  '"Apple Color Emoji"',
-  '"Segoe UI Emoji"',
-  '"Segoe UI Symbol"',
-  '"Noto Color Emoji"',
-  'sans-serif'
-];
-
-const DEFAULT_SERIF_FONTS = ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'];
-
-export default extendTheme({
-  fonts: {
-    heading: `Cantarell, ${DEFAULT_SERIF_FONTS.join(', ')}`,
-    body: `Inter, ${DEFAULT_SANS_FONT.join(', ')}`
-  },
-
-  styles: {
-    global: (props) => ({
-      body: {
-        bg: mode('gray.200', '#191919')(props)
-      }
-    })
-  },
-
-  initialColorMode: 'system',
-  useSystemColorMode: true
+export default createIconPack({
+  url: 'https://raw.githubusercontent.com/radix-ui/icons/master/packages/radix-icons/icons/'
 });

@@ -1,17 +1,15 @@
 {
   "extends": "@augu/tsconfig/dom.json",
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
     "allowJs": true,
-    "module": "ESNext",
     "noEmit": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "typeRoots": ["./node_modules/@types", "./src/typings"]
+    "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

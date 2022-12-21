@@ -1,6 +1,6 @@
 /*
- * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
- * Copyright (c) 2018-2022 Noel
+ * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,29 +21,38 @@
  * SOFTWARE.
  */
 
-import Document, { NextScript, Head, Html, Main, DocumentContext } from 'next/document';
-import { ColorModeScript } from '@chakra-ui/react';
+@import '@fontsource/jetbrains-mono';
+@import '@fontsource/cantarell';
+@import '@fontsource/inter';
 
-export default class PawDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initial = await Document.getInitialProps(ctx);
-    return { ...initial };
-  }
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
 
-  render() {
-    return (
-      <Html lang="en">
-        <Head>
-          <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
-          <link rel="icon" href="https://cdn.floofy.dev/images/August.png" />
-          <meta charSet="UTF-8" />
-        </Head>
-        <body>
-          <ColorModeScript />
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
+/* define base colours here */
+:root {
+  --background: #202336;
+  --selection: #d961a3;
+}
+
+::-moz-selection {
+  background: var(--selection);
+  color: white;
+}
+
+::selection {
+  background: var(--selection);
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
 }

@@ -1,7 +1,4 @@
 {
   "extends": ["prettier", "@augu/eslint-config/ts.js"],
-  "rules": {
-    "quotes": "off",
-    "@typescript-eslint/indent": "off"
-  }
+  "plugins": ["astro"]
 }

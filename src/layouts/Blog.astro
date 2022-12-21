@@ -1,0 +1,57 @@
+---
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+
+export interface Content {
+  description: string;
+  createdAt: string;
+  draft?: boolean;
+  title: string;
+}
+
+export interface Props {
+  content: Content;
+}
+
+const { content } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <title>{content.title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
+    <meta name="description" content={content.description} />
+    <meta name="theme-color" content="#896ae0" />
+    <meta property="od:description" content={content.description} />
+    <meta property="og:title" content={content.title} />
+    <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://floofy.dev" />
+    <meta name="language" content="English" />
+    <meta name="keywords" content="august, auguwu, noel, noelware" />
+  </head>
+  <body class="flex flex-col">
+    <Navbar />
+    <main
+      class="container mx-auto space-y-6 text-center items-center justify-center flex flex-col lg:items-left lg:text-left lg:block lg:max-w-7xl lg:space-y-3 mt-6"
+    >
+      <img
+        src="https://cdn.floofy.dev/images/August.png"
+        class="w-[154px] h-[154px] rounded-md shadow-sm"
+        alt="noel avatar"
+        draggable="false"
+      />
+
+      <h1 class="font-mono text-white text-4xl">{content.title}</h1>
+      <h2 class="text-2xl text-white">{content.description}</h2>
+    </main>
+    <main class="container mx-auto max-w-7xl mt-9">
+      <article
+        class="prose prose-2xl prose-code:dark:text-slate-300 prose-p:text-zinc-200 prose-headings:text-zinc-200 prose-headings:font-sans prose-strong:dark:text-slate-300 prose-strong:text-slate-700 prose-li:dark:text-slate-300 prose-li:text-slate-700 prose-a:dark:text-fuchsia-200 hover:prose-a:dark:text-fuchsia-400 prose-a:text-fuchsia-500 hover:prose-a:text-fuchsia-200 prose-img:mx-auto"
+      >
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 /*
- * 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
- * Copyright (c) 2018-2022 Noel
+ * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,21 +23,23 @@
 
 // @ts-check
 
-/**
- * Next.js configuration for @noel/paw.
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
-  productionBrowserSourceMaps: true,
-  poweredByHeader: false,
-  trailingSlash: true,
-  images: {
-    domains: ['cdn.floofy.dev', 'profile.place', 'cdn.arisu.land']
-  },
-  eslint: {
-    // It is already linting in workflow, so this isn't needed
-    ignoreDuringBuilds: true
-  }
-};
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
 
-module.exports = nextConfig;
+import remarkTwemoji from 'remark-twemoji';
+
+export default defineConfig({
+  integrations: [mdx(), sitemap(), tailwind()],
+  site: 'https://floofy.dev',
+  markdown: {
+    extendDefaultPlugins: true,
+    remarkPlugins: [remarkTwemoji],
+    syntaxHighlight: 'shiki',
+    shikiConfig: {
+      theme: 'rose-pine',
+      wrap: true
+    }
+  }
+});

@@ -1,0 +1,58 @@
+---
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+
+const posts = (await Astro.glob('./blog/*.{md,mdx}'))
+  .filter((f) => !Object.prototype.hasOwnProperty.call(f.frontmatter, 'draft'))
+  .sort((a, b) => new Date(a.frontmatter.createdAt).valueOf() - new Date(b.frontmatter.createdAt).valueOf());
+---
+
+<html lang="en">
+  <head>
+    <title>Noel - pile of floof that exists</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
+    <meta property="og:description" content="My blog where I talk about random stuff, I guess?" />
+    <meta name="description" content="My blog where I talk about random stuff, I guess?" />
+    <meta name="theme-color" content="#896ae0" />
+    <meta property="og:title" content="Noel 🌺 | Blog" />
+    <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://floofy.dev" />
+    <meta name="language" content="English" />
+    <meta name="keywords" content="august, auguwu, noel, noelware" />
+  </head>
+  <body class="flex flex-col space-y-12">
+    <Navbar />
+    <div
+      class="container mx-auto space-y-6 text-center items-center justify-center flex flex-col lg:items-left lg:text-left lg:block lg:max-w-7xl lg:space-y-3"
+    >
+      <img
+        src="https://cdn.floofy.dev/images/August.png"
+        class="w-[154px] h-[154px] rounded-md shadow-sm self-center"
+        alt="noel avatar"
+        draggable="false"
+      />
+
+      <h1 class="font-mono text-white text-4xl">Noel's Blog</h1>
+      <h2 class="text-2xl text-white">Here are some of my writing that I have done thus far.</h2>
+    </div>
+
+    <div class="flex flex-col container mx-auto space-y-6 lg:block lg:space-y-3">
+      <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
+        {
+          posts.map((post) => (
+            <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
+              <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
+                {post.frontmatter.title}
+              </a>
+
+              <p class="font-sans text-white">{post.frontmatter.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </body>
+</html>

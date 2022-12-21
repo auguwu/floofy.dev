@@ -1,6 +1,6 @@
 /*
- * 🐾 @noel/floofy.dev: Source code for floofy.dev and Noel's portfolio, a professional side of myself.
- * Copyright (c) 2018-2022 Noel
+ * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,23 +21,9 @@
  * SOFTWARE.
  */
 
-import { ChakraProvider, Flex, Box } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
-import Navbar from '../components/Navbar';
-import theme from '../theme';
-
-export default function PawApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider resetCSS theme={theme}>
-      <Flex direction="column" alignItems="center" mt="1.6em">
-        <Box h="10%" w="85%" pt={{ base: 4, lg: 0 }}>
-          <Navbar />
-        </Box>
-      </Flex>
-
-      <Flex direction="row" px={[4, 6, 8]} py={[2, 4, 6]}>
-        <Component {...pageProps} />
-      </Flex>
-    </ChakraProvider>
-  );
-}
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
+};

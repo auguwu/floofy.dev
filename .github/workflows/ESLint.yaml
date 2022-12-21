@@ -1,5 +1,5 @@
-# 🐾 @noel/paw: Paw is a personalized website about myself and my projects, source code for https://floofy.dev
-# Copyright (c) 2018-2022 Noel
+# 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+# Copyright (c) 2018-2023 Noel <cutie@floofy.dev>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -38,10 +38,10 @@ on:
       - 'tsconfig.json'
 
   pull_request:
+    types: [opened, synchronize]
     branches:
-      - 'master'
+      - master
     paths-ignore:
-      - '.github/**'
       - '.vscode/**'
       - '.husky/**'
       - '.eslintignore'
@@ -51,14 +51,13 @@ on:
       - 'package.json'
       - 'renovate.json'
       - 'tsconfig.json'
-
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
-      
+
       - name: Uses Node.js 19
         uses: actions/setup-node@v3
         with:

@@ -1,3 +1,10 @@
+# Created by https://www.toptal.com/developers/gitignore/api/Node,Yarn,VisualStudio,VisualStudioCode,JetBrains+All
+# Edit at https://www.toptal.com/developers/gitignore?templates=Node,Yarn,VisualStudio,VisualStudioCode,JetBrains+All
+
+### JetBrains+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
@@ -206,6 +213,13 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
@@ -233,12 +247,6 @@ dist
 # Ignore all local history of files
 .history
 .ionide
-
-# Support for Project snippet scope
-.vscode/*.code-snippets
-
-# Ignore code-workspaces
-*.code-workspace
 
 ### yarn ###
 # https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
@@ -633,6 +641,7 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
+*.code-workspace
 
 # Local History for Visual Studio Code
 
@@ -649,10 +658,5 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# yarn v2
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-!.yarn/releases
-.pnp.*
+.yarn/cache/
+!.yarn/releases/
