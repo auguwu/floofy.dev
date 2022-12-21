@@ -33,9 +33,7 @@ on:
       - '.gitignore'
       - '**.md'
       - 'LICENSE'
-      - 'package.json'
       - 'renovate.json'
-      - 'tsconfig.json'
 
   pull_request:
     types: [opened, synchronize]
@@ -48,9 +46,7 @@ on:
       - '.gitignore'
       - '**.md'
       - 'LICENSE'
-      - 'package.json'
       - 'renovate.json'
-      - 'tsconfig.json'
 jobs:
   lint:
     runs-on: ubuntu-latest
