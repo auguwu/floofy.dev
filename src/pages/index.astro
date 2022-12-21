@@ -1,4 +1,6 @@
 ---
+import ProjectCard from '../components/ProjectCard.astro';
+import Container from '../components/Container.astro';
 import { Icon } from 'astro-icon';
 import Navbar from '../components/Navbar.astro';
 import '../styles/global.css';
@@ -41,9 +43,7 @@ const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
 
   <body class="flex flex-col space-y-12">
     <Navbar />
-
-    <!-- mobile -->
-    <div class="flex flex-col space-y-4 container mx-auto justify-center items-center lg:hidden">
+    <Container>
       <img
         src="https://cdn.floofy.dev/images/August.png"
         class="w-[154px] h-[154px] rounded-md shadow-sm"
@@ -51,10 +51,10 @@ const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
         draggable="false"
       />
 
-      <h1 class="font-mono text-white text-4xl">Noel</h1>
-      <h2 class="text-2xl text-white italic">a pile of floof that exists on the internet!</h2>
+      <h1 class="font-mono text-white text-4xl mt-3">Noel</h1>
+      <h2 class="text-2xl text-white italic mt-4">a pile of floof that exists on the internet!</h2>
 
-      <div class="grid grid-cols-4 gap-3 lg:hidden">
+      <div class="grid grid-cols-4 gap-3 mt-5 lg:hidden">
         <a href="https://discord.com/users/280158289667555328" class="mr-3">
           <Icon name="fa-brands:discord" size={64} class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" />
         </a>
@@ -71,71 +71,18 @@ const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
           <Icon name="fa-brands:mastodon" size={64} class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" />
         </a>
       </div>
-    </div>
 
-    <div class="flex container mx-auto mt-6 lg:hidden">
-      <div class="grid grid-cols-1 gap-6 items-center [&>*]:h-full">
-        {
-          githubRepos.map((data) => (
-            <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-              <div class="flex flex-row gap-2 align-middle">
-                <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
-
-                <a href={data.html_url} class="text-white text-2xl font-mono hover:underline" target="_blank">
-                  {data.full_name}
-                </a>
-
-                <div class="flex-1 place-self-stretch" />
-              </div>
-              <p class="text-white text-lg">{data.description}</p>
-              <div class="flex flex-row gap-2 bottom-[0] left-[0]">
-                <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
-
-                <p class="text-white text-lg font-mono">{data.stargazers_count} stars</p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-
-    <!-- desktop -->
-    <div class="lg:flex lg:flex-col lg:container lg:mx-auto lg:max-w-7xl lg:space-y-3 hidden">
-      <img
-        src="https://cdn.floofy.dev/images/August.png"
-        class="w-[154px] h-[154px] rounded-md shadow-sm"
-        alt="noel avatar"
-        draggable="false"
-      />
-
-      <h1 class="font-mono text-white text-4xl">Noel</h1>
-      <h2 class="text-2xl text-white italic">a pile of floof that exists on the internet!</h2>
-
-      <div class="container mx-auto max-w-7xl space-y-6">
-        <div class="grid grid-cols-3 gap-3 items-center [&>*]:h-full">
-          {
-            githubRepos.map((data) => (
-              <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-                <div class="flex flex-row gap-2 align-middle">
-                  <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
-
-                  <a href={data.html_url} class="text-white text-2xl font-mono hover:underline" target="_blank">
-                    {data.full_name}
-                  </a>
-
-                  <div class="flex-1 place-self-stretch" />
-                </div>
-                <p class="text-white text-lg">{data.description}</p>
-                <div class="flex flex-row gap-2 bottom-[0] left-[0]">
-                  <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
-
-                  <p class="text-white text-lg font-mono">{data.stargazers_count} stars</p>
-                </div>
-              </div>
-            ))
-          }
+      <div class="flex container mx-auto mt-6 items-center justify-center lg:hidden">
+        <div class="grid grid-cols-1 gap-6 [&>*]:h-full">
+          {githubRepos.map((data) => <ProjectCard data={data} />)}
         </div>
       </div>
-    </div>
+
+      <div class="container mx-auto max-w-7xl space-y-6 max-md:hidden">
+        <div class="grid grid-cols-3 gap-3 items-center [&>*]:h-full">
+          {githubRepos.map((data) => <ProjectCard data={data} />)}
+        </div>
+      </div>
+    </Container>
   </body>
 </html>

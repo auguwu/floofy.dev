@@ -1,4 +1,5 @@
 ---
+import Container from '../components/Container.astro';
 import Navbar from '../components/Navbar.astro';
 import '../styles/global.css';
 
@@ -25,34 +26,32 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
   </head>
   <body class="flex flex-col space-y-12">
     <Navbar />
-    <div
-      class="container mx-auto space-y-6 text-center items-center justify-center flex flex-col lg:items-left lg:text-left lg:block lg:max-w-7xl lg:space-y-3"
-    >
+    <Container>
       <img
         src="https://cdn.floofy.dev/images/August.png"
-        class="w-[154px] h-[154px] rounded-md shadow-sm self-center"
+        class="w-[154px] h-[154px] rounded-md shadow-sm max-sm:self-center mb-3"
         alt="noel avatar"
         draggable="false"
       />
 
-      <h1 class="font-mono text-white text-4xl">Noel's Blog</h1>
-      <h2 class="text-2xl text-white">Here are some of my writing that I have done thus far.</h2>
-    </div>
+      <h1 class="font-mono text-white text-4xl mt-3">Noel's Blog</h1>
+      <h2 class="text-2xl text-white mt-4 mb-3">Here are some of my writing that I have done thus far.</h2>
 
-    <div class="flex flex-col container mx-auto space-y-6 lg:block lg:space-y-3">
-      <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
-        {
-          posts.map((post) => (
-            <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-              <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
-                {post.frontmatter.title}
-              </a>
+      <div class="flex flex-col container mx-auto space-y-6 lg:block lg:space-y-3">
+        <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
+          {
+            posts.map((post) => (
+              <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
+                <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
+                  {post.frontmatter.title}
+                </a>
 
-              <p class="font-sans text-white">{post.frontmatter.description}</p>
-            </div>
-          ))
-        }
+                <p class="font-sans text-white">{post.frontmatter.description}</p>
+              </div>
+            ))
+          }
+        </div>
       </div>
-    </div>
+    </Container>
   </body>
 </html>

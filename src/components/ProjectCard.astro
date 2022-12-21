@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon';
+
+export interface Props {
+  data: any;
+}
+
+const { data } = Astro.props;
+---
+
+<div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3">
+  <div class="flex flex-col gap-2 align-middle">
+    <div class="flex flex-row flex-1 mt-auto px-2">
+      <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
+
+      <a href={data.html_url} class="text-white text-2xl ml-3 max-sm:text-lg font-mono hover:underline" target="_blank">
+        {data.full_name}
+      </a>
+
+      <div class="flex-1 place-self-stretch"></div>
+    </div>
+    <p class="text-white text-lg">{data.description}</p>
+    <div class="mb-auto flex flex-row">
+      <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
+      <p class="ml-2 text-white text-lg max-sm:text-md font-mono">{data.stargazers_count} stars</p>
+    </div>
+  </div>
+</div>

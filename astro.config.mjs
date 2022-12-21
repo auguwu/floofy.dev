@@ -24,15 +24,19 @@
 // @ts-check
 
 import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 import remarkTwemoji from 'remark-twemoji';
 
+// https://astro.build/config
 export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind()],
   site: 'https://floofy.dev',
+  output: 'server',
+  adapter: cloudflare(),
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkTwemoji],
