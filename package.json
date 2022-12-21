@@ -10,10 +10,9 @@
   "license": "MIT",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "lint:ci": "tsx --tsconfig ./scripts/tsconfig.json ./scripts/eslint.ci.ts",
     "build": "astro build",
-    "lint": "eslint src --ext .ts,.astro,.js --fix",
-    "fmt": "prettier --config ./.prettierrc.json --write **/*.{ts,js,md,json,yaml,yml,astro}",
+    "lint": "eslint src --ext .ts,.js --fix",
+    "fmt": "prettier --config ./.prettierrc.json --write **/*.{ts,js,md,json,yaml,yml}",
     "dev": "astro dev"
   },
   "dependencies": {
