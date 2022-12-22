@@ -660,3 +660,4 @@ FodyWeavers.xsd
 
 .yarn/cache/
 !.yarn/releases/
+.vercel/
