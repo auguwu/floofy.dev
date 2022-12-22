@@ -16,12 +16,12 @@
     "dev": "astro dev"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^5.0.0",
     "@astrojs/mdx": "0.13.0",
     "@astrojs/partytown": "1.0.2",
     "@astrojs/rss": "1.2.1",
     "@astrojs/sitemap": "1.0.0",
     "@astrojs/tailwind": "2.1.3",
+    "@astrojs/vercel": "^2.3.6",
     "@builder.io/partytown": "0.7.3",
     "@fontsource/cantarell": "4.5.10",
     "@fontsource/inter": "4.5.14",
