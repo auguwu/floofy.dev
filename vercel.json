@@ -6,7 +6,7 @@
     },
     {
       "source": "/plausible/api/event",
-      "destination": "https://plausible.noelware.org/api/vent"
+      "destination": "https://plausible.noelware.org/api/event"
     }
   ]
 }
