@@ -32,7 +32,7 @@ const defineConfig = (config) => config;
 
 module.exports = defineConfig({
   content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/container-queries')],
+  plugins: [require('@tailwindcss/typography')],
   theme: {
     extend: {
       fontFamily: {

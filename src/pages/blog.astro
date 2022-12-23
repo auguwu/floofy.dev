@@ -1,6 +1,8 @@
 ---
 import Container from '../components/Container.astro';
 import Navbar from '../components/Navbar.astro';
+import Head from '../components/Head.astro';
+
 import '../styles/global.css';
 
 const posts = (await Astro.glob('./blog/*.{md,mdx}'))
@@ -9,22 +11,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
 ---
 
 <html lang="en">
-  <head>
-    <title>Noel - pile of floof that exists</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
-    <meta property="og:description" content="My blog where I talk about random stuff, I guess?" />
-    <meta name="description" content="My blog where I talk about random stuff, I guess?" />
-    <meta name="theme-color" content="#896ae0" />
-    <meta property="og:title" content="Noel 🌺 | Blog" />
-    <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://floofy.dev" />
-    <meta name="language" content="English" />
-    <meta name="keywords" content="august, auguwu, noel, noelware" />
-    <script defer data-domain="floofy.dev" data-api="/plausible/api/event" src="/plausible/js/script.js"></script>
-  </head>
+  <Head description="My blog where I talk about random stuff, I guess?" title="a blog, i think?" path="/blog" />
   <body class="flex flex-col space-y-12">
     <Navbar />
     <Container>

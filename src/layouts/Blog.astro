@@ -1,5 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
+import Head from '../components/Head.astro';
+
 import '../styles/global.css';
 
 export interface Content {
@@ -7,6 +9,7 @@ export interface Content {
   createdAt: string;
   draft?: boolean;
   title: string;
+  url: string;
 }
 
 export interface Props {
@@ -17,21 +20,7 @@ const { content } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <title>{content.title}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
-    <meta name="description" content={content.description} />
-    <meta name="theme-color" content="#896ae0" />
-    <meta property="od:description" content={content.description} />
-    <meta property="og:title" content={content.title} />
-    <meta property="og:image" content="https://cdn.floofy.dev/images/August.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://floofy.dev" />
-    <meta name="language" content="English" />
-    <meta name="keywords" content="august, auguwu, noel, noelware" />
-    <script defer data-domain="floofy.dev" data-api="/plausible/api/event" src="/plausible/js/script.js"></script>
-  </head>
+  <Head title={content.title} description={content.description} path={content.url} />
   <body class="flex flex-col">
     <Navbar />
     <main
