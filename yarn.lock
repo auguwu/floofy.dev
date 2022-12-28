@@ -51,38 +51,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "@astrojs/markdown-remark@npm:1.1.3"
-  dependencies:
-    "@astrojs/micromark-extension-mdx-jsx": ^1.0.3
-    "@astrojs/prism": ^1.0.0
-    acorn: ^8.7.1
-    acorn-jsx: ^5.3.2
-    github-slugger: ^1.4.0
-    hast-util-to-html: ^8.0.3
-    import-meta-resolve: ^2.1.0
-    mdast-util-from-markdown: ^1.2.0
-    mdast-util-mdx-expression: ^1.2.1
-    mdast-util-mdx-jsx: ^1.2.0
-    micromark-extension-mdx-expression: ^1.0.3
-    micromark-extension-mdx-md: ^1.0.0
-    micromark-util-combine-extensions: ^1.0.0
-    rehype-raw: ^6.1.1
-    rehype-stringify: ^9.0.3
-    remark-gfm: ^3.0.1
-    remark-parse: ^10.0.1
-    remark-rehype: ^10.1.0
-    remark-smartypants: ^2.0.0
-    shiki: ^0.11.1
-    unified: ^10.1.2
-    unist-util-map: ^3.1.1
-    unist-util-visit: ^4.1.0
-    vfile: ^5.3.2
-  checksum: 1d8aa5226f2b746e004fb18db0b50086a674b7e31da502dea6182925f48d14972879d5be3771614ea06cc9c8872bcd0b217a69676c6bf18d5b18d534ee151553
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:^1.2.0":
   version: 1.2.0
   resolution: "@astrojs/markdown-remark@npm:1.2.0"
@@ -772,7 +740,7 @@ __metadata:
     "@types/prettier": 2.7.2
     "@typescript-eslint/eslint-plugin": 5.47.1
     "@typescript-eslint/parser": 5.47.1
-    astro: 1.7.2
+    astro: 1.8.0
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
     eslint: 8.30.0
@@ -1313,7 +1281,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.0.0, acorn@npm:^8.6.0, acorn@npm:^8.7.1, acorn@npm:^8.8.0":
+"acorn@npm:^8.0.0, acorn@npm:^8.6.0, acorn@npm:^8.7.1, acorn@npm:^8.8.0, acorn@npm:^8.8.1":
   version: 8.8.1
   resolution: "acorn@npm:8.8.1"
   bin:
@@ -1530,13 +1498,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:1.7.2":
-  version: 1.7.2
-  resolution: "astro@npm:1.7.2"
+"astro@npm:1.8.0":
+  version: 1.8.0
+  resolution: "astro@npm:1.8.0"
   dependencies:
     "@astrojs/compiler": ^0.31.0
     "@astrojs/language-server": ^0.28.3
-    "@astrojs/markdown-remark": ^1.1.3
+    "@astrojs/markdown-remark": ^1.2.0
     "@astrojs/telemetry": ^1.0.1
     "@astrojs/webapi": ^1.1.1
     "@babel/core": ^7.18.2
@@ -1550,6 +1518,7 @@ __metadata:
     "@types/babel__core": ^7.1.19
     "@types/html-escaper": ^3.0.0
     "@types/yargs-parser": ^21.0.0
+    acorn: ^8.8.1
     boxen: ^6.2.1
     ci-info: ^3.3.1
     common-ancestor-path: ^1.0.1
@@ -1559,6 +1528,7 @@ __metadata:
     devalue: ^4.2.0
     diff: ^5.1.0
     es-module-lexer: ^1.1.0
+    estree-walker: ^3.0.1
     execa: ^6.1.0
     fast-glob: ^3.2.11
     github-slugger: ^1.4.0
@@ -1597,7 +1567,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: c79502af52cb1713655cb11cd8823cf027479e81f4d6f205be710729c071f35e2a1a145d14f8e6ed491e47dc6dd58a7ffc9c32fab5df86adb26850e17c5e07fe
+  checksum: 2cb66863687c81ffb4f9511e610f4a2df80ebc76d50cffbd04007b44fd81027c179ecf41576a4add00368fa8fe3367433503b0379727b51f980bd4653ae73ca2
   languageName: node
   linkType: hard
 
@@ -2887,7 +2857,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"estree-walker@npm:^3.0.0":
+"estree-walker@npm:^3.0.0, estree-walker@npm:^3.0.1":
   version: 3.0.1
   resolution: "estree-walker@npm:3.0.1"
   checksum: 674096950819041f1ee471e63f7aa987f2ed3a3a441cc41a5176e9ed01ea5cfd6487822c3b9c2cddd0e2c8f9d7ef52d32d06147a19b5a9ca9f8ab0c094bd43b9
