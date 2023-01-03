@@ -15,7 +15,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0 || ^0.31.0, @astrojs/compiler@npm:^0.31.0":
+"@astrojs/compiler@npm:^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0 || ^0.31.0, @astrojs/compiler@npm:^0.31.0, @astrojs/compiler@npm:^0.31.3":
   version: 0.31.3
   resolution: "@astrojs/compiler@npm:0.31.3"
   checksum: eada0d3b153919759a60ae8e83b8ed88945f3ea480199885d2f58e2095816c1026a15c9d30eb708f804d7c3eeebb9f3005e83613e56d57ea61f7922ced1a0e3c
@@ -747,7 +747,7 @@ __metadata:
     eslint-config-prettier: 8.6.0
     eslint-plugin-astro: 0.21.1
     prettier: 2.8.1
-    prettier-plugin-astro: 0.7.0
+    prettier-plugin-astro: 0.7.1
     remark-twemoji: 0.1.1
     tailwindcss: 3.2.4
     twemoji: 14.0.2
@@ -5617,7 +5617,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.7.0, prettier-plugin-astro@npm:^0.7.0":
+"prettier-plugin-astro@npm:0.7.1":
+  version: 0.7.1
+  resolution: "prettier-plugin-astro@npm:0.7.1"
+  dependencies:
+    "@astrojs/compiler": ^0.31.3
+    prettier: ^2.7.1
+    sass-formatter: ^0.7.5
+    synckit: ^0.8.4
+  checksum: d7a50d6cef190bc7eb02aae48b9b0a018639e0a984bf0a2b020b8b12d8c74ff9d91116adc082657883a8195977341db7db483c26139591ee9b5528dfbdbd085e
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-astro@npm:^0.7.0":
   version: 0.7.0
   resolution: "prettier-plugin-astro@npm:0.7.0"
   dependencies:
