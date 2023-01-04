@@ -747,7 +747,7 @@ __metadata:
     eslint-config-prettier: 8.6.0
     eslint-plugin-astro: 0.21.1
     prettier: 2.8.1
-    prettier-plugin-astro: 0.7.1
+    prettier-plugin-astro: 0.7.2
     remark-twemoji: 0.1.1
     tailwindcss: 3.2.4
     twemoji: 14.0.2
@@ -5624,15 +5624,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.7.1":
-  version: 0.7.1
-  resolution: "prettier-plugin-astro@npm:0.7.1"
+"prettier-plugin-astro@npm:0.7.2":
+  version: 0.7.2
+  resolution: "prettier-plugin-astro@npm:0.7.2"
   dependencies:
     "@astrojs/compiler": ^0.31.3
     prettier: ^2.7.1
     sass-formatter: ^0.7.5
     synckit: ^0.8.4
-  checksum: d7a50d6cef190bc7eb02aae48b9b0a018639e0a984bf0a2b020b8b12d8c74ff9d91116adc082657883a8195977341db7db483c26139591ee9b5528dfbdbd085e
+  checksum: b4b8515d1f31984d6856783eb0163020a26c106284f01b59870b09110f1310aa916328f1622a7a9cd87b229c482ff5cb283bcbdad1b6a8816fabea9e1341a808
   languageName: node
   linkType: hard
 
