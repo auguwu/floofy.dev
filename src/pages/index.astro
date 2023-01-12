@@ -28,17 +28,19 @@ const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
   <body class="flex flex-col space-y-12">
     <Navbar />
     <Container>
-      <img
-        src="https://cdn.floofy.dev/images/August.png"
-        class="w-[154px] h-[154px] rounded-md shadow-sm"
-        alt="noel avatar"
-        draggable="false"
-      />
+      <div class="relative max-lg:grid max-lg:place-self-center max-lg:text-center max-lg:place-items-center">
+        <img
+          src="https://cdn.floofy.dev/images/August.png"
+          class="w-[154px] h-[154px] rounded-md shadow-sm"
+          alt="noel avatar"
+          draggable="false"
+        />
 
-      <h1 class="font-mono text-white text-4xl mt-3">Noel</h1>
-      <h2 class="text-2xl text-white italic mt-4">a pile of floof that exists on the internet!</h2>
+        <h1 class="font-mono text-white text-4xl mt-3">Noel</h1>
+        <h2 class="text-2xl text-white italic mt-4">a pile of floof that exists on the internet!</h2>
+      </div>
 
-      <div class="grid grid-cols-4 gap-3 mt-5 lg:hidden">
+      <div class="grid grid-cols-4 gap-3 mt-5 md:place-self-center md:gap-2 lg:hidden">
         <a href="https://discord.com/users/280158289667555328" class="mr-3">
           <Icon name="fa-brands:discord" size={64} class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" />
         </a>
@@ -62,7 +64,7 @@ const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
         </div>
       </div>
 
-      <div class="container mx-auto max-w-7xl space-y-6 max-md:hidden">
+      <div class="container mx-auto max-w-7xl space-y-6 max-lg:hidden">
         <div class="grid grid-cols-3 gap-3 items-center [&>*]:h-full">
           {githubRepos.map((data) => <ProjectCard data={data} />)}
         </div>

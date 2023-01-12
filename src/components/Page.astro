@@ -1,0 +1,22 @@
+---
+import Navbar from './Navbar.astro';
+import Head from './Head.astro';
+
+export interface Props {
+  description: string;
+  bodyClass?: string;
+  image?: string;
+  title: string;
+  path: string;
+}
+
+const props = Astro.props;
+---
+
+<html lang="en">
+  <Head {...props} />
+  <body class={`text-white ${props.bodyClass ?? ''}`}>
+    <Navbar />
+    <slot />
+  </body>
+</html>

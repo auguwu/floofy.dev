@@ -737,6 +737,7 @@ __metadata:
     "@fontsource/jetbrains-mono": 4.5.11
     "@tailwindcss/typography": 0.5.9
     "@types/eslint": 8.4.10
+    "@types/node": ^18.11.18
     "@types/prettier": 2.7.2
     "@typescript-eslint/eslint-plugin": 5.48.1
     "@typescript-eslint/parser": 5.48.1
@@ -1024,6 +1025,13 @@ __metadata:
   dependencies:
     "@types/unist": "*"
   checksum: 1708c9a879d3c0b602a9f520bbb9039fd882e6072026af231a66af017d23cd97481de60cd9ad0e3b3c2c990b780b54c6a5ba7ba5d2f286ab4cf57967e1f98ee2
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.18":
+  version: 18.11.18
+  resolution: "@types/node@npm:18.11.18"
+  checksum: 03f17f9480f8d775c8a72da5ea7e9383db5f6d85aa5fefde90dd953a1449bd5e4ffde376f139da4f3744b4c83942166d2a7603969a6f8ea826edfb16e6e3b49d
   languageName: node
   linkType: hard
 

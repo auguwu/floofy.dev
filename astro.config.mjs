@@ -41,7 +41,15 @@ export default defineConfig({
     syntaxHighlight: 'shiki',
     shikiConfig: {
       theme: 'rose-pine',
-      wrap: true
+      wrap: true,
+      langs: [
+        {
+          id: 'docker',
+          scopeName: 'source.dockerfile',
+          path: 'docker.tmLanguage.json',
+          aliases: ['dockerfile']
+        }
+      ]
     }
   }
 });

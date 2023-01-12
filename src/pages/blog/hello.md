@@ -1,6 +1,5 @@
 ---
 title: Welcome to my blog!~
-author: Noel
 description: Welcome to my new blog made with Astro!
 createdAt: 2022-12-21T06:36:23.354Z
 layout: ../../layouts/Blog.astro

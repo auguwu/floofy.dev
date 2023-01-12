@@ -1,6 +1,5 @@
 ---
 title: Building a background task queue in Kotlin
-author: Noel
 description: How I built Noelware's Kotoha task queue framework in a single blog post.
 createdAt: 2022-12-21T07:05:51.545Z
 draft: true
