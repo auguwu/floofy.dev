@@ -15,17 +15,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0 || ^0.31.0, @astrojs/compiler@npm:^0.31.0, @astrojs/compiler@npm:^0.31.3":
+"@astrojs/compiler@npm:^0.29.3":
+  version: 0.29.19
+  resolution: "@astrojs/compiler@npm:0.29.19"
+  checksum: 3d86dec7550f2ef3ffeb66c249c76b762c7b759fc09125fd863bbf5f8c7b333df710a81fa8cb2e1cd0cd73707f4fc003c6b44af234e462131dd0768c2a37e059
+  languageName: node
+  linkType: hard
+
+"@astrojs/compiler@npm:^0.31.0, @astrojs/compiler@npm:^0.31.3":
   version: 0.31.3
   resolution: "@astrojs/compiler@npm:0.31.3"
   checksum: eada0d3b153919759a60ae8e83b8ed88945f3ea480199885d2f58e2095816c1026a15c9d30eb708f804d7c3eeebb9f3005e83613e56d57ea61f7922ced1a0e3c
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^0.29.3":
-  version: 0.29.19
-  resolution: "@astrojs/compiler@npm:0.29.19"
-  checksum: 3d86dec7550f2ef3ffeb66c249c76b762c7b759fc09125fd863bbf5f8c7b333df710a81fa8cb2e1cd0cd73707f4fc003c6b44af234e462131dd0768c2a37e059
+"@astrojs/compiler@npm:^0.33.0":
+  version: 0.33.0
+  resolution: "@astrojs/compiler@npm:0.33.0"
+  checksum: 540ef898d97d96eb7604f840c5d06b63dd9aacfb460c9f12b9d03ccb206d045f0f1c868157801a9566d8be1a4134455183c2d1f5f6cbc9dd78c80f4aa81ce8b5
   languageName: node
   linkType: hard
 
@@ -746,7 +753,7 @@ __metadata:
     autoprefixer: 10.4.13
     eslint: 8.30.0
     eslint-config-prettier: 8.6.0
-    eslint-plugin-astro: 0.21.1
+    eslint-plugin-astro: 0.22.0
     prettier: 2.8.3
     prettier-plugin-astro: 0.7.2
     remark-twemoji: 0.1.1
@@ -1117,7 +1124,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:5.48.2":
+"@typescript-eslint/scope-manager@npm:5.48.2, @typescript-eslint/scope-manager@npm:^5.48.2":
   version: 5.48.2
   resolution: "@typescript-eslint/scope-manager@npm:5.48.2"
   dependencies:
@@ -1480,18 +1487,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:^0.9.0":
-  version: 0.9.2
-  resolution: "astro-eslint-parser@npm:0.9.2"
+"astro-eslint-parser@npm:^0.10.1":
+  version: 0.10.1
+  resolution: "astro-eslint-parser@npm:0.10.1"
   dependencies:
-    "@astrojs/compiler": ^0.27.0 || ^0.28.0 || ^0.29.0 || ^0.30.0 || ^0.31.0
+    "@astrojs/compiler": ^0.33.0
+    "@typescript-eslint/scope-manager": ^5.48.2
     "@typescript-eslint/types": ^5.25.0
     astrojs-compiler-sync: ^0.3.0
     debug: ^4.3.4
-    eslint-scope: ^7.1.1
     eslint-visitor-keys: ^3.0.0
     espree: ^9.0.0
-  checksum: 274cc45adf1723c51f4bbfa8241710fc0f38c9cceadb66b57f99b61bf87beb572c318e58f5d774e9ef1a02c10bde6340df5d676eab6e1abe62d93c154c43d9c0
+  checksum: 9936fd33d155de3366b1378c196cb13ed97480e596363c00e8dffd390d8d27501963a5bb8f65d44be1b470b6dbb20afc260904fe51a629d5afc17f3248648e0e
   languageName: node
   linkType: hard
 
@@ -2647,19 +2654,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:0.21.1":
-  version: 0.21.1
-  resolution: "eslint-plugin-astro@npm:0.21.1"
+"eslint-plugin-astro@npm:0.22.0":
+  version: 0.22.0
+  resolution: "eslint-plugin-astro@npm:0.22.0"
   dependencies:
     "@jridgewell/sourcemap-codec": ^1.4.14
     "@typescript-eslint/types": ^5.25.0
-    astro-eslint-parser: ^0.9.0
+    astro-eslint-parser: ^0.10.1
     eslint-utils: ^3.0.0
     postcss: ^8.4.14
     postcss-selector-parser: ^6.0.10
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: a067b0f55d0665219c72f97bcda2964b8c656bf5217aa7da2a1d84d577258bb7085215753d262c03ba85a923ed43a21560f01651f354cc7b24249d42e549ce74
+  checksum: 8020356a71f948d73dade4bcfcce3092e9e804ca6db967a61fc6d7d6f55dd9fe3f9621a23b83ef7675e8456a32cd1ce3c08e141ec0c2ff931bfeadaacda5416b
   languageName: node
   linkType: hard
 
