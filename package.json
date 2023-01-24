@@ -18,7 +18,7 @@
   "dependencies": {
     "@astrojs/mdx": "0.15.0",
     "@astrojs/tailwind": "3.0.0",
-    "@astrojs/vercel": "2.4.0",
+    "@astrojs/vercel": "3.0.0",
     "@fontsource/cantarell": "4.5.10",
     "@fontsource/inter": "4.5.15",
     "@fontsource/jetbrains-mono": "4.5.12",
