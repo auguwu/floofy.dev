@@ -11,7 +11,7 @@
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "build": "astro build",
-    "lint": "eslint src --ext .ts,.js --fix",
+    "lint": "tsx --tsconfig ./scripts/tsconfig.json scripts/eslint.ts",
     "fmt": "prettier --config ./.prettierrc.json --write **/*.{ts,js,md,json,yaml,yml}",
     "dev": "yarn fmt && yarn lint && astro dev"
   },
@@ -31,18 +31,22 @@
     "twemoji": "14.0.2"
   },
   "devDependencies": {
+    "@actions/core": "1.10.0",
     "@augu/eslint-config": "3.0.0",
     "@augu/tsconfig": "1.1.1",
     "@types/eslint": "8.4.10",
-    "@types/node": "^18.11.18",
+    "@types/node": "18.11.18",
     "@types/prettier": "2.7.2",
     "@typescript-eslint/eslint-plugin": "5.49.0",
     "@typescript-eslint/parser": "5.49.0",
-    "eslint": "8.30.0",
+    "eslint": "8.32.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-astro": "0.23.0",
+    "log-symbols": "5.1.0",
     "prettier": "2.8.3",
     "prettier-plugin-astro": "0.7.2",
+    "signale": "1.4.0",
+    "tsx": "3.12.2",
     "typescript": "4.9.4"
   }
 }

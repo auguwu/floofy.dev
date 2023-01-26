@@ -1,7 +1,6 @@
 ---
 import Container from '../components/Container.astro';
-import Navbar from '../components/Navbar.astro';
-import Head from '../components/Head.astro';
+import Page from '../components/Page.astro';
 
 import '../styles/global.css';
 
@@ -10,36 +9,37 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}'))
   .sort((a, b) => new Date(a.frontmatter.createdAt).valueOf() - new Date(b.frontmatter.createdAt).valueOf());
 ---
 
-<html lang="en">
-  <Head description="My blog where I talk about random stuff, I guess?" title="a blog, i think?" path="/blog" />
-  <body class="flex flex-col space-y-12">
-    <Navbar />
-    <Container>
-      <img
-        src="https://cdn.floofy.dev/images/August.png"
-        class="w-[154px] h-[154px] rounded-md shadow-sm max-sm:self-center mb-3"
-        alt="noel avatar"
-        draggable="false"
-      />
+<Page
+  bodyClass="max-md:space-y-8 space-y-3"
+  description="My blog where I talk about random stuff, I guess?"
+  title="a blog, i think?"
+  path="/blog"
+>
+  <Container>
+    <img
+      src="https://cdn.floofy.dev/images/August.png"
+      class="w-[154px] h-[154px] rounded-md shadow-sm max-sm:self-center mb-3"
+      alt="noel avatar"
+      draggable="false"
+    />
 
-      <h1 class="font-mono text-white text-4xl mt-3">Noel's Blog</h1>
-      <h2 class="text-2xl text-white mt-4 mb-3">Here are some of my writing that I have done thus far.</h2>
+    <h1 class="font-mono text-white text-4xl mt-3">Noel's Blog</h1>
+    <h2 class="text-2xl text-white mt-4 mb-3">Here are some of my writing that I have done thus far.</h2>
 
-      <div class="flex flex-col container mx-auto space-y-6 lg:block lg:space-y-3">
-        <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
-          {
-            posts.map((post) => (
-              <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-                <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
-                  {post.frontmatter.title}
-                </a>
+    <div class="flex flex-col container mx-auto lg:block">
+      <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
+        {
+          posts.map((post) => (
+            <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
+              <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
+                {post.frontmatter.title}
+              </a>
 
-                <p class="font-sans text-white">{post.frontmatter.description}</p>
-              </div>
-            ))
-          }
-        </div>
+              <p class="font-sans text-white">{post.frontmatter.description}</p>
+            </div>
+          ))
+        }
       </div>
-    </Container>
-  </body>
-</html>
+    </div>
+  </Container>
+</Page>
