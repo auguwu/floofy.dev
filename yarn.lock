@@ -77,29 +77,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@astrojs/markdown-remark@npm:2.0.0"
-  dependencies:
-    "@astrojs/prism": ^2.0.0
-    github-slugger: ^1.4.0
-    import-meta-resolve: ^2.1.0
-    rehype-raw: ^6.1.1
-    rehype-stringify: ^9.0.3
-    remark-gfm: ^3.0.1
-    remark-parse: ^10.0.1
-    remark-rehype: ^10.1.0
-    remark-smartypants: ^2.0.0
-    shiki: ^0.11.1
-    unified: ^10.1.2
-    unist-util-visit: ^4.1.0
-    vfile: ^5.3.2
-  peerDependencies:
-    astro: ^2.0.0
-  checksum: ddc9737a6eb37f01a242484ca62ef0e0520f9ab122f9a1206a5aa942174aafe64a791761f422fd36664c1dff3ba0bb0f7936b11c85cf10df57f8d3415ff92b34
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:^2.0.1":
   version: 2.0.1
   resolution: "@astrojs/markdown-remark@npm:2.0.1"
@@ -952,7 +929,7 @@ __metadata:
     "@types/prettier": 2.7.2
     "@typescript-eslint/eslint-plugin": 5.49.0
     "@typescript-eslint/parser": 5.49.0
-    astro: 2.0.1
+    astro: 2.0.2
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
     eslint: 8.32.0
@@ -1704,13 +1681,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.0.1":
-  version: 2.0.1
-  resolution: "astro@npm:2.0.1"
+"astro@npm:2.0.2":
+  version: 2.0.2
+  resolution: "astro@npm:2.0.2"
   dependencies:
     "@astrojs/compiler": ^1.0.1
     "@astrojs/language-server": ^0.28.3
-    "@astrojs/markdown-remark": ^2.0.0
+    "@astrojs/markdown-remark": ^2.0.1
     "@astrojs/telemetry": ^2.0.0
     "@astrojs/webapi": ^2.0.0
     "@babel/core": ^7.18.2
@@ -1762,7 +1739,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 20f8fdc6c67848ab14e0551e7bf45b49452171db91e65f9d5a298efa0fbf6eb79d2b4f12b1f181668bdbf3db285c6a120a48fcadaf719485af4c6d5b36e9b73e
+  checksum: be4ab7e64ab9ba6343837decfa8c22f2e05f0d661aaedf042106fa619640c0c0f7e5b63a50c45e6855a6d9be4db3f11754a5e63d5109814edac5b2bbf080cafb
   languageName: node
   linkType: hard
 
