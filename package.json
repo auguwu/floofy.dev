@@ -43,7 +43,7 @@
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-astro": "0.23.0",
     "log-symbols": "5.1.0",
-    "prettier": "2.8.3",
+    "prettier": "2.8.4",
     "prettier-plugin-astro": "0.8.0",
     "signale": "1.4.0",
     "tsx": "3.12.2",
