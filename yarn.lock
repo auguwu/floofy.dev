@@ -172,17 +172,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:3.0.1":
-  version: 3.0.1
-  resolution: "@astrojs/vercel@npm:3.0.1"
+"@astrojs/vercel@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@astrojs/vercel@npm:3.1.0"
   dependencies:
     "@astrojs/webapi": ^2.0.0
+    "@vercel/analytics": ^0.1.8
     "@vercel/nft": ^0.22.1
     fast-glob: ^3.2.11
     set-cookie-parser: ^2.5.1
+    web-vitals: ^3.1.1
   peerDependencies:
-    astro: ^2.0.6
-  checksum: 79d02ea42436201bf49afe5efcd8c5f8f97a0229f408491fd3c493231f2c6e735d883d98ffcb0cfe5687aa01d8a402b46fcff90918fbd52a5cf8362b6c2be59d
+    astro: ^2.0.9
+  checksum: 87405276e2915580c1c5531f40d83aad62e1a3a73d27096de06780e755c764c0a142c6143c16eefceb8f8ec717af17582c0cc41aa166c32960addb70e583b63c
   languageName: node
   linkType: hard
 
@@ -940,7 +942,7 @@ __metadata:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.16.0
     "@astrojs/tailwind": 3.0.1
-    "@astrojs/vercel": 3.0.1
+    "@astrojs/vercel": 3.1.0
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 4.5.10
@@ -1530,6 +1532,15 @@ __metadata:
     "@typescript-eslint/types": 5.51.0
     eslint-visitor-keys: ^3.3.0
   checksum: b49710f3c6b3b62a846a163afffd81be5eb2b1f44e25bec51ff3c9f4c3b579d74aa4cbd3753b4fc09ea3dbc64a7062f9c658c08d22bb2740a599cb703d876220
+  languageName: node
+  linkType: hard
+
+"@vercel/analytics@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "@vercel/analytics@npm:0.1.8"
+  peerDependencies:
+    react: ^16.8||^17||^18
+  checksum: e837f66494372d557e32383e7ab7192a40da242a16d4f650f61b6e0c5ea282b2a37120ec125d3c5d5e3228c3d1957f48c93d299b4b466169e9d7a853a8014c3a
   languageName: node
   linkType: hard
 
@@ -8275,6 +8286,13 @@ __metadata:
   version: 3.2.1
   resolution: "web-streams-polyfill@npm:3.2.1"
   checksum: b119c78574b6d65935e35098c2afdcd752b84268e18746606af149e3c424e15621b6f1ff0b42b2676dc012fc4f0d313f964b41a4b5031e525faa03997457da02
+  languageName: node
+  linkType: hard
+
+"web-vitals@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "web-vitals@npm:3.1.1"
+  checksum: 26d552d7e0bba470e1426bbf55c3c1a701c683bbde4553791a2c7e1bc3a7b7b29bf66ccf67c74872af3aa39e5668728736b90f8b3fee2910c0c566e7eb1b6096
   languageName: node
   linkType: hard
 
