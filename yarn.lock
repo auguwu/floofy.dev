@@ -979,7 +979,7 @@ __metadata:
     "@types/prettier": 2.7.2
     "@typescript-eslint/eslint-plugin": 5.52.0
     "@typescript-eslint/parser": 5.52.0
-    astro: 2.0.11
+    astro: 2.0.12
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
     eslint: 8.34.0
@@ -1900,9 +1900,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.0.11":
-  version: 2.0.11
-  resolution: "astro@npm:2.0.11"
+"astro@npm:2.0.12":
+  version: 2.0.12
+  resolution: "astro@npm:2.0.12"
   dependencies:
     "@astrojs/compiler": ^1.1.0
     "@astrojs/language-server": ^0.28.3
@@ -1958,7 +1958,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: e145866eb270bafe8684d7f2f91013544c0d58e3b29c8910b6d3e0541d3a3c4d195772bd152c08afd07fbba59a4521f41f44b0a7cd24be539f1aa0918d172569
+  checksum: 36e9ec641c6e583a64ba6c3e2a615a9cd1ec5a53aa2fbd3261c6eaab2918e349fc3feb86a5543cc57a5de04da07bd65f8451c13f8fef16eb27b1b5d8b3923dbd
   languageName: node
   linkType: hard
 
