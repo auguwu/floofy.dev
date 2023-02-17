@@ -107,9 +107,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.16.2":
-  version: 0.16.2
-  resolution: "@astrojs/mdx@npm:0.16.2"
+"@astrojs/mdx@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@astrojs/mdx@npm:0.17.0"
   dependencies:
     "@astrojs/markdown-remark": ^2.0.1
     "@astrojs/prism": ^2.0.0
@@ -128,7 +128,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: d944c5407acb65dac1ed36ceb60ec9c541ecb69b45a521ceb03993fcfc9b5ae6987f5824a79fc7e1836c590f32ce5f4ae109e15e2268bab77304d377d6b65db9
+  checksum: 5adb5a427cf4c1a4df6c4f6ef3d9d706c4c752ae4afa1c4b511358056159851e620e75c8bb19376289789643436e23883eea9433a8eca78103d9362ba2ae9d6b
   languageName: node
   linkType: hard
 
@@ -965,7 +965,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.16.2
+    "@astrojs/mdx": 0.17.0
     "@astrojs/tailwind": 3.0.1
     "@astrojs/vercel": 3.1.2
     "@augu/eslint-config": 4.0.1
