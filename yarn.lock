@@ -172,9 +172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:3.1.1":
-  version: 3.1.1
-  resolution: "@astrojs/vercel@npm:3.1.1"
+"@astrojs/vercel@npm:3.1.2":
+  version: 3.1.2
+  resolution: "@astrojs/vercel@npm:3.1.2"
   dependencies:
     "@astrojs/webapi": ^2.0.0
     "@vercel/analytics": ^0.1.8
@@ -183,8 +183,8 @@ __metadata:
     set-cookie-parser: ^2.5.1
     web-vitals: ^3.1.1
   peerDependencies:
-    astro: ^2.0.10
-  checksum: 7ae19918c66263489b1d0f9b7349def8fc9650e5023133e2e85152082fcb7d098f92ecb56432a829e09af025d7fe19658e81035dbf817dbc2222b7c3df5a8f96
+    astro: ^2.0.13
+  checksum: fdb9f4e95a58fb5e85c2143b35d4352cad5503907009e90a5fe3a1f065c917608a06f30c7662b5d2c49c08c460078f4c99a8fa91d484a0b72ccdc93ae5a17f81
   languageName: node
   linkType: hard
 
@@ -967,7 +967,7 @@ __metadata:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.16.2
     "@astrojs/tailwind": 3.0.1
-    "@astrojs/vercel": 3.1.1
+    "@astrojs/vercel": 3.1.2
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 4.5.10
