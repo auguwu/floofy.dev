@@ -172,28 +172,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:3.1.2":
-  version: 3.1.2
-  resolution: "@astrojs/vercel@npm:3.1.2"
+"@astrojs/vercel@npm:3.1.4":
+  version: 3.1.4
+  resolution: "@astrojs/vercel@npm:3.1.4"
   dependencies:
-    "@astrojs/webapi": ^2.0.0
+    "@astrojs/webapi": ^2.0.2
     "@vercel/analytics": ^0.1.8
     "@vercel/nft": ^0.22.1
     fast-glob: ^3.2.11
     set-cookie-parser: ^2.5.1
     web-vitals: ^3.1.1
   peerDependencies:
-    astro: ^2.0.13
-  checksum: fdb9f4e95a58fb5e85c2143b35d4352cad5503907009e90a5fe3a1f065c917608a06f30c7662b5d2c49c08c460078f4c99a8fa91d484a0b72ccdc93ae5a17f81
-  languageName: node
-  linkType: hard
-
-"@astrojs/webapi@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@astrojs/webapi@npm:2.0.0"
-  dependencies:
-    undici: ^5.14.0
-  checksum: 4336492bb211e3289ac438dab2eb9a06cfde47764ecfc8aa50ea3416636a0013d1192e5637bd112c00f3a88af5543ffc084e650348017a9b263b4fdd8a46deca
+    astro: ^2.0.17
+  checksum: d339d21813720c6c93e2ea5590f213bf7ae048d124b37b27704bd2f919badd26929803761c9f573ff81c0f732f373057639f0bdf3c7c52245d6369a8fddbcb81
   languageName: node
   linkType: hard
 
@@ -203,6 +194,15 @@ __metadata:
   dependencies:
     undici: 5.18.0
   checksum: 7e0db7f0540f6b71cdb70478737eb2acbb2eb6ece1069b677201ccce23292fd6f96181ee0876d18647d3d8a548cdbbdfc6cc8d42bc02785252e8abe8dcce6108
+  languageName: node
+  linkType: hard
+
+"@astrojs/webapi@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@astrojs/webapi@npm:2.0.2"
+  dependencies:
+    undici: 5.20.0
+  checksum: ce1b5f492dbd9b7050a92b65964f7384e1864eb07181d79c37bb4d6c1047121f38aac0f941a8f7eb88cd11d25c85ba2c2562afa84e6e7ad5d45a85c08a2bed00
   languageName: node
   linkType: hard
 
@@ -976,7 +976,7 @@ __metadata:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.17.0
     "@astrojs/tailwind": 3.0.1
-    "@astrojs/vercel": 3.1.2
+    "@astrojs/vercel": 3.1.4
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 4.5.10
@@ -7921,6 +7921,15 @@ __metadata:
   dependencies:
     busboy: ^1.6.0
   checksum: 74e0f357c376c745fcca612481a5742866ae36086ad387e626255f4c4a15fc5357d9d0fa4355271b6a633d50f5556c3e85720844680c44861c66e23afca7245f
+  languageName: node
+  linkType: hard
+
+"undici@npm:5.20.0":
+  version: 5.20.0
+  resolution: "undici@npm:5.20.0"
+  dependencies:
+    busboy: ^1.6.0
+  checksum: 25412a785b2bd0b12f0bb0ec47ef00aa7a611ca0e570cb7af97cffe6a42e0d78e4b15190363a43771e9002defc3c6647c1b2d52201b3f64e2196819db4d150d3
   languageName: node
   linkType: hard
 
