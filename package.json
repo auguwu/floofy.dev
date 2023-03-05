@@ -16,7 +16,7 @@
         "dev": "yarn fmt && yarn lint && astro dev"
     },
     "dependencies": {
-        "@astrojs/mdx": "0.17.0",
+        "@astrojs/mdx": "0.17.2",
         "@astrojs/tailwind": "3.0.1",
         "@astrojs/vercel": "3.1.4",
         "@fontsource/cantarell": "4.5.10",

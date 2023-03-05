@@ -107,16 +107,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.17.0":
-  version: 0.17.0
-  resolution: "@astrojs/mdx@npm:0.17.0"
+"@astrojs/mdx@npm:0.17.2":
+  version: 0.17.2
+  resolution: "@astrojs/mdx@npm:0.17.2"
   dependencies:
     "@astrojs/markdown-remark": ^2.0.1
     "@astrojs/prism": ^2.0.0
     "@mdx-js/mdx": ^2.3.0
     "@mdx-js/rollup": ^2.3.0
     acorn: ^8.8.0
-    es-module-lexer: ^0.10.5
+    es-module-lexer: ^1.1.1
     estree-util-visit: ^1.2.0
     github-slugger: ^1.4.0
     gray-matter: ^4.0.3
@@ -128,7 +128,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: 5adb5a427cf4c1a4df6c4f6ef3d9d706c4c752ae4afa1c4b511358056159851e620e75c8bb19376289789643436e23883eea9433a8eca78103d9362ba2ae9d6b
+  checksum: 3cf2fb47ace07d9e6a64fc3a194c39a9558252a024454d446ab6070be79f39e6250709a833624a49568bdcec9347c3a5822ee88cbcad43aa8c179c9ab9ad3877
   languageName: node
   linkType: hard
 
@@ -974,7 +974,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.17.0
+    "@astrojs/mdx": 0.17.2
     "@astrojs/tailwind": 3.0.1
     "@astrojs/vercel": 3.1.4
     "@augu/eslint-config": 4.0.1
@@ -2859,17 +2859,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^0.10.5":
-  version: 0.10.5
-  resolution: "es-module-lexer@npm:0.10.5"
-  checksum: d2f9debd9d913323322095934653e0558bb8220177645eb76d316b4afd911e8d83ffee0b748b0faa9f3ce1560db3eee4a0ac68d6c2f750c11f4250adce84cf02
-  languageName: node
-  linkType: hard
-
 "es-module-lexer@npm:^1.1.0":
   version: 1.1.0
   resolution: "es-module-lexer@npm:1.1.0"
   checksum: 3e9f5019b69c6b2f04eb8478c4fdb4ed72cb8b4c97511b5dd39c1f498386ed8f5083c32067c15efcfabc7e8460cb65ed4627dd32405475715a898009922f41fa
+  languageName: node
+  linkType: hard
+
+"es-module-lexer@npm:^1.1.1":
+  version: 1.2.0
+  resolution: "es-module-lexer@npm:1.2.0"
+  checksum: a0b865641ae52093fa3dffc41f3c440ac97b9932156896daa7784e66f01bef40f15b5578540f91cb4a43c38adda4a8ab8afca395b3b25480007d741ff0642de3
   languageName: node
   linkType: hard
 
