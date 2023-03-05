@@ -29,19 +29,21 @@ const defaultConfig = require('tailwindcss/defaultConfig');
  * @param {import('tailwindcss').Config} config
  */
 const defineConfig = (config) => config;
-
 module.exports = defineConfig({
-  content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
-  plugins: [require('@tailwindcss/typography')],
-  theme: {
-    extend: {
-      fontFamily: {
-        // @ts-ignore
-        sans: ['Inter', ...defaultConfig.theme.fontFamily.sans],
+    content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
+    plugins: [require('@tailwindcss/typography')],
+    theme: {
+        extend: {
+            fontFamily: {
+                // @ts-ignore
+                sans: ['Inter', ...defaultConfig.theme.fontFamily.sans],
 
-        // @ts-ignore
-        mono: ['"JetBrains Mono"', ...defaultConfig.theme.fontFamily.mono]
-      }
+                // @ts-ignore
+                mono: ['"JetBrains Mono"', ...defaultConfig.theme.fontFamily.mono],
+
+                // @ts-ignore
+                serif: ['Cantarell', ...defaultConfig.theme.fontFamily.serif]
+            }
+        }
     }
-  }
 });

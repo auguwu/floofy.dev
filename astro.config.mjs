@@ -25,31 +25,30 @@
 
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel/serverless';
+import mdx from '@astrojs/mdx';
 
 import remarkTwemoji from 'remark-twemoji';
 
 export default defineConfig({
-  integrations: [mdx(), tailwind()],
-  site: 'https://floofy.dev',
-  output: 'server',
-  adapter: vercel(),
-  markdown: {
-    extendDefaultPlugins: true,
-    remarkPlugins: [remarkTwemoji],
-    syntaxHighlight: 'shiki',
-    shikiConfig: {
-      theme: 'rose-pine',
-      wrap: true,
-      langs: [
-        {
-          id: 'docker',
-          scopeName: 'source.dockerfile',
-          path: 'docker.tmLanguage.json',
-          aliases: ['dockerfile']
+    integrations: [mdx(), tailwind()],
+    site: 'https://floofy.dev',
+    output: 'server',
+    adapter: vercel(),
+    markdown: {
+        remarkPlugins: [remarkTwemoji],
+        syntaxHighlight: 'shiki',
+        shikiConfig: {
+            theme: 'rose-pine',
+            wrap: true,
+            langs: [
+                {
+                    id: 'docker',
+                    scopeName: 'source.dockerfile',
+                    path: 'docker.tmLanguage.json',
+                    aliases: ['dockerfile']
+                }
+            ]
         }
-      ]
     }
-  }
 });

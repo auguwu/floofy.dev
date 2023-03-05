@@ -1,4 +1,7 @@
 {
-  "editor.tabSize": 2,
-  "css.lint.unknownAtRules": "ignore"
+    "editor.tabSize": 4,
+    "css.lint.unknownAtRules": "ignore",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }

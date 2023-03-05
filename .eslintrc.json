@@ -1,4 +1,29 @@
 {
-  "extends": ["prettier", "@augu/eslint-config/ts.js"],
-  "plugins": ["astro"]
+    "extends": ["prettier", "@augu/eslint-config/ts.js"],
+    "ignorePatterns": ["**/*.md", "**/*.mdx", "LICENSE"],
+    "parserOptions": {
+        "extraFileExtensions": [".astro"]
+    },
+    "overrides": [
+        {
+            "files": ["./src/**/*.{ts,tsx}"],
+            "parserOptions": {
+                "project": "./tsconfig.json"
+            }
+        },
+        {
+            "files": ["src/**/*.astro"],
+            "parser": "astro-eslint-parser",
+            "parserOptions": {
+                "parser": "@typescript-eslint/parser",
+                "project": "./tsconfig.json"
+            }
+        },
+        {
+            "files": ["./scripts/**/*.ts"],
+            "parserOptions": {
+                "project": "./scripts/tsconfig.json"
+            }
+        }
+    ]
 }

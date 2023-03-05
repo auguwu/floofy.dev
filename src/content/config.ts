@@ -21,38 +21,16 @@
  * SOFTWARE.
  */
 
-@import '@fontsource/jetbrains-mono';
-@import '@fontsource/cantarell';
-@import '@fontsource/inter';
+import { defineCollection, z } from 'astro:content';
 
-@tailwind components;
-@tailwind base;
-@tailwind utilities;
-
-/* define base colours here */
-:root {
-    --background: #202336;
-    --selection: #d961a3;
-}
-
-::-moz-selection {
-    background: var(--selection);
-    color: white;
-}
-
-::selection {
-    background: var(--selection);
-    color: white;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--background);
-}
+export const collections = {
+    blog: defineCollection({
+        schema: z
+            .object({
+                title: z.string(),
+                description: z.string(),
+                createdAt: z.date()
+            })
+            .strict()
+    })
+};

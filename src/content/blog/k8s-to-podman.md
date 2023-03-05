@@ -1,7 +1,6 @@
 ---
 title: Moving from Kubernetes to Podman
 description: I started to move from Kubernetes to Podman for my Oracle VM.
-layout: ../../layouts/Blog.astro
 createdAt: 2023-01-12T11:40:20.641Z
 ---
 
@@ -192,19 +191,19 @@ For this example, I'll be using `registry.floofy.dev/actions/runner:2.300.2` as 
 ```yaml
 version: '3.8'
 services:
-  runner:
-    image: registry.floofy.dev/actions/runner:2.300.2
-    container_name: actions-runner
-    environment:
-      - GITHUB_ORGANIZATION=Noelware
-      - GITHUB_ACCESS_TOKEN=${GH_ACCESS_TOKEN}
-      - GITHUB_RUNNER_NAME=actions-runner-arm64
-    groups:
-      # This is where we need to set the Docker group. You can use
-      # the `getent group docker | cut -d: -f3` command to get the `docker` group ID.
-      #
-      # - $(result of `getent group docker | cut -d: -f3`)
-    volumes:
-      # If we wanted to use Docker, we can use it here
-      - /var/run/docker.sock:/var/run/docker.sock
+    runner:
+        image: registry.floofy.dev/actions/runner:2.300.2
+        container_name: actions-runner
+        environment:
+            - GITHUB_ORGANIZATION=Noelware
+            - GITHUB_ACCESS_TOKEN=${GH_ACCESS_TOKEN}
+            - GITHUB_RUNNER_NAME=actions-runner-arm64
+        groups:
+            # This is where we need to set the Docker group. You can use
+            # the `getent group docker | cut -d: -f3` command to get the `docker` group ID.
+            #
+            # - $(result of `getent group docker | cut -d: -f3`)
+        volumes:
+            # If we wanted to use Docker, we can use it here
+            - /var/run/docker.sock:/var/run/docker.sock
 ```

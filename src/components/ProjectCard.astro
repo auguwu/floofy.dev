@@ -2,35 +2,40 @@
 import { Icon } from 'astro-icon';
 
 export interface Props {
-  data: any;
+    data: any;
 }
 
 const { data } = Astro.props;
 const iconName = {
-  dockerfile: 'vscode-icons:file-type-docker',
-  typescript: 'vscode-icons:file-type-typescript-official',
-  kotlin: 'vscode-icons:file-type-kotlin',
-  astro: 'vscode-icons:file-type-astro',
-  go: 'vscode-icons:file-type-go-gopher'
+    dockerfile: 'vscode-icons:file-type-docker',
+    typescript: 'vscode-icons:file-type-typescript-official',
+    kotlin: 'vscode-icons:file-type-kotlin',
+    astro: 'vscode-icons:file-type-astro',
+    rust: 'vscode-icons:file-type-rust',
+    go: 'vscode-icons:file-type-go-gopher'
 };
 ---
 
 <div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3">
-  <div class="flex flex-col gap-2 align-middle">
-    <div class="flex flex-row flex-1 mt-auto px-2">
-      <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
+    <div class="flex flex-col gap-2 align-middle">
+        <div class="flex flex-row flex-1 mt-auto px-2">
+            <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
 
-      <a href={data.html_url} class="text-white text-2xl ml-3 max-sm:text-lg font-mono hover:underline" target="_blank">
-        {data.name}
-      </a>
+            <a
+                href={data.html_url}
+                class="text-white text-2xl ml-3 max-sm:text-lg font-mono hover:underline"
+                target="_blank"
+            >
+                {data.name}
+            </a>
 
-      <div class="flex-1 place-self-stretch"></div>
-      <Icon name={iconName[data.language.toLowerCase()]} size={30} />
+            <div class="flex-1 place-self-stretch"></div>
+            <Icon name={iconName[data.language.toLowerCase()]} size={30} />
+        </div>
+        <p class="text-white text-lg">{data.description}</p>
+        <div class="mb-auto flex flex-row">
+            <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
+            <p class="ml-2 text-white text-lg max-sm:text-md font-mono">{data.stargazers_count} stars</p>
+        </div>
     </div>
-    <p class="text-white text-lg">{data.description}</p>
-    <div class="mb-auto flex flex-row">
-      <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
-      <p class="ml-2 text-white text-lg max-sm:text-md font-mono">{data.stargazers_count} stars</p>
-    </div>
-  </div>
 </div>
