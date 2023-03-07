@@ -172,28 +172,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/vercel@npm:3.1.4":
-  version: 3.1.4
-  resolution: "@astrojs/vercel@npm:3.1.4"
+"@astrojs/vercel@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@astrojs/vercel@npm:3.2.0"
   dependencies:
-    "@astrojs/webapi": ^2.0.2
+    "@astrojs/webapi": ^2.1.0
     "@vercel/analytics": ^0.1.8
     "@vercel/nft": ^0.22.1
     fast-glob: ^3.2.11
     set-cookie-parser: ^2.5.1
     web-vitals: ^3.1.1
   peerDependencies:
-    astro: ^2.0.17
-  checksum: d339d21813720c6c93e2ea5590f213bf7ae048d124b37b27704bd2f919badd26929803761c9f573ff81c0f732f373057639f0bdf3c7c52245d6369a8fddbcb81
-  languageName: node
-  linkType: hard
-
-"@astrojs/webapi@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "@astrojs/webapi@npm:2.0.2"
-  dependencies:
-    undici: 5.20.0
-  checksum: ce1b5f492dbd9b7050a92b65964f7384e1864eb07181d79c37bb4d6c1047121f38aac0f941a8f7eb88cd11d25c85ba2c2562afa84e6e7ad5d45a85c08a2bed00
+    astro: ^2.1.0
+  checksum: dc8e96aacb353b861cbc46d46680e500f40e02e92c7c6a7c1ca2f96deb10e6b1b807e82d3319946209def6969c125ebf224c624204e32a7b34867e3b6c90a82f
   languageName: node
   linkType: hard
 
@@ -203,6 +194,15 @@ __metadata:
   dependencies:
     undici: 5.20.0
   checksum: a05921796da2e41748e78f42a809fcb8b17c425cee81f579a77d4b6af9a465092fbff6039539fdc8904f4d873c3ec8fbc2d1c6c12b855d27ddbf3d2746bc8aa9
+  languageName: node
+  linkType: hard
+
+"@astrojs/webapi@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/webapi@npm:2.1.0"
+  dependencies:
+    undici: 5.20.0
+  checksum: 49e398896c38ac630700262a6d88dabd974dbe4b3444f1e9eb6323033a3614eaa46d7f3748f08530c7d9f724d9170940110568cc14958a302652c21efd97ea55
   languageName: node
   linkType: hard
 
@@ -1000,7 +1000,7 @@ __metadata:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.17.0
     "@astrojs/tailwind": 3.1.0
-    "@astrojs/vercel": 3.1.4
+    "@astrojs/vercel": 3.2.0
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 4.5.10
