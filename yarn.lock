@@ -197,6 +197,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/webapi@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "@astrojs/webapi@npm:2.0.3"
+  dependencies:
+    undici: 5.20.0
+  checksum: a05921796da2e41748e78f42a809fcb8b17c425cee81f579a77d4b6af9a465092fbff6039539fdc8904f4d873c3ec8fbc2d1c6c12b855d27ddbf3d2746bc8aa9
+  languageName: node
+  linkType: hard
+
 "@augu/eslint-config@npm:4.0.1":
   version: 4.0.1
   resolution: "@augu/eslint-config@npm:4.0.1"
@@ -1004,7 +1013,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.54.0
     "@typescript-eslint/parser": 5.54.0
-    astro: 2.0.17
+    astro: 2.0.18
     astro-eslint-parser: 0.11.0
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
@@ -1936,15 +1945,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.0.17":
-  version: 2.0.17
-  resolution: "astro@npm:2.0.17"
+"astro@npm:2.0.18":
+  version: 2.0.18
+  resolution: "astro@npm:2.0.18"
   dependencies:
     "@astrojs/compiler": ^1.2.0
     "@astrojs/language-server": ^0.28.3
     "@astrojs/markdown-remark": ^2.0.1
     "@astrojs/telemetry": ^2.0.1
-    "@astrojs/webapi": ^2.0.2
+    "@astrojs/webapi": ^2.0.3
     "@babel/core": ^7.18.2
     "@babel/generator": ^7.18.2
     "@babel/parser": ^7.18.4
@@ -1994,7 +2003,7 @@ __metadata:
     zod: ^3.17.3
   bin:
     astro: astro.js
-  checksum: 21007d7cc9b6d98c7efbe550d18182024b039eedacc90211c8b6d4e2cb61199027c418e802cf8096d71017bae8a52c13663cbff4a256abf15185ad61a690aa5b
+  checksum: 560014819292aff9b0982ccc752a6d32b050572fae1ff2eb90b03c46186b7d95e08fbc6201ac4ab245576f53cb624726d3c5227cc0ad6f32e0367c5bfa56a2da
   languageName: node
   linkType: hard
 
