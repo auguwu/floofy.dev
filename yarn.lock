@@ -107,6 +107,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/markdown-remark@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/markdown-remark@npm:2.1.0"
+  dependencies:
+    "@astrojs/prism": ^2.1.0
+    github-slugger: ^1.4.0
+    image-size: ^1.0.2
+    import-meta-resolve: ^2.1.0
+    rehype-raw: ^6.1.1
+    rehype-stringify: ^9.0.3
+    remark-gfm: ^3.0.1
+    remark-parse: ^10.0.1
+    remark-rehype: ^10.1.0
+    remark-smartypants: ^2.0.0
+    shiki: ^0.11.1
+    unified: ^10.1.2
+    unist-util-visit: ^4.1.0
+    vfile: ^5.3.2
+  peerDependencies:
+    astro: ^2.1.0
+  checksum: d62d7aee5fa7374640e874d59dcb781361d48bddcee8558c541f1514a152dee1f6ad70dc8221483cd7a7a7e60cfc32a675ab326903f2f834f043ce607a3fc771
+  languageName: node
+  linkType: hard
+
 "@astrojs/mdx@npm:0.17.0":
   version: 0.17.0
   resolution: "@astrojs/mdx@npm:0.17.0"
@@ -141,6 +165,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/prism@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/prism@npm:2.1.0"
+  dependencies:
+    prismjs: ^1.28.0
+  checksum: b9d01122c185e5b1fbf28bb9ebcbcc4dc8a24c7ffe55a4e631a9ffb50e8f92747604f21d746ab13ab1abc6dd028d83a395027409133d45341c0fefa1c5916a83
+  languageName: node
+  linkType: hard
+
 "@astrojs/tailwind@npm:3.1.0":
   version: 3.1.0
   resolution: "@astrojs/tailwind@npm:3.1.0"
@@ -156,9 +189,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/telemetry@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@astrojs/telemetry@npm:2.0.1"
+"@astrojs/telemetry@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/telemetry@npm:2.1.0"
   dependencies:
     ci-info: ^3.3.1
     debug: ^4.3.4
@@ -168,7 +201,7 @@ __metadata:
     is-wsl: ^2.2.0
     undici: ^5.20.0
     which-pm-runs: ^1.1.0
-  checksum: c335ae9b731a0f3e65a74962f5b0bfc78e88867ffc66a4a9d29ed6cd0718d1d328e90139b499379e7fe14c2c6d00c5c3c75ec2b8ea4c6cca30d52b9c14509714
+  checksum: b6ab473dc13361c2552bb5b4b33810765476253b78ef92a4049e4165548455acb4a9c87d7fa6fc52c11868a1120a5d73f7504233e92d5e7b287fb003f5841cbd
   languageName: node
   linkType: hard
 
@@ -185,15 +218,6 @@ __metadata:
   peerDependencies:
     astro: ^2.1.0
   checksum: dc8e96aacb353b861cbc46d46680e500f40e02e92c7c6a7c1ca2f96deb10e6b1b807e82d3319946209def6969c125ebf224c624204e32a7b34867e3b6c90a82f
-  languageName: node
-  linkType: hard
-
-"@astrojs/webapi@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "@astrojs/webapi@npm:2.0.3"
-  dependencies:
-    undici: 5.20.0
-  checksum: a05921796da2e41748e78f42a809fcb8b17c425cee81f579a77d4b6af9a465092fbff6039539fdc8904f4d873c3ec8fbc2d1c6c12b855d27ddbf3d2746bc8aa9
   languageName: node
   linkType: hard
 
@@ -1013,7 +1037,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.54.1
     "@typescript-eslint/parser": 5.54.1
-    astro: 2.0.18
+    astro: 2.1.0
     astro-eslint-parser: 0.11.0
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
@@ -1945,15 +1969,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.0.18":
-  version: 2.0.18
-  resolution: "astro@npm:2.0.18"
+"astro@npm:2.1.0":
+  version: 2.1.0
+  resolution: "astro@npm:2.1.0"
   dependencies:
     "@astrojs/compiler": ^1.2.0
     "@astrojs/language-server": ^0.28.3
-    "@astrojs/markdown-remark": ^2.0.1
-    "@astrojs/telemetry": ^2.0.1
-    "@astrojs/webapi": ^2.0.3
+    "@astrojs/markdown-remark": ^2.1.0
+    "@astrojs/telemetry": ^2.1.0
+    "@astrojs/webapi": ^2.1.0
     "@babel/core": ^7.18.2
     "@babel/generator": ^7.18.2
     "@babel/parser": ^7.18.4
@@ -1964,6 +1988,7 @@ __metadata:
     "@types/yargs-parser": ^21.0.0
     acorn: ^8.8.1
     boxen: ^6.2.1
+    chokidar: ^3.5.3
     ci-info: ^3.3.1
     common-ancestor-path: ^1.0.1
     cookie: ^0.5.0
@@ -1978,6 +2003,7 @@ __metadata:
     github-slugger: ^2.0.0
     gray-matter: ^4.0.3
     html-escaper: ^3.0.3
+    image-size: ^1.0.2
     kleur: ^4.1.4
     magic-string: ^0.27.0
     mime: ^3.0.0
@@ -2001,9 +2027,14 @@ __metadata:
     vitefu: ^0.2.4
     yargs-parser: ^21.0.1
     zod: ^3.17.3
+  peerDependencies:
+    sharp: ^0.31.3
+  peerDependenciesMeta:
+    sharp:
+      optional: true
   bin:
     astro: astro.js
-  checksum: 560014819292aff9b0982ccc752a6d32b050572fae1ff2eb90b03c46186b7d95e08fbc6201ac4ab245576f53cb624726d3c5227cc0ad6f32e0367c5bfa56a2da
+  checksum: eb8a3aec75c4f93c1c6ed48251369065135211c88eb5eb54fd31dbb4a13f82247b23612974cc6b5210eb03d633c8521416fbe925f810dad1e6535ab1f34945b7
   languageName: node
   linkType: hard
 
@@ -4408,6 +4439,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"image-size@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "image-size@npm:1.0.2"
+  dependencies:
+    queue: 6.0.2
+  bin:
+    image-size: bin/image-size.js
+  checksum: 01745fdb47f87cecf538e69c63f9adc5bfab30a345345c2de91105f3afbd1bfcfba1256af02bf3323077b33b0004469a837e077bf0cbb9c907e9c1e9e7547585
+  languageName: node
+  linkType: hard
+
 "immutable@npm:^4.0.0":
   version: 4.2.4
   resolution: "immutable@npm:4.2.4"
@@ -4463,7 +4505,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:2, inherits@npm:^2.0.3, inherits@npm:^2.0.4":
+"inherits@npm:2, inherits@npm:^2.0.3, inherits@npm:^2.0.4, inherits@npm:~2.0.3":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -6835,6 +6877,15 @@ __metadata:
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
   checksum: b676f8c040cdc5b12723ad2f91414d267605b26419d5c821ff03befa817ddd10e238d22b25d604920340fd73efd8ba795465a0377c4adf45a4a41e4234e42dc4
+  languageName: node
+  linkType: hard
+
+"queue@npm:6.0.2":
+  version: 6.0.2
+  resolution: "queue@npm:6.0.2"
+  dependencies:
+    inherits: ~2.0.3
+  checksum: ebc23639248e4fe40a789f713c20548e513e053b3dc4924b6cb0ad741e3f264dcff948225c8737834dd4f9ec286dbc06a1a7c13858ea382d9379f4303bcc0916
   languageName: node
   linkType: hard
 
