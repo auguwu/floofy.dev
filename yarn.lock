@@ -1006,7 +1006,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": 5.54.1
     "@typescript-eslint/parser": 5.54.1
     astro: 2.1.2
-    astro-eslint-parser: 0.11.0
+    astro-eslint-parser: 0.12.0
     astro-icon: 0.8.0
     autoprefixer: 10.4.13
     eslint: 8.35.0
@@ -1911,7 +1911,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:0.11.0, astro-eslint-parser@npm:^0.11.0":
+"astro-eslint-parser@npm:0.12.0":
+  version: 0.12.0
+  resolution: "astro-eslint-parser@npm:0.12.0"
+  dependencies:
+    "@astrojs/compiler": ^1.0.0
+    "@typescript-eslint/scope-manager": ^5.48.2
+    "@typescript-eslint/types": ^5.25.0
+    astrojs-compiler-sync: ^0.3.0
+    debug: ^4.3.4
+    eslint-visitor-keys: ^3.0.0
+    espree: ^9.0.0
+  checksum: d149b9159b157355c4a718d1e9319938452e8bb1173bb6f53399d73f1c713f14c30373bf1bff647cd5cab34df9f1e64e0f0f0c4c99a71aa893ce5b1417eea8d5
+  languageName: node
+  linkType: hard
+
+"astro-eslint-parser@npm:^0.11.0":
   version: 0.11.0
   resolution: "astro-eslint-parser@npm:0.11.0"
   dependencies:
