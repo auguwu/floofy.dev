@@ -1,7 +1,7 @@
 {
     "name": "@noel/site",
     "description": "🐾 Noel's personal website, blog, and documentation site made with Astro",
-    "version": "12.2.0",
+    "version": "12.3.0",
     "private": true,
     "author": "Noel <cutie@floofy.dev>",
     "homepage": "https://floofy.dev",
