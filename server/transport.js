@@ -21,5 +21,13 @@
  * SOFTWARE.
  */
 
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+const { default: noelTransport, formatters } = require('@augu/pino-transport');
+const useJson = process.env.NOEL_SITE_USE_JSON !== undefined;
+
+module.exports = () =>
+    noelTransport({
+        json: useJson,
+        transport: new formatters.Default({
+            targetPadding: 15
+        })
+    });

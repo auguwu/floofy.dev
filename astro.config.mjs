@@ -25,16 +25,17 @@
 
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/serverless';
+import node from '@astrojs/node';
 import mdx from '@astrojs/mdx';
 
 import remarkTwemoji from 'remark-twemoji';
 
 export default defineConfig({
+    // @ts-ignore
     integrations: [mdx(), tailwind()],
     site: 'https://floofy.dev',
     output: 'server',
-    adapter: vercel(),
+    adapter: node({ mode: 'middleware' }),
     markdown: {
         remarkPlugins: [remarkTwemoji],
         syntaxHighlight: 'shiki',

@@ -27,7 +27,12 @@ const { description, image, title, path } = Astro.props;
     <!-- Only run Plausible in production -->
     {
         import.meta.env.PROD && (
-            <script defer data-domain="floofy.dev" data-api="/plausible/api/event" src="/plausible/js/script.js" />
+            <script
+                defer
+                data-domain="floofy.dev"
+                data-api="https://plausible.noelware.org/api/event"
+                src="https://plausible.noelware.org/js/script.js"
+            />
         )
     }
 </head>
