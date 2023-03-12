@@ -57,7 +57,6 @@ async function main() {
             const hasWarnings = result.warningCount > 0;
             const symbol = hasErrors ? symbols.error : hasWarnings ? symbols.warning : symbols.success;
 
-            log.info(`${symbol}   src/${path}`);
             for (const message of result.messages) {
                 const s = message.severity === 1 ? symbols.warning : symbols.error;
                 if (process.env.CI !== undefined) {

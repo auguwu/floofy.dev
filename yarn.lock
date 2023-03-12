@@ -1030,6 +1030,7 @@ __metadata:
     eslint: 8.36.0
     eslint-config-prettier: 8.7.0
     eslint-plugin-astro: 0.24.0
+    image-size: 1.0.2
     log-symbols: 5.1.0
     prettier: 2.8.4
     prettier-plugin-astro: 0.8.0
@@ -4489,7 +4490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:^1.0.2":
+"image-size@npm:1.0.2, image-size@npm:^1.0.2":
   version: 1.0.2
   resolution: "image-size@npm:1.0.2"
   dependencies:
