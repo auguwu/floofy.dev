@@ -20,7 +20,7 @@
         "server-destroy": "1.0.1",
         "slash": "5.0.0",
         "string-width": "5.1.2",
-        "svgo": "2.8.0",
+        "svgo": "3.0.2",
         "undici": "5.20.0"
     },
     "devDependencies": {
