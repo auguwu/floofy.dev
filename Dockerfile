@@ -39,6 +39,8 @@ FROM node:19.7-alpine3.17 AS server
 RUN apk update && apk add --no-cache git ca-certificates
 WORKDIR /build
 
+ENV NODE_ENV=production
+
 COPY .yarn/ /build/.yarn
 COPY server/package.json .
 COPY server/yarn.lock .
@@ -52,6 +54,8 @@ FROM node:19.7-alpine3.17
 
 RUN apk update && apk add --no-cache ca-certificates bash tini
 WORKDIR /app/noel/site
+
+ENV NODE_ENV=production
 
 COPY --from=server /build/tcp-transport.js /app/noel/site/tcp-transport.js
 COPY --from=server /build/node_modules /app/noel/site/node_modules
