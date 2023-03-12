@@ -48,16 +48,7 @@ const log = pino({
             { target: './transport.js' },
 
             // @ts-ignore
-            logstashTcpUrl !== undefined
-                ? {
-                      target: 'pino-socket',
-                      options: {
-                          address: logstashTcpUrl,
-                          port: 4040,
-                          mode: 'tcp'
-                      }
-                  }
-                : undefined
+            logstashTcpUrl !== undefined ? { target: './tcp-transport.js' } : undefined
         ].filter(Boolean)
     }
 });

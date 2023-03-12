@@ -6,7 +6,15 @@ import Page from '../components/Page.astro';
 
 import '../styles/global.css';
 
-const githubRepos = await fetch('https://api.github.com/users/auguwu/repos')
+const token = import.meta.env.GITHUB_TOKEN;
+const githubRepos = await fetch('https://api.github.com/users/auguwu/repos', {
+    headers:
+        token !== undefined
+            ? {
+                  Authorization: `token ${token}`
+              }
+            : {}
+})
     .then((res) => res.json())
     .then((data: any[]) =>
         data

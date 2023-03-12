@@ -53,9 +53,10 @@ FROM node:19.7-alpine3.17
 RUN apk update && apk add --no-cache ca-certificates bash tini
 WORKDIR /app/noel/site
 
+COPY --from=server /build/tcp-transport.js /app/noel/site/tcp-transport.js
 COPY --from=server /build/node_modules /app/noel/site/node_modules
-COPY --from=server /build/server.js /app/noel/site/server.js
 COPY --from=server /build/transport.js /app/noel/site/transport.js
+COPY --from=server /build/server.js /app/noel/site/server.js
 COPY --from=site /build/dist /app/noel/site/dist
 
 RUN addgroup -g 1001 noel && \

@@ -133,7 +133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:^5.1.0":
+"@astrojs/node@npm:5.1.0":
   version: 5.1.0
   resolution: "@astrojs/node@npm:5.1.0"
   dependencies:
@@ -987,7 +987,7 @@ __metadata:
   dependencies:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.18.0
-    "@astrojs/node": ^5.1.0
+    "@astrojs/node": 5.1.0
     "@astrojs/tailwind": 3.1.0
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
