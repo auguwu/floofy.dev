@@ -1,7 +1,7 @@
 {
     "name": "@noel/site",
     "description": "🐾 Noel's personal website, blog, and documentation site made with Astro",
-    "version": "12.3.1",
+    "version": "12.3.2",
     "private": true,
     "author": "Noel <cutie@floofy.dev>",
     "homepage": "https://floofy.dev",
@@ -10,7 +10,7 @@
     "license": "MIT",
     "packageManager": "yarn@3.4.1",
     "scripts": {
-        "build": "astro build",
+        "build": "yarn fmt && yarn lint && astro build",
         "lint": "tsx --tsconfig ./scripts/tsconfig.json scripts/eslint.ts",
         "fmt": "prettier --config ./.prettierrc.json --write **/*.{ts,js,md,json,yaml,yml}",
         "dev": "yarn fmt && yarn lint && astro dev"
