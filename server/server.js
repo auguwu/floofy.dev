@@ -74,6 +74,7 @@ async function main() {
         root: resolve(DIST_PATH, 'client/_astro')
     });
 
+    server.get('/healthz', (_, reply) => reply.status(200).send('OK!'));
     server.all('*', async (req, reply) => {
         for (const [header, value] of Object.entries(reply.getHeaders())) reply.header(header, value);
 
