@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@augu/pino-transport@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@augu/pino-transport@npm:1.3.0"
+"@augu/pino-transport@npm:1.3.1":
+  version: 1.3.1
+  resolution: "@augu/pino-transport@npm:1.3.1"
   dependencies:
     "@noelware/utils": 2.2.1
     colorette: 2.0.19
@@ -18,7 +18,7 @@ __metadata:
   dependenciesMeta:
     pino:
       optional: true
-  checksum: c45d207af43fbc37c80da1411ed230a6d355c98772665b4496e57b443e3be0390d673afe28acee7bba1f698f22309eeaed095b2369a566f7b0835e71ec2ec401
+  checksum: e120523d4cf0a15ea0dbd709459dc8208dd7a6fe788af116c643c2eaca22ce1ff1e22614d63c8153bbcecc07556419e5d698320e0dea41e6bbac5893aebcdd4e
   languageName: node
   linkType: hard
 
@@ -102,7 +102,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@noel/site-server@workspace:."
   dependencies:
-    "@augu/pino-transport": 1.3.0
+    "@augu/pino-transport": 1.3.1
     "@fastify/static": 6.9.0
     "@types/cookie": 0.5.1
     "@types/mime": 3.0.1
