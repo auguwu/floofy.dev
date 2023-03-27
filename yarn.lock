@@ -84,31 +84,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@astrojs/markdown-remark@npm:2.1.0"
-  dependencies:
-    "@astrojs/prism": ^2.1.0
-    github-slugger: ^1.4.0
-    image-size: ^1.0.2
-    import-meta-resolve: ^2.1.0
-    rehype-raw: ^6.1.1
-    rehype-stringify: ^9.0.3
-    remark-gfm: ^3.0.1
-    remark-parse: ^10.0.1
-    remark-rehype: ^10.1.0
-    remark-smartypants: ^2.0.0
-    shiki: ^0.11.1
-    unified: ^10.1.2
-    unist-util-visit: ^4.1.0
-    vfile: ^5.3.2
-  peerDependencies:
-    astro: ^2.1.0
-  checksum: d62d7aee5fa7374640e874d59dcb781361d48bddcee8558c541f1514a152dee1f6ad70dc8221483cd7a7a7e60cfc32a675ab326903f2f834f043ce607a3fc771
-  languageName: node
-  linkType: hard
-
-"@astrojs/markdown-remark@npm:^2.1.2":
+"@astrojs/markdown-remark@npm:^2.1.1, @astrojs/markdown-remark@npm:^2.1.2":
   version: 2.1.2
   resolution: "@astrojs/markdown-remark@npm:2.1.2"
   dependencies:
@@ -131,12 +107,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.18.0":
-  version: 0.18.0
-  resolution: "@astrojs/mdx@npm:0.18.0"
+"@astrojs/mdx@npm:0.18.2":
+  version: 0.18.2
+  resolution: "@astrojs/mdx@npm:0.18.2"
   dependencies:
-    "@astrojs/markdown-remark": ^2.1.0
-    "@astrojs/prism": ^2.1.0
+    "@astrojs/markdown-remark": ^2.1.1
+    "@astrojs/prism": ^2.1.1
     "@mdx-js/mdx": ^2.3.0
     "@mdx-js/rollup": ^2.3.0
     acorn: ^8.8.0
@@ -152,7 +128,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: e48243c79cb2099c88bbce70ab7b700e3ab52e937f25a5db4f74d9ab17caeb4d279a085ab929e573190565cf8dcb852f9796c4fd58b0c4b788544110e48856c3
+  checksum: e9701a07b42ae58f5705bc65fd7f4e80ecec2c0168705f227ffe994b4f74c7154c97b0ee53f17b2d1555ceaa3debd6cd136f2a40a6151ccb8b955398f3272b09
   languageName: node
   linkType: hard
 
@@ -175,6 +151,15 @@ __metadata:
   dependencies:
     prismjs: ^1.28.0
   checksum: b9d01122c185e5b1fbf28bb9ebcbcc4dc8a24c7ffe55a4e631a9ffb50e8f92747604f21d746ab13ab1abc6dd028d83a395027409133d45341c0fefa1c5916a83
+  languageName: node
+  linkType: hard
+
+"@astrojs/prism@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "@astrojs/prism@npm:2.1.1"
+  dependencies:
+    prismjs: ^1.28.0
+  checksum: 396314ba0bb816d32e3916146d7e7518641ad247adbc18af76676ed0cfd5833f017f1696a05bc12f113cf1b2bdd102b49f61e068ef5d20d81b746b4bbb687d80
   languageName: node
   linkType: hard
 
@@ -1009,7 +994,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.18.0
+    "@astrojs/mdx": 0.18.2
     "@astrojs/node": 5.1.0
     "@astrojs/tailwind": 3.1.0
     "@augu/eslint-config": 4.0.1
@@ -4464,7 +4449,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"image-size@npm:1.0.2, image-size@npm:^1.0.2":
+"image-size@npm:1.0.2":
   version: 1.0.2
   resolution: "image-size@npm:1.0.2"
   dependencies:
