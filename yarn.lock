@@ -1021,7 +1021,7 @@ __metadata:
     prettier: 2.8.7
     prettier-plugin-astro: 0.8.0
     remark-twemoji: 0.1.1
-    sass: 1.59.2
+    sass: 1.60.0
     signale: 1.4.0
     tailwindcss: 3.2.7
     tsx: 3.12.5
@@ -7298,16 +7298,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.59.2":
-  version: 1.59.2
-  resolution: "sass@npm:1.59.2"
+"sass@npm:1.60.0":
+  version: 1.60.0
+  resolution: "sass@npm:1.60.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: ab015ac49beb1252373023cc79b687aabd7850a7f450250b2fbe4eb3f64b0aef6759f8c7b33234221788a0e42cdd3999edfb5995218e474123b99cb126773e30
+  checksum: 06e163c37af466ec194cf2ed8dab616372afeb19322d356947d48ea664fc38398ae77c4d91bea9cb0ace954ce289d5518d0f8555ecc49f6bf2539a8ef52fc580
   languageName: node
   linkType: hard
 
