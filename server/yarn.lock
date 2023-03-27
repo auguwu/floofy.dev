@@ -54,7 +54,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/fast-json-stringify-compiler@npm:^4.1.0":
+"@fastify/fast-json-stringify-compiler@npm:^4.2.0":
   version: 4.2.0
   resolution: "@fastify/fast-json-stringify-compiler@npm:4.2.0"
   dependencies:
@@ -109,7 +109,7 @@ __metadata:
     "@types/send": 0.17.1
     "@types/server-destroy": 1.0.1
     cookie: 0.5.0
-    fastify: 4.14.1
+    fastify: 4.15.0
     html-escaper: 3.0.3
     image-size: 1.0.2
     kleur: 4.1.5
@@ -606,17 +606,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify@npm:4.14.1":
-  version: 4.14.1
-  resolution: "fastify@npm:4.14.1"
+"fastify@npm:4.15.0":
+  version: 4.15.0
+  resolution: "fastify@npm:4.15.0"
   dependencies:
     "@fastify/ajv-compiler": ^3.5.0
     "@fastify/error": ^3.0.0
-    "@fastify/fast-json-stringify-compiler": ^4.1.0
+    "@fastify/fast-json-stringify-compiler": ^4.2.0
     abstract-logging: ^2.0.1
     avvio: ^8.2.0
     fast-content-type-parse: ^1.0.0
-    find-my-way: ^7.3.0
+    find-my-way: ^7.6.0
     light-my-request: ^5.6.1
     pino: ^8.5.0
     process-warning: ^2.0.0
@@ -625,7 +625,7 @@ __metadata:
     secure-json-parse: ^2.5.0
     semver: ^7.3.7
     tiny-lru: ^10.0.0
-  checksum: 243c376fea832a80627fdfdc191043c648430ff4f6c44831b6cad9328cbd02f5ef589de6e4bbe4d075d248e686a0b20832d9b2a6a6f13a92a75a1cbd30ce2cd5
+  checksum: f263809abf15c0bcb76ccc8abd9799da5ca2ea0c819aee05805c434e21a468543b1ebb43647c9a418d65711c907ab7d264d1dbdbb69bcd6e02f1b677a2519ce7
   languageName: node
   linkType: hard
 
@@ -638,7 +638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"find-my-way@npm:^7.3.0":
+"find-my-way@npm:^7.6.0":
   version: 7.6.0
   resolution: "find-my-way@npm:7.6.0"
   dependencies:
