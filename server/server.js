@@ -62,7 +62,7 @@ async function main() {
 
     const { handler } = await import(resolve(DIST_PATH, 'server/entry.mjs'));
     const server = fastify({
-        logger: log,
+        logger: log.child({ name: 'floofy.dev:fastify' }),
         genReqId: () => randomBytes(4).toString('hex'),
         requestIdHeader: 'X-Request-Id',
         ignoreDuplicateSlashes: true,

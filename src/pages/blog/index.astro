@@ -1,81 +1,63 @@
 ---
 import { getCollection } from 'astro:content';
 import Container from '~/components/Container.astro';
+import Navbar from '../../components/Navbar.astro';
 import Page from '~/components/Page.astro';
 
 import '~/styles/global.css';
 
+const currentYear = new Date().getFullYear();
 const posts = await getCollection('blog').then((posts) =>
     posts.sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())
 );
 ---
 
 <Page
-    bodyClass="max-md:space-y-8 space-y-3"
-    title="Noel's Blog"
-    description="📝 Writing of random stuff I write"
+    bodyClass="relative"
+    description="📝 Random writing from Noel, nothing too special..."
+    title="Noel's Blogs"
     path="/blog"
 >
-    <Container>
-        <img
-            src="https://cdn.floofy.dev/images/August.png"
-            class="w-[154px] h-[154px] rounded-md shadow-sm max-sm:self-center mb-3"
-            alt="noel avatar"
-            draggable="false"
-        />
+    <main class="min-h-screen">
+        <Navbar />
+        <Container>
+            <div class="mt-4 relative grid place-self-center text-center place-items-center">
+                <img
+                    src="https://cdn.floofy.dev/images/August.png"
+                    class="w-[154px] h-[154px] rounded-md shadow-sm"
+                    alt="noel avatar"
+                    draggable="false"
+                />
 
-        <h1 class="font-mono text-white text-4xl mt-3">Noel's Blog</h1>
-        <h2 class="text-2xl text-white mt-4 mb-3">📝 Here are some of my writing that I have done thus far.</h2>
-        <div class="flex flex-col container mx-auto lg:block">
-            <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
-                {
-                    posts.map((post) => (
-                        <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-                            <a href={`/blog/${post.slug}`} class="font-mono text-white text-2xl lg:text-lg">
-                                {post.data.title}
-                            </a>
-
-                            <p class="font-sans text-white">{post.data.description}</p>
-                        </div>
-                    ))
-                }
+                <h1 class="font-serif text-white text-4xl mt-3">Noel's Blog</h1>
+                <h2 class="text-2xl text-white mt-4">
+                    📝 Collection of my random writings that I publish, sometimes...
+                </h2>
             </div>
-        </div>
-    </Container>
+            <div class="flex flex-col items-center container mx-auto">
+                <div class="grid grid-cols-1 gap-6">
+                    {
+                        posts.map((post) => (
+                            <div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3 max-lg:max-w-2xl lg:w-[48rem]">
+                                <a href={`/blog/${post.slug}`} class="font-serif text-white text-2xl lg:text-lg">
+                                    {post.data.title}
+                                </a>
+
+                                <p class="font-sans text-white">{post.data.description}</p>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </Container>
+        <footer class="relative bottom-0 left-0 text-center mt-56 max-lg:mt-8">
+            <p class="font-serif text-xl">
+                Copyright &copy; 2018-{currentYear}
+                <a class="text-[#f4b5d5] underline" href="https://floofy.dev" target="_blank">Noel</a> &bull;
+                <a class="text-[#f4b5d5] underline" href="https://github.com/auguwu/floofy.dev" target="_blank">
+                    Source Code
+                </a>
+            </p>
+        </footer>
+    </main>
 </Page>
-
-<!-- ---
-<Page
-  bodyClass="max-md:space-y-8 space-y-3"
-  description="My blog where I talk about random stuff, I guess?"
-  title="a blog, i think?"
-  path="/blog"
->
-  <Container>
-    <img
-      src="https://cdn.floofy.dev/images/August.png"
-      class="w-[154px] h-[154px] rounded-md shadow-sm max-sm:self-center mb-3"
-      alt="noel avatar"
-      draggable="false"
-    />
-
-    <h1 class="font-mono text-white text-4xl mt-3">Noel's Blog</h1>
-    <h2 class="text-2xl text-white mt-4 mb-3">Here are some of my writing that I have done thus far.</h2>
-
-    <div class="flex flex-col container mx-auto lg:block">
-      <div class="grid grid-cols-1 gap-6 lg:gap-3 lg:grid-cols-3">
-        {
-          posts.map((post) => (
-            <div class="py-4 px-3 rounded-md shadow-lg bg-[#2B2C3B] space-y-3">
-              <a href={post.url} class="font-mono text-white text-2xl lg:text-lg">
-                {post.frontmatter.title}
-              </a>
-
-              <p class="font-sans text-white">{post.frontmatter.description}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </Container>
-</Page> -->

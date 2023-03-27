@@ -27,6 +27,7 @@ const useJson = process.env.NOEL_SITE_USE_JSON !== undefined;
 module.exports = () =>
     noelTransport({
         json: useJson,
+        dest: 1,
         transport: new formatters.Default({
             targetPadding: 15
         })

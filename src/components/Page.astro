@@ -1,5 +1,4 @@
 ---
-import Navbar from './Navbar.astro';
 import Head from './Head.astro';
 
 export interface Props {
@@ -16,7 +15,6 @@ const props = Astro.props;
 <html lang="en">
     <Head {...props} />
     <body class={`text-white ${props.bodyClass ?? ''}`}>
-        <Navbar />
         <slot />
     </body>
 </html>

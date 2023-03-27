@@ -2,7 +2,12 @@
 import { Icon } from 'astro-icon';
 
 export interface Props {
-    data: any;
+    data: {
+        description: string;
+        language: keyof typeof langs;
+        name: string;
+        url: string;
+    };
 }
 
 const { data } = Astro.props;
@@ -14,6 +19,15 @@ const iconName = {
     rust: 'vscode-icons:file-type-rust',
     go: 'vscode-icons:file-type-go-gopher'
 };
+
+const langs = {
+    dockerfile: 'https://docker.com',
+    typescript: 'https://typescriptlang.org',
+    kotlin: 'https://kotlinlang.org',
+    astro: 'https://astro.build',
+    rust: 'https://rustlang.org',
+    go: 'https://go.dev'
+};
 ---
 
 <div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3">
@@ -22,20 +36,20 @@ const iconName = {
             <Icon size={24} pack="radix" name="bookmark-filled" class="text-white align-middle" />
 
             <a
-                href={data.html_url}
-                class="text-white text-2xl ml-3 max-sm:text-lg font-mono hover:underline"
+                href={data.url}
+                class="text-white text-2xl ml-2 max-sm:text-lg font-mono hover:underline"
                 target="_blank"
             >
                 {data.name}
             </a>
 
             <div class="flex-1 place-self-stretch"></div>
-            <Icon name={iconName[data.language.toLowerCase()]} size={30} />
+            <a href={langs[data.language.toLowerCase()]} target="_blank">
+                <Icon name={iconName[data.language.toLowerCase()]} size={30} />
+            </a>
         </div>
-        <p class="text-white text-lg">{data.description}</p>
-        <div class="mb-auto flex flex-row">
-            <Icon size={24} pack="radix" name="star-filled" class="text-orange-300" />
-            <p class="ml-2 text-white text-lg max-sm:text-md font-mono">{data.stargazers_count} stars</p>
+        <div class="relative mb-auto flex flex-col">
+            <p class="text-white text-lg font-serif">{data.description}</p>
         </div>
     </div>
 </div>
