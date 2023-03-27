@@ -55,10 +55,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@astrojs/compiler@npm:1.2.0"
-  checksum: 1aa546450fd46f9478f5eb69c47614b9a398a46af17318cc7c77e37d4df058574b49d3eae6ae4cc30fc31072bbb1f77d87ea72c30855124514542efb33ae1995
+"@astrojs/compiler@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@astrojs/compiler@npm:1.3.0"
+  checksum: d2eb523499289c567d2197b4d6b3106cab3449627dfd0017652cbf3829c73684bd5db8a2c011a3a96f058be3fdfbed2a46d23b6f04aece62b77808f6ee752e06
   languageName: node
   linkType: hard
 
@@ -105,6 +105,29 @@ __metadata:
   peerDependencies:
     astro: ^2.1.0
   checksum: d62d7aee5fa7374640e874d59dcb781361d48bddcee8558c541f1514a152dee1f6ad70dc8221483cd7a7a7e60cfc32a675ab326903f2f834f043ce607a3fc771
+  languageName: node
+  linkType: hard
+
+"@astrojs/markdown-remark@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@astrojs/markdown-remark@npm:2.1.2"
+  dependencies:
+    "@astrojs/prism": ^2.1.0
+    github-slugger: ^1.4.0
+    import-meta-resolve: ^2.1.0
+    rehype-raw: ^6.1.1
+    rehype-stringify: ^9.0.3
+    remark-gfm: ^3.0.1
+    remark-parse: ^10.0.1
+    remark-rehype: ^10.1.0
+    remark-smartypants: ^2.0.0
+    shiki: ^0.11.1
+    unified: ^10.1.2
+    unist-util-visit: ^4.1.0
+    vfile: ^5.3.2
+  peerDependencies:
+    astro: ^2.1.5
+  checksum: 4adfeec4fa526cf189dd7760d551a83abe23361f3c7b3a89f17ef1894f531e635804bdef87bab8d6884678449f61de828a00cfc98ce87aa6ee4db89745b4081b
   languageName: node
   linkType: hard
 
@@ -1001,7 +1024,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.54.1
     "@typescript-eslint/parser": 5.54.1
-    astro: 2.1.2
+    astro: 2.1.7
     astro-eslint-parser: 0.12.0
     astro-icon: 0.8.0
     autoprefixer: 10.4.14
@@ -1891,13 +1914,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.1.2":
-  version: 2.1.2
-  resolution: "astro@npm:2.1.2"
+"astro@npm:2.1.7":
+  version: 2.1.7
+  resolution: "astro@npm:2.1.7"
   dependencies:
-    "@astrojs/compiler": ^1.2.0
+    "@astrojs/compiler": ^1.3.0
     "@astrojs/language-server": ^0.28.3
-    "@astrojs/markdown-remark": ^2.1.0
+    "@astrojs/markdown-remark": ^2.1.2
     "@astrojs/telemetry": ^2.1.0
     "@astrojs/webapi": ^2.1.0
     "@babel/core": ^7.18.2
@@ -1925,7 +1948,6 @@ __metadata:
     github-slugger: ^2.0.0
     gray-matter: ^4.0.3
     html-escaper: ^3.0.3
-    image-size: ^1.0.2
     kleur: ^4.1.4
     magic-string: ^0.27.0
     mime: ^3.0.0
@@ -1956,7 +1978,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: df90edc6145ce0f0e8b21511335cb218c9839f4815793071e0b56e8cef6a0ec6dcc780c83772513f06bf88760f666124a1622e1f8d8d9ba433383a6b96287823
+  checksum: adb0a822eb76aeb20fb38663176090aa08149a1ea1fa00658befb2ae73f46207b3518f3c0c9eb0248033c81c1938b342f3520662738c7e16ef7171eb3e5aa42b
   languageName: node
   linkType: hard
 
