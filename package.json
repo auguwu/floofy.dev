@@ -35,7 +35,7 @@
         "@augu/eslint-config": "4.0.1",
         "@augu/tsconfig": "1.1.1",
         "@types/eslint": "8.21.1",
-        "@types/node": "18.15.0",
+        "@types/node": "18.15.1",
         "@types/prettier": "2.7.2",
         "@types/signale": "1.4.4",
         "@typescript-eslint/eslint-plugin": "5.54.1",
@@ -50,7 +50,7 @@
         "prettier-plugin-astro": "0.8.0",
         "sass": "1.59.2",
         "signale": "1.4.0",
-        "tsx": "3.12.4",
+        "tsx": "3.12.5",
         "typescript": "4.9.5"
     }
 }
