@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM node:19.7-alpine3.17 AS site
+FROM node:19.8-alpine3.17 AS site
 
 RUN apk update && apk add --no-cache git ca-certificates
 WORKDIR /build
@@ -34,7 +34,7 @@ RUN yarn install --immutable
 COPY . .
 RUN yarn build
 
-FROM node:19.7-alpine3.17 AS server
+FROM node:19.8-alpine3.17 AS server
 
 RUN apk update && apk add --no-cache git ca-certificates
 WORKDIR /build
@@ -50,7 +50,7 @@ RUN yarn install --immutable
 
 COPY server .
 
-FROM node:19.7-alpine3.17
+FROM node:19.8-alpine3.17
 
 RUN apk update && apk add --no-cache ca-certificates bash tini
 WORKDIR /app/noel/site
