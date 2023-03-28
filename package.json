@@ -23,7 +23,7 @@
         "@fontsource/inter": "4.5.15",
         "@fontsource/jetbrains-mono": "4.5.12",
         "@tailwindcss/typography": "0.5.9",
-        "astro": "2.1.7",
+        "astro": "2.1.8",
         "astro-icon": "0.8.0",
         "autoprefixer": "10.4.14",
         "remark-twemoji": "0.1.1",
