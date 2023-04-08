@@ -84,29 +84,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:^2.1.1":
-  version: 2.1.2
-  resolution: "@astrojs/markdown-remark@npm:2.1.2"
-  dependencies:
-    "@astrojs/prism": ^2.1.0
-    github-slugger: ^1.4.0
-    import-meta-resolve: ^2.1.0
-    rehype-raw: ^6.1.1
-    rehype-stringify: ^9.0.3
-    remark-gfm: ^3.0.1
-    remark-parse: ^10.0.1
-    remark-rehype: ^10.1.0
-    remark-smartypants: ^2.0.0
-    shiki: ^0.11.1
-    unified: ^10.1.2
-    unist-util-visit: ^4.1.0
-    vfile: ^5.3.2
-  peerDependencies:
-    astro: ^2.1.5
-  checksum: 4adfeec4fa526cf189dd7760d551a83abe23361f3c7b3a89f17ef1894f531e635804bdef87bab8d6884678449f61de828a00cfc98ce87aa6ee4db89745b4081b
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:^2.1.3":
   version: 2.1.3
   resolution: "@astrojs/markdown-remark@npm:2.1.3"
@@ -130,11 +107,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.18.2":
-  version: 0.18.2
-  resolution: "@astrojs/mdx@npm:0.18.2"
+"@astrojs/mdx@npm:0.18.3":
+  version: 0.18.3
+  resolution: "@astrojs/mdx@npm:0.18.3"
   dependencies:
-    "@astrojs/markdown-remark": ^2.1.1
+    "@astrojs/markdown-remark": ^2.1.3
     "@astrojs/prism": ^2.1.1
     "@mdx-js/mdx": ^2.3.0
     "@mdx-js/rollup": ^2.3.0
@@ -151,7 +128,7 @@ __metadata:
     shiki: ^0.11.1
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: e9701a07b42ae58f5705bc65fd7f4e80ecec2c0168705f227ffe994b4f74c7154c97b0ee53f17b2d1555ceaa3debd6cd136f2a40a6151ccb8b955398f3272b09
+  checksum: b457a384ff6829d0e0e9e8025e1ff66bfecea37bb1b9a4b08b5f42d693c5ef647ee58ac63759926b24c9b4d6aa05472af946fd44f386cf3d62bfa4e02db3c2d1
   languageName: node
   linkType: hard
 
@@ -1017,7 +994,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.18.2
+    "@astrojs/mdx": 0.18.3
     "@astrojs/node": 5.1.1
     "@astrojs/tailwind": 3.1.1
     "@augu/eslint-config": 4.0.1
