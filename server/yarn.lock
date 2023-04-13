@@ -76,9 +76,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fastify/static@npm:6.10.0":
-  version: 6.10.0
-  resolution: "@fastify/static@npm:6.10.0"
+"@fastify/static@npm:6.10.1":
+  version: 6.10.1
+  resolution: "@fastify/static@npm:6.10.1"
   dependencies:
     "@fastify/accept-negotiator": ^1.0.0
     "@fastify/send": ^2.0.0
@@ -87,7 +87,7 @@ __metadata:
     glob: ^8.0.1
     p-limit: ^3.1.0
     readable-stream: ^4.0.0
-  checksum: 483087ff67f28b89168ba82b15398cfe4aa928b87e391daa51def3c990b1577450cb6faa37e7c02fb3536c71ab1374cf3a3dadd210c94a76006f053f4534dddc
+  checksum: c86a6e8d3b0bb8a8f649e0f6b378024896892b71a6a477352089106f4ad863bdd52f30cfd1853a9fd80f639d10d1a9bf03fc091d73562738e4ddddcc29146c14
   languageName: node
   linkType: hard
 
@@ -103,7 +103,7 @@ __metadata:
   resolution: "@noel/site-server@workspace:."
   dependencies:
     "@augu/pino-transport": 1.3.3
-    "@fastify/static": 6.10.0
+    "@fastify/static": 6.10.1
     "@types/cookie": 0.5.1
     "@types/mime": 3.0.1
     "@types/send": 0.17.1
