@@ -123,7 +123,7 @@ __metadata:
     slash: 5.0.0
     string-width: 5.1.2
     svgo: 2.8.0
-    undici: 5.21.2
+    undici: 5.22.0
   languageName: unknown
   linkType: soft
 
@@ -1321,12 +1321,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.21.2":
-  version: 5.21.2
-  resolution: "undici@npm:5.21.2"
+"undici@npm:5.22.0":
+  version: 5.22.0
+  resolution: "undici@npm:5.22.0"
   dependencies:
     busboy: ^1.6.0
-  checksum: baceaa9e610966631e86ad2869b657556dd465438eed55e8079cec2a306ecbeecfde2d6e37e43baf96a4c59588ebef50476131e96e018dcc0a7f5db7e6a06c85
+  checksum: 8dc55240a60ae7680798df344e8f46ad0f872ed0fa434fb94cc4fd2b5b2f8053bdf11994d15902999d3880f9bf7cd875a2e90883d2702bf0f366dacd9cbf3fc6
   languageName: node
   linkType: hard
 
