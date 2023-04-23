@@ -50,7 +50,7 @@
         "prettier-plugin-astro": "0.8.0",
         "sass": "1.62.0",
         "signale": "1.4.0",
-        "tsx": "3.12.5",
+        "tsx": "3.12.6",
         "typescript": "5.0.4"
     }
 }
