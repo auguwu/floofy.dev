@@ -107,12 +107,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.19.0":
-  version: 0.19.0
-  resolution: "@astrojs/mdx@npm:0.19.0"
+"@astrojs/markdown-remark@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@astrojs/markdown-remark@npm:2.2.1"
   dependencies:
-    "@astrojs/markdown-remark": ^2.1.4
-    "@astrojs/prism": ^2.1.1
+    "@astrojs/prism": ^2.1.2
+    github-slugger: ^1.4.0
+    import-meta-resolve: ^2.1.0
+    rehype-raw: ^6.1.1
+    rehype-stringify: ^9.0.3
+    remark-gfm: ^3.0.1
+    remark-parse: ^10.0.1
+    remark-rehype: ^10.1.0
+    remark-smartypants: ^2.0.0
+    shiki: ^0.14.1
+    unified: ^10.1.2
+    unist-util-visit: ^4.1.0
+    vfile: ^5.3.2
+  peerDependencies:
+    astro: ^2.5.0
+  checksum: 4ccbd4f3cbaf48281e696d364be7f713a661ea2a34eb69cf0eb1ac4099600411da7aa632d0ba08089f9408dff82c727a52a16e659237c1bd6ab3a9e6e4b2a057
+  languageName: node
+  linkType: hard
+
+"@astrojs/mdx@npm:0.19.4":
+  version: 0.19.4
+  resolution: "@astrojs/mdx@npm:0.19.4"
+  dependencies:
+    "@astrojs/markdown-remark": ^2.2.1
+    "@astrojs/prism": ^2.1.2
     "@mdx-js/mdx": ^2.3.0
     "@mdx-js/rollup": ^2.3.0
     acorn: ^8.8.0
@@ -125,11 +148,11 @@ __metadata:
     remark-frontmatter: ^4.0.1
     remark-gfm: ^3.0.1
     remark-smartypants: ^2.0.0
-    shiki: ^0.11.1
+    shiki: ^0.14.1
     source-map: ^0.7.4
     unist-util-visit: ^4.1.0
     vfile: ^5.3.2
-  checksum: e547f03ba5ab1de48c67a73e26674091d847e533c182d43874d6b65e41fbb07e92ddd8542778ea1028f91faeb489c858fdc999cad4d15e652dd545a0d9108fa2
+  checksum: bce353e0504d0d8e7a03d8fc74a01c310fc06499fc48f6bca9f133641afb8e28fe1cd1c779420833ea178270d4b076a1aee685e7076a6a51e1900adc1dc38aea
   languageName: node
   linkType: hard
 
@@ -155,12 +178,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/prism@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@astrojs/prism@npm:2.1.1"
+"@astrojs/prism@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "@astrojs/prism@npm:2.1.2"
   dependencies:
     prismjs: ^1.28.0
-  checksum: 396314ba0bb816d32e3916146d7e7518641ad247adbc18af76676ed0cfd5833f017f1696a05bc12f113cf1b2bdd102b49f61e068ef5d20d81b746b4bbb687d80
+  checksum: 79799428a2021e210a71161d161584314bcf469987ad87ebac2371cd67472ee516530f773fd5692a48041d29861584b49704936c2140e53d0c57b693b26c5ffa
   languageName: node
   linkType: hard
 
@@ -995,7 +1018,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.19.0
+    "@astrojs/mdx": 0.19.4
     "@astrojs/node": 5.1.1
     "@astrojs/tailwind": 3.1.1
     "@augu/eslint-config": 4.0.1
@@ -1708,6 +1731,13 @@ __metadata:
   version: 6.0.1
   resolution: "ansi-regex@npm:6.0.1"
   checksum: 1ff8b7667cded1de4fa2c9ae283e979fc87036864317da86a2e546725f96406746411d0d85e87a2d12fa5abd715d90006de7fa4fa0477c92321ad3b4c7d4e169
+  languageName: node
+  linkType: hard
+
+"ansi-sequence-parser@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "ansi-sequence-parser@npm:1.1.0"
+  checksum: 75f4d3a4c555655a698aec05b5763cbddcd16ccccdbfd178fb0aa471ab74fdf98e031b875ef26e64be6a95cf970c89238744b26de6e34af97f316d5186b1df53
   languageName: node
   linkType: hard
 
@@ -4961,7 +4991,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-parser@npm:^3.0.0":
+"jsonc-parser@npm:^3.0.0, jsonc-parser@npm:^3.2.0":
   version: 3.2.0
   resolution: "jsonc-parser@npm:3.2.0"
   checksum: 946dd9a5f326b745aa326d48a7257e3f4a4b62c5e98ec8e49fa2bdd8d96cef7e6febf1399f5c7016114fd1f68a1c62c6138826d5d90bc650448e3cf0951c53c7
@@ -7452,6 +7482,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shiki@npm:^0.14.1":
+  version: 0.14.2
+  resolution: "shiki@npm:0.14.2"
+  dependencies:
+    ansi-sequence-parser: ^1.1.0
+    jsonc-parser: ^3.2.0
+    vscode-oniguruma: ^1.7.0
+    vscode-textmate: ^8.0.0
+  checksum: f2a14302b1803617e3ff1b751a5c87b4af4ad15214dc00e9215402e42940a84a0b956cf55d628f25dbf1296b18e277b8529571cd9359b971ac599a0ab11303e7
+  languageName: node
+  linkType: hard
+
 "side-channel@npm:^1.0.4":
   version: 1.0.4
   resolution: "side-channel@npm:1.0.4"
@@ -8527,7 +8569,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vscode-oniguruma@npm:^1.6.1":
+"vscode-oniguruma@npm:^1.6.1, vscode-oniguruma@npm:^1.7.0":
   version: 1.7.0
   resolution: "vscode-oniguruma@npm:1.7.0"
   checksum: 53519d91d90593e6fb080260892e87d447e9b200c4964d766772b5053f5699066539d92100f77f1302c91e8fc5d9c772fbe40fe4c90f3d411a96d5a9b1e63f42
@@ -8538,6 +8580,13 @@ __metadata:
   version: 6.0.0
   resolution: "vscode-textmate@npm:6.0.0"
   checksum: ff6f17a406c2906586afc14ef01cb122e33acd35312e815abb5c924347a777c6783ce3fe7db8b83f1760ebf843c669843b9390f905b69c433b3395af28e4b483
+  languageName: node
+  linkType: hard
+
+"vscode-textmate@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "vscode-textmate@npm:8.0.0"
+  checksum: 127780dfea89559d70b8326df6ec344cfd701312dd7f3f591a718693812b7852c30b6715e3cfc8b3200a4e2515b4c96f0843c0eacc0a3020969b5de262c2a4bb
   languageName: node
   linkType: hard
 
