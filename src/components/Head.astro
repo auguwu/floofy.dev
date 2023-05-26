@@ -1,8 +1,8 @@
 ---
 export interface Props {
-    description: string;
+    description?: string;
     image?: string;
-    title: string;
+    title?: string;
     path: string;
 }
 
@@ -10,14 +10,14 @@ const { description, image, title, path } = Astro.props;
 ---
 
 <head>
-    <title>Noel - {title}</title>
+    <title>{`Noel 🌺${title ? ` - ${title}` : ''}`.trim()}</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
     <meta property="og:description" content={description} />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#896ae0" />
-    <meta property="og:title" content={`Noel 🌺${title.length > 0 ? ` ~ ${title}` : ''}`} />
+    <meta property="og:title" content={`Noel 🌺${title?.length && title.length > 0 ? ` - ${title}` : ''}`.trim()} />
     <meta property="og:image" content={image ?? 'https://cdn.floofy.dev/images/August.png'} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://floofy.dev${path}`} />

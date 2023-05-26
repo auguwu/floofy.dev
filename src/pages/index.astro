@@ -1,13 +1,9 @@
 ---
-import ProjectCard, { type Props } from '../components/ProjectCard.astro';
-import Container from '../components/Container.astro';
-import { Icon } from 'astro-icon';
-import Navbar from '../components/Navbar.astro';
-import Page from '../components/Page.astro';
+import ProjectCard, { type Props } from '~/components/ProjectCard.astro';
+import Container from '~/components/Container.astro';
+import Navbar from '~/components/Navbar.astro';
+import Head from '~/components/Head.astro';
 
-import '../styles/global.css';
-
-const currentYear = new Date().getFullYear();
 const projects: Props['data'][] = [
     {
         description: '🐻‍❄️📦 Free, open source, and reliable Helm Chart registry made in Kotlin',
@@ -49,68 +45,30 @@ const projects: Props['data'][] = [
 ];
 ---
 
-<Page
-    description="a pile of floof that exists on the internet, and knows how to operate a computer!~ (´・ω・｀)"
-    bodyClass="relative"
-    title="pile of floof that exists"
-    path="/"
->
-    <main class="h-screen">
+<html lang="en">
+    <Head path="/" />
+    <body>
         <Navbar />
-        <Container>
-            <div class="mt-4 relative grid place-self-center text-center place-items-center">
-                <img
-                    src="https://cdn.floofy.dev/images/August.png"
-                    class="w-[154px] h-[154px] rounded-md shadow-sm"
-                    alt="noel avatar"
-                    draggable="false"
-                />
-
-                <h1 class="font-mono text-white text-4xl mt-3">Noel</h1>
-                <h2 class="text-2xl text-white italic mt-4">a pile of floof that exists on the internet!</h2>
-            </div>
-            <div class="grid grid-cols-4 gap-3 mt-7 md:place-self-center md:gap-2 lg:hidden">
-                <a href="https://discord.com/users/280158289667555328" aria-label="discord" class="mr-3">
-                    <Icon name="fa-brands:discord" size={64} class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" />
-                </a>
-
-                <a href="https://github.com/auguwu" aria-label="github" class="mr-2">
-                    <Icon name="fa-brands:github" size={64} class="text-white bg-[#333333] py-1 px-1 rounded-lg" />
-                </a>
-
-                <a href="https://twitter.com/auguuwu" aria-label="twitter" class="mr-2">
-                    <Icon name="fa-brands:twitter" size={64} class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" />
-                </a>
-
-                <a href="https://wuff.space/@noel" aria-label="mastodon" class="mr-2">
-                    <Icon name="fa-brands:mastodon" size={64} class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" />
-                </a>
-
-                <a href="https://last.fm/auguwu" aria-label="last-fm" class="mr-2">
-                    <Icon name="fa-brands:lastfm" size="48" class="text-white bg-[#D51007] py-1 px-1 rounded-lg" />
-                </a>
+        <div class="flex flex-col container mx-auto max-md:justify-center max-md:items-center lg:max-w-7xl">
+            <div class="flex container flex-col mt-8 space-y-3">
+                <h1 class="font-serif text-5xl">Noel</h1>
+                <h2 class="text-3xl">Fullstack Developer, Systems Administration</h2>
+                <hr />
+                <h3 class="text-xl">
+                    19 year old polar bear who boops his hardware too much to the point of possibly breaking it! (So far
+                    it hasn't)
+                </h3>
             </div>
 
-            <div class="flex container mx-auto mt-10 items-center justify-center lg:hidden">
-                <div class="grid grid-cols-1 gap-6 [&>*]:h-full">
+            <h2 class="text-3xl mt-5">Projects</h2>
+            <Container>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 items-center [&>*]:h-full">
                     {projects.map((data) => <ProjectCard data={data} />)}
                 </div>
-            </div>
-
-            <div class="container mx-auto mt-6 max-w-7xl space-y-6 max-lg:hidden">
-                <div class="grid grid-cols-3 gap-3 items-center [&>*]:h-full">
-                    {projects.map((data) => <ProjectCard data={data} />)}
-                </div>
-            </div>
-        </Container>
-        <footer class="relative bottom-0 left-0 text-center mt-56 max-lg:mt-8">
-            <p class="font-serif text-xl">
-                Copyright &copy; 2018-{currentYear}
-                <a class="text-[#f4b5d5] underline" href="https://floofy.dev" target="_blank">Noel</a> &bull;
-                <a class="text-[#f4b5d5] underline" href="https://github.com/auguwu/floofy.dev" target="_blank">
-                    Source Code
-                </a>
-            </p>
-        </footer>
-    </main>
-</Page>
+            </Container>
+        </div>
+        <style is:global>
+            @import '~/styles/global.css';
+        </style>
+    </body>
+</html>

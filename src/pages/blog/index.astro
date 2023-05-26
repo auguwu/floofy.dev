@@ -1,63 +1,36 @@
 ---
 import { getCollection } from 'astro:content';
 import Container from '~/components/Container.astro';
-import Navbar from '../../components/Navbar.astro';
-import Page from '~/components/Page.astro';
+import Navbar from '~/components/Navbar.astro';
+import Head from '~/components/Head.astro';
 
 import '~/styles/global.css';
 
-const currentYear = new Date().getFullYear();
 const posts = await getCollection('blog').then((posts) =>
     posts.sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())
 );
 ---
 
-<Page
-    bodyClass="relative"
-    description="📝 Random writing from Noel, nothing too special..."
-    title="Noel's Blogs"
-    path="/blog"
->
-    <main class="min-h-screen">
+<!DOCTYPE html>
+<html lang="en">
+    <Head title="Blog" description="📝 Collection of my writing I post time from time" path="/blog" />
+    <body class="relative">
         <Navbar />
         <Container>
-            <div class="mt-4 relative grid place-self-center text-center place-items-center">
-                <img
-                    src="https://cdn.floofy.dev/images/August.png"
-                    class="w-[154px] h-[154px] rounded-md shadow-sm"
-                    alt="noel avatar"
-                    draggable="false"
-                />
-
-                <h1 class="font-serif text-white text-4xl mt-3">Noel's Blog</h1>
-                <h2 class="text-2xl text-white mt-4">
-                    📝 Collection of my random writings that I publish, sometimes...
-                </h2>
-            </div>
-            <div class="flex flex-col items-center container mx-auto">
-                <div class="grid grid-cols-1 gap-6">
-                    {
-                        posts.map((post) => (
-                            <div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3 max-lg:max-w-2xl lg:w-[48rem]">
-                                <a href={`/blog/${post.slug}`} class="font-serif text-white text-2xl lg:text-lg">
-                                    {post.data.title}
-                                </a>
-
-                                <p class="font-sans text-white">{post.data.description}</p>
-                            </div>
-                        ))
-                    }
+            <div class="flex mt-3 mx-auto border border-pink-300 lg:w-[80rem] rounded-lg shadow-md py-2 px-3">
+                <div>
+                    <img
+                        src="https://cdn.floofy.dev/images/August.png"
+                        class="md:w-[148px] md:h-[148px] max-sm:hidden h-[72px] w-[72px] rounded-md lg:shadow-sm"
+                        alt="noel avatar"
+                        draggable="false"
+                    />
+                </div>
+                <div class="my-auto ml-4">
+                    <h1 class="font-mono md:text-4xl">📝 Blog</h1>
+                    <h2 class="md:text-2xl mt-2">All of my posts that I have written!</h2>
                 </div>
             </div>
         </Container>
-        <footer class="relative bottom-0 left-0 text-center mt-56 max-lg:mt-8">
-            <p class="font-serif text-xl">
-                Copyright &copy; 2018-{currentYear}
-                <a class="text-[#f4b5d5] underline" href="https://floofy.dev" target="_blank">Noel</a> &bull;
-                <a class="text-[#f4b5d5] underline" href="https://github.com/auguwu/floofy.dev" target="_blank">
-                    Source Code
-                </a>
-            </p>
-        </footer>
-    </main>
-</Page>
+    </body>
+</html>

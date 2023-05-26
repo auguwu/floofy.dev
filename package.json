@@ -1,7 +1,7 @@
 {
     "name": "@noel/site",
     "description": "🐾 Noel's personal website, blog, and documentation site made with Astro",
-    "version": "12.4.0",
+    "version": "12.5.0",
     "private": true,
     "author": "Noel <cutie@floofy.dev>",
     "homepage": "https://floofy.dev",
@@ -50,7 +50,7 @@
         "prettier-plugin-astro": "0.8.0",
         "sass": "1.62.0",
         "signale": "1.4.0",
-        "tsx": "3.12.5",
+        "tsx": "3.12.7",
         "typescript": "5.0.4"
     }
 }
