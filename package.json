@@ -48,7 +48,7 @@
         "log-symbols": "5.1.0",
         "prettier": "2.8.8",
         "prettier-plugin-astro": "0.8.0",
-        "sass": "1.62.0",
+        "sass": "1.62.1",
         "signale": "1.4.0",
         "tsx": "3.12.7",
         "typescript": "5.0.4"
