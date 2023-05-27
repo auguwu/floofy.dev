@@ -13,7 +13,7 @@
         "kleur": "4.1.5",
         "mime": "3.0.0",
         "path-to-regexp": "6.2.1",
-        "pino": "8.11.0",
+        "pino": "8.14.1",
         "pino-socket": "7.3.0",
         "resolve-pkg": "2.0.0",
         "send": "0.18.0",
