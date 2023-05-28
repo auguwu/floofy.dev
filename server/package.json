@@ -19,7 +19,7 @@
         "send": "0.18.0",
         "server-destroy": "1.0.1",
         "slash": "5.1.0",
-        "string-width": "5.1.2",
+        "string-width": "6.1.0",
         "svgo": "2.8.0",
         "undici": "5.22.1"
     },
