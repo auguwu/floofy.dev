@@ -120,7 +120,7 @@ __metadata:
     resolve-pkg: 2.0.0
     send: 0.18.0
     server-destroy: 1.0.1
-    slash: 5.0.0
+    slash: 5.1.0
     string-width: 5.1.2
     svgo: 2.8.0
     undici: 5.22.1
@@ -1205,10 +1205,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"slash@npm:5.0.0":
-  version: 5.0.0
-  resolution: "slash@npm:5.0.0"
-  checksum: 1fa799ee165f7eacf0122ea4252bcf44290db402eb9d3058624ff1d421b8dfe262100dffb0b2cc23f36858666bf661476e2a4c40ebaf3e7b61107cad55a1de88
+"slash@npm:5.1.0":
+  version: 5.1.0
+  resolution: "slash@npm:5.1.0"
+  checksum: 70434b34c50eb21b741d37d455110258c42d2cf18c01e6518aeb7299f3c6e626330c889c0c552b5ca2ef54a8f5a74213ab48895f0640717cacefeef6830a1ba4
   languageName: node
   linkType: hard
 
