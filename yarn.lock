@@ -947,10 +947,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/jetbrains-mono@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@fontsource/jetbrains-mono@npm:5.0.1"
-  checksum: 4bda64650b4816afd08397a9baaa1203ded302b8123fdcd0a7dca4df6110e40b13ccb1c640d5711463a7e75f8854eb33075fcdc518713474a72f3d3bd2bfd81b
+"@fontsource/jetbrains-mono@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@fontsource/jetbrains-mono@npm:5.0.2"
+  checksum: f32d09c9f41bcea8619756fdd0752bd55b8be8425358996e45817836d9b0f915b7658281869d60efb58e0f7bf2ef34eb09ff62e72c8de40c085f24146a6e9b84
   languageName: node
   linkType: hard
 
@@ -1119,7 +1119,7 @@ __metadata:
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 5.0.2
     "@fontsource/inter": 5.0.2
-    "@fontsource/jetbrains-mono": 5.0.1
+    "@fontsource/jetbrains-mono": 5.0.2
     "@tailwindcss/typography": 0.5.9
     "@types/eslint": 8.40.0
     "@types/node": 18.16.16
