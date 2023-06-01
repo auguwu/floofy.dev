@@ -47,7 +47,7 @@
         "image-size": "1.0.2",
         "log-symbols": "5.1.0",
         "prettier": "2.8.8",
-        "prettier-plugin-astro": "0.9.1",
+        "prettier-plugin-astro": "0.10.0",
         "sass": "1.62.1",
         "signale": "1.4.0",
         "tsx": "3.12.7",

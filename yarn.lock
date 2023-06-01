@@ -62,6 +62,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/compiler@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@astrojs/compiler@npm:1.5.0"
+  checksum: 317bd349481fa94fb6cbccc3103b993c1b60ee92150171cab281755fd9736202df655c56655e653f1482d038bfb964b2fe82ea238bbfe67c302a308fbc1d6349
+  languageName: node
+  linkType: hard
+
 "@astrojs/language-server@npm:^1.0.0":
   version: 1.0.5
   resolution: "@astrojs/language-server@npm:1.0.5"
@@ -1251,7 +1258,7 @@ __metadata:
     image-size: 1.0.2
     log-symbols: 5.1.0
     prettier: 2.8.8
-    prettier-plugin-astro: 0.9.1
+    prettier-plugin-astro: 0.10.0
     remark-twemoji: 0.1.1
     sass: 1.62.1
     signale: 1.4.0
@@ -7134,15 +7141,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.9.1":
-  version: 0.9.1
-  resolution: "prettier-plugin-astro@npm:0.9.1"
+"prettier-plugin-astro@npm:0.10.0":
+  version: 0.10.0
+  resolution: "prettier-plugin-astro@npm:0.10.0"
   dependencies:
-    "@astrojs/compiler": ^1.0.1
-    prettier: ^2.8.3
-    sass-formatter: ^0.7.5
-    synckit: ^0.8.4
-  checksum: f5ec1022187a59be11425b34c40ac5f03039ef236e55c87bd038f17eae5164ed401e3a784d6a41029b9b69d4427625414db5abf1e9d49721e4a90c9ceaf38b43
+    "@astrojs/compiler": ^1.5.0
+    prettier: ^2.8.8
+    sass-formatter: ^0.7.6
+  checksum: 4cb68c274dde64e42c1e2eb080ecd70c79fbcdef6ab4ba40f5d9e246ac794842d36534b82c5231d59d0536e70de1502c9f4fe9a603897a38606339868749d5e3
   languageName: node
   linkType: hard
 
@@ -7690,6 +7696,15 @@ __metadata:
   dependencies:
     suf-log: ^2.5.3
   checksum: 967d789635359cf829f029595789d5e095dd0bb3e57b62d2e3ba7e013c68a89587f8c843ffcdaba0302859c4d69f0a3258f6d2131caf661775dd31868e8ae830
+  languageName: node
+  linkType: hard
+
+"sass-formatter@npm:^0.7.6":
+  version: 0.7.6
+  resolution: "sass-formatter@npm:0.7.6"
+  dependencies:
+    suf-log: ^2.5.3
+  checksum: 2c123f7c75d8614fd951c82d1376d4897ea676a87f2bc82a5c9cb8d0c8572662d79f6605e6af6f6339d3d44a95d78f62c6e8bec6ec77db8712839e41cc2fd5ee
   languageName: node
   linkType: hard
 
