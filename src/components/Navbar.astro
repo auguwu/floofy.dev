@@ -4,7 +4,7 @@ import { Icon } from 'astro-icon';
 
 <nav class="relative">
     <header
-        class="flex items-center justify-center max-lg:flex-col lg:justify-between bg-[#2B2C3B] py-3 px-1.5 lg:pl-2 lg:shadow-md lg:max-w-screen-xl lg:mx-auto lg:mt-4 lg:rounded-lg"
+        class="flex items-center justify-center max-lg:flex-col lg:justify-between bg-[#2B2C3B] py-3 px-1.5 lg:pl-2 lg:shadow-md lg:max-w-screen-xl lg:mx-auto lg:mt-1.5 rounded-lg"
     >
         <div class="flex flex-row align-middle gap-2">
             <div class="flex flex-row gap-3">
@@ -21,14 +21,15 @@ import { Icon } from 'astro-icon';
             <span class="my-auto ml-2">&bull;</span>
             <a
                 href="/"
-                class="mr-2 my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
+                class="my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
             >
                 Home
             </a>
 
+            <span class="my-auto">&bull;</span>
             <a
                 href="/blog"
-                class="mr-1 my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
+                class="my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
             >
                 Blog
             </a>
@@ -46,7 +47,7 @@ import { Icon } from 'astro-icon';
                 <Icon name="fa-brands:twitter" size="32" class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" />
             </a>
 
-            <a id="icon" href="https://wuff.space/@noel" class="mr-2" title="Mastodon">
+            <a id="icon" href="https://wuff.space/@noel" rel="me" class="mr-2" title="Mastodon">
                 <Icon name="fa-brands:mastodon" size="32" class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" />
             </a>
 

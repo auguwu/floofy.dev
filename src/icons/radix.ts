@@ -21,6 +21,7 @@
  * SOFTWARE.
  */
 
+// @ts-ignore
 import { createIconPack } from 'astro-icon/pack';
 
 export default createIconPack({

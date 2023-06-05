@@ -2,7 +2,7 @@
 import { getEntryBySlug } from 'astro:content';
 import Container from '~/components/Container.astro';
 import Navbar from '~/components/Navbar.astro';
-import Page from '~/components/Page.astro';
+import Head from '~/components/Head.astro';
 
 import '~/styles/global.css';
 
@@ -20,8 +20,10 @@ const { render, data } = page;
 const { Content } = await render();
 ---
 
-<Page description={data.description} bodyClass="relative" title={data.title} path={`/blog/${slug}`}>
-    <main class="min-h-screen">
+<!DOCTYPE html>
+<html lang="en">
+    <Head title={data.title} description={data.description} path={`/blog/${slug}`} />
+    <body class="relative max-lg:px-3 py-4">
         <Navbar />
         <Container>
             <div class="flex mt-3 mx-auto border border-pink-300 lg:w-[80rem] rounded-lg shadow-md py-2 px-3">
@@ -41,22 +43,13 @@ const { Content } = await render();
                     </div>
                 </div>
             </div>
-            <main class="flex container mx-auto pb-8 mt-9">
+            <main class="flex container mx-auto mt-5">
                 <article
-                    class="lg:max-w-[80rem] prose prose-p:break-words prose-p:text-zinc-200 prose-p:text-2xl prose-headings:font-serif prose-headings:text-zinc-200 prose-strong:text-slate-200 prose-code:text-slate-200 prose-a:text-rose-200 hover:prose-a:text-fuchsia-400 prose-a:underline prose-li:text-slate-300 prose-img:mx-auto"
+                    class="lg:max-w-full max-w-md prose prose-p:break-words prose-p:text-zinc-200 prose-p:text-2xl prose-headings:font-serif prose-headings:text-zinc-200 prose-strong:text-slate-200 prose-code:text-slate-200 prose-a:text-rose-200 hover:prose-a:text-fuchsia-400 prose-a:underline prose-li:text-slate-300 prose-img:mx-auto"
                 >
                     <Content />
                 </article>
             </main>
         </Container>
-        <footer class="relative bottom-0 left-0 text-center">
-            <p class="font-serif text-xl">
-                Copyright &copy; 2018-{currentYear}
-                <a class="text-[#f4b5d5] underline" href="https://floofy.dev" target="_blank">Noel</a> &bull;
-                <a class="text-[#f4b5d5] underline" href="https://github.com/auguwu/floofy.dev" target="_blank">
-                    Source Code
-                </a>
-            </p>
-        </footer>
-    </main>
-</Page>
+    </body>
+</html>

@@ -47,7 +47,7 @@ const projects: Props['data'][] = [
 
 <html lang="en">
     <Head path="/" />
-    <body>
+    <body class="max-lg:px-3 py-2">
         <Navbar />
         <div class="flex flex-col container mx-auto max-md:justify-center max-md:items-center lg:max-w-7xl">
             <div class="flex container flex-col mt-8 space-y-3">
@@ -60,7 +60,7 @@ const projects: Props['data'][] = [
                 </h3>
             </div>
 
-            <h2 class="text-3xl mt-5">Projects</h2>
+            <h2 class="text-3xl lg:mt-5 mt-2">Projects</h2>
             <Container>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 items-center [&>*]:h-full">
                     {projects.map((data) => <ProjectCard data={data} />)}

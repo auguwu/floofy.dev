@@ -23,9 +23,3 @@
 
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
-
-declare module 'astro-icon/pack' {
-    import { createIconPack } from 'astro-icon/lib/createIconPack';
-
-    export { createIconPack };
-}
