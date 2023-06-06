@@ -141,16 +141,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:5.1.4":
-  version: 5.1.4
-  resolution: "@astrojs/node@npm:5.1.4"
+"@astrojs/node@npm:5.2.0":
+  version: 5.2.0
+  resolution: "@astrojs/node@npm:5.2.0"
   dependencies:
-    "@astrojs/webapi": ^2.1.1
+    "@astrojs/webapi": ^2.2.0
     send: ^0.18.0
     server-destroy: ^1.0.1
   peerDependencies:
-    astro: ^2.5.0
-  checksum: 9937ca5863df5c5d93f1b5b87f0b5a7e6904b7a6b8b63b712f79e9ff7555240702704bf72790fcf359cd3519028ec3e62576737a37f42bace286de8a170f1a34
+    astro: ^2.6.0
+  checksum: 654df5420b3cee0f75d058041855e62b0f4a6496f91f832e66eb0f77aca304a9dbd052a215d54ddf4caa7be0f66eb2e8ade4a0d4ba1e436b05290e55c8804e97
   languageName: node
   linkType: hard
 
@@ -191,15 +191,6 @@ __metadata:
     undici: ^5.22.0
     which-pm-runs: ^1.1.0
   checksum: 204485f4488e8c5a9046225516aa36e09d6e27165375dde5372d09558704693aee6fe3ad607704d00dcf811d25cb073d1bb0630f09e8eb107a487d058deb4063
-  languageName: node
-  linkType: hard
-
-"@astrojs/webapi@npm:^2.1.1":
-  version: 2.1.1
-  resolution: "@astrojs/webapi@npm:2.1.1"
-  dependencies:
-    undici: ^5.22.0
-  checksum: b62b06930ca1ef5e095457d1f6e10348e5ff6cb0d4463489dea0f6003af0f04f3b0097d845c8b8ab95a6eaace5afa2367f7c922451580cfa8cd64fea94f71269
   languageName: node
   linkType: hard
 
@@ -1245,7 +1236,7 @@ __metadata:
   dependencies:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.19.6
-    "@astrojs/node": 5.1.4
+    "@astrojs/node": 5.2.0
     "@astrojs/tailwind": 3.1.3
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
