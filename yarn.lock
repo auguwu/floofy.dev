@@ -69,6 +69,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/internal-helpers@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@astrojs/internal-helpers@npm:0.1.0"
+  checksum: 86e3519688fa7f537eea5e496884aa376a265b34fd34dbc1acad6cef078e352c06267ba07f82041dc1663a242052d6d5646f65537a10283e4ef02138372db9e7
+  languageName: node
+  linkType: hard
+
 "@astrojs/language-server@npm:^1.0.0":
   version: 1.0.5
   resolution: "@astrojs/language-server@npm:1.0.5"
@@ -1250,7 +1257,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.59.9
     "@typescript-eslint/parser": 5.59.9
-    astro: 2.5.7
+    astro: 2.6.1
     astro-eslint-parser: 0.14.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.14
@@ -2128,11 +2135,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.5.7":
-  version: 2.5.7
-  resolution: "astro@npm:2.5.7"
+"astro@npm:2.6.1":
+  version: 2.6.1
+  resolution: "astro@npm:2.6.1"
   dependencies:
     "@astrojs/compiler": ^1.4.0
+    "@astrojs/internal-helpers": ^0.1.0
     "@astrojs/language-server": ^1.0.0
     "@astrojs/markdown-remark": ^2.2.1
     "@astrojs/telemetry": ^2.1.1
@@ -2195,7 +2203,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 07c3671a14058e769dfb92696960567b2e7d59e8b9189c2309c3d92f9ba409ee63a626af5e018fbf1c20732096ea91e35a64861ed7d91739b76e3b4244d6173d
+  checksum: 33c5a52d4feb7ef7b31e78a52e21ca770d113d73f3d6baa52b8e5fcfe001a17eec957ab3728b0f074ce19ff4dd6b33b09fa0beac0f0ffb010fee241f4460da2c
   languageName: node
   linkType: hard
 
