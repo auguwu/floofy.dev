@@ -69,10 +69,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/internal-helpers@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@astrojs/internal-helpers@npm:0.1.0"
-  checksum: 86e3519688fa7f537eea5e496884aa376a265b34fd34dbc1acad6cef078e352c06267ba07f82041dc1663a242052d6d5646f65537a10283e4ef02138372db9e7
+"@astrojs/internal-helpers@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@astrojs/internal-helpers@npm:0.1.1"
+  checksum: 8e2077ef486d5cb108a8fb1080792806aef1690979d35624fa60cd936605f4963b48a9d009d44efd3e66d855cbb9d7709064faf3b0a986549feef7f2e5682b3d
   languageName: node
   linkType: hard
 
@@ -1109,13 +1109,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ljharb/has-package-exports-patterns@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@ljharb/has-package-exports-patterns@npm:0.0.2"
-  checksum: 348d421377c5c2e7e6ddf518800d30dbcdf3176d397fed2b214f49dd4ac3d1689701a463c7b89710ba32de63c87fc643565c9ff06aa066d49bc200b5e4b6655e
-  languageName: node
-  linkType: hard
-
 "@mdx-js/mdx@npm:^2.3.0":
   version: 2.3.0
   resolution: "@mdx-js/mdx@npm:2.3.0"
@@ -1188,7 +1181,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.60.1
     "@typescript-eslint/parser": 5.60.1
-    astro: 2.7.0
+    astro: 2.7.1
     astro-eslint-parser: 0.14.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.14
@@ -2056,12 +2049,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.7.0":
-  version: 2.7.0
-  resolution: "astro@npm:2.7.0"
+"astro@npm:2.7.1":
+  version: 2.7.1
+  resolution: "astro@npm:2.7.1"
   dependencies:
     "@astrojs/compiler": ^1.5.0
-    "@astrojs/internal-helpers": ^0.1.0
+    "@astrojs/internal-helpers": ^0.1.1
     "@astrojs/language-server": ^1.0.0
     "@astrojs/markdown-remark": ^2.2.1
     "@astrojs/telemetry": ^2.1.1
@@ -2102,13 +2095,11 @@ __metadata:
     preferred-pm: ^3.0.3
     prompts: ^2.4.2
     rehype: ^12.0.1
-    semver: ^7.5.2
+    semver: ^7.5.3
     server-destroy: ^1.0.1
     shiki: ^0.14.1
-    slash: ^4.0.0
     string-width: ^5.1.2
     strip-ansi: ^7.1.0
-    supports-esm: ^1.0.0
     tsconfig-resolver: ^3.0.1
     typescript: "*"
     unist-util-visit: ^4.1.2
@@ -2124,7 +2115,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 18a1e36d9091913aa4036e4b44eade115df0e21a2bc7558fd55748ae2921e97262f7a571756318e8596bb5de651af90deaf1578af1129570218af1e060465466
+  checksum: deb6d2b51daab83a42af1435952804dea8e1b172d3d6de24a17b4b79845b774ab259a3ecfb2797f01b49eb3ede156c4df8bf87ffb160af8e99e657d395353030
   languageName: node
   linkType: hard
 
@@ -4395,15 +4386,6 @@ __metadata:
   version: 4.0.0
   resolution: "has-flag@npm:4.0.0"
   checksum: 261a1357037ead75e338156b1f9452c016a37dcd3283a972a30d9e4a87441ba372c8b81f818cd0fbcd9c0354b4ae7e18b9e1afa1971164aef6d18c2b6095a8ad
-  languageName: node
-  linkType: hard
-
-"has-package-exports@npm:^1.1.0":
-  version: 1.3.0
-  resolution: "has-package-exports@npm:1.3.0"
-  dependencies:
-    "@ljharb/has-package-exports-patterns": ^0.0.2
-  checksum: d3c68581c4a2f92d3a44480b757ee3a06e31c1dec7089ac88d10bf59cadb9596c69fcf0d8bf6e5c623a1bd3f0c636b8f9736894fdd9ce8757de7058e76d2b766
   languageName: node
   linkType: hard
 
@@ -7693,14 +7675,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.5.2":
-  version: 7.5.2
-  resolution: "semver@npm:7.5.2"
+"semver@npm:^7.5.3":
+  version: 7.5.3
+  resolution: "semver@npm:7.5.3"
   dependencies:
     lru-cache: ^6.0.0
   bin:
     semver: bin/semver.js
-  checksum: 3fdf5d1e6f170fe8bcc41669e31787649af91af7f54f05c71d0865bb7aa27e8b92f68b3e6b582483e2c1c648008bc84249d2cd86301771fe5cbf7621d1fe5375
+  checksum: 9d58db16525e9f749ad0a696a1f27deabaa51f66e91d2fa2b0db3de3e9644e8677de3b7d7a03f4c15bc81521e0c3916d7369e0572dbde250d9bedf5194e2a8a7
   languageName: node
   linkType: hard
 
@@ -7814,13 +7796,6 @@ __metadata:
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: 94a93fff615f25a999ad4b83c9d5e257a7280c90a32a7cb8b4a87996e4babf322e469c42b7f649fd5796edd8687652f3fb452a86dc97a816f01113183393f11c
-  languageName: node
-  linkType: hard
-
-"slash@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "slash@npm:4.0.0"
-  checksum: da8e4af73712253acd21b7853b7e0dbba776b786e82b010a5bfc8b5051a1db38ed8aba8e1e8f400dd2c9f373be91eb1c42b66e91abb407ff42b10feece5e1d2d
   languageName: node
   linkType: hard
 
@@ -8128,15 +8103,6 @@ __metadata:
   dependencies:
     has-flag: ^4.0.0
   checksum: 3dda818de06ebbe5b9653e07842d9479f3555ebc77e9a0280caf5a14fb877ffee9ed57007c3b78f5a6324b8dbeec648d9e97a24e2ed9fdb81ddc69ea07100f4a
-  languageName: node
-  linkType: hard
-
-"supports-esm@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "supports-esm@npm:1.0.0"
-  dependencies:
-    has-package-exports: ^1.1.0
-  checksum: 3497a5886d3d9cd498ecec7679b7028e312c2c0fb897582eb06ba46caf1562aebc9b915103efb1d9e79b1bd6f0e2e2efe9d14dd4906255ceac9b79f53b91cb84
   languageName: node
   linkType: hard
 
