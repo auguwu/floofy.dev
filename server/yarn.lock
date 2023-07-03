@@ -109,7 +109,7 @@ __metadata:
     "@types/send": 0.17.1
     "@types/server-destroy": 1.0.1
     cookie: 0.5.0
-    fastify: 4.19.1
+    fastify: 4.19.2
     html-escaper: 3.0.3
     image-size: 1.0.2
     kleur: 4.1.5
@@ -606,9 +606,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fastify@npm:4.19.1":
-  version: 4.19.1
-  resolution: "fastify@npm:4.19.1"
+"fastify@npm:4.19.2":
+  version: 4.19.2
+  resolution: "fastify@npm:4.19.2"
   dependencies:
     "@fastify/ajv-compiler": ^3.5.0
     "@fastify/error": ^3.2.0
@@ -626,7 +626,7 @@ __metadata:
     secure-json-parse: ^2.5.0
     semver: ^7.5.0
     tiny-lru: ^11.0.1
-  checksum: e5c06ac49655f6e96e6eb50abf23705de50f04e20ec289ab183f650b0e65e29c920479a4804045eb60362de2ce004094a65f31fbc963eae25e26cfcc4d4c7ee4
+  checksum: 64bd66dc0fc6b188dd7642af01b08d9010855155910fa158b08a74a1d38dc0908323588d9bd93077e0a9aaa8bb597580de9327ab7240c69370c6059d517e62d5
   languageName: node
   linkType: hard
 
