@@ -996,24 +996,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/cantarell@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@fontsource/cantarell@npm:5.0.3"
-  checksum: 04aebe690b3c1f835c967dcc521ce89fe2dba1798a487afeed4ab5ed398981d638171a67adca3718670d8709dbd7bc23965af27ddc94205af43f01646fa19268
+"@fontsource/cantarell@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@fontsource/cantarell@npm:5.0.4"
+  checksum: e7227dc6dbb58057e923bb8bb0505abdb2470914c903480c4d33bd20cdfcf8f5117a516aa23bd0e5e55b8bfeb8a805cfe6c2ce2dc471fa107406e56f8699d8e8
   languageName: node
   linkType: hard
 
-"@fontsource/inter@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@fontsource/inter@npm:5.0.3"
-  checksum: 297d10d77636f25185631829b453227ee8f8c08a5e3cb2a585be562f2fb693a16adcb4cef5a6c561d1a34d5be04eb2c45a11e82c900935344a2412533f1829a8
+"@fontsource/inter@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@fontsource/inter@npm:5.0.4"
+  checksum: 93ef85c869827c3627e141b1377d9864d9c15e8b7730979506a482c6250df7c2a4e50a0a715343ad24eb25092fb7d827065a758f56e9a5a05bcdcb8cd08fc07e
   languageName: node
   linkType: hard
 
-"@fontsource/jetbrains-mono@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@fontsource/jetbrains-mono@npm:5.0.3"
-  checksum: 69b8349fab932446b75a853627aec1d52f27fb38b49d931a095e5d5df34cd1526b42ad94a2166902a8670f16e7ce7ca3391e4100c8760967ac7f081d75316ea4
+"@fontsource/jetbrains-mono@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@fontsource/jetbrains-mono@npm:5.0.4"
+  checksum: e534324006171e54fef37e9d62828742a5e73a94f2b2e49c7aa3359f342259ded4e2fc6df77986aba4c20f389c7823579190268c9f0ad1d5d7e0e239205f4641
   languageName: node
   linkType: hard
 
@@ -1185,9 +1185,9 @@ __metadata:
     "@astrojs/tailwind": 4.0.0
     "@augu/eslint-config": 4.0.1
     "@augu/tsconfig": 1.1.1
-    "@fontsource/cantarell": 5.0.3
-    "@fontsource/inter": 5.0.3
-    "@fontsource/jetbrains-mono": 5.0.3
+    "@fontsource/cantarell": 5.0.4
+    "@fontsource/inter": 5.0.4
+    "@fontsource/jetbrains-mono": 5.0.4
     "@tailwindcss/typography": 0.5.9
     "@types/eslint": 8.40.2
     "@types/node": 18.16.19
