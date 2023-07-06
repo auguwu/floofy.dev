@@ -1195,7 +1195,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 5.61.0
     "@typescript-eslint/parser": 5.61.0
-    astro: 2.7.4
+    astro: 2.8.0
     astro-eslint-parser: 0.14.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.14
@@ -2063,9 +2063,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.7.4":
-  version: 2.7.4
-  resolution: "astro@npm:2.7.4"
+"astro@npm:2.8.0":
+  version: 2.8.0
+  resolution: "astro@npm:2.8.0"
   dependencies:
     "@astrojs/compiler": ^1.5.3
     "@astrojs/internal-helpers": ^0.1.1
@@ -2120,6 +2120,7 @@ __metadata:
     vfile: ^5.3.7
     vite: ^4.3.9
     vitefu: ^0.2.4
+    which-pm: ^2.0.0
     yargs-parser: ^21.1.1
     zod: ^3.20.6
   peerDependencies:
@@ -2129,7 +2130,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 983f5b4307cfdc7d1f55604b65204a63fb407404df9ba7f848c439a7287ef2e2051a87021063afbcec36fd6b3f8e6dea50fb780b28014b4e4faaa61624e525ec
+  checksum: e075a1aef5e93ac70eeaddb0b1b30dbd4d3ef620e305af786beb4edbf06bd75e81d2107a948bf7c5270ec3e5591e45b778c196eee52ae67d5ce29a4d88bbf854
   languageName: node
   linkType: hard
 
@@ -8992,7 +8993,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"which-pm@npm:2.0.0":
+"which-pm@npm:2.0.0, which-pm@npm:^2.0.0":
   version: 2.0.0
   resolution: "which-pm@npm:2.0.0"
   dependencies:
