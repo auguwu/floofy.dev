@@ -69,17 +69,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "@astrojs/compiler@npm:1.5.0"
-  checksum: 317bd349481fa94fb6cbccc3103b993c1b60ee92150171cab281755fd9736202df655c56655e653f1482d038bfb964b2fe82ea238bbfe67c302a308fbc1d6349
-  languageName: node
-  linkType: hard
-
 "@astrojs/compiler@npm:^1.5.3":
   version: 1.5.3
   resolution: "@astrojs/compiler@npm:1.5.3"
   checksum: b4b450cf578ed7d46b8b48ae5495c0a05ec0e7c0f64e2a871f50479db096ddecc18002d44f8e71fac1dd344a3b5a70c5c70cb662442a4eb7937cecb3604185b4
+  languageName: node
+  linkType: hard
+
+"@astrojs/compiler@npm:^1.5.5":
+  version: 1.5.6
+  resolution: "@astrojs/compiler@npm:1.5.6"
+  checksum: a69dba8bd34ce0113baee214869a1183d83a4740a0ff39eddac4ef545f2bcd9071498684ad0f84d6b2368e0cd575d2a4f833d021a1909d2e778bf20fef60b118
   languageName: node
   linkType: hard
 
@@ -1223,7 +1223,7 @@ __metadata:
     image-size: 1.0.2
     log-symbols: 5.1.0
     prettier: 3.0.0
-    prettier-plugin-astro: 0.10.0
+    prettier-plugin-astro: 0.11.0
     remark-twemoji: 0.1.1
     sass: 1.63.6
     signale: 1.4.0
@@ -7123,14 +7123,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.10.0":
-  version: 0.10.0
-  resolution: "prettier-plugin-astro@npm:0.10.0"
+"prettier-plugin-astro@npm:0.11.0":
+  version: 0.11.0
+  resolution: "prettier-plugin-astro@npm:0.11.0"
   dependencies:
-    "@astrojs/compiler": ^1.5.0
-    prettier: ^2.8.8
+    "@astrojs/compiler": ^1.5.5
+    prettier: ^3.0.0
     sass-formatter: ^0.7.6
-  checksum: 4cb68c274dde64e42c1e2eb080ecd70c79fbcdef6ab4ba40f5d9e246ac794842d36534b82c5231d59d0536e70de1502c9f4fe9a603897a38606339868749d5e3
+  checksum: d1d0a21a009372ab5c893dd4b7548cc07e263f3a47023d0fff07bc70a4b3cbfd8d29f1710d6c07fcde8845d6940622579077b7c991a41e3237f79db251b00c8c
   languageName: node
   linkType: hard
 
@@ -7146,7 +7146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:3.0.0":
+"prettier@npm:3.0.0, prettier@npm:^3.0.0":
   version: 3.0.0
   resolution: "prettier@npm:3.0.0"
   bin:
