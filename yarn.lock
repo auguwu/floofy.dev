@@ -69,17 +69,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/compiler@npm:^1.5.3":
-  version: 1.5.3
-  resolution: "@astrojs/compiler@npm:1.5.3"
-  checksum: b4b450cf578ed7d46b8b48ae5495c0a05ec0e7c0f64e2a871f50479db096ddecc18002d44f8e71fac1dd344a3b5a70c5c70cb662442a4eb7937cecb3604185b4
-  languageName: node
-  linkType: hard
-
 "@astrojs/compiler@npm:^1.5.5":
   version: 1.5.6
   resolution: "@astrojs/compiler@npm:1.5.6"
   checksum: a69dba8bd34ce0113baee214869a1183d83a4740a0ff39eddac4ef545f2bcd9071498684ad0f84d6b2368e0cd575d2a4f833d021a1909d2e778bf20fef60b118
+  languageName: node
+  linkType: hard
+
+"@astrojs/compiler@npm:^1.6.0":
+  version: 1.6.1
+  resolution: "@astrojs/compiler@npm:1.6.1"
+  checksum: ba13b8cf89dee7b219bdb11ad011176ce174ff2b193f3402a6747137c0e23c1ef444ebf61a12b39ba5ec79b93fdca57147dc9ba05d4325354dcd43c4fee19cd3
   languageName: node
   linkType: hard
 
@@ -1213,7 +1213,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 6.1.0
     "@typescript-eslint/parser": 6.1.0
-    astro: 2.8.5
+    astro: 2.9.0
     astro-eslint-parser: 0.14.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.14
@@ -1352,6 +1352,13 @@ __metadata:
   dependencies:
     "@types/ms": "*"
   checksum: 0a7b89d8ed72526858f0b61c6fd81f477853e8c4415bb97f48b1b5545248d2ae389931680b94b393b993a7cfe893537a200647d93defe6d87159b96812305adc
+  languageName: node
+  linkType: hard
+
+"@types/dom-view-transitions@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@types/dom-view-transitions@npm:1.0.1"
+  checksum: 0246473f485cb415e1f14a08e6a0d3ff85f29abdb2b6f7ca7f0247b2a3a7356a8fe8567a4c73b1503dc02ad92c1d9d8a373eb7b8fca9c1dad545dca57423e866
   languageName: node
   linkType: hard
 
@@ -2097,11 +2104,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.8.5":
-  version: 2.8.5
-  resolution: "astro@npm:2.8.5"
+"astro@npm:2.9.0":
+  version: 2.9.0
+  resolution: "astro@npm:2.9.0"
   dependencies:
-    "@astrojs/compiler": ^1.5.3
+    "@astrojs/compiler": ^1.6.0
     "@astrojs/internal-helpers": ^0.1.1
     "@astrojs/language-server": ^1.0.0
     "@astrojs/markdown-remark": ^2.2.1
@@ -2114,6 +2121,7 @@ __metadata:
     "@babel/traverse": ^7.22.5
     "@babel/types": ^7.22.5
     "@types/babel__core": ^7.20.1
+    "@types/dom-view-transitions": ^1.0.1
     "@types/yargs-parser": ^21.0.0
     acorn: ^8.9.0
     boxen: ^6.2.1
@@ -2137,6 +2145,7 @@ __metadata:
     kleur: ^4.1.4
     magic-string: ^0.27.0
     mime: ^3.0.0
+    network-information-types: ^0.1.1
     ora: ^6.3.1
     p-limit: ^4.0.0
     path-to-regexp: ^6.2.1
@@ -2164,7 +2173,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 32acfbc9c754a04c672e97782e2d660fd88ee3a5c7561abcf4655828db66bb8789ea0f41ed7e9fe96f5fdf86502b8c55773302a1dfc9942c017050fa2acd7f82
+  checksum: 2a48f9e7caad2f93388d6b57968e9a5e3624b3c18beb895d864256aad49be587086e9427813f7b9562204daee7ecc3ed457d445a85d35871b0d563f30cc19130
   languageName: node
   linkType: hard
 
@@ -6434,6 +6443,15 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"network-information-types@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "network-information-types@npm:0.1.1"
+  peerDependencies:
+    typescript: ">= 3.0.0"
+  checksum: 14ecc1e24b53fb6895c2920d353299a965d0501952f1e507b9fa9c1cdab7341257957b4c6d5c95e569e855c49f4c6274f69fce4ceb65983235aa7531e70dc3b6
   languageName: node
   linkType: hard
 
