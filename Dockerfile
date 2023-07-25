@@ -39,7 +39,8 @@ FROM node:20.5.0-alpine3.18
 RUN apk update && apk add --no-cache ca-certificates bash tini curl
 WORKDIR /app/noel/site
 
-COPY --from=build /build/dist /app/noel/site/dist
+COPY --from=build /build/node_modules /app/noel/site/node_modules
+COPY --from=build /build/dist         /app/noel/site/dist
 
 RUN addgroup -g 1001 noel && \
     adduser -DSH -u 1001 -G noel noel && \
