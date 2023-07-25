@@ -19,12 +19,12 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM node:19.9-alpine3.17 AS site
+FROM node:20.4.0-alpine3.18 AS build
 
 RUN apk update && apk add --no-cache git ca-certificates
 WORKDIR /build
 
-COPY .yarn/ /build/.yarn
+COPY .yarn /build/.yarn
 COPY package.json .
 COPY .yarnrc.yml .
 COPY yarn.lock .
@@ -34,34 +34,12 @@ RUN yarn install --immutable
 COPY . .
 RUN yarn build
 
-FROM node:19.9-alpine3.17 AS server
+FROM node:20.4.0-alpine3.18
 
-RUN apk update && apk add --no-cache git ca-certificates
-WORKDIR /build
-
-ENV NODE_ENV=production
-
-COPY .yarn/ /build/.yarn
-COPY server/package.json .
-COPY server/yarn.lock .
-COPY .yarnrc.yml .
-
-RUN yarn install --immutable
-
-COPY server .
-
-FROM node:19.9-alpine3.17
-
-RUN apk update && apk add --no-cache ca-certificates bash tini
+RUN apk update && apk add --no-cache ca-certificates bash tini curl
 WORKDIR /app/noel/site
 
-ENV NODE_ENV=production
-
-COPY --from=server /build/tcp-transport.js /app/noel/site/tcp-transport.js
-COPY --from=server /build/node_modules /app/noel/site/node_modules
-COPY --from=server /build/transport.js /app/noel/site/transport.js
-COPY --from=server /build/server.js /app/noel/site/server.js
-COPY --from=site /build/dist /app/noel/site/dist
+COPY --from=build /build/dist /app/noel/site/dist
 
 RUN addgroup -g 1001 noel && \
     adduser -DSH -u 1001 -G noel noel && \
@@ -71,4 +49,4 @@ EXPOSE 3000
 
 USER noel
 ENTRYPOINT ["tini", "-s"]
-CMD ["node", "server.js"]
+CMD ["node", "dist/server/entry.mjs"]

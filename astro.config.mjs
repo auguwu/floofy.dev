@@ -31,11 +31,12 @@ import mdx from '@astrojs/mdx';
 import remarkTwemoji from 'remark-twemoji';
 
 export default defineConfig({
-    // @ts-ignore
     integrations: [mdx(), tailwind()],
     site: 'https://floofy.dev',
     output: 'server',
-    adapter: node({ mode: 'middleware' }),
+    adapter: node({
+        mode: 'standalone'
+    }),
     markdown: {
         remarkPlugins: [remarkTwemoji],
         syntaxHighlight: 'shiki',

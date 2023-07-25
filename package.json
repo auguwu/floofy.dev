@@ -1,7 +1,7 @@
 {
     "name": "@noel/site",
     "description": "🐾 Noel's personal website, blog, and documentation site made with Astro",
-    "version": "12.5.0",
+    "version": "12.6.0",
     "private": true,
     "author": "Noel <cutie@floofy.dev>",
     "homepage": "https://floofy.dev",
@@ -19,6 +19,7 @@
         "@astrojs/mdx": "0.19.7",
         "@astrojs/node": "5.3.0",
         "@astrojs/tailwind": "4.0.0",
+        "@augu/pino-transport": "1.4.0",
         "@fontsource/cantarell": "5.0.5",
         "@fontsource/inter": "5.0.5",
         "@fontsource/jetbrains-mono": "5.0.5",
@@ -26,6 +27,7 @@
         "astro": "2.9.2",
         "astro-icon": "0.8.1",
         "autoprefixer": "10.4.14",
+        "pino": "8.14.1",
         "remark-twemoji": "0.1.1",
         "tailwindcss": "3.3.3",
         "twemoji": "14.0.2"
