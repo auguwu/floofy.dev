@@ -162,16 +162,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/node@npm:5.3.0":
-  version: 5.3.0
-  resolution: "@astrojs/node@npm:5.3.0"
+"@astrojs/node@npm:5.3.1":
+  version: 5.3.1
+  resolution: "@astrojs/node@npm:5.3.1"
   dependencies:
     "@astrojs/webapi": ^2.2.0
     send: ^0.18.0
     server-destroy: ^1.0.1
   peerDependencies:
-    astro: ^2.7.0
-  checksum: 8486c1eb553bcbd30e5d1b2e439815ad35d19afae89fc79bd53314d929cb8230bfddd69e60a5dd37400f3bb6f59cf349fd897de60c48d03feb773282e909fd31
+    astro: ^2.9.7
+  checksum: c964e1b83c7b3d0bae0747f04edccc4cd42f363d62359587d43db7a7e64768b9186087b92000808d673c0871591d069058be0fa95f6fbe5dc33681fd97719548
   languageName: node
   linkType: hard
 
@@ -1216,7 +1216,7 @@ __metadata:
   dependencies:
     "@actions/core": 1.10.0
     "@astrojs/mdx": 0.19.7
-    "@astrojs/node": 5.3.0
+    "@astrojs/node": 5.3.1
     "@astrojs/tailwind": 4.0.0
     "@augu/eslint-config": 4.0.1
     "@augu/pino-transport": 1.4.0
