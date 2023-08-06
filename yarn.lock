@@ -1031,24 +1031,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/cantarell@npm:5.0.7":
-  version: 5.0.7
-  resolution: "@fontsource/cantarell@npm:5.0.7"
-  checksum: d222592a1ca8ff34bc6a5cd00b9abd571b77d7314ee71599c7903f275fb36425b2264875e281571d4db3101d49d0548679315bf59e0bf1c8d7d971e0d6adef59
+"@fontsource/cantarell@npm:5.0.8":
+  version: 5.0.8
+  resolution: "@fontsource/cantarell@npm:5.0.8"
+  checksum: 8f603411a9f0e5840ee0fd4bb0715da5dfd03b5a0afd1b100bdda42e9b788156fb4925633a13c0cc5c5530b7040a9a69c8c61117132601c8b488da5c8f17d4e7
   languageName: node
   linkType: hard
 
-"@fontsource/inter@npm:5.0.7":
-  version: 5.0.7
-  resolution: "@fontsource/inter@npm:5.0.7"
-  checksum: 2b9f40f20c2d0bf97247f86f94bf0666e0fe281f96d45bae56f0fb80ee5358af5629b639537aae2935f54d08c6650345bd7af85bcb2466ccbe8cd9da74631b56
+"@fontsource/inter@npm:5.0.8":
+  version: 5.0.8
+  resolution: "@fontsource/inter@npm:5.0.8"
+  checksum: d67def08f86681ca21d7ee771fc94b05bd6073f4ccc130f619bb94252b37cda1a9796f0c9991bb7be723f292b6deb014049546be5961bcd5185b439b12ed7d63
   languageName: node
   linkType: hard
 
-"@fontsource/jetbrains-mono@npm:5.0.7":
-  version: 5.0.7
-  resolution: "@fontsource/jetbrains-mono@npm:5.0.7"
-  checksum: 8bc6d69271e126d55f3d6b53d37a2d48deb345eb2ccbf87df4f636ec01f3f105e7b5de6a845472e2fa8275eacc530e8816f7ff4b449f9b70caec707ed204abf8
+"@fontsource/jetbrains-mono@npm:5.0.8":
+  version: 5.0.8
+  resolution: "@fontsource/jetbrains-mono@npm:5.0.8"
+  checksum: 92e331c351581da47d534bc8831a6a20193b03036d830e722b34527c41ce7c3dc254d4a5b4d3ca6e6f027aa88b131b40802c468fcfb40af975d0bfb56a96978f
   languageName: node
   linkType: hard
 
@@ -1228,9 +1228,9 @@ __metadata:
     "@augu/eslint-config": 4.0.1
     "@augu/pino-transport": 1.4.0
     "@augu/tsconfig": 1.1.1
-    "@fontsource/cantarell": 5.0.7
-    "@fontsource/inter": 5.0.7
-    "@fontsource/jetbrains-mono": 5.0.7
+    "@fontsource/cantarell": 5.0.8
+    "@fontsource/inter": 5.0.8
+    "@fontsource/jetbrains-mono": 5.0.8
     "@tailwindcss/typography": 0.5.9
     "@types/eslint": 8.44.2
     "@types/node": 18.17.3
