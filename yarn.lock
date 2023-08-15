@@ -1238,7 +1238,7 @@ __metadata:
     "@types/signale": 1.4.4
     "@typescript-eslint/eslint-plugin": 6.4.0
     "@typescript-eslint/parser": 6.4.0
-    astro: 2.10.7
+    astro: 2.10.9
     astro-eslint-parser: 0.14.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.15
@@ -2145,9 +2145,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:2.10.7":
-  version: 2.10.7
-  resolution: "astro@npm:2.10.7"
+"astro@npm:2.10.9":
+  version: 2.10.9
+  resolution: "astro@npm:2.10.9"
   dependencies:
     "@astrojs/compiler": ^1.8.0
     "@astrojs/internal-helpers": ^0.1.2
@@ -2171,7 +2171,6 @@ __metadata:
     common-ancestor-path: ^1.0.1
     cookie: ^0.5.0
     debug: ^4.3.4
-    deepmerge-ts: ^4.3.0
     devalue: ^4.3.2
     diff: ^5.1.0
     es-module-lexer: ^1.3.0
@@ -2214,7 +2213,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 5bed1b5815c425ddb655e9d9b1c0205ef6c9c81391838baa1d2a9d14fb91bcd64450c5d33059866a1db8de2ced0f6e58786e460e0c200b59202f08133e946be3
+  checksum: 5919b89d4d17db54d455feb65150fbf06af4c488d3de87c4b8fe20144924e170cc8c947ca7eb96297f64c9c3e67c47882156d7ab3c5bb7314dab4d4559d18133
   languageName: node
   linkType: hard
 
@@ -2859,13 +2858,6 @@ __metadata:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: edb65dd0d7d1b9c40b2f50219aef30e116cedd6fc79290e740972c132c09106d2e80aa0bc8826673dd5a00222d4179c84b36a790eef63a4c4bca75a37ef90804
-  languageName: node
-  linkType: hard
-
-"deepmerge-ts@npm:^4.3.0":
-  version: 4.3.0
-  resolution: "deepmerge-ts@npm:4.3.0"
-  checksum: d5f8a96df9a2bc7177d59544b9390ba76e50fb725f776669068ca04eef319e98ee8870cf7b7ecca9f636b711d57cea571ac61553ee01101a614c045f7a86e0be
   languageName: node
   linkType: hard
 
