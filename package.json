@@ -8,7 +8,7 @@
     "repository": "https://github.com/auguwu/floofy.dev",
     "bugs": "https://github.com/auguwu/floofy.dev/issues",
     "license": "MIT",
-    "packageManager": "yarn@3.6.2",
+    "packageManager": "yarn@3.6.3",
     "scripts": {
         "build": "yarn fmt && yarn lint && astro build",
         "lint": "tsx --tsconfig ./scripts/tsconfig.json scripts/eslint.ts",
