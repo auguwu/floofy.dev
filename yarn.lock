@@ -113,6 +113,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@astrojs/markdown-remark@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@astrojs/markdown-remark@npm:3.0.0"
+  dependencies:
+    "@astrojs/prism": ^3.0.0
+    github-slugger: ^2.0.0
+    import-meta-resolve: ^3.0.0
+    rehype-raw: ^6.1.1
+    rehype-stringify: ^9.0.4
+    remark-gfm: ^3.0.1
+    remark-parse: ^10.0.2
+    remark-rehype: ^10.1.0
+    remark-smartypants: ^2.0.0
+    shiki: ^0.14.3
+    unified: ^10.1.2
+    unist-util-visit: ^4.1.2
+    vfile: ^5.3.7
+  peerDependencies:
+    astro: ^3.0.0
+  checksum: b9006fb6b3ffedfb2d9a9f49d3f0f382b0d7c95456de3a32f6bdfc6b36a07625bd61aefae93a894ebe7acd19b91d1f6309b176289a478632d21c27003b69aad6
+  languageName: node
+  linkType: hard
+
 "@astrojs/markdown-remark@npm:^2.2.1":
   version: 2.2.1
   resolution: "@astrojs/markdown-remark@npm:2.2.1"
@@ -136,17 +159,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:0.19.7":
-  version: 0.19.7
-  resolution: "@astrojs/mdx@npm:0.19.7"
+"@astrojs/mdx@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@astrojs/mdx@npm:1.0.0"
   dependencies:
-    "@astrojs/markdown-remark": ^2.2.1
-    "@astrojs/prism": ^2.1.2
+    "@astrojs/markdown-remark": 3.0.0
+    "@astrojs/prism": 3.0.0
     "@mdx-js/mdx": ^2.3.0
-    acorn: ^8.8.0
-    es-module-lexer: ^1.1.1
-    estree-util-visit: ^1.2.0
-    github-slugger: ^1.4.0
+    acorn: ^8.10.0
+    es-module-lexer: ^1.3.0
+    estree-util-visit: ^1.2.1
+    github-slugger: ^2.0.0
     gray-matter: ^4.0.3
     hast-util-to-html: ^8.0.4
     kleur: ^4.1.4
@@ -154,11 +177,13 @@ __metadata:
     remark-frontmatter: ^4.0.1
     remark-gfm: ^3.0.1
     remark-smartypants: ^2.0.0
-    shiki: ^0.14.1
+    shiki: ^0.14.3
     source-map: ^0.7.4
-    unist-util-visit: ^4.1.0
-    vfile: ^5.3.2
-  checksum: 366a865ba0fa98e4901f9b65f677cd1dc0760b7fb05d8cfa5e3bc821904ac872cc00a59e246b510c266d3982f7837f01ca0464b6b56ccd840c16d51c6c751b8d
+    unist-util-visit: ^4.1.2
+    vfile: ^5.3.7
+  peerDependencies:
+    astro: ^3.0.0
+  checksum: 44d1658505840a0f041b6fa67dab24465bca054b52f0f2e855db269f1f0e8d2c2e2273906e8c581cacf6197276af2a4e9b43e65a360e7ba6c565732302fbeb2a
   languageName: node
   linkType: hard
 
@@ -172,6 +197,15 @@ __metadata:
   peerDependencies:
     astro: ^2.10.13
   checksum: 40def4578716d43bf379b00d5dba0f3c17ed6afe79372de88176c5d15bd5959ca4a24b15d01e34445d28e54ef5bd7dc6a7c2e417ed4fff94a0b111d1964bb8b4
+  languageName: node
+  linkType: hard
+
+"@astrojs/prism@npm:3.0.0, @astrojs/prism@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@astrojs/prism@npm:3.0.0"
+  dependencies:
+    prismjs: ^1.29.0
+  checksum: 84d014943a81534e033a4b286c827eccb7600b51332bcddc06bd174e88c8cb3a6d31dcb691346cf1f0ea6e817dacbfa52a945081e413cc87e3b1449272237e02
   languageName: node
   linkType: hard
 
@@ -1222,7 +1256,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": 1.10.0
-    "@astrojs/mdx": 0.19.7
+    "@astrojs/mdx": 1.0.0
     "@astrojs/node": 5.3.6
     "@astrojs/tailwind": 4.0.0
     "@augu/eslint-config": 4.0.1
@@ -1891,6 +1925,15 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 4079b67283b94935157698831967642f24a075c52ce3feaaaafe095776dfbe15d86a1b33b1e53860fc0d062ed6c83f4284a5c87c85b9ad51853a01173da6097f
+  languageName: node
+  linkType: hard
+
+"acorn@npm:^8.10.0":
+  version: 8.10.0
+  resolution: "acorn@npm:8.10.0"
+  bin:
+    acorn: bin/acorn
+  checksum: 538ba38af0cc9e5ef983aee196c4b8b4d87c0c94532334fa7e065b2c8a1f85863467bb774231aae91613fcda5e68740c15d97b1967ae3394d20faddddd8af61d
   languageName: node
   linkType: hard
 
@@ -3178,13 +3221,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-module-lexer@npm:^1.1.1":
-  version: 1.2.0
-  resolution: "es-module-lexer@npm:1.2.0"
-  checksum: a0b865641ae52093fa3dffc41f3c440ac97b9932156896daa7784e66f01bef40f15b5578540f91cb4a43c38adda4a8ab8afca395b3b25480007d741ff0642de3
-  languageName: node
-  linkType: hard
-
 "es-module-lexer@npm:^1.3.0":
   version: 1.3.0
   resolution: "es-module-lexer@npm:1.3.0"
@@ -3985,13 +4021,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"estree-util-visit@npm:^1.0.0, estree-util-visit@npm:^1.2.0":
+"estree-util-visit@npm:^1.0.0":
   version: 1.2.0
   resolution: "estree-util-visit@npm:1.2.0"
   dependencies:
     "@types/estree-jsx": ^1.0.0
     "@types/unist": ^2.0.0
   checksum: d36a36aed82d6cb00d24615889052e22308ff008191b3760f65f93e9d0b06d3bc448af9f99a685947f1c69fba36d9a412da243b0b026096c66ecd74054c3b090
+  languageName: node
+  linkType: hard
+
+"estree-util-visit@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "estree-util-visit@npm:1.2.1"
+  dependencies:
+    "@types/estree-jsx": ^1.0.0
+    "@types/unist": ^2.0.0
+  checksum: 6feea4fdc43b0ba0f79faf1d57cf32373007e146d4810c7c09c13f5a9c1b8600c1ac57a8d949967cedd2a9a91dddd246e19b59bacfc01e417168b4ebf220f691
   languageName: node
   linkType: hard
 
@@ -4917,6 +4963,13 @@ __metadata:
   version: 2.2.0
   resolution: "import-meta-resolve@npm:2.2.0"
   checksum: 35a012c07bdaaed907ad150021b47a4bd8b2c77c88f02a2c5a15a5cb5c146072a94b6633cc528eaccf187bca12196c0fb2ff44a54b3b2a03bcf200511b3f1e50
+  languageName: node
+  linkType: hard
+
+"import-meta-resolve@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "import-meta-resolve@npm:3.0.0"
+  checksum: d0428cd14915ee0093b995dc5bbc70bd01cc668822f52b62af98f728e5d6a08724f07e6aa9f5fae002d5eecbf6ec2cdcd379bf4869dd1b353bd080693f91e394
   languageName: node
   linkType: hard
 
@@ -7422,7 +7475,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.28.0":
+"prismjs@npm:^1.28.0, prismjs@npm:^1.29.0":
   version: 1.29.0
   resolution: "prismjs@npm:1.29.0"
   checksum: 007a8869d4456ff8049dc59404e32d5666a07d99c3b0e30a18bd3b7676dfa07d1daae9d0f407f20983865fd8da56de91d09cb08e6aa61f5bc420a27c0beeaf93
@@ -7643,6 +7696,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rehype-stringify@npm:^9.0.4":
+  version: 9.0.4
+  resolution: "rehype-stringify@npm:9.0.4"
+  dependencies:
+    "@types/hast": ^2.0.0
+    hast-util-to-html: ^8.0.0
+    unified: ^10.0.0
+  checksum: 7da6f07a8b31e544c3dcf648ddc831e3ea72d5d417f95471cd6f3ec172e4dfbf5615cbd5b53aebe8a36febce604a95fb23f83d650d476c3cd79bc0834d577359
+  languageName: node
+  linkType: hard
+
 "rehype@npm:^12.0.1":
   version: 12.0.1
   resolution: "rehype@npm:12.0.1"
@@ -7697,6 +7761,17 @@ __metadata:
     mdast-util-from-markdown: ^1.0.0
     unified: ^10.0.0
   checksum: 505088e564ab53ff054433368adbb7b551f69240c7d9768975529837a86f1d0f085e72d6211929c5c42db315273df4afc94f3d3a8662ffdb69468534c6643d29
+  languageName: node
+  linkType: hard
+
+"remark-parse@npm:^10.0.2":
+  version: 10.0.2
+  resolution: "remark-parse@npm:10.0.2"
+  dependencies:
+    "@types/mdast": ^3.0.0
+    mdast-util-from-markdown: ^1.0.0
+    unified: ^10.0.0
+  checksum: 5041b4b44725f377e69986e02f8f072ae2222db5e7d3b6c80829756b842e811343ffc2069cae1f958a96bfa36104ab91a57d7d7e2f0cef521e210ab8c614d5c7
   languageName: node
   linkType: hard
 
@@ -8138,6 +8213,18 @@ __metadata:
     vscode-oniguruma: ^1.7.0
     vscode-textmate: ^8.0.0
   checksum: f2a14302b1803617e3ff1b751a5c87b4af4ad15214dc00e9215402e42940a84a0b956cf55d628f25dbf1296b18e277b8529571cd9359b971ac599a0ab11303e7
+  languageName: node
+  linkType: hard
+
+"shiki@npm:^0.14.3":
+  version: 0.14.3
+  resolution: "shiki@npm:0.14.3"
+  dependencies:
+    ansi-sequence-parser: ^1.1.0
+    jsonc-parser: ^3.2.0
+    vscode-oniguruma: ^1.7.0
+    vscode-textmate: ^8.0.0
+  checksum: a4dd98e3b2a5dd8be207448f111ffb9ad2ed6c530f215714d8b61cbf91ec3edbabb09109b8ec58a26678aacd24e8161d5a9bc0c1fa1b4f64b27ceb180cbd0c89
   languageName: node
   linkType: hard
 
