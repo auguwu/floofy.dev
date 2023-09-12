@@ -44,7 +44,7 @@ jobs:
               uses: docker/setup-qemu-action@v2
 
             - name: Login into registry.floofy.dev
-              uses: docker/login-action@v2
+              uses: docker/login-action@v3
               with:
                   registry: registry.floofy.dev
                   username: august
