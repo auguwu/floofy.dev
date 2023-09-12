@@ -38,7 +38,7 @@ jobs:
               uses: auguwu/git-tag-action@master
 
             - name: Setup Docker buildx
-              uses: docker/setup-buildx-action@v2
+              uses: docker/setup-buildx-action@v3
 
             - name: Setup QEMU
               uses: docker/setup-qemu-action@v2
