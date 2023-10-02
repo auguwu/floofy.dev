@@ -17,7 +17,7 @@
     },
     "dependencies": {
         "@astrojs/mdx": "1.1.0",
-        "@astrojs/node": "6.0.1",
+        "@astrojs/node": "6.0.2",
         "@astrojs/tailwind": "5.0.0",
         "@augu/pino-transport": "1.4.0",
         "@fontsource/cantarell": "5.0.8",
