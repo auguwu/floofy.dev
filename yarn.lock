@@ -1113,17 +1113,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/inter@npm:5.0.14":
-  version: 5.0.14
-  resolution: "@fontsource/inter@npm:5.0.14"
-  checksum: 01400bdcb1c5b8f9a9ca7ed511b7890140011a61a9d7547ff9a0f5982f9a7874fb9e0eb7e5e7fc1d73c58e76d57c7d1ff88042b895b2436be729f9a1eca597ea
+"@fontsource/inter@npm:5.0.15":
+  version: 5.0.15
+  resolution: "@fontsource/inter@npm:5.0.15"
+  checksum: 9d65a95f1e90fbba06fd48a5729ea5148cf01a18d5d40e03bbafc75090ee04f1b852fbfc3e0c44366ab2ad932e69c73d5dd829b8b58bdd90dae8616e61436ce9
   languageName: node
   linkType: hard
 
-"@fontsource/jetbrains-mono@npm:5.0.16":
-  version: 5.0.16
-  resolution: "@fontsource/jetbrains-mono@npm:5.0.16"
-  checksum: 74c6032fb91f8a716ebac8f85bbde45dcb06cba4583079ea38e63eda8509a53bd7f182f98cb5774ea3a5719c50e195499ca797cf1e7443a53ae9daab2083279f
+"@fontsource/jetbrains-mono@npm:5.0.17":
+  version: 5.0.17
+  resolution: "@fontsource/jetbrains-mono@npm:5.0.17"
+  checksum: 3b39f21814cf9b861e30c9345243530eccbf55484553f47b997d1f63ea7611a9ee7f80010344acc580bd529391b07dce6c4fe958e39e91eff97b6a29630cb2df
   languageName: node
   linkType: hard
 
@@ -1311,8 +1311,8 @@ __metadata:
     "@augu/pino-transport": 1.4.0
     "@augu/tsconfig": 1.1.1
     "@fontsource/cantarell": 5.0.8
-    "@fontsource/inter": 5.0.14
-    "@fontsource/jetbrains-mono": 5.0.16
+    "@fontsource/inter": 5.0.15
+    "@fontsource/jetbrains-mono": 5.0.17
     "@tailwindcss/typography": 0.5.10
     "@types/eslint": 8.44.6
     "@types/node": 18.18.6
