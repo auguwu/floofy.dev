@@ -160,9 +160,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/telemetry@npm:3.0.3":
-  version: 3.0.3
-  resolution: "@astrojs/telemetry@npm:3.0.3"
+"@astrojs/telemetry@npm:3.0.4":
+  version: 3.0.4
+  resolution: "@astrojs/telemetry@npm:3.0.4"
   dependencies:
     ci-info: ^3.8.0
     debug: ^4.3.4
@@ -171,7 +171,7 @@ __metadata:
     is-docker: ^3.0.0
     is-wsl: ^3.0.0
     which-pm-runs: ^1.1.0
-  checksum: c87bb5a064bd4b155ea9b7aaebcb8ca00d8a626e072f9871829043e6cdf100e725e6af5cd9a4c0e819e3f3f779c785b1652f5ed9bee8266d6233a6abe889938a
+  checksum: 86dadef9374189d939923f5109835bddc8ba36e043983e3f67eedf14466327dd1e953cf414b24e9b521f192262baddea476fc09c2979396427bf177ca061aa0a
   languageName: node
   linkType: hard
 
@@ -1320,7 +1320,7 @@ __metadata:
     "@types/signale": 1.4.6
     "@typescript-eslint/eslint-plugin": 6.9.0
     "@typescript-eslint/parser": 6.9.0
-    astro: 3.3.3
+    astro: 3.3.4
     astro-eslint-parser: 0.16.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.16
@@ -2207,14 +2207,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:3.3.3":
-  version: 3.3.3
-  resolution: "astro@npm:3.3.3"
+"astro@npm:3.3.4":
+  version: 3.3.4
+  resolution: "astro@npm:3.3.4"
   dependencies:
     "@astrojs/compiler": ^2.1.0
     "@astrojs/internal-helpers": 0.2.1
     "@astrojs/markdown-remark": 3.3.0
-    "@astrojs/telemetry": 3.0.3
+    "@astrojs/telemetry": 3.0.4
     "@babel/core": ^7.22.10
     "@babel/generator": ^7.22.10
     "@babel/parser": ^7.22.10
@@ -2273,7 +2273,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 952294c52c7e326c1047d3ce4df95173b203f81159138315e4823dda356432bbe5077d3971b6cdd5e82cece320bc576d8057fdcfd3204d529ae68a0663ce691b
+  checksum: 5ac495e24c59a63011b17a9475051e32100f13b15adfdc19310db21751e45f020800b962978a9bb80b7ffd8bb23db3c387792bb7bb45db2e37156afd4fd7800e
   languageName: node
   linkType: hard
 
