@@ -1320,7 +1320,7 @@ __metadata:
     "@types/signale": 1.4.6
     "@typescript-eslint/eslint-plugin": 6.9.0
     "@typescript-eslint/parser": 6.9.0
-    astro: 3.3.4
+    astro: 3.4.0
     astro-eslint-parser: 0.16.0
     astro-icon: 0.8.1
     autoprefixer: 10.4.16
@@ -2207,9 +2207,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:3.3.4":
-  version: 3.3.4
-  resolution: "astro@npm:3.3.4"
+"astro@npm:3.4.0":
+  version: 3.4.0
+  resolution: "astro@npm:3.4.0"
   dependencies:
     "@astrojs/compiler": ^2.1.0
     "@astrojs/internal-helpers": 0.2.1
@@ -2248,6 +2248,7 @@ __metadata:
     mime: ^3.0.0
     ora: ^7.0.1
     p-limit: ^4.0.0
+    p-queue: ^7.4.1
     path-to-regexp: ^6.2.1
     preferred-pm: ^3.1.2
     probe-image-size: ^7.2.3
@@ -2273,7 +2274,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 5ac495e24c59a63011b17a9475051e32100f13b15adfdc19310db21751e45f020800b962978a9bb80b7ffd8bb23db3c387792bb7bb45db2e37156afd4fd7800e
+  checksum: c540f902b53a2ebdeffeb2143f165ee1506a7c438f8945001e30a66d00f2b881be0da91d492ef771131f17b962c7ae78866c292639cf5d906889297bda1304fa
   languageName: node
   linkType: hard
 
@@ -3992,6 +3993,13 @@ __metadata:
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
   checksum: 1ffe3bb22a6d51bdeb6bf6f7cf97d2ff4a74b017ad12284cc9e6a279e727dc30a5de6bb613e5596ff4dc3e517841339ad09a7eec44266eccb1aa201a30448166
+  languageName: node
+  linkType: hard
+
+"eventemitter3@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "eventemitter3@npm:5.0.1"
+  checksum: 543d6c858ab699303c3c32e0f0f47fc64d360bf73c3daf0ac0b5079710e340d6fe9f15487f94e66c629f5f82cd1a8678d692f3dbb6f6fcd1190e1b97fcad36f8
   languageName: node
   linkType: hard
 
@@ -7198,6 +7206,23 @@ __metadata:
   dependencies:
     aggregate-error: ^3.0.0
   checksum: cb0ab21ec0f32ddffd31dfc250e3afa61e103ef43d957cc45497afe37513634589316de4eb88abdfd969fe6410c22c0b93ab24328833b8eb1ccc087fc0442a1c
+  languageName: node
+  linkType: hard
+
+"p-queue@npm:^7.4.1":
+  version: 7.4.1
+  resolution: "p-queue@npm:7.4.1"
+  dependencies:
+    eventemitter3: ^5.0.1
+    p-timeout: ^5.0.2
+  checksum: 1c6888aa994d399262a9fbdd49c7066f8359732397f7a42ecf03f22875a1d65899797b46413f97e44acc18dddafbcc101eb135c284714c931dbbc83c3967f450
+  languageName: node
+  linkType: hard
+
+"p-timeout@npm:^5.0.2":
+  version: 5.1.0
+  resolution: "p-timeout@npm:5.1.0"
+  checksum: f5cd4e17301ff1ff1d8dbf2817df0ad88c6bba99349fc24d8d181827176ad4f8aca649190b8a5b1a428dfd6ddc091af4606835d3e0cb0656e04045da5c9e270c
   languageName: node
   linkType: hard
 
