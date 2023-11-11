@@ -22,7 +22,6 @@
  */
 
 import { warning, error } from '@actions/core';
-import { relative } from 'path';
 import { Signale } from 'signale';
 import { ESLint } from 'eslint';
 
@@ -52,11 +51,6 @@ async function main() {
         log.info(`Linting directory [${dir}]`);
         const results = await eslint.lintFiles(dir);
         for (const result of results) {
-            const path = relative(dir, result.filePath);
-            const hasErrors = result.errorCount > 0;
-            const hasWarnings = result.warningCount > 0;
-            const symbol = hasErrors ? symbols.error : hasWarnings ? symbols.warning : symbols.success;
-
             for (const message of result.messages) {
                 const s = message.severity === 1 ? symbols.warning : symbols.error;
                 if (process.env.CI !== undefined) {
@@ -70,7 +64,7 @@ async function main() {
                     });
                 } else {
                     const method = message.severity === 1 ? log.warn : log.error;
-                    method(`    * ${s}   ${message.message} (${message.ruleId})`);
+                    method(`${message.message} (${message.ruleId})`);
                 }
             }
         }

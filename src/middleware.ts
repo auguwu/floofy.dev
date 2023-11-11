@@ -53,7 +53,7 @@ const responseSerializer = (request: Request) => (response: Response) => ({
 const log = pino({
     serializers: {
         ...serializers,
-        request: requestSerializer
+        req: requestSerializer
     },
     level,
     name: 'floofy.dev',
@@ -64,11 +64,11 @@ const log = pino({
 
 export const onRequest = defineMiddleware(async ({ request }, next) => {
     const now = performance.now();
-    log.info({ request }, 'processing request');
+    log.info({ req: request }, 'processing request');
 
     const response = await next();
     log.info(
-        { response: responseSerializer(request)(response), responseTime: performance.now() - now },
+        { res: responseSerializer(request)(response as any), responseTime: performance.now() - now },
         'processed request'
     );
 

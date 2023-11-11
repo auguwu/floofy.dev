@@ -4,6 +4,10 @@ import Container from '~/components/Container.astro';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
 
+const birthday = new Date(2004, 2, 24).getTime();
+const now = new Date(Date.now() - birthday);
+const age = Math.abs(now.getUTCFullYear() - 1970);
+
 const projects: Props['data'][] = [
     {
         description: '🐻‍❄️📦 Free, open source, and reliable Helm Chart registry made in Rust',
@@ -22,18 +26,6 @@ const projects: Props['data'][] = [
         language: 'go',
         name: 'ume',
         url: 'https://github.com/auguwu/ume'
-    },
-    {
-        description: "This site's source code: made with Astro",
-        language: 'astro',
-        name: 'floofy.dev',
-        url: 'https://floofy.dev'
-    },
-    {
-        description: '💐💚 Optimized, and easy Docker images and Coder templates to use in your everyday work!',
-        language: 'dockerfile',
-        name: "Noel's Coder Images",
-        url: 'https://github.com/auguwu/coder-images'
     }
 ];
 ---
@@ -44,11 +36,11 @@ const projects: Props['data'][] = [
         <Navbar />
         <div class="flex flex-col container mx-auto max-md:justify-center max-md:items-center lg:max-w-7xl">
             <div class="flex container flex-col mt-8 space-y-3">
-                <h1 class="font-serif text-5xl">Noel</h1>
-                <h2 class="text-3xl">Fullstack Developer, Systems Administration</h2>
+                <h1 class="font-serif text-5xl">Noel (he/him)</h1>
+                <h2 class="text-3xl">Fullstack Developer, Systems Administrator</h2>
                 <hr />
                 <h3 class="text-xl">
-                    19 year old polar bear who boops his hardware too much to the point of possibly breaking it! (So far
+                    {age} year old polar bear who boops his hardware too much to the point of possibly breaking it! (So far
                     it hasn't)
                 </h3>
             </div>
