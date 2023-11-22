@@ -1336,7 +1336,7 @@ __metadata:
     sass: "npm:1.69.5"
     signale: "npm:1.4.0"
     tailwindcss: "npm:3.3.5"
-    tsx: "npm:4.2.0"
+    tsx: "npm:4.3.0"
     twemoji: "npm:14.0.2"
     typescript: "npm:5.3.2"
   languageName: unknown
@@ -2459,13 +2459,6 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: cdb9272433994393a995235720c304e8c7123b4994b02fc0b24ca0f483db482c4f85fe8b40995aa6193d47d781e5535cf5d0efe96e465d2af42058fb3251b13a
-  languageName: node
-  linkType: hard
-
-"buffer-from@npm:^1.0.0":
-  version: 1.1.2
-  resolution: "buffer-from@npm:1.1.2"
-  checksum: 0448524a562b37d4d7ed9efd91685a5b77a50672c556ea254ac9a6d30e3403a517d8981f10e565db24e8339413b43c97ca2951f10e399c6125a0d8911f5679bb
   languageName: node
   linkType: hard
 
@@ -8643,17 +8636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.21":
-  version: 0.5.21
-  resolution: "source-map-support@npm:0.5.21"
-  dependencies:
-    buffer-from: "npm:^1.0.0"
-    source-map: "npm:^0.6.0"
-  checksum: 8317e12d84019b31e34b86d483dd41d6f832f389f7417faf8fc5c75a66a12d9686e47f589a0554a868b8482f037e23df9d040d29387eb16fa14cb85f091ba207
-  languageName: node
-  linkType: hard
-
-"source-map@npm:^0.6.0, source-map@npm:^0.6.1":
+"source-map@npm:^0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ef7462f1c29d502b3057e822cdbdae0b0e565302c4dd1a95e11e793d8d9d62006cdc10e0fd99163ca33ff2071360cf50ee13f90440806e7ed57d81cba2f7ff
@@ -9209,20 +9192,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:4.2.0":
-  version: 4.2.0
-  resolution: "tsx@npm:4.2.0"
+"tsx@npm:4.3.0":
+  version: 4.3.0
+  resolution: "tsx@npm:4.3.0"
   dependencies:
     esbuild: "npm:~0.18.20"
     fsevents: "npm:~2.3.3"
     get-tsconfig: "npm:^4.7.2"
-    source-map-support: "npm:^0.5.21"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 73a2c4cb7e21cb36080e0430b4aa6e7dce793780faf343b807ee64ba435c722907dd18c140411c5296edca618858f8429469f42a441f1bd3920b29df338c57c1
+  checksum: 7059593e6d1edd0d1a4d4f72195e45bd14bfacaa6eafb628215a3ce2ef18591b002bfb3d5f81a6a6b1921884bd7883fb7699725c95c44a44206fc81788c53b49
   languageName: node
   linkType: hard
 
