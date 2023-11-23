@@ -1336,7 +1336,7 @@ __metadata:
     sass: "npm:1.69.5"
     signale: "npm:1.4.0"
     tailwindcss: "npm:3.3.5"
-    tsx: "npm:4.3.0"
+    tsx: "npm:4.4.0"
     twemoji: "npm:14.0.2"
     typescript: "npm:5.3.2"
   languageName: unknown
@@ -9192,9 +9192,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:4.3.0":
-  version: 4.3.0
-  resolution: "tsx@npm:4.3.0"
+"tsx@npm:4.4.0":
+  version: 4.4.0
+  resolution: "tsx@npm:4.4.0"
   dependencies:
     esbuild: "npm:~0.18.20"
     fsevents: "npm:~2.3.3"
@@ -9204,7 +9204,7 @@ __metadata:
       optional: true
   bin:
     tsx: dist/cli.mjs
-  checksum: 7059593e6d1edd0d1a4d4f72195e45bd14bfacaa6eafb628215a3ce2ef18591b002bfb3d5f81a6a6b1921884bd7883fb7699725c95c44a44206fc81788c53b49
+  checksum: 9f36b9c3dac0abc1402d8680d3e0d1964739715a982a66918e50e2724b1a2af85c4c3267b93ce29ed78d169e82775bbf1747d826a876bdffa4e4ea56df5b150e
   languageName: node
   linkType: hard
 
