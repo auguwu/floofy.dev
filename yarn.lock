@@ -1322,7 +1322,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:6.12.0"
     astro: "npm:3.6.4"
     astro-eslint-parser: "npm:0.16.0"
-    astro-icon: "npm:0.8.1"
+    astro-icon: "npm:0.8.2"
     autoprefixer: "npm:10.4.16"
     eslint: "npm:8.54.0"
     eslint-config-prettier: "npm:9.0.0"
@@ -2196,14 +2196,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-icon@npm:0.8.1":
-  version: 0.8.1
-  resolution: "astro-icon@npm:0.8.1"
+"astro-icon@npm:0.8.2":
+  version: 0.8.2
+  resolution: "astro-icon@npm:0.8.2"
   dependencies:
-    node-fetch: "npm:^3.1.0"
     resolve-pkg: "npm:^2.0.0"
     svgo: "npm:^2.8.0"
-  checksum: 3b2055e2b4a254fcd7497974a8c14bf7e49b8c2c0a90ffbe377ea8b5b3cc4302f3f689c920f69418e306aadadc6affb7d17afb03ebb5ff1d2bbe77619ba36dea
+  checksum: 914074107bf43e72b09c4750201d9c1944e8d904a516234706a78016775ff3cf59797a132209d6c975e12e59be34a0aea612604c88a13185f6044ea4c4b2fd7c
   languageName: node
   linkType: hard
 
@@ -2880,13 +2879,6 @@ __metadata:
   dependencies:
     css-tree: "npm:^1.1.2"
   checksum: 8b6a2dc687f2a8165dde13f67999d5afec63cb07a00ab100fbb41e4e8b28d986cfa0bc466b4f5ba5de7260c2448a64e6ad26ec718dd204d3a7d109982f0bf1aa
-  languageName: node
-  linkType: hard
-
-"data-uri-to-buffer@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "data-uri-to-buffer@npm:4.0.0"
-  checksum: 251b085188b9343416d46dd8dce8279984a6bb7183196e226da68e293c76f1a97e8db2d4a9cb7b24671c8fb4bff7d4b866e851033cff681fff770abdcf83fbed
   languageName: node
   linkType: hard
 
@@ -4114,16 +4106,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fetch-blob@npm:^3.1.2, fetch-blob@npm:^3.1.4":
-  version: 3.2.0
-  resolution: "fetch-blob@npm:3.2.0"
-  dependencies:
-    node-domexception: "npm:^1.0.0"
-    web-streams-polyfill: "npm:^3.0.3"
-  checksum: 5264ecceb5fdc19eb51d1d0359921f12730941e333019e673e71eb73921146dceabcb0b8f534582be4497312d656508a439ad0f5edeec2b29ab2e10c72a1f86b
-  languageName: node
-  linkType: hard
-
 "figures@npm:^2.0.0":
   version: 2.0.0
   resolution: "figures@npm:2.0.0"
@@ -4213,15 +4195,6 @@ __metadata:
   dependencies:
     is-callable: "npm:^1.1.3"
   checksum: fdac0cde1be35610bd635ae958422e8ce0cc1313e8d32ea6d34cfda7b60850940c1fd07c36456ad76bd9c24aef6ff5e03b02beb58c83af5ef6c968a64eada676
-  languageName: node
-  linkType: hard
-
-"formdata-polyfill@npm:^4.0.10":
-  version: 4.0.10
-  resolution: "formdata-polyfill@npm:4.0.10"
-  dependencies:
-    fetch-blob: "npm:^3.1.2"
-  checksum: 9b5001d2edef3c9449ac3f48bd4f8cc92e7d0f2e7c1a5c8ba555ad4e77535cc5cf621fabe49e97f304067037282dd9093b9160a3cb533e46420b446c4e6bc06f
   languageName: node
   linkType: hard
 
@@ -6869,24 +6842,6 @@ __metadata:
   dependencies:
     node-gyp: "npm:latest"
   checksum: 8eea1d4d965930a177a0508695beb0d89b4c1d80bf330646a035357a1e8fc31e0d09686e2374996e96e757b947a7ece319f98ede3146683f162597c0bcb4df90
-  languageName: node
-  linkType: hard
-
-"node-domexception@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "node-domexception@npm:1.0.0"
-  checksum: e332522f242348c511640c25a6fc7da4f30e09e580c70c6b13cb0be83c78c3e71c8d4665af2527e869fc96848924a4316ae7ec9014c091e2156f41739d4fa233
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:^3.1.0":
-  version: 3.3.0
-  resolution: "node-fetch@npm:3.3.0"
-  dependencies:
-    data-uri-to-buffer: "npm:^4.0.0"
-    fetch-blob: "npm:^3.1.4"
-    formdata-polyfill: "npm:^4.0.10"
-  checksum: 3db05df0b5643dfb70973f82e27bc4fc1e2ce8a995e1f05bb4af88a0011f170406e84dce4ed7cd5a4c385145939c81795b4fc71bc6c9d659d5750cc82dee8bc4
   languageName: node
   linkType: hard
 
@@ -9773,13 +9728,6 @@ __metadata:
   version: 2.0.1
   resolution: "web-namespaces@npm:2.0.1"
   checksum: b6d9f02f1a43d0ef0848a812d89c83801d5bbad57d8bb61f02eb6d7eb794c3736f6cc2e1191664bb26136594c8218ac609f4069722c6f56d9fc2d808fa9271c6
-  languageName: node
-  linkType: hard
-
-"web-streams-polyfill@npm:^3.0.3":
-  version: 3.2.1
-  resolution: "web-streams-polyfill@npm:3.2.1"
-  checksum: 08fcf97b7883c1511dd3da794f50e9bde75a660884783baaddb2163643c21a94086f394dc4bd20dff0f55c98d98d60c4bea05a5809ef5005bdf835b63ada8900
   languageName: node
   linkType: hard
 
