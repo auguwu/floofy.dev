@@ -9860,14 +9860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.1.1":
-  version: 2.2.1
-  resolution: "yaml@npm:2.2.1"
-  checksum: 2e443fed323db4d5ae0c7134c6dbd30cb920e0c8f79a6ce78677731409af83ee2d74a09563fce01503a07f9a02274d42784d816f87294a53b47b955bc83dc655
-  languageName: node
-  linkType: hard
-
-"yaml@npm:^2.3.4":
+"yaml@npm:^2.1.1, yaml@npm:^2.3.4":
   version: 2.3.4
   resolution: "yaml@npm:2.3.4"
   checksum: f8207ce43065a22268a2806ea6a0fa3974c6fde92b4b2fa0082357e487bc333e85dc518910007e7ac001b532c7c84bd3eccb6c7757e94182b564028b0008f44b
