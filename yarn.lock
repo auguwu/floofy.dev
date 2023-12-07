@@ -1315,7 +1315,7 @@ __metadata:
     "@fontsource/jetbrains-mono": "npm:5.0.18"
     "@tailwindcss/typography": "npm:0.5.10"
     "@types/eslint": "npm:8.44.8"
-    "@types/node": "npm:20.10.3"
+    "@types/node": "npm:20.10.4"
     "@types/prettier": "npm:2.7.3"
     "@types/signale": "npm:1.4.7"
     "@typescript-eslint/eslint-plugin": "npm:6.12.0"
@@ -1576,12 +1576,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.10.3":
-  version: 20.10.3
-  resolution: "@types/node@npm:20.10.3"
+"@types/node@npm:20.10.4":
+  version: 20.10.4
+  resolution: "@types/node@npm:20.10.4"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 7cb506abb0d570bb5133bd06a47115109a813b507323c985c3b4aef2993eed79b6bb62b82194cb5c558b4d349de3d199ee2e8c693b913065a1cd7f526cc65a68
+  checksum: c10c1dd13f5c2341ad866777dc32946538a99e1ebd203ae127730814b8e5fa4aedfbcb01cb3e24a5466f1af64bcdfa16e7de6e745ff098fff0942aa779b7fe03
   languageName: node
   linkType: hard
 
