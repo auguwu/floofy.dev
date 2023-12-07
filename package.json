@@ -24,7 +24,7 @@
         "@fontsource/inter": "5.0.16",
         "@fontsource/jetbrains-mono": "5.0.18",
         "@tailwindcss/typography": "0.5.10",
-        "astro": "3.6.4",
+        "astro": "4.0.3",
         "astro-icon": "0.8.2",
         "autoprefixer": "10.4.16",
         "pino": "8.16.2",
