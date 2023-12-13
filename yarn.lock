@@ -1182,7 +1182,7 @@ __metadata:
     eslint-plugin-astro: "npm:0.30.0"
     image-size: "npm:1.0.2"
     log-symbols: "npm:6.0.0"
-    pino: "npm:8.16.2"
+    pino: "npm:8.17.0"
     prettier: "npm:3.1.1"
     prettier-plugin-astro: "npm:0.12.2"
     remark-twemoji: "npm:0.1.1"
@@ -7142,9 +7142,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.16.2":
-  version: 8.16.2
-  resolution: "pino@npm:8.16.2"
+"pino@npm:8.17.0":
+  version: 8.17.0
+  resolution: "pino@npm:8.17.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
     fast-redact: "npm:^3.1.1"
@@ -7159,7 +7159,7 @@ __metadata:
     thread-stream: "npm:^2.0.0"
   bin:
     pino: bin.js
-  checksum: d2860167dd5ce3322d5c007b6e88c4ef672316b193677dc637ba11d6af6ad57475380d2abdbc940a7a9f57c4fa1e5776ee7e43cb1b2c2ffcf9fa42e3af41da0f
+  checksum: e1b559b00d4d4f010529dfff7bec4292e6e4c5f5ce6cd272acab91496fc620c29613e71d321aad39c21c22060167488408f10f51d0dda6334cfcab299d0f0acd
   languageName: node
   linkType: hard
 
