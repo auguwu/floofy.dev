@@ -1179,7 +1179,7 @@ __metadata:
     autoprefixer: "npm:10.4.16"
     eslint: "npm:8.55.0"
     eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-astro: "npm:0.30.0"
+    eslint-plugin-astro: "npm:0.31.0"
     image-size: "npm:1.0.2"
     log-symbols: "npm:6.0.0"
     pino: "npm:8.17.1"
@@ -3463,9 +3463,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:0.30.0":
-  version: 0.30.0
-  resolution: "eslint-plugin-astro@npm:0.30.0"
+"eslint-plugin-astro@npm:0.31.0":
+  version: 0.31.0
+  resolution: "eslint-plugin-astro@npm:0.31.0"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
@@ -3476,7 +3476,7 @@ __metadata:
     postcss-selector-parser: "npm:^6.0.10"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: ce27f5ca22e041c59d783c2487e2efa28d7b825d8150af7a95b59595333eb547823deb5c8524d5542095fc56fc42c29380fdfd5e2d190b6cb032aec565da0ba7
+  checksum: 41919b68e77e7d294744d99bcb3e6ca47f26a98e05b4e6378e9b370d22d25bb5322014f71897bd843c562726f73764b9bac23f7091320f58b3a32e0c9819d844
   languageName: node
   linkType: hard
 
