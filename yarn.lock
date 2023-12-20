@@ -1174,7 +1174,7 @@ __metadata:
     "@fontsource/inter": "npm:5.0.16"
     "@fontsource/jetbrains-mono": "npm:5.0.18"
     "@tailwindcss/typography": "npm:0.5.10"
-    "@types/eslint": "npm:8.44.9"
+    "@types/eslint": "npm:8.56.0"
     "@types/node": "npm:20.10.5"
     "@types/prettier": "npm:2.7.3"
     "@types/signale": "npm:1.4.7"
@@ -1414,13 +1414,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:8.44.9":
-  version: 8.44.9
-  resolution: "@types/eslint@npm:8.44.9"
+"@types/eslint@npm:8.56.0":
+  version: 8.56.0
+  resolution: "@types/eslint@npm:8.56.0"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
-  checksum: dd78831339267c2010af9485f15f68c3353f086157527442f0ce8a561b1ef01bc3a8d8dd9f9943b347a80a9a7bff7aa7b5ad1c6d664bcfb80cb6b41933c97981
+  checksum: 0405403788b9b8b3dbce59b668cdf5f7dc3b3fe5f82a4bf335cd7c936b95df83d892bd70af69f0d4f463125b45d15084dc5c0eeda9982d80ddbd988aa6758b63
   languageName: node
   linkType: hard
 
