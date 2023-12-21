@@ -144,9 +144,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/tailwind@npm:5.0.3":
-  version: 5.0.3
-  resolution: "@astrojs/tailwind@npm:5.0.3"
+"@astrojs/tailwind@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@astrojs/tailwind@npm:5.0.4"
   dependencies:
     autoprefixer: "npm:^10.4.15"
     postcss: "npm:^8.4.28"
@@ -154,7 +154,7 @@ __metadata:
   peerDependencies:
     astro: ^3.0.0 || ^4.0.0
     tailwindcss: ^3.0.24
-  checksum: 11d8cc766aafbb2b9e331470d3da40ed5c2b7cdbab28db66b4f82d19ce097908805885dca4ac5f0e8250ba6aa143e2117f3dc83418a90d6dc11fbe7d4ce4068b
+  checksum: 2641b17fb39f1cb4f41955ef19ee2afac2fce76666fb85cb1013e2709c7577ce5a8328e5eaaf3f16da0cffeabe6edbd552bd33b5a7137641916667a59a5d1936
   languageName: node
   linkType: hard
 
@@ -1166,7 +1166,7 @@ __metadata:
     "@actions/core": "npm:1.10.1"
     "@astrojs/mdx": "npm:2.0.2"
     "@astrojs/node": "npm:7.0.2"
-    "@astrojs/tailwind": "npm:5.0.3"
+    "@astrojs/tailwind": "npm:5.0.4"
     "@augu/eslint-config": "npm:4.0.1"
     "@augu/pino-transport": "npm:1.4.0"
     "@augu/tsconfig": "npm:1.2.0"
