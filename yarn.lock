@@ -1247,7 +1247,7 @@ __metadata:
     log-symbols: "npm:6.0.0"
     pino: "npm:8.17.2"
     prettier: "npm:3.1.1"
-    prettier-plugin-astro: "npm:0.12.2"
+    prettier-plugin-astro: "npm:0.12.3"
     remark-twemoji: "npm:0.1.1"
     sass: "npm:1.69.5"
     signale: "npm:1.4.0"
@@ -7691,14 +7691,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-astro@npm:0.12.2":
-  version: 0.12.2
-  resolution: "prettier-plugin-astro@npm:0.12.2"
+"prettier-plugin-astro@npm:0.12.3":
+  version: 0.12.3
+  resolution: "prettier-plugin-astro@npm:0.12.3"
   dependencies:
     "@astrojs/compiler": "npm:^1.5.5"
     prettier: "npm:^3.0.0"
     sass-formatter: "npm:^0.7.6"
-  checksum: aa64b78605396d5261047d592f775bd75737fe8c0a53b350f92f617c15d66ea2b3feda8a1281018fa8c4011f4342e65b4db2629c1d0364876a85d9f4f1b645af
+  checksum: 5c4b94752bfee3a5e710187a9d8ec6aa57b3beb5bf246a6036bafe27a77b1438b2b63956b1b2738c30319ed8ceba52f79093b35ecca6546189750f320c2ab319
   languageName: node
   linkType: hard
 
