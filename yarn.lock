@@ -1420,7 +1420,7 @@ __metadata:
     "@types/signale": "npm:1.4.7"
     "@typescript-eslint/eslint-plugin": "npm:6.17.0"
     "@typescript-eslint/parser": "npm:6.17.0"
-    astro: "npm:4.0.9"
+    astro: "npm:4.1.0"
     astro-eslint-parser: "npm:0.16.0"
     astro-icon: "npm:1.0.2"
     autoprefixer: "npm:10.4.16"
@@ -2307,6 +2307,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aria-query@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "aria-query@npm:5.3.0"
+  dependencies:
+    dequal: "npm:^2.0.3"
+  checksum: c3e1ed127cc6886fea4732e97dd6d3c3938e64180803acfb9df8955517c4943760746ffaf4020ce8f7ffaa7556a3b5f85c3769a1f5ca74a1288e02d042f9ae4e
+  languageName: node
+  linkType: hard
+
 "array-includes@npm:^3.1.5, array-includes@npm:^3.1.6":
   version: 3.1.6
   resolution: "array-includes@npm:3.1.6"
@@ -2395,9 +2404,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.0.9":
-  version: 4.0.9
-  resolution: "astro@npm:4.0.9"
+"astro@npm:4.1.0":
+  version: 4.1.0
+  resolution: "astro@npm:4.1.0"
   dependencies:
     "@astrojs/compiler": "npm:^2.3.4"
     "@astrojs/internal-helpers": "npm:0.2.1"
@@ -2411,6 +2420,8 @@ __metadata:
     "@babel/types": "npm:^7.23.3"
     "@types/babel__core": "npm:^7.20.4"
     acorn: "npm:^8.11.2"
+    aria-query: "npm:^5.3.0"
+    axobject-query: "npm:^4.0.0"
     boxen: "npm:^7.1.1"
     chokidar: "npm:^3.5.3"
     ci-info: "npm:^4.0.0"
@@ -2466,7 +2477,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: 43488536b622ce70202c7dc6b4e92f46d3ff42622411bc0b07e4503e9ccdf51b86fef56d4edbac9c1ee977053406be59c77a8a1a584341eda5ffb80e792ac4e8
+  checksum: 013d6285bed89c693e00d2c9af1fddfe7e973e07c50ec58451e9a155b08f70ab3b308d8fd6d6c1f4e8fba8dac5a4893d279de71f94075c31b825197e3795a088
   languageName: node
   linkType: hard
 
@@ -2528,6 +2539,15 @@ __metadata:
   version: 1.0.5
   resolution: "available-typed-arrays@npm:1.0.5"
   checksum: 4d4d5e86ea0425696f40717882f66a570647b94ac8d273ddc7549a9b61e5da099e149bf431530ccbd776bd74e02039eb8b5edf426e3e2211ee61af16698a9064
+  languageName: node
+  linkType: hard
+
+"axobject-query@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "axobject-query@npm:4.0.0"
+  dependencies:
+    dequal: "npm:^2.0.3"
+  checksum: 5b0bc6a1b1e9701811adc7682953617f40859838275a68584579b0668902111fd16aef3ec9de3855de1065d8c3c0a1af62f6edc9db25395c722cc21c91780587
   languageName: node
   linkType: hard
 
@@ -3190,7 +3210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:^2.0.0":
+"dequal@npm:^2.0.0, dequal@npm:^2.0.3":
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: 6ff05a7561f33603df87c45e389c9ac0a95e3c056be3da1a0c4702149e3a7f6fe5ffbb294478687ba51a9e95f3a60e8b6b9005993acd79c292c7d15f71964b6b
