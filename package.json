@@ -29,7 +29,7 @@
         "autoprefixer": "10.4.16",
         "pino": "8.17.2",
         "remark-twemoji": "0.1.1",
-        "tailwindcss": "3.4.0",
+        "tailwindcss": "3.4.1",
         "twemoji": "14.0.2"
     },
     "devDependencies": {
