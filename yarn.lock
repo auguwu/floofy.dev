@@ -1237,7 +1237,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:6.18.1"
     "@typescript-eslint/parser": "npm:6.18.1"
     astro: "npm:4.1.2"
-    astro-eslint-parser: "npm:0.16.0"
+    astro-eslint-parser: "npm:0.16.1"
     astro-icon: "npm:1.0.2"
     autoprefixer: "npm:10.4.16"
     eslint: "npm:8.56.0"
@@ -2193,7 +2193,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:0.16.0, astro-eslint-parser@npm:^0.16.0":
+"astro-eslint-parser@npm:0.16.1":
+  version: 0.16.1
+  resolution: "astro-eslint-parser@npm:0.16.1"
+  dependencies:
+    "@astrojs/compiler": "npm:^2.0.0"
+    "@typescript-eslint/scope-manager": "npm:^5.0.0"
+    "@typescript-eslint/types": "npm:^5.0.0"
+    astrojs-compiler-sync: "npm:^0.3.0"
+    debug: "npm:^4.3.4"
+    entities: "npm:^4.5.0"
+    eslint-visitor-keys: "npm:^3.0.0"
+    espree: "npm:^9.0.0"
+    semver: "npm:^7.3.8"
+  checksum: d3f579eef58d656ca5c68b4707f4397d3b168e76a8812e672b69f380eb5503908d7f11992ebbecadadca6330c48aab2969c0a654015d2ebcb1dac900af15538f
+  languageName: node
+  linkType: hard
+
+"astro-eslint-parser@npm:^0.16.0":
   version: 0.16.0
   resolution: "astro-eslint-parser@npm:0.16.0"
   dependencies:
@@ -3297,7 +3314,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^4.2.0, entities@npm:^4.4.0":
+"entities@npm:^4.2.0, entities@npm:^4.4.0, entities@npm:^4.5.0":
   version: 4.5.0
   resolution: "entities@npm:4.5.0"
   checksum: ede2a35c9bce1aeccd055a1b445d41c75a14a2bb1cd22e242f20cf04d236cdcd7f9c859eb83f76885327bfae0c25bf03303665ee1ce3d47c5927b98b0e3e3d48
