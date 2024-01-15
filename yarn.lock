@@ -1242,7 +1242,7 @@ __metadata:
     autoprefixer: "npm:10.4.16"
     eslint: "npm:8.56.0"
     eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-astro: "npm:0.31.0"
+    eslint-plugin-astro: "npm:0.31.1"
     image-size: "npm:1.1.1"
     log-symbols: "npm:6.0.0"
     pino: "npm:8.17.2"
@@ -3615,12 +3615,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-compat-utils@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "eslint-compat-utils@npm:0.1.2"
+"eslint-compat-utils@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "eslint-compat-utils@npm:0.2.0"
+  dependencies:
+    semver: "npm:^7.5.4"
   peerDependencies:
     eslint: ">=6.0.0"
-  checksum: 8c273889485ab863f2b6089c36f042dd2d9bf65d219fa256c1991f9466ea8261f3ab753a017a6d8e93bec84abd568fe3e10216f3fda5b41d05e3dce3b2a5e514
+  checksum: 240b645e0a541af88b2c62f30785ca851b834b90b87221a496e03ba10702a0e9eac5578941f1e2ef5e2eb6c93c7a8568dd23f5f4527aa3c9f84f2c9e5aa519e2
   languageName: node
   linkType: hard
 
@@ -3635,20 +3637,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:0.31.0":
-  version: 0.31.0
-  resolution: "eslint-plugin-astro@npm:0.31.0"
+"eslint-plugin-astro@npm:0.31.1":
+  version: 0.31.1
+  resolution: "eslint-plugin-astro@npm:0.31.1"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
     "@typescript-eslint/types": "npm:^5.25.0"
     astro-eslint-parser: "npm:^0.16.0"
-    eslint-compat-utils: "npm:^0.1.2"
+    eslint-compat-utils: "npm:^0.2.0"
     postcss: "npm:^8.4.14"
     postcss-selector-parser: "npm:^6.0.10"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 41919b68e77e7d294744d99bcb3e6ca47f26a98e05b4e6378e9b370d22d25bb5322014f71897bd843c562726f73764b9bac23f7091320f58b3a32e0c9819d844
+  checksum: 1631d879f497762ac8fee362a53b8acdfac4df14e4ec9d8caca68999e4a197cb50d4198968c370f21429ba87dae36a5aa4035e00692fa89ab73309a1bc1c032d
   languageName: node
   linkType: hard
 
