@@ -48,7 +48,7 @@
         "eslint-plugin-astro": "0.31.3",
         "image-size": "1.1.1",
         "log-symbols": "6.0.0",
-        "prettier": "3.2.2",
+        "prettier": "3.2.3",
         "prettier-plugin-astro": "0.12.3",
         "sass": "1.69.7",
         "signale": "1.4.0",
