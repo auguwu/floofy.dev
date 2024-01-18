@@ -115,11 +115,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:2.0.4":
-  version: 2.0.4
-  resolution: "@astrojs/mdx@npm:2.0.4"
+"@astrojs/markdown-remark@npm:4.1.0":
+  version: 4.1.0
+  resolution: "@astrojs/markdown-remark@npm:4.1.0"
   dependencies:
-    "@astrojs/markdown-remark": "npm:4.0.1"
+    "@astrojs/prism": "npm:^3.0.0"
+    github-slugger: "npm:^2.0.0"
+    import-meta-resolve: "npm:^4.0.0"
+    mdast-util-definitions: "npm:^6.0.0"
+    rehype-raw: "npm:^7.0.0"
+    rehype-stringify: "npm:^10.0.0"
+    remark-gfm: "npm:^4.0.0"
+    remark-parse: "npm:^11.0.0"
+    remark-rehype: "npm:^11.0.0"
+    remark-smartypants: "npm:^2.0.0"
+    shikiji: "npm:^0.9.18"
+    unified: "npm:^11.0.4"
+    unist-util-visit: "npm:^5.0.0"
+    vfile: "npm:^6.0.1"
+  checksum: faa2364a3f552ada82afdbf233435f6cbd07bbedfb222cc0ea4aac019eb9edf0f630b3dc8957b2579798ed00744f3bf92cf28898acd7cf189b597d88af5f4d3a
+  languageName: node
+  linkType: hard
+
+"@astrojs/mdx@npm:2.0.5":
+  version: 2.0.5
+  resolution: "@astrojs/mdx@npm:2.0.5"
+  dependencies:
+    "@astrojs/markdown-remark": "npm:4.1.0"
     "@mdx-js/mdx": "npm:^3.0.0"
     acorn: "npm:^8.11.2"
     es-module-lexer: "npm:^1.4.1"
@@ -136,7 +158,7 @@ __metadata:
     vfile: "npm:^6.0.1"
   peerDependencies:
     astro: ^4.0.0
-  checksum: e5497bbe5b34e5d53bc7b8acd267420d3d99ef2fbedcd4a72605d3ef514982ade0dde0f146327c6149db9367dc2da69e2284f64560ea5f24958df5522feb301b
+  checksum: a0297fe4a1285d75811334a635f213288753d1c44d0b69a628e1c53576b37b2a5b54952a483607ee25267d4395422de699c4b747c99b4d73bda6b60081640858
   languageName: node
   linkType: hard
 
@@ -1220,7 +1242,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": "npm:1.10.1"
-    "@astrojs/mdx": "npm:2.0.4"
+    "@astrojs/mdx": "npm:2.0.5"
     "@astrojs/node": "npm:7.0.4"
     "@astrojs/tailwind": "npm:5.1.0"
     "@augu/eslint-config": "npm:4.0.1"
@@ -8595,12 +8617,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shikiji-core@npm:0.9.19":
+  version: 0.9.19
+  resolution: "shikiji-core@npm:0.9.19"
+  checksum: 086137d5dd27227557c8c2f376cedfc6ac73616863e644ae07fbc284a164097295612c9c901fda2a0617234ddeb9482394e9975e43c714d81dc3d0852950abc7
+  languageName: node
+  linkType: hard
+
 "shikiji@npm:^0.6.13":
   version: 0.6.13
   resolution: "shikiji@npm:0.6.13"
   dependencies:
     hast-util-to-html: "npm:^9.0.0"
   checksum: 77294c4722c45ef271af618bb033f5946294755a20a675d3cdea2d3a1b07e03b4158ec4ef7587383a2f364de1653fa4f09d5cee0fc1580006f417104fc905f8a
+  languageName: node
+  linkType: hard
+
+"shikiji@npm:^0.9.18":
+  version: 0.9.19
+  resolution: "shikiji@npm:0.9.19"
+  dependencies:
+    shikiji-core: "npm:0.9.19"
+  checksum: 0ebd0c4eb0605e32e51003912a3ff7c3339fd5b83ca375406ddcedca6063be00d6e751809d2c689f7b6d7f04a7ab30776b1450c1bf3646bb915d2bbdd836611f
   languageName: node
   linkType: hard
 
