@@ -50,7 +50,7 @@
         "log-symbols": "6.0.0",
         "prettier": "3.2.4",
         "prettier-plugin-astro": "0.12.3",
-        "sass": "1.69.7",
+        "sass": "1.70.0",
         "signale": "1.4.0",
         "tsx": "4.7.0",
         "typescript": "5.3.3"
