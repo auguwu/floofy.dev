@@ -93,28 +93,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.0.1":
-  version: 4.0.1
-  resolution: "@astrojs/markdown-remark@npm:4.0.1"
-  dependencies:
-    "@astrojs/prism": "npm:^3.0.0"
-    github-slugger: "npm:^2.0.0"
-    import-meta-resolve: "npm:^4.0.0"
-    mdast-util-definitions: "npm:^6.0.0"
-    rehype-raw: "npm:^7.0.0"
-    rehype-stringify: "npm:^10.0.0"
-    remark-gfm: "npm:^4.0.0"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.0.0"
-    remark-smartypants: "npm:^2.0.0"
-    shikiji: "npm:^0.6.13"
-    unified: "npm:^11.0.4"
-    unist-util-visit: "npm:^5.0.0"
-    vfile: "npm:^6.0.1"
-  checksum: 2f880f86e78d340f95d0473734e34a269939f1e98ab0c58c6ef1e81d62ad52038cf7b3a94afcafcb6a50b6833ef918c37dc7a3219a3f371efb4085353860547e
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:4.1.0":
   version: 4.1.0
   resolution: "@astrojs/markdown-remark@npm:4.1.0"
@@ -1258,7 +1236,7 @@ __metadata:
     "@types/signale": "npm:1.4.7"
     "@typescript-eslint/eslint-plugin": "npm:6.19.0"
     "@typescript-eslint/parser": "npm:6.19.0"
-    astro: "npm:4.1.3"
+    astro: "npm:4.2.1"
     astro-eslint-parser: "npm:0.16.1"
     astro-icon: "npm:1.0.2"
     autoprefixer: "npm:10.4.17"
@@ -2259,13 +2237,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.1.3":
-  version: 4.1.3
-  resolution: "astro@npm:4.1.3"
+"astro@npm:4.2.1":
+  version: 4.2.1
+  resolution: "astro@npm:4.2.1"
   dependencies:
     "@astrojs/compiler": "npm:^2.3.4"
     "@astrojs/internal-helpers": "npm:0.2.1"
-    "@astrojs/markdown-remark": "npm:4.0.1"
+    "@astrojs/markdown-remark": "npm:4.1.0"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.23.3"
     "@babel/generator": "npm:^7.23.3"
@@ -2316,7 +2294,7 @@ __metadata:
     semver: "npm:^7.5.4"
     server-destroy: "npm:^1.0.1"
     sharp: "npm:^0.32.6"
-    shikiji: "npm:^0.6.13"
+    shikiji: "npm:^0.9.18"
     string-width: "npm:^7.0.0"
     strip-ansi: "npm:^7.1.0"
     tsconfck: "npm:^3.0.0"
@@ -2332,7 +2310,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: dab769c0469313c1d29b415d37b253190b59d6a378fffc80464e65704cb2c21ce140457b03d10d84e46726976489ecf1c52f49cdc25ec37788e323155ce6e2bf
+  checksum: 2ee204f1ecb1ebda7bea32d750446c8fabe265fafa0643168399794a5627c0a0a99693d3f88fb0a6e6a2de32b17ffd706beb9a475fa97e808d4fd2d02e7d22a6
   languageName: node
   linkType: hard
 
@@ -8621,15 +8599,6 @@ __metadata:
   version: 0.9.19
   resolution: "shikiji-core@npm:0.9.19"
   checksum: 086137d5dd27227557c8c2f376cedfc6ac73616863e644ae07fbc284a164097295612c9c901fda2a0617234ddeb9482394e9975e43c714d81dc3d0852950abc7
-  languageName: node
-  linkType: hard
-
-"shikiji@npm:^0.6.13":
-  version: 0.6.13
-  resolution: "shikiji@npm:0.6.13"
-  dependencies:
-    hast-util-to-html: "npm:^9.0.0"
-  checksum: 77294c4722c45ef271af618bb033f5946294755a20a675d3cdea2d3a1b07e03b4158ec4ef7587383a2f364de1653fa4f09d5cee0fc1580006f417104fc905f8a
   languageName: node
   linkType: hard
 
