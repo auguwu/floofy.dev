@@ -115,9 +115,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/mdx@npm:2.0.6":
-  version: 2.0.6
-  resolution: "@astrojs/mdx@npm:2.0.6"
+"@astrojs/mdx@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@astrojs/mdx@npm:2.1.0"
   dependencies:
     "@astrojs/markdown-remark": "npm:4.2.0"
     "@mdx-js/mdx": "npm:^3.0.0"
@@ -136,7 +136,7 @@ __metadata:
     vfile: "npm:^6.0.1"
   peerDependencies:
     astro: ^4.0.0
-  checksum: 9ec6ccd00aa4c5deac15e0ee9ad4eda7fedf9d3969f8795915cdfca22258531d7766f0ea44f9d8b8bb9d861c3aa39778849cafece3eefd79fa47b422c5bad24f
+  checksum: 051acea01c864ba5851d4b0396a4188167b2886039fbabf6d6e969a3fe165d324fc34d71dc2ab0e98667fc6b8a242f1f531756106adeafe78ac8c97a3ea764f8
   languageName: node
   linkType: hard
 
@@ -1220,7 +1220,7 @@ __metadata:
   resolution: "@noel/site@workspace:."
   dependencies:
     "@actions/core": "npm:1.10.1"
-    "@astrojs/mdx": "npm:2.0.6"
+    "@astrojs/mdx": "npm:2.1.0"
     "@astrojs/node": "npm:8.0.0"
     "@astrojs/tailwind": "npm:5.1.0"
     "@augu/eslint-config": "npm:4.0.1"

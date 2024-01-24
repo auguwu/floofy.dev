@@ -16,7 +16,7 @@
         "dev": "yarn fmt && yarn lint && astro dev"
     },
     "dependencies": {
-        "@astrojs/mdx": "2.0.6",
+        "@astrojs/mdx": "2.1.0",
         "@astrojs/node": "8.0.0",
         "@astrojs/tailwind": "5.1.0",
         "@augu/pino-transport": "1.4.0",
