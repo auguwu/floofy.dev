@@ -93,28 +93,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@astrojs/markdown-remark@npm:4.2.0":
-  version: 4.2.0
-  resolution: "@astrojs/markdown-remark@npm:4.2.0"
-  dependencies:
-    "@astrojs/prism": "npm:^3.0.0"
-    github-slugger: "npm:^2.0.0"
-    import-meta-resolve: "npm:^4.0.0"
-    mdast-util-definitions: "npm:^6.0.0"
-    rehype-raw: "npm:^7.0.0"
-    rehype-stringify: "npm:^10.0.0"
-    remark-gfm: "npm:^4.0.0"
-    remark-parse: "npm:^11.0.0"
-    remark-rehype: "npm:^11.0.0"
-    remark-smartypants: "npm:^2.0.0"
-    shikiji: "npm:^0.9.18"
-    unified: "npm:^11.0.4"
-    unist-util-visit: "npm:^5.0.0"
-    vfile: "npm:^6.0.1"
-  checksum: c6f291e9ee270b8814a83dda21a6143d3b06ac05f14b92b5109c26edc6ee192f8066fabd481ddfccd5a84255bc1a99f17753ad2c4dde17e3d6cee399f67a55ef
-  languageName: node
-  linkType: hard
-
 "@astrojs/markdown-remark@npm:4.2.1":
   version: 4.2.1
   resolution: "@astrojs/markdown-remark@npm:4.2.1"
@@ -1258,7 +1236,7 @@ __metadata:
     "@types/signale": "npm:1.4.7"
     "@typescript-eslint/eslint-plugin": "npm:6.20.0"
     "@typescript-eslint/parser": "npm:6.20.0"
-    astro: "npm:4.2.6"
+    astro: "npm:4.2.7"
     astro-eslint-parser: "npm:0.16.2"
     astro-icon: "npm:1.0.4"
     autoprefixer: "npm:10.4.17"
@@ -2259,13 +2237,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro@npm:4.2.6":
-  version: 4.2.6
-  resolution: "astro@npm:4.2.6"
+"astro@npm:4.2.7":
+  version: 4.2.7
+  resolution: "astro@npm:4.2.7"
   dependencies:
     "@astrojs/compiler": "npm:^2.5.0"
     "@astrojs/internal-helpers": "npm:0.2.1"
-    "@astrojs/markdown-remark": "npm:4.2.0"
+    "@astrojs/markdown-remark": "npm:4.2.1"
     "@astrojs/telemetry": "npm:3.0.4"
     "@babel/core": "npm:^7.23.3"
     "@babel/generator": "npm:^7.23.3"
@@ -2333,7 +2311,7 @@ __metadata:
       optional: true
   bin:
     astro: astro.js
-  checksum: d40439a0abb6c967024a5a98ecd013c8cd40a2da8c612705e8cf95e71dcfa239eb75e26c0c529c999f364c552e90701a00a2fe7f2e398df9052b4e8a375024aa
+  checksum: f38b82591048de79ca1f42f253fed03665972c5ef4fd1027d196ee6ffe97ac6ab4bec07a5190e592711bc408ba7459d1d4eb6e8c078a841da27f4eb17f02e10b
   languageName: node
   linkType: hard
 
