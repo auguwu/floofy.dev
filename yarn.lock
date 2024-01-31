@@ -1242,7 +1242,7 @@ __metadata:
     autoprefixer: "npm:10.4.17"
     eslint: "npm:8.56.0"
     eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-astro: "npm:0.31.3"
+    eslint-plugin-astro: "npm:0.31.4"
     image-size: "npm:1.1.1"
     log-symbols: "npm:6.0.0"
     pino: "npm:8.17.2"
@@ -2193,7 +2193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-eslint-parser@npm:0.16.3":
+"astro-eslint-parser@npm:0.16.3, astro-eslint-parser@npm:^0.16.3":
   version: 0.16.3
   resolution: "astro-eslint-parser@npm:0.16.3"
   dependencies:
@@ -2207,22 +2207,6 @@ __metadata:
     espree: "npm:^9.0.0"
     semver: "npm:^7.3.8"
   checksum: 10/8b63cdaa23849fbc83a332b90874d72e202c8a33c48a9435bb01ba6a3452057e4439cd63bba02b23e1bc8ef8fa6dabf1c55ccbcbdccfac9c418c377951ada6ee
-  languageName: node
-  linkType: hard
-
-"astro-eslint-parser@npm:^0.16.0":
-  version: 0.16.0
-  resolution: "astro-eslint-parser@npm:0.16.0"
-  dependencies:
-    "@astrojs/compiler": "npm:^2.0.0"
-    "@typescript-eslint/scope-manager": "npm:^5.0.0"
-    "@typescript-eslint/types": "npm:^5.0.0"
-    astrojs-compiler-sync: "npm:^0.3.0"
-    debug: "npm:^4.3.4"
-    eslint-visitor-keys: "npm:^3.0.0"
-    espree: "npm:^9.0.0"
-    semver: "npm:^7.3.8"
-  checksum: 10/55fb19b5ee4ac7ae911e9eb9ce75d8be5652ecd6ed29e1eb12d5711cf7340de02bd5e6d65c7f3666bc7989dd12f65ab4eb9836783fb45bc7e0a8c84ac340a36a
   languageName: node
   linkType: hard
 
@@ -3659,20 +3643,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-astro@npm:0.31.3":
-  version: 0.31.3
-  resolution: "eslint-plugin-astro@npm:0.31.3"
+"eslint-plugin-astro@npm:0.31.4":
+  version: 0.31.4
+  resolution: "eslint-plugin-astro@npm:0.31.4"
   dependencies:
     "@eslint-community/eslint-utils": "npm:^4.2.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
     "@typescript-eslint/types": "npm:^5.25.0"
-    astro-eslint-parser: "npm:^0.16.0"
+    astro-eslint-parser: "npm:^0.16.3"
     eslint-compat-utils: "npm:^0.4.0"
     postcss: "npm:^8.4.14"
     postcss-selector-parser: "npm:^6.0.10"
   peerDependencies:
     eslint: ">=7.0.0"
-  checksum: 10/196bb1bbbfe422c6c6e35b25ece3f688018eb9b7b5e0737a04826227d71defa15071e91ed85a9dd8d8b3d8ed01cef188dd4dbdc9c3805378e35248881dd1a028
+  checksum: 10/a532c35bacb0b8420627f7f7719c780880b5eb4ae77c321ecab2e70fe0f504ce466df0b4e20e0c73a2c823258768166b2ba7da38aef59fbcae0d942995010a3f
   languageName: node
   linkType: hard
 
