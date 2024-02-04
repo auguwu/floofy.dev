@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2023 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,9 +21,25 @@
  * SOFTWARE.
  */
 
-// @ts-ignore
-import { createIconPack } from 'astro-icon/pack';
+import defaultConfig from 'tailwindcss/defaultConfig';
+import typography from '@tailwindcss/typography';
 
-export default createIconPack({
-    url: 'https://raw.githubusercontent.com/radix-ui/icons/master/packages/radix-icons/icons/'
-});
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+    plugins: [typography],
+    theme: {
+        extend: {
+            fontFamily: {
+                // @ts-ignore
+                sans: ['"Open Sans"', ...defaultConfig.theme.fontFamily.sans],
+
+                // @ts-ignore
+                mono: ['"JetBrains Mono"', ...defaultConfig.theme.fontFamily.mono],
+
+                // @ts-ignore
+                serif: ['Cantarell', ...defaultConfig.theme.fontFamily.serif]
+            }
+        }
+    }
+};

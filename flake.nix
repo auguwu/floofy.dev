@@ -18,34 +18,31 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+{
+  description = "🐾 Personal site made with Astro";
+  inputs = {
+    nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
+    flake-utils.url = github:numtide/flake-utils;
+    flake-compat = {
+      url = github:edolstra/flake-compat;
+      flake = false;
+    };
+  };
 
-FROM oven/bun:1.0-alpine AS build
-
-RUN apk update
-WORKDIR /build
-
-COPY package.json .
-COPY bun.lockb .
-
-RUN bun install --frozen-lockfile
-
-COPY . .
-RUN bun run build
-
-FROM oven/bun:1.0-alpine
-
-RUN apk update && apk add --no-cache bash tini curl
-WORKDIR /app/noel/site
-
-COPY --from=build /build/node_modules /app/noel/site/node_modules
-COPY --from=build /build/dist         /app/noel/site/dist
-
-RUN addgroup -g 1001 noel && \
-    adduser -DSH -u 1001 -G noel noel && \
-    chown -R noel:noel /app/noel/site
-
-EXPOSE 4321
-
-USER noel
-ENTRYPOINT ["tini", "-s"]
-CMD ["bun", "dist/server/entry.mjs"]
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    ...
+  }:
+    flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import nixpkgs {
+        inherit system;
+      };
+    in {
+      devShells.default = pkgs.mkShell {
+        LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [pkgs.stdenv.cc.cc];
+        buildInputs = with pkgs; [bun];
+      };
+    });
+}

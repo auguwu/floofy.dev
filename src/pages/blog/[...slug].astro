@@ -1,17 +1,11 @@
 ---
 import { getEntryBySlug } from 'astro:content';
-import Container from '~/components/Container.astro';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
 
 import '~/styles/global.css';
 
-const currentYear = new Date().getFullYear();
 const { slug } = Astro.params;
-const formatter = new Intl.DateTimeFormat('en-GB', {
-    dateStyle: 'medium',
-    timeStyle: 'medium'
-});
 
 const page = await getEntryBySlug('blog', slug!);
 if (!page) return Astro.redirect('/404');
@@ -25,31 +19,16 @@ const { Content } = await render();
     <Head title={data.title} description={data.description} path={`/blog/${slug}`} />
     <body class="relative max-lg:px-3 py-4">
         <Navbar />
-        <Container>
-            <div class="flex mt-3 mx-auto border border-pink-300 lg:w-[80rem] rounded-lg shadow-md py-2 px-3">
-                <div>
-                    <img
-                        src="https://cdn.floofy.dev/images/August.png"
-                        class="md:w-[154px] md:h-[154px] max-sm:hidden h-[72px] w-[72px] rounded-md lg:shadow-sm"
-                        alt="noel avatar"
-                        draggable="false"
-                    />
-                </div>
-                <div class="my-auto ml-4">
-                    <h1 class="font-mono md:text-4xl">{data.title}</h1>
-                    <h2 class="md:text-2xl mt-2">{data.description}</h2>
-                    <div class="text-white mt-4">
-                        <span class="text-md">Published on {formatter.format(new Date(data.createdAt))}</span>
-                    </div>
-                </div>
-            </div>
-            <main class="flex container mx-auto mt-5">
-                <article
-                    class="lg:max-w-full max-w-md prose prose-p:break-words prose-p:text-zinc-200 prose-p:text-2xl prose-headings:font-serif prose-headings:text-zinc-200 prose-strong:text-slate-200 prose-code:text-slate-200 prose-a:text-rose-200 hover:prose-a:text-fuchsia-400 prose-a:underline prose-li:text-slate-300 prose-img:mx-auto"
-                >
+        <div class="flex flex-col container mt-2.5 mx-auto space-y-6 max-md:justify-center max-md:items-center lg:max-w-screen-xl">
+            <h1 class="font-sans text-4xl">{data.title}</h1>
+            <h2 class="font-sans text-3xl text-gray-400">{data.description}</h2>
+            <hr class="border-gray-600 mt-1.5" />
+
+            <main class="flex container mx-auto">
+                <article class="markdown">
                     <Content />
                 </article>
             </main>
-        </Container>
+        </div>
     </body>
 </html>

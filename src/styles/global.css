@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2023 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,7 +23,7 @@
 
 @import '@fontsource/jetbrains-mono';
 @import '@fontsource/cantarell';
-@import '@fontsource/inter';
+@import '@fontsource/open-sans';
 
 @tailwind components;
 @tailwind base;
@@ -31,7 +31,7 @@
 
 /* define base colours here */
 :root {
-    --background: #202336;
+    --background: #11111c;
     --selection: #d961a3;
 }
 
@@ -58,4 +58,44 @@ html {
 body {
     background-color: var(--background);
     color: white;
+}
+
+article.markdown {
+    @apply prose -mt-6 lg:max-w-screen-xl max-w-none
+
+    /* <p> elements */
+    prose-p:break-words prose-p:text-zinc-200 prose-p:text-2xl
+
+    /* <a> elements */
+    prose-a:text-rose-200 hover:prose-a:text-fuchsia-400 prose-a:underline prose-p:leading-7 prose-p:[&:not(:first-child)]:mt-6
+
+    /* <h1> elements */
+    prose-h1:font-serif prose-h1:font-bold prose-h1:text-5xl prose-h1:tracking-tight prose-h1:scroll-m-20 prose-h1:dark:text-white prose-h1:text-zinc-900/60
+
+    /* <h2> elements */
+    prose-h2:font-serif prose-h2:font-bold prose-h2:text-4xl prose-h2:tracking-tight prose-h2:scroll-m-20 prose-h2:first:mt-0 prose-h2:dark:text-white prose-h2:text-zinc-900/60
+
+    /* <h3> elements */
+    prose-h3:font-serif prose-h3:font-bold prose-h3:text-2xl prose-h3:tracking-tight prose-h3:scroll-m-20 prose-h3:dark:text-white prose-h3:text-zinc-900/60
+
+    /* <h4> elements */
+    prose-h4:text-xl prose-h4:tracking-tight prose-h4:scroll-m-20 prose-h4:dark:text-white prose-h4:text-zinc-900/60
+
+    /* <h5> elements */
+    prose-h5:text-lg prose-h5:dark:text-white prose-h5:text-zinc-900/60
+
+    /* <h6> elements */
+    prose-h6:text-sm prose-h6:dark:text-white prose-h6:text-zinc-900/60
+
+    /* table elements */
+    prose-table:w-full
+    prose-thead:border-gray-600
+    prose-th:text-lg prose-th:text-white
+    prose-tr:text-lg prose-tr:text-white
+
+    /* blockquote elements */
+    prose-blockquote:border-gray-600 prose-blockquote:border-l-2
+
+    /* <code> elements */
+    /*[&:not(pre)]:prose-code:relative [&:not(pre)]:prose-code:rounded [&:not(pre)]:prose-code:bg-gray-800 [&:not(pre)]:prose-code:px-[0.3rem] [&:not(pre)]:prose-code:py-[0.2rem] [&:not(pre)]:prose-code:font-mono [&:not(pre)]:prose-code:text-sm [&:not(pre)]:prose-code:font-semibold*/;
 }

@@ -652,8 +652,4 @@ FodyWeavers.xsd
 # Additional files built by Visual Studio
 
 .astro/
-.vercel/
-server/.yarn/*.gz
-server/.yarn/cache/
-.yarn/cache/
-!.yarn/releases/
+.direnv/

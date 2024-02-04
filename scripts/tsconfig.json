@@ -1,16 +1,13 @@
 {
-    "extends": "@augu/tsconfig",
+    "extends": ["@augu/tsconfig"],
+    "exclude": ["node_modules"],
+    "include": ["**/*.ts"],
     "compilerOptions": {
-        "jsx": "preserve",
+        "resolveJsonModule": true,
+        "moduleResolution": "Bundler",
+        "removeComments": false,
         "target": "ESNext",
         "module": "ESNext",
-        "moduleResolution": "Node",
-        "skipLibCheck": true,
-        "strict": true,
-        "noEmit": true,
-        "allowSyntheticDefaultImports": true,
-        "rootDir": "."
-    },
-    "include": ["**/*.ts"],
-    "exclude": ["node_modules"]
+        "types": ["bun"]
+    }
 }

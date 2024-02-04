@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2023 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,29 +21,21 @@
  * SOFTWARE.
  */
 
-// @ts-check
+import { getCollection } from 'astro:content';
+import type { APIRoute } from 'astro';
+import rss from '@astrojs/rss';
 
-const defaultConfig = require('tailwindcss/defaultConfig');
+const blog = await getCollection('blog');
 
-/**
- * @param {import('tailwindcss').Config} config
- */
-const defineConfig = (config) => config;
-module.exports = defineConfig({
-    content: ['./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}'],
-    plugins: [require('@tailwindcss/typography')],
-    theme: {
-        extend: {
-            fontFamily: {
-                // @ts-ignore
-                sans: ['Inter', ...defaultConfig.theme.fontFamily.sans],
-
-                // @ts-ignore
-                mono: ['"JetBrains Mono"', ...defaultConfig.theme.fontFamily.mono],
-
-                // @ts-ignore
-                serif: ['Cantarell', ...defaultConfig.theme.fontFamily.serif]
-            }
-        }
-    }
-});
+export const GET: APIRoute = () =>
+    rss({
+        title: "Noel's Blog",
+        description: "🐾 Noel's collection of writings",
+        site: 'https://floofy.dev',
+        items: blog.map((post) => ({
+            title: post.data.title,
+            description: post.data.description,
+            pubDate: new Date(post.data.createdAt),
+            link: `https://floofy.dev/blog/${post.slug}`
+        }))
+    });

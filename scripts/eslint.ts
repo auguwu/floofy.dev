@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2023 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,54 +21,94 @@
  * SOFTWARE.
  */
 
-import { warning, error } from '@actions/core';
-import { Signale } from 'signale';
-import { ESLint } from 'eslint';
+// @ts-ignore
+import { FlatESLint } from 'eslint/use-at-your-own-risk';
+import { Stopwatch } from '@noelware/utils';
+import * as log from './util/logging';
+import type { ESLint } from 'eslint';
+import * as colors from 'colorette';
+import { resolve } from 'node:path';
 
-const log = new Signale({
-    scope: '@noel/site:eslint',
-    config: {
-        displayBadge: true,
-        displayScope: true,
-        displayTimestamp: true,
-        displayDate: true
-    }
-});
-
-// list of directories to glob over
-const dirs = ['src/**/*.{ts,tsx,astro}', 'scripts/**/*.ts'] as const;
 async function main() {
-    const symbols = await import('log-symbols').then((f) => f.default);
-    const eslint = new ESLint({
-        useEslintrc: true,
+    const ROOT = Bun.fileURLToPath(new URL('..', import.meta.url));
+    log.info(`root directory: ${ROOT}`);
 
-        // if we aren't in ci, use the --fix flag to fix
-        // the issues
-        fix: process.env.CI === undefined
+    const linter = new FlatESLint({
+        allowInlineConfig: true,
+        fix: !log.ci,
+        cwd: ROOT
     });
 
-    for (const dir of dirs) {
-        log.info(`Linting directory [${dir}]`);
-        const results = await eslint.lintFiles(dir);
-        for (const result of results) {
-            for (const message of result.messages) {
-                const s = message.severity === 1 ? symbols.warning : symbols.error;
-                if (process.env.CI !== undefined) {
-                    const method = message.severity === 1 ? warning : error;
-                    method(`${s} ${message.message} (${message.ruleId})`, {
-                        endColumn: message.endColumn,
-                        endLine: message.endLine,
-                        file: result.filePath,
-                        startLine: message.line,
-                        startColumn: message.column
-                    });
-                } else {
-                    const method = message.severity === 1 ? log.warn : log.error;
-                    method(`${message.message} (${message.ruleId})`);
+    const glob = new Bun.Glob('**/*.{ts,js}');
+    const formatter = await linter.loadFormatter('codeframe');
+
+    log.startGroup(`linting directory [${resolve(ROOT)}]`);
+
+    let failed = false;
+    for await (const file of glob.scan({ cwd: ROOT })) {
+        if (file.includes('node_modules') || file.includes('dist')) {
+            continue;
+        }
+
+        const sw = Stopwatch.createStarted();
+        log.info(
+            `${colors.isColorSupported ? colors.bold(colors.magenta('START')) : 'START'}   ${resolve(ROOT, file)}`
+        );
+
+        const contents = await Bun.file(resolve(ROOT, file)).text();
+        const results: ESLint.LintResult[] = await linter.lintText(contents, {
+            filePath: resolve(ROOT, file)
+        });
+
+        if (!log.ci) {
+            const shouldPrint = formatter.format(results);
+            shouldPrint.length > 0 && console.log(shouldPrint);
+        } else {
+            for (const result of results) {
+                for (const msg of result.messages) {
+                    switch (msg.severity) {
+                        case 0:
+                            continue;
+
+                        case 1:
+                            log.warn(
+                                `[${msg.ruleId || '(unknown rule)'}] ${msg.message} (line ${msg.line}:${msg.column})`
+                            );
+                            continue;
+
+                        case 2:
+                            failed = true;
+                            log.error(
+                                `${
+                                    colors.isColorSupported ? colors.bold(colors.red('FAILED')) : 'FAILED'
+                                } file [${file}] has failed to lint properly; run \`bun run lint\` outside of CI to fix it: ${
+                                    msg.ruleId || '(unknown rule)'
+                                }: ${msg.message}`,
+                                {
+                                    startColumn: msg.endColumn,
+                                    endColumn: msg.endColumn,
+                                    startLine: msg.line,
+                                    endLine: msg.endLine,
+                                    title: `[${msg.ruleId || '(unknown)'}] ${msg.message}`,
+                                    file: file
+                                }
+                            );
+
+                            break;
+                    }
                 }
             }
         }
+
+        log.info(
+            `${colors.isColorSupported ? colors.bold(colors.magenta('END')) : 'END'}     ${resolve(ROOT, file)} ${
+                colors.isColorSupported ? colors.bold(`[${sw.stop()}]`) : ''
+            }`
+        );
     }
+
+    log.endGroup();
+    process.exit(failed ? 1 : 0);
 }
 
 main().catch((ex) => {

@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2023 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,28 +21,23 @@
  * SOFTWARE.
  */
 
-// @ts-check
+import type { APIRoute } from 'astro';
 
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import node from '@astrojs/node';
-import mdx from '@astrojs/mdx';
+export const GET: APIRoute = () =>
+    new Response(
+        `# Disallow GPT to index
+User-agent: GPTBot
+Disallow: /
 
-import remarkTwemoji from 'remark-twemoji';
+# Disallow Google Bard to index
+User-agent: Google-Extended
+Disallow: /
 
-export default defineConfig({
-    integrations: [mdx(), tailwind()],
-    site: 'https://floofy.dev',
-    output: 'server',
-    adapter: node({
-        mode: 'standalone'
-    }),
-    markdown: {
-        remarkPlugins: [remarkTwemoji],
-        syntaxHighlight: 'shiki',
-        shikiConfig: {
-            theme: 'rose-pine',
-            wrap: true
-        }
-    }
-});
+# everyone else is ok :)
+User-agent: *
+Allow: /
+
+Sitemap: https://floofy.dev/sitemap-index.xml
+`.trim(),
+        { status: 200 }
+    );

@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 ---
 
 <nav class="relative">
@@ -9,79 +9,67 @@ import { Icon } from 'astro-icon';
         <div class="flex flex-row align-middle gap-2">
             <div class="flex flex-row gap-3">
                 <img
-                    src="https://cdn.floofy.dev/images/August.png"
-                    draggable="false"
-                    class="rounded-lg my-auto w-[36px] h-[36px] lg:w-[48px] lg:h-[48px]"
                     alt="noel avatar"
+                    class="rounded-lg my-auto w-[36px] h-[36px] lg:w-[48px] lg:h-[48px]"
+                    draggable="false"
+                    src="https://cdn.floofy.dev/images/August.png"
                 />
 
                 <span class="font-mono text-xl my-auto">Noel 🌺</span>
             </div>
 
             <a
-                href="/"
                 class="my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
+                href="/"
             >
                 Home
             </a>
 
             <span class="my-auto">&bull;</span>
             <a
-                href="/blog"
                 class="my-auto font-mono text-white text-xl hover:bg-[#35353A] hover:shadow-md py-2 px-2 rounded-lg"
+                href="/blog"
             >
                 Blog
             </a>
         </div>
         <div class="flex lg:hidden flex-row align-middle gap-2 mt-2.5">
-            <a id="icon" href="https://discord.com/users/280158289667555328" class="mr-3" title="Discord">
-                <Icon name="fa-brands:discord" size="32" class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" />
+            <a class="mr-3" href="https://discord.com/users/280158289667555328" id="icon" title="Discord">
+                <Icon class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" name="fa-brands:discord" size={32} />
             </a>
 
-            <a id="icon" href="https://github.com/auguwu" class="mr-2" title="GitHub">
-                <Icon name="fa-brands:github" size="32" class="text-white bg-[#333333] py-1 px-1 rounded-lg" />
+            <a class="mr-2" href="https://github.com/auguwu" id="icon" title="GitHub">
+                <Icon class="text-white bg-[#333333] py-1 px-1 rounded-lg" name="fa-brands:github" size={32} />
             </a>
 
-            <a id="icon" href="https://twitter.com/auguuwu" class="mr-2" title="Twitter">
-                <Icon name="fa-brands:twitter" size="32" class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" />
+            <a class="mr-2" href="https://twitter.com/auguuwu" id="icon" title="Twitter">
+                <Icon class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" name="fa-brands:twitter" size={32} />
             </a>
 
-            <a id="icon" href="https://wuff.space/@noel" rel="me" class="mr-2" title="Mastodon">
-                <Icon name="fa-brands:mastodon" size="32" class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" />
+            <a class="mr-2" href="https://wuff.space/@noel" id="icon" rel="me" title="Mastodon">
+                <Icon class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" name="fa-brands:mastodon" size={32} />
             </a>
 
-            <a id="icon" href="https://last.fm/auguwu" class="mr-2" title="last.fm">
-                <Icon name="fa-brands:lastfm" size="32" class="text-white bg-[#D51007] py-1 px-1 rounded-lg" />
-            </a>
-
-            <a id="icon" href="https://bsky.app/profile/floofy.dev" class="mr-2" title="Bluesky">
-                <img src="https://bsky.app/static/favicon-32x32.png" alt="Bluesky Favicon" />
+            <a class="mr-2" href="https://last.fm/auguwu" id="icon" title="last.fm">
+                <Icon class="text-white bg-[#D51007] py-1 px-1 rounded-lg" name="fa-brands:lastfm" size={32} />
             </a>
         </div>
 
         <div class="lg:flex hidden lg:flex-row lg:align-middle lg:gap-2">
-            <a id="icon" href="https://discord.com/users/280158289667555328" class="mr-3">
-                <Icon name="fa-brands:discord" size="48" class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" />
+            <a class="mr-3" href="https://discord.com/users/280158289667555328" id="icon">
+                <Icon class="text-white bg-[#5865F2] py-1 px-1 rounded-lg" name="fa-brands:discord" size={48} />
             </a>
 
-            <a id="icon" href="https://github.com/auguwu" class="mr-2">
-                <Icon name="fa-brands:github" size="48" class="text-white bg-[#333333] py-1 px-1 rounded-lg" />
+            <a class="mr-2" href="https://github.com/auguwu" id="icon">
+                <Icon class="text-white bg-[#333333] py-1 px-1 rounded-lg" name="fa-brands:github" size={48} />
             </a>
 
-            <a id="icon" href="https://twitter.com/auguuwu" class="mr-2">
-                <Icon name="fa-brands:twitter" size="48" class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" />
+            <a class="mr-2" href="https://twitter.com/auguuwu" id="icon">
+                <Icon class="text-white bg-[#1DA1F2] py-1 px-1 rounded-lg" name="fa-brands:twitter" size={48} />
             </a>
 
-            <a id="icon" href="https://wuff.space/@noel" class="mr-2">
-                <Icon name="fa-brands:mastodon" size="48" class="text-white bg-[#563ACC] py-1 px-1 rounded-lg" />
-            </a>
-
-            <a id="icon" href="https://last.fm/auguwu" class="mr-2">
-                <Icon name="fa-brands:lastfm" size="48" class="text-white bg-[#D51007] py-1 px-1 rounded-lg" />
-            </a>
-
-            <a id="icon" href="https://bsky.app/profile/floofy.dev" class="mr-2" title="Bluesky">
-                <img class="w-[48px] h-[48px]" src="https://bsky.app/static/favicon-32x32.png" alt="Bluesky Favicon" />
+            <a class="mr-2" href="https://last.fm/auguwu" id="icon">
+                <Icon class="text-white bg-[#D51007] py-1 px-1 rounded-lg" name="fa-brands:lastfm" size={48} />
             </a>
         </div>
     </header>

@@ -1,31 +1,25 @@
 ---
 import ProjectCard, { type Props } from '~/components/ProjectCard.astro';
 import Container from '~/components/Container.astro';
+import { age as getAge } from '~/utils/datetime';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
 
-const birthday = new Date(2004, 2, 24).getTime();
-const now = new Date(Date.now() - birthday);
-const age = Math.abs(now.getUTCFullYear() - 1970);
+import '~/styles/global.css';
 
+const age = getAge(new Date(2004, 2, 24));
 const projects: Props['data'][] = [
     {
-        description: '🐻‍❄️📦 Free, open source, and reliable Helm Chart registry made in Rust',
-        language: 'rust',
-        name: 'charted-server',
-        url: 'https://charts.noelware.org'
-    },
-    {
-        description: '🐻‍❄️🪶 Minimal, and fast HTTP proxy to host files from any cloud storage provider',
-        language: 'rust',
-        name: 'Hazel',
-        url: 'https://github.com/Noelware/hazel'
-    },
-    {
         description: '🐻‍❄️💐 Easy, and flexible image host to share with your friends on Discord, Telegram, and more.',
-        language: 'go',
+        language: 'rust',
         name: 'ume',
         url: 'https://github.com/auguwu/ume'
+    },
+    {
+        description: '💐💚 Collection of Docker images that I use for Coder',
+        language: 'dockerfile',
+        name: 'Coder Images',
+        url: 'https://github.com/auguwu/coder-images'
     }
 ];
 ---
@@ -34,26 +28,29 @@ const projects: Props['data'][] = [
     <Head path="/" />
     <body class="max-lg:px-3 py-2">
         <Navbar />
-        <div class="flex flex-col container mx-auto max-md:justify-center max-md:items-center lg:max-w-7xl">
-            <div class="flex container flex-col mt-8 space-y-3">
-                <h1 class="font-serif text-5xl">Noel (he/him)</h1>
-                <h2 class="text-3xl">Fullstack Developer, Systems Administrator</h2>
-                <hr />
-                <h3 class="text-xl">
-                    {age} year old polar bear who boops his hardware too much to the point of possibly breaking it! (So far
-                    it hasn't)
-                </h3>
+
+        <div class="flex flex-col container mt-2.5 mx-auto space-y-4 max-md:justify-center max-md:items-center lg:max-w-screen-xl">
+            <h1 class="font-sans text-4xl">Noel Towa [he/him] &bull; {age} years old</h1>
+            <h2 class="font-sans text-3xl text-gray-400">Developer, System Administrator, Polar Bear</h2>
+            <div class="flex flex-row gap-2">
+                <a href="https://en.pronouns.page/terminology#gay" target="_blank">
+                    <img alt="gay pride" src="https://en.pronouns.page/flags/Gay_.png" class="w-12 h-8 rounded-sm" />
+                </a>
+                <a href="https://en.pronouns.page/terminology#homosexual" target="_blank">
+                    <img alt="homosex ual" src="https://en.pronouns.page/flags/Gay.png" class="w-12 h-8 rounded-sm" />
+                </a>
+                <a href="https://en.pronouns.page/terminology#polyamorous" target="_blank">
+                    <img alt="poly (i like 2 men)" src="https://en.pronouns.page/flags/Polyamorous__.png" class="w-12 h-8 rounded-sm" />
+                </a>
             </div>
 
-            <h2 class="text-3xl lg:mt-5 mt-2">Projects</h2>
+            <hr class="border-gray-600 mt-1.5" />
             <Container>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 items-center [&>*]:h-full">
+                <h1 class="text-3xl font-serif">Projects</h1>
+                <div class="mt-2 grid grid-cols-1 lg:grid-cols-3 gap-3 items-center [&>*]:h-full">
                     {projects.map((data) => <ProjectCard data={data} />)}
                 </div>
             </Container>
         </div>
-        <style is:global>
-            @import '~/styles/global.css';
-        </style>
     </body>
 </html>

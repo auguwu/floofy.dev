@@ -21,6 +21,9 @@
  * SOFTWARE.
  */
 
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
-/// <reference types="unplugin-fonts/client" />
+module.exports = {
+    plugins: {
+        autoprefixer: {},
+        tailwindcss: {}
+    }
+};

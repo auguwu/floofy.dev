@@ -21,6 +21,14 @@
  * SOFTWARE.
  */
 
-/// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
-/// <reference types="unplugin-fonts/client" />
+export function age(date: Date) {
+    const today = new Date();
+    const precedes =
+        today.getMonth() < date.getMonth() ||
+        (today.getMonth() === date.getMonth() && today.getDate() < date.getDate());
+
+    const diff = today.getFullYear() - date.getFullYear();
+    const age = diff - (precedes ? 1 : 0);
+
+    return age;
+}
