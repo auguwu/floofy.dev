@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "@astrojs/node": "8.2.0",
-        "@astrojs/rss": "4.0.4",
+        "@astrojs/rss": "4.0.5",
         "@astrojs/sitemap": "3.0.5",
         "@astrojs/tailwind": "5.1.0",
         "@augu/pino-transport": "1.4.0",
