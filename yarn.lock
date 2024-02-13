@@ -1330,10 +1330,10 @@ astro-icon@1.1.0:
     "@iconify/types" "^2.0.0"
     "@iconify/utils" "^2.1.5"
 
-astro@4.3.6:
-  version "4.3.6"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-4.3.6.tgz#bdbbdf2cdccec79d07a0a2e12afd2d637f2819cb"
-  integrity sha512-VYJGsBygMtPM/qTRgn5QdxkSILgjpW2uHVw3snp/Gkl+N9uRAAnuYxrUO7wkbLejfrmlb0nZyyKG+H5VDQPbeg==
+astro@4.3.7:
+  version "4.3.7"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-4.3.7.tgz#8ade6ce4e9802e1254d9e40985e565b9e6d7803f"
+  integrity sha512-spdl+Ae6WZjQ0w8VBPq8ulN1hdN0m4EWvKG7ecgHjPQIHidMnzWJoZLEFEeKASqCGB1fDibqr7RDHoHkhZbp2Q==
   dependencies:
     "@astrojs/compiler" "^2.5.3"
     "@astrojs/internal-helpers" "0.2.1"
