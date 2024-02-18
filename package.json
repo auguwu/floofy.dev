@@ -24,7 +24,7 @@
         "@augu/pino-transport": "1.4.0",
         "@fontsource/cantarell": "5.0.8",
         "@fontsource/jetbrains-mono": "5.0.18",
-        "@fontsource/open-sans": "5.0.23",
+        "@fontsource/open-sans": "5.0.24",
         "@tailwindcss/typography": "0.5.10",
         "astro": "4.4.0",
         "astro-icon": "1.1.0",

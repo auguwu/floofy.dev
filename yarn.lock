@@ -546,10 +546,10 @@
   resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-5.0.18.tgz#ac2d610201bb3bc0577ed907a94aed37af8aa537"
   integrity sha512-0+YDAaAnCdXjirHFO3NfHLUW8xtKCT5rlm23Q0qG3TpZp3QBrZh5r9ikUxh3ufHc2+fVnk4Y6GWNEnVIfB7u/g==
 
-"@fontsource/open-sans@5.0.23":
-  version "5.0.23"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.23.tgz#327d4d6e6a1c60b8605faa69e14b1d5f40155b5a"
-  integrity sha512-BTp23tnfuvoLVyb0pmybebmx/YEmq/VMSwTWPy9zMyNlRV63XDVuE1M/XCpcCy2mYbespx/Ky4NWrZkL3GGfig==
+"@fontsource/open-sans@5.0.24":
+  version "5.0.24"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.24.tgz#02f85e51d0ee75c3c2f42f683cd486364f99e2d9"
+  integrity sha512-bIF+87vxfOPTyvnBKS+rCPmz/m66um3zCk1UdPv8RGBgwu6MMxwED0jpcbvyFSkfy0ApcdjfkDSAhlFTm/pgiw==
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.14"
