@@ -21,14 +21,17 @@
  * SOFTWARE.
  */
 
+import * as tailwind from 'prettier-plugin-tailwindcss';
+import * as astro from 'prettier-plugin-astro';
 import { Stopwatch } from '@noelware/utils';
+import { fileURLToPath } from 'node:url';
 import * as log from './util/logging';
 import * as prettier from 'prettier';
 import * as colors from 'colorette';
 import { resolve } from 'node:path';
 
 async function main() {
-    const ROOT = Bun.fileURLToPath(new URL('..', import.meta.url));
+    const ROOT = fileURLToPath(new URL('..', import.meta.url));
     log.info(`root directory: ${ROOT}`);
 
     const config = await prettier.resolveConfig(resolve(ROOT, '.prettierrc.json'));
@@ -36,7 +39,7 @@ async function main() {
         throw new Error(`was unable to resolve Prettier config in [${resolve(ROOT, '.prettierrc.json')}] ?!`);
     }
 
-    const glob = new Bun.Glob('**/*.{ts,js,md,yaml,yml,json}');
+    const glob = new Bun.Glob('**/*.{ts,js,md,yaml,yml,json,astro}');
     log.startGroup('formatting!');
 
     let failed = false;
@@ -52,10 +55,11 @@ async function main() {
 
         // lazily create a Bun.File, which we will use later
         const fileObj = Bun.file(resolve(ROOT, file));
-        const info = await prettier.getFileInfo(resolve(ROOT, file));
+        const info = await prettier.getFileInfo(resolve(ROOT, file), { plugins: [tailwind, astro] });
+
         if (info.inferredParser === null) {
             log.warn(
-                `${colors.isColorSupported ? colors.bold(colors.gray('IGNORED')) : 'IGNORED'}   ${resolve(
+                `${colors.isColorSupported ? colors.bold(colors.gray('IGNORED')) : 'IGNORED'} ${resolve(
                     ROOT,
                     file
                 )} ${colors.isColorSupported ? colors.bold(`[${sw.stop()}]`) : `[${sw.stop()}]`}`

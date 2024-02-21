@@ -21,8 +21,6 @@
  * SOFTWARE.
  */
 
-import * as astroParser from 'astro-eslint-parser';
-import astro from 'eslint-plugin-astro';
 import { fileURLToPath } from 'url';
 
 // Node (`ESLINT_FLAT_CONFIG=1 npx eslint`):
@@ -50,28 +48,19 @@ import { fileURLToPath } from 'url';
 //       typescript: [Function: typescript],
 //       vue: [Function: vue],
 //     }
+/** @type {import('@augu/eslint-config').default} */
 const noel = await import('@augu/eslint-config').then((mod) =>
     typeof Bun !== 'undefined' ? mod.default : mod.default.default
 );
 
 const configs = await noel({
     perfectionist: true,
+    astro: {
+        typescript: true
+    },
     typescript: {
         tsconfig: fileURLToPath(new URL('.', import.meta.url))
     }
-});
-
-// TODO(@auguwu): add this in @augu/eslint-config
-configs.push({
-    ignores: ['**/*.astro']
-    // languageOptions: {
-    //     parser: astroParser,
-    //     sourceType: 'module'
-    // },
-    // plugins: {
-    //     astro
-    // },
-    // rules: astro.configs.recommended.rules
 });
 
 export default configs;

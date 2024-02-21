@@ -3,6 +3,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.documentSelectors": ["**/*.astro"],
     "eslint.experimental.useFlatConfig": true,
     "eslint.validate": ["javascript", "typescript", "astro"],
     "css.lint.unknownAtRules": "ignore",
@@ -10,6 +11,6 @@
         "source.fixAll.eslint": true
     },
     "[astro]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

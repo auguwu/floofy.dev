@@ -12,35 +12,39 @@ const formatter = new Intl.DateTimeFormat('en-GB', {
 });
 
 const posts = await getCollection('blog').then((posts) =>
-    posts.sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf()).filter(post => !post.data.draft)
+    posts.sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf()).filter((post) => !post.data.draft)
 );
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <Head title="Blog" description="📝 Collection of my writing I post time from time" path="/blog" />
     <body class="relative max-lg:px-3 py-4">
         <Navbar />
-        <div class="flex flex-col container mt-2.5 mx-auto space-y-4 max-md:justify-center max-md:items-center lg:max-w-screen-xl">
+        <div
+            class="flex flex-col container mt-2.5 mx-auto space-y-4 max-md:justify-center max-md:items-center lg:max-w-screen-xl"
+        >
             <h1 class="font-sans text-4xl">Blog Posts</h1>
             <h2 class="font-sans text-3xl text-gray-400">Collection of all writings that I write!</h2>
             <hr class="border-gray-600 mt-1.5" />
 
             <Container>
                 <div class="grid grid-cols-1 lg:grid-cols-3 items-center gap-3">
-                    {posts.map((post) =>
-                        <div class="py-4 px-3 rounded-md shadow-md bg-[#1e1f2a] space-y-3 space-x-2 h-full">
-                            <a
-                                href={`/blog/${post.slug}`}
-                                class="font-serif text-2xl text-semibold hover:border-b-2 hover:border-slate-500"
-                            >
-                                {post.data.title}
-                            </a>
+                    {
+                        posts.map((post) => (
+                            <div class="py-4 px-3 rounded-md shadow-md bg-[#1e1f2a] space-y-3 space-x-2 h-full">
+                                <a
+                                    href={`/blog/${post.slug}`}
+                                    class="font-serif text-2xl text-semibold hover:border-b-2 hover:border-slate-500"
+                                >
+                                    {post.data.title}
+                                </a>
 
-                            <h5 class="mt-1.5">{post.data.description}</h5>
-                            <span class="mt-2">{formatter.format(new Date(post.data.createdAt))}</span>
-                        </div>
-                    )}
+                                <h5 class="mt-1.5">{post.data.description}</h5>
+                                <span class="mt-2">{formatter.format(new Date(post.data.createdAt))}</span>
+                            </div>
+                        ))
+                    }
                 </div>
             </Container>
         </div>

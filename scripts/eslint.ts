@@ -24,13 +24,14 @@
 // @ts-ignore
 import { FlatESLint } from 'eslint/use-at-your-own-risk';
 import { Stopwatch } from '@noelware/utils';
+import { fileURLToPath } from 'node:url';
 import * as log from './util/logging';
 import type { ESLint } from 'eslint';
 import * as colors from 'colorette';
 import { resolve } from 'node:path';
 
 async function main() {
-    const ROOT = Bun.fileURLToPath(new URL('..', import.meta.url));
+    const ROOT = fileURLToPath(new URL('..', import.meta.url));
     log.info(`root directory: ${ROOT}`);
 
     const linter = new FlatESLint({
@@ -39,7 +40,7 @@ async function main() {
         cwd: ROOT
     });
 
-    const glob = new Bun.Glob('**/*.{ts,js}');
+    const glob = new Bun.Glob('**/*.{ts,js,astro}');
     const formatter = await linter.loadFormatter('codeframe');
 
     log.startGroup(`linting directory [${resolve(ROOT)}]`);
@@ -63,6 +64,16 @@ async function main() {
         if (!log.ci) {
             const shouldPrint = formatter.format(results);
             shouldPrint.length > 0 && console.log(shouldPrint);
+
+            for (const result of results) {
+                for (const msg of result.messages) {
+                    switch (msg.severity) {
+                        case 2:
+                            failed = true;
+                            break;
+                    }
+                }
+            }
         } else {
             for (const result of results) {
                 for (const msg of result.messages) {

@@ -1,5 +1,5 @@
 ---
-import { getEntryBySlug } from 'astro:content';
+import { getEntry } from 'astro:content';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
 
@@ -7,19 +7,21 @@ import '~/styles/global.css';
 
 const { slug } = Astro.params;
 
-const page = await getEntryBySlug('blog', slug!);
+const page = await getEntry('blog', slug!);
 if (!page) return Astro.redirect('/404');
 
 const { render, data } = page;
 const { Content } = await render();
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <Head title={data.title} description={data.description} path={`/blog/${slug}`} />
     <body class="relative max-lg:px-3 py-4">
         <Navbar />
-        <div class="flex flex-col container mt-2.5 mx-auto space-y-6 max-md:justify-center max-md:items-center lg:max-w-screen-xl">
+        <div
+            class="flex flex-col container mt-2.5 mx-auto space-y-6 max-md:justify-center max-md:items-center lg:max-w-screen-xl"
+        >
             <h1 class="font-sans text-4xl">{data.title}</h1>
             <h2 class="font-sans text-3xl text-gray-400">{data.description}</h2>
             <hr class="border-gray-600 mt-1.5" />
