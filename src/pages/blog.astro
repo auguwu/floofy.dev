@@ -1,9 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
 import Container from '~/components/Container.astro';
 import Navbar from '~/components/Navbar.astro';
+import { getCollection } from 'astro:content';
 import Head from '~/components/Head.astro';
-
 import '~/styles/global.css';
 
 const formatter = new Intl.DateTimeFormat('en-GB', {

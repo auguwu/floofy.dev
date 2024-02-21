@@ -1,13 +1,12 @@
 ---
-import { getEntry } from 'astro:content';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
-
+import { getEntry } from 'astro:content';
 import '~/styles/global.css';
 
 const { slug } = Astro.params;
-
 const page = await getEntry('blog', slug!);
+
 if (!page) return Astro.redirect('/404');
 
 const { render, data } = page;
@@ -16,7 +15,7 @@ const { Content } = await render();
 
 <!doctype html>
 <html lang="en">
-    <Head title={data.title} description={data.description} path={`/blog/${slug}`} />
+    <Head description={data.description} path={`/blog/${slug}`} title={data.title} />
     <body class="relative max-lg:px-3 py-4">
         <Navbar />
         <div

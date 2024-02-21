@@ -9,8 +9,5 @@
     "css.lint.unknownAtRules": "ignore",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    },
-    "[astro]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
