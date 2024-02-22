@@ -23,21 +23,19 @@ const iconName = {
 const langs = {
     dockerfile: 'https://docker.com',
     typescript: 'https://typescriptlang.org',
-    kotlin: 'https://kotlinlang.org',
     astro: 'https://astro.build',
-    rust: 'https://rustlang.org',
-    go: 'https://go.dev'
+    rust: 'https://rustlang.org'
 };
 ---
 
 <div class="py-4 px-3 rounded-md shadow-md bg-[#2B2C3B] space-y-3 space-x-2">
     <div class="flex flex-col gap-2 align-middle">
         <div class="flex flex-row flex-1 mt-auto px-2">
-            <Icon size={24} name="radix-icons:bookmark-filled" class="text-white align-middle" />
+            <Icon class="text-white align-middle" name="radix-icons:bookmark-filled" size={24} />
 
             <a
-                href={data.url}
                 class="text-white text-2xl ml-2 max-sm:text-lg font-mono hover:underline"
+                href={data.url}
                 target="_blank"
             >
                 {data.name}

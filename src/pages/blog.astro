@@ -17,7 +17,7 @@ const posts = await getCollection('blog').then((posts) =>
 
 <!doctype html>
 <html lang="en">
-    <Head title="Blog" description="📝 Collection of my writing I post time from time" path="/blog" />
+    <Head description="📝 Collection of my writing I post time from time" path="/blog" title="Blog" />
     <body class="relative max-lg:px-3 py-4">
         <Navbar />
         <div
@@ -33,8 +33,8 @@ const posts = await getCollection('blog').then((posts) =>
                         posts.map((post) => (
                             <div class="py-4 px-3 rounded-md shadow-md bg-[#1e1f2a] space-y-3 space-x-2 h-full">
                                 <a
-                                    href={`/blog/${post.slug}`}
                                     class="font-serif text-2xl text-semibold hover:border-b-2 hover:border-slate-500"
+                                    href={`/blog/${post.slug}`}
                                 >
                                     {post.data.title}
                                 </a>

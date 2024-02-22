@@ -40,7 +40,7 @@ async function main() {
         cwd: ROOT
     });
 
-    const glob = new Bun.Glob('**/*.{ts,js}');
+    const glob = new Bun.Glob('**/*.{ts,js,astro}');
     const formatter = await linter.loadFormatter('codeframe');
 
     log.startGroup(`linting directory [${resolve(ROOT)}]`);

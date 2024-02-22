@@ -4,7 +4,6 @@ import Container from '~/components/Container.astro';
 import { age as getAge } from '~/utils/datetime';
 import Navbar from '~/components/Navbar.astro';
 import Head from '~/components/Head.astro';
-
 import '~/styles/global.css';
 
 const age = getAge(new Date(2004, 2, 24));
@@ -22,6 +21,19 @@ const projects: Props['data'][] = [
         url: 'https://github.com/auguwu/coder-images'
     }
 ];
+
+const friends = [
+    {
+        friend: 'Spotlight',
+        img: 'https://joscomputing.space/assets/friends/spotlight.gif',
+        url: 'https://joscomputing.space'
+    },
+    {
+        friend: 'Alula',
+        img: 'https://alula.me/webring/alula.png',
+        url: 'https://alula.me'
+    }
+];
 ---
 
 <html lang="en">
@@ -36,29 +48,40 @@ const projects: Props['data'][] = [
             <h2 class="font-sans text-3xl text-gray-400">Developer, System Administrator, Polar Bear</h2>
             <div class="flex flex-row gap-2 mt-1.5">
                 <a href="https://en.pronouns.page/terminology#gay" target="_blank">
-                    <img alt="gay pride" src="https://en.pronouns.page/flags/Gay_.png" class="w-12 h-8 rounded-sm" />
+                    <img alt="gay pride" class="w-12 h-8 rounded-sm" src="https://en.pronouns.page/flags/Gay_.png" />
                 </a>
                 <a href="https://en.pronouns.page/terminology#homosexual" target="_blank">
-                    <img alt="homosex ual" src="https://en.pronouns.page/flags/Gay.png" class="w-12 h-8 rounded-sm" />
+                    <img alt="homosex ual" class="w-12 h-8 rounded-sm" src="https://en.pronouns.page/flags/Gay.png" />
                 </a>
                 <a href="https://en.pronouns.page/terminology#polyamorous" target="_blank">
                     <img
                         alt="poly (i like 2 men)"
-                        src="https://en.pronouns.page/flags/Polyamorous__.png"
                         class="w-12 h-8 rounded-sm"
+                        src="https://en.pronouns.page/flags/Polyamorous__.png"
                     />
                 </a>
             </div>
-            <span class="text-gray-400 font-mono">friends :3</span>
+            <span class="text-gray-400 font-mono">
+                friends :3 &bull;
+                <a class="hover:underline" href="https://cdn.floofy.dev/images/88x31.gif">webring</a>
+            </span>
             <hr class="border-gray-600 mt-1.5" />
             <div class="flex flex-row gap-2 mt-2">
                 <a href="https://joscomputing.space" target="_blank">
                     <img
                         alt="Spotlight's 88x31"
-                        src="https://joscomputing.space/assets/friends/spotlight.gif"
                         class="rounded-sm"
+                        src="https://joscomputing.space/assets/friends/spotlight.gif"
                     />
                 </a>
+
+                {
+                    friends.map(({ friend, img, url }) => (
+                        <a href={url} target="_blank">
+                            <img alt={`${friend}'s 88x31'`} class="rounded-sm" src={img} />
+                        </a>
+                    ))
+                }
             </div>
 
             <Container>

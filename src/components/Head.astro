@@ -12,25 +12,25 @@ const { description, image, title, path } = Astro.props;
 <head>
     <title>{`Noel 🌺${title ? ` - ${title}` : ''}`.trim()}</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://cdn.floofy.dev/images/August.png" />
-    <meta property="og:description" content={description} />
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#896ae0" />
-    <meta property="og:title" content={`Noel 🌺${title?.length && title.length > 0 ? ` - ${title}` : ''}`.trim()} />
-    <meta property="og:image" content={image ?? 'https://cdn.floofy.dev/images/August.png'} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://floofy.dev${path}`} />
-    <meta name="language" content="English" />
-    <meta name="keywords" content="august, auguwu, noel, noelware" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://cdn.floofy.dev/images/August.png" rel="shortcut icon" />
+    <meta content={description} property="og:description" />
+    <meta content={description} name="description" />
+    <meta content="#896ae0" name="theme-color" />
+    <meta content={`Noel 🌺${title?.length && title.length > 0 ? ` - ${title}` : ''}`.trim()} property="og:title" />
+    <meta content={image ?? 'https://cdn.floofy.dev/images/August.png'} property="og:image" />
+    <meta content="website" property="og:type" />
+    <meta content={`https://floofy.dev${path}`} property="og:url" />
+    <meta content="English" name="language" />
+    <meta content="august, auguwu, noel, noelware" name="keywords" />
 
     <!-- Only run Plausible in production -->
     {
         import.meta.env.PROD && (
             <script
-                defer
-                data-domain="floofy.dev"
                 data-api="https://plausible.noelware.org/api/event"
+                data-domain="floofy.dev"
+                defer
                 src="https://plausible.noelware.org/js/script.js"
             />
         )
