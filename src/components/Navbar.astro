@@ -1,5 +1,8 @@
 ---
+import Image from 'astro/components/Image.astro';
 import { Icon } from 'astro-icon/components';
+
+const ICON = 'https://cdn.floofy.dev/images/August.png';
 ---
 
 <nav class="relative">
@@ -8,13 +11,7 @@ import { Icon } from 'astro-icon/components';
     >
         <div class="flex flex-row align-middle gap-2">
             <div class="flex flex-row gap-3">
-                <img
-                    alt="noel avatar"
-                    class="rounded-lg my-auto w-[36px] h-[36px] lg:w-[48px] lg:h-[48px]"
-                    draggable="false"
-                    src="https://cdn.floofy.dev/images/August.png"
-                />
-
+                <Image alt="Noel's avatar" class="rounded-lg" draggable={false} height={36} src={ICON} width={56} />
                 <span class="font-mono text-xl my-auto">Noel 🌺</span>
             </div>
 

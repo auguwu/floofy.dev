@@ -61,41 +61,48 @@ body {
 }
 
 article.markdown {
-    @apply prose -mt-6 lg:max-w-screen-xl max-w-none
-
-    /* <p> elements */
-    prose-p:break-words prose-p:text-zinc-200 prose-p:text-2xl
-
-    /* <a> elements */
-    prose-a:text-rose-200 hover:prose-a:text-fuchsia-400 prose-a:underline prose-p:leading-7 prose-p:[&:not(:first-child)]:mt-6
+    /* Generic styles that apply to all styles when <article class="markdown"> is used */
+    @apply prose prose-invert -mt-6 max-w-full;
 
     /* <h1> elements */
-    prose-h1:font-serif prose-h1:font-bold prose-h1:text-5xl prose-h1:tracking-tight prose-h1:scroll-m-20 prose-h1:dark:text-white prose-h1:text-zinc-900/60
+    @apply prose-h1:scroll-m-20 prose-h1:font-serif prose-h1:text-5xl prose-h1:font-bold prose-h1:tracking-tight;
 
     /* <h2> elements */
-    prose-h2:font-serif prose-h2:font-bold prose-h2:text-4xl prose-h2:tracking-tight prose-h2:scroll-m-20 prose-h2:first:mt-0 prose-h2:dark:text-white prose-h2:text-zinc-900/60
+    @apply prose-h2:scroll-m-20 prose-h2:font-serif prose-h2:text-4xl prose-h2:font-bold prose-h2:tracking-tight prose-h2:first:mt-0;
 
     /* <h3> elements */
-    prose-h3:font-serif prose-h3:font-bold prose-h3:text-2xl prose-h3:tracking-tight prose-h3:scroll-m-20 prose-h3:dark:text-white prose-h3:text-zinc-900/60
+    @apply prose-h3:scroll-m-20 prose-h3:font-serif prose-h3:text-2xl prose-h3:font-bold prose-h3:tracking-tight;
 
     /* <h4> elements */
-    prose-h4:text-xl prose-h4:tracking-tight prose-h4:scroll-m-20 prose-h4:dark:text-white prose-h4:text-zinc-900/60
+    @apply prose-h4:scroll-m-20 prose-h4:text-xl prose-h4:tracking-tight;
 
     /* <h5> elements */
-    prose-h5:text-lg prose-h5:dark:text-white prose-h5:text-zinc-900/60
+    @apply prose-h5:text-lg;
 
     /* <h6> elements */
-    prose-h6:text-sm prose-h6:dark:text-white prose-h6:text-zinc-900/60
+    @apply prose-h6:text-sm prose-p:break-words prose-p:text-2xl;
 
-    /* table elements */
-    prose-table:w-full
-    prose-thead:border-gray-600
-    prose-th:text-lg prose-th:text-white
-    prose-tr:text-lg prose-tr:text-white
+    /* <p> elements */
+    @apply prose-p:leading-7 prose-p:text-zinc-200 prose-p:[&:not(:first-child)]:mt-6;
 
-    /* blockquote elements */
-    prose-blockquote:border-gray-600 prose-blockquote:border-l-2
+    /* <a> elements */
+    @apply prose-a:text-rose-200 prose-a:underline hover:prose-a:text-fuchsia-400;
 
-    /* <code> elements */
-    /*[&:not(pre)]:prose-code:relative [&:not(pre)]:prose-code:rounded [&:not(pre)]:prose-code:bg-gray-800 [&:not(pre)]:prose-code:px-[0.3rem] [&:not(pre)]:prose-code:py-[0.2rem] [&:not(pre)]:prose-code:font-mono [&:not(pre)]:prose-code:text-sm [&:not(pre)]:prose-code:font-semibold*/;
+    /* <blockquote> elements */
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-gray-600;
+
+    /* <li> elements */
+    @apply prose-li:leading-7 prose-li:text-zinc-200;
+
+    /* <table> elements */
+    @apply prose-table:w-full;
+
+    /* <tr> elements */
+    @apply prose-tr:text-lg prose-tr:text-white;
+
+    /* <th> elements */
+    @apply prose-th:text-lg prose-th:text-white;
+
+    /* <code> elements when the parent is not <pre> */
+    @apply [&:not(pre)]:prose-code:relative [&:not(pre)]:prose-code:rounded [&:not(pre)]:prose-code:px-[0.3rem] [&:not(pre)]:prose-code:py-[0.2rem];
 }

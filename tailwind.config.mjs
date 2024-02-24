@@ -39,7 +39,24 @@ export default {
 
                 // @ts-ignore
                 serif: ['Cantarell', ...defaultConfig.theme.fontFamily.serif]
-            }
+            },
+            typography: ({ theme }) => ({
+                DEFAULT: {
+                    css: {
+                        // removes the `"` from blockquotes
+                        'blockquote p:first-of-type::before': null,
+                        'blockquote p:first-of-type::after': null,
+
+                        // removes the '`' from <code> elements
+                        'code::before': null,
+                        'code::after': null,
+                        code: {
+                            color: theme('colors.rose[200]'),
+                            backgroundColor: theme('colors.gray[800]')
+                        }
+                    }
+                }
+            })
         }
     }
 };
