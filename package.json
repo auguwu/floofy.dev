@@ -19,7 +19,7 @@
     "dependencies": {
         "@astrojs/node": "8.2.3",
         "@astrojs/rss": "4.0.5",
-        "@astrojs/sitemap": "3.1.1",
+        "@astrojs/sitemap": "3.1.4",
         "@astrojs/tailwind": "5.1.0",
         "@augu/pino-transport": "1.4.0",
         "@fontsource/cantarell": "5.0.12",
