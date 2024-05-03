@@ -46,7 +46,7 @@
         "@types/node": "20.12.8",
         "@typescript-eslint/eslint-plugin": "7.2.0",
         "@typescript-eslint/parser": "7.2.0",
-        "astro-eslint-parser": "0.16.3",
+        "astro-eslint-parser": "0.17.0",
         "colorette": "2.0.20",
         "eslint": "8.57.0",
         "eslint-config-prettier": "9.1.0",
