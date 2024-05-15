@@ -18,7 +18,7 @@
     },
     "dependencies": {
         "@astrojs/node": "8.2.5",
-        "@astrojs/rss": "4.0.5",
+        "@astrojs/rss": "4.0.6",
         "@astrojs/sitemap": "3.1.4",
         "@astrojs/tailwind": "5.1.0",
         "@augu/pino-transport": "1.4.0",
@@ -26,7 +26,7 @@
         "@fontsource/jetbrains-mono": "5.0.20",
         "@fontsource/open-sans": "5.0.28",
         "@tailwindcss/typography": "0.5.13",
-        "astro": "4.8.3",
+        "astro": "4.8.4",
         "astro-icon": "1.1.0",
         "autoprefixer": "10.4.19",
         "pino": "9.1.0",
