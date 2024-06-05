@@ -31,7 +31,7 @@
         "autoprefixer": "10.4.19",
         "pino": "9.1.0",
         "remark-twemoji": "0.1.1",
-        "tailwindcss": "3.4.3",
+        "tailwindcss": "3.4.4",
         "twemoji": "14.0.2"
     },
     "devDependencies": {
