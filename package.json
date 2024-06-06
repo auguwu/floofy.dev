@@ -26,7 +26,7 @@
         "@fontsource/jetbrains-mono": "5.0.20",
         "@fontsource/open-sans": "5.0.28",
         "@tailwindcss/typography": "0.5.13",
-        "astro": "4.9.3",
+        "astro": "4.10.0",
         "astro-icon": "1.1.0",
         "autoprefixer": "10.4.19",
         "pino": "9.1.0",
