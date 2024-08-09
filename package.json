@@ -28,7 +28,7 @@
         "@tailwindcss/typography": "0.5.14",
         "astro": "4.13.2",
         "astro-icon": "1.1.0",
-        "autoprefixer": "10.4.19",
+        "autoprefixer": "10.4.20",
         "pino": "9.2.0",
         "remark-twemoji": "0.1.1",
         "tailwindcss": "3.4.4",
