@@ -41,7 +41,7 @@
         "@iconify-json/fa-brands": "1.1.9",
         "@iconify-json/logos": "1.1.44",
         "@iconify-json/radix-icons": "1.1.15",
-        "@iconify-json/vscode-icons": "1.1.35",
+        "@iconify-json/vscode-icons": "1.1.37",
         "@types/bun": "1.1.3",
         "@types/node": "20.14.2",
         "@typescript-eslint/eslint-plugin": "7.13.0",
