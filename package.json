@@ -29,7 +29,7 @@
         "astro": "4.13.3",
         "astro-icon": "1.1.0",
         "autoprefixer": "10.4.20",
-        "pino": "9.2.0",
+        "pino": "9.3.2",
         "remark-twemoji": "0.1.1",
         "tailwindcss": "3.4.9",
         "twemoji": "14.0.2"
