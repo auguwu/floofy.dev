@@ -21,6 +21,7 @@
  * SOFTWARE.
  */
 
+import githubAlerts from 'remark-github-alerts';
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
@@ -34,7 +35,7 @@ export default defineConfig({
     output: 'server',
     site: 'https://floofy.dev',
     markdown: {
-        remarkPlugins: [twemoji],
+        remarkPlugins: [twemoji, githubAlerts],
         syntaxHighlight: 'shiki',
         shikiConfig: {
             theme: 'poimandres',

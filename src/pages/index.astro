@@ -22,6 +22,8 @@ const projects: Props['data'][] = [
     }
 ];
 
+// if any mutuals I know want to be added, you can DM me on Discord (@auguwu)
+// or submit a PR if you wish :3
 const friends = [
     {
         friend: 'Spotlight',
@@ -32,8 +34,13 @@ const friends = [
         friend: 'Alula',
         img: 'https://alula.me/webring/alula.png',
         url: 'https://alula.me'
+    },
+    {
+        friend: 'Ovyerus',
+        img: 'https://ovyerus.com/webring/ovyerus.png',
+        url: 'https://ovyerus.com'
     }
-];
+] as const;
 ---
 
 <html lang="en">
@@ -70,7 +77,7 @@ const friends = [
                 {
                     friends.map(({ friend, img, url }) => (
                         <a href={url} target="_blank">
-                            <img alt={`${friend}'s 88x31'`} class="rounded-sm" src={img} />
+                            <img alt={`${friend}'s 88x31`} class="rounded-sm" src={img} />
                         </a>
                     ))
                 }

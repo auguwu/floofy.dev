@@ -89,7 +89,7 @@ article.markdown {
     @apply prose-a:text-rose-200 prose-a:underline hover:prose-a:text-fuchsia-400;
 
     /* <blockquote> elements */
-    @apply prose-blockquote:border-l-4 prose-blockquote:border-gray-600;
+    @apply prose-blockquote:border-l-4 prose-blockquote:border-gray-600 prose-blockquote:not-italic;
 
     /* <li> elements */
     @apply prose-li:leading-7 prose-li:text-zinc-200;
