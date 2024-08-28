@@ -25,7 +25,7 @@
         "@fontsource/cantarell": "5.0.14",
         "@fontsource/jetbrains-mono": "5.0.21",
         "@fontsource/open-sans": "5.0.29",
-        "@tailwindcss/typography": "0.5.14",
+        "@tailwindcss/typography": "0.5.15",
         "astro": "4.14.6",
         "astro-icon": "1.1.1",
         "autoprefixer": "10.4.20",
