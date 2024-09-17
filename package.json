@@ -32,7 +32,7 @@
         "pino": "9.4.0",
         "remark-github-alerts": "0.0.4",
         "remark-twemoji": "0.1.1",
-        "tailwindcss": "3.4.11",
+        "tailwindcss": "3.4.12",
         "twemoji": "14.0.2"
     },
     "devDependencies": {
