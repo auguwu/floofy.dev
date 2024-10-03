@@ -40,7 +40,7 @@
         "@augu/eslint-config": "5.2.4",
         "@augu/tsconfig": "1.2.0",
         "@iconify-json/fa-brands": "1.2.0",
-        "@iconify-json/logos": "1.2.1",
+        "@iconify-json/logos": "1.2.2",
         "@iconify-json/radix-icons": "1.2.0",
         "@iconify-json/vscode-icons": "1.2.2",
         "@types/bun": "1.1.10",
