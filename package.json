@@ -44,7 +44,7 @@
         "@iconify-json/radix-icons": "1.2.1",
         "@iconify-json/vscode-icons": "1.2.2",
         "@types/bun": "1.1.12",
-        "@types/node": "22.7.8",
+        "@types/node": "22.7.9",
         "@typescript-eslint/eslint-plugin": "7.18.0",
         "@typescript-eslint/parser": "7.18.0",
         "astro-eslint-parser": "1.0.3",
