@@ -30,7 +30,7 @@
         "astro-icon": "1.1.1",
         "autoprefixer": "10.4.20",
         "pino": "9.5.0",
-        "remark-github-alerts": "0.0.4",
+        "remark-github-alerts": "0.1.0",
         "remark-twemoji": "0.1.1",
         "tailwindcss": "3.4.14",
         "twemoji": "14.0.2"
