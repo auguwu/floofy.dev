@@ -27,7 +27,7 @@
         "@fontsource/open-sans": "5.1.0",
         "@tailwindcss/typography": "0.5.15",
         "astro": "5.1.1",
-        "astro-icon": "1.1.4",
+        "astro-icon": "1.1.5",
         "autoprefixer": "10.4.20",
         "pino": "9.6.0",
         "remark-github-alerts": "0.1.0",
