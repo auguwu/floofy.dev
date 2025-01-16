@@ -4,10 +4,9 @@
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.documentSelectors": ["**/*.astro"],
-    "eslint.experimental.useFlatConfig": true,
     "eslint.validate": ["javascript", "typescript", "astro"],
     "css.lint.unknownAtRules": "ignore",
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     }
 }

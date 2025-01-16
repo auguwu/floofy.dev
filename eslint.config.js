@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,39 +22,9 @@
  */
 
 import { fileURLToPath } from 'url';
+import noel from '@augu/eslint-config';
 
-// Node (`ESLINT_FLAT_CONFIG=1 npx eslint`):
-//      > import('@augu/eslint-config'):
-//      [Module: null prototype] {
-//        default: {
-//          default: [Getter],
-//          javascript: [Getter],
-//          perfectionist: [Getter],
-//          typescript: [Getter],
-//          vue: [Getter]
-//        },
-//        javascript: [Function: javascript],
-//        perfectionist: [AsyncFunction: perfectionist],
-//        typescript: [AsyncFunction: typescript],
-//        vue: [AsyncFunction: vue]
-//      }
-//
-// Bun:
-//     > bun run lint
-//     Module {
-//       default: [Function: noel],
-//       javascript: [Function: javascript],
-//       perfectionist: [Function: perfectionist],
-//       typescript: [Function: typescript],
-//       vue: [Function: vue],
-//     }
-/** @type {import('@augu/eslint-config').default} */
-const noel = await import('@augu/eslint-config').then((mod) =>
-    typeof Bun !== 'undefined' ? mod.default : mod.default.default
-);
-
-const configs = await noel({
-    perfectionist: true,
+export default noel({
     astro: {
         typescript: true
     },
@@ -62,5 +32,3 @@ const configs = await noel({
         tsconfig: fileURLToPath(new URL('.', import.meta.url))
     }
 });
-
-export default configs;

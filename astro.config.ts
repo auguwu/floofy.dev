@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,8 +21,8 @@
  * SOFTWARE.
  */
 
-import githubAlerts from 'remark-github-alerts';
 import { defineConfig } from 'astro/config';
+import githubAlerts from 'remark-github-alerts';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import twemoji from 'remark-twemoji';
@@ -34,6 +34,7 @@ export default defineConfig({
     adapter: node({ mode: 'standalone' }),
     output: 'server',
     site: 'https://floofy.dev',
+
     markdown: {
         remarkPlugins: [twemoji, githubAlerts],
         syntaxHighlight: 'shiki',

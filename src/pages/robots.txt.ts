@@ -1,6 +1,6 @@
 /*
  * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
- * Copyright (c) 2018-2024 Noel Towa <cutie@floofy.dev>
+ * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
