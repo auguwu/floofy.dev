@@ -20,7 +20,7 @@
         "@astrojs/node": "9.0.2",
         "@astrojs/rss": "4.0.11",
         "@astrojs/sitemap": "3.2.1",
-        "@astrojs/tailwind": "5.1.5",
+        "@astrojs/tailwind": "6.0.0",
         "@fontsource/cantarell": "5.1.1",
         "@fontsource/jetbrains-mono": "5.1.2",
         "@fontsource/open-sans": "5.1.1",
