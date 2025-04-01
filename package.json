@@ -41,7 +41,7 @@
         "@iconify-json/radix-icons": "^1.2.2",
         "@iconify-json/vscode-icons": "1.2.18",
         "@types/bun": "1.2.8",
-        "@types/node": "22.13.14",
+        "@types/node": "22.13.17",
         "colorette": "2.0.20",
         "eslint": "9.23.0",
         "eslint-config-prettier": "10.1.1",
