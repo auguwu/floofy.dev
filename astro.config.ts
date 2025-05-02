@@ -23,17 +23,20 @@
 
 import { defineConfig } from 'astro/config';
 import githubAlerts from 'remark-github-alerts';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import twemoji from 'remark-twemoji';
 import node from '@astrojs/node';
 import icon from 'astro-icon';
 
 export default defineConfig({
-    integrations: [tailwind(), sitemap(), icon()],
+    integrations: [sitemap(), icon()],
     adapter: node({ mode: 'standalone' }),
     output: 'server',
     site: 'https://floofy.dev',
+    vite: {
+        plugins: [tailwindcss()]
+    },
 
     markdown: {
         remarkPlugins: [twemoji, githubAlerts],

@@ -651,9 +651,9 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-.astro/
 .direnv/
+.astro/
 
-# files that are in the new revision
+# this has stuff that will be avaliable in v14
 public/
 src/site.ts
