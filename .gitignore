@@ -653,3 +653,7 @@ FodyWeavers.xsd
 
 .astro/
 .direnv/
+
+# files that are in the new revision
+public/
+src/site.ts
