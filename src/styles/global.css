@@ -25,11 +25,9 @@
 @import '@fontsource/cantarell';
 @import '@fontsource/open-sans';
 
-@tailwind components;
-@tailwind base;
-@tailwind utilities;
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
 
-/* define base colours here */
 :root {
     --background: #11111c;
     --selection: #d961a3;
@@ -60,49 +58,23 @@ body {
     color: white;
 }
 
-article.markdown {
-    /* Generic styles that apply to all styles when <article class="markdown"> is used */
-    @apply prose prose-invert -mt-6 max-w-full;
+@theme {
+    --font-sans:
+        'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
 
-    /* <h1> elements */
-    @apply prose-h1:scroll-m-20 prose-h1:font-serif prose-h1:text-5xl prose-h1:font-bold prose-h1:tracking-tight;
+    --font-serif: Cantarell, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono:
+        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+        monospace;
 
-    /* <h2> elements */
-    @apply prose-h2:scroll-m-20 prose-h2:font-serif prose-h2:text-4xl prose-h2:font-bold prose-h2:tracking-tight prose-h2:first:mt-0;
+    /*
+        for some reason, tailwindcss can't find these styles?! even though
+        in documentation, it exists?
+    */
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
 
-    /* <h3> elements */
-    @apply prose-h3:scroll-m-20 prose-h3:font-serif prose-h3:text-2xl prose-h3:font-bold prose-h3:tracking-tight;
-
-    /* <h4> elements */
-    @apply prose-h4:scroll-m-20 prose-h4:text-xl prose-h4:tracking-tight;
-
-    /* <h5> elements */
-    @apply prose-h5:text-lg;
-
-    /* <h6> elements */
-    @apply prose-h6:text-sm prose-p:break-words prose-p:text-2xl;
-
-    /* <p> elements */
-    @apply prose-p:leading-7 prose-p:text-zinc-200 prose-p:[&:not(:first-child)]:mt-6;
-
-    /* <a> elements */
-    @apply prose-a:text-rose-200 prose-a:underline hover:prose-a:text-fuchsia-400;
-
-    /* <blockquote> elements */
-    @apply prose-blockquote:border-l-4 prose-blockquote:border-gray-600 prose-blockquote:not-italic;
-
-    /* <li> elements */
-    @apply prose-li:leading-7 prose-li:text-zinc-200;
-
-    /* <table> elements */
-    @apply prose-table:w-full;
-
-    /* <tr> elements */
-    @apply prose-tr:text-lg prose-tr:text-white;
-
-    /* <th> elements */
-    @apply prose-th:text-lg prose-th:text-white;
-
-    /* <code> elements when the parent is not <pre> */
-    @apply [&:not(pre)]:prose-code:relative [&:not(pre)]:prose-code:rounded [&:not(pre)]:prose-code:px-[0.3rem] [&:not(pre)]:prose-code:py-[0.2rem];
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
 }

@@ -1,7 +1,7 @@
 {
     "name": "floofy.dev",
     "description": "🐾 Noel's personal website made with Astro",
-    "version": "14.0.0",
+    "version": "13.1.0",
     "private": true,
     "type": "module",
     "author": "Noel Towa <cutie@floofy.dev>",
