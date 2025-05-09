@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,14 +21,14 @@
  * SOFTWARE.
  */
 
-import * as tailwind from 'prettier-plugin-tailwindcss';
-import * as astro from 'prettier-plugin-astro';
-import { Stopwatch } from '@noelware/utils';
 import { fileURLToPath } from 'node:url';
-import * as log from './util/logging';
+import * as tailwind from 'prettier-plugin-tailwindcss';
+import { Stopwatch } from '@noelware/utils';
 import * as prettier from 'prettier';
 import * as colors from 'colorette';
 import { resolve } from 'node:path';
+import * as astro from 'prettier-plugin-astro';
+import * as log from './util/logging';
 
 async function main() {
     const ROOT = fileURLToPath(new URL('..', import.meta.url));
@@ -70,10 +70,7 @@ async function main() {
 
         const contents = await fileObj.text();
         if (log.ci) {
-            const correct = await prettier.check(contents, {
-                parser: info.inferredParser,
-                ...config
-            });
+            const correct = await prettier.check(contents, { parser: info.inferredParser, ...config });
 
             if (!correct) {
                 log.error(
@@ -82,9 +79,7 @@ async function main() {
                     } file was not properly formatted. run \`bun run fmt\` outside of CI ${
                         colors.isColorSupported ? colors.bold(`[${sw.stop()}]`) : `[${sw.stop()}]`
                     }`,
-                    {
-                        file: resolve(ROOT, file)
-                    }
+                    { file: resolve(ROOT, file) }
                 );
 
                 failed = true;
@@ -97,10 +92,7 @@ async function main() {
                 }`
             );
         } else {
-            const formatted = await prettier.format(contents, {
-                parser: info.inferredParser,
-                ...config
-            });
+            const formatted = await prettier.format(contents, { parser: info.inferredParser, ...config });
 
             await Bun.write(fileObj, formatted, { createPath: false });
 

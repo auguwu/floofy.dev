@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,17 +22,39 @@
  */
 
 import { defineCollection, z } from 'astro:content';
+import { resolve } from 'node:path';
+import { glob } from 'astro/loaders';
+
+// const blog = defineCollection({
+//     loader: glob({ pattern: '**/*.{md,mdx}', base: resolve(import.meta.dirname, 'content/blog') }),
+//     schema: z.object({
+//         title: z.string(),
+//         description: z.string(),
+//         createdAt: z.date(),
+//         tags: z.array(z.string()).default([]),
+//         draft: z.boolean().default(false)
+//     })
+// });
+
+const docs = defineCollection({
+    loader: glob({ pattern: '**/*.{md,mdx}', base: resolve(import.meta.dirname, '../content/docs') }),
+    schema: z.object({
+        title: z.string(),
+        description: z.string()
+    })
+});
+
+// const oss = defineCollection({
+//     loader: glob({ pattern: '**/*.{md,mdx}', base: resolve(import.meta.dirname, 'content/oss') }),
+//     schema: z.object({
+//         project: z.string(),
+//         description: z.string(),
+//         emojis: z.array(z.string()).default(['fluent-emoji:polar-bear'])
+//     })
+// });
 
 export const collections = {
-    blog: defineCollection({
-        schema: z
-            .object({
-                title: z.string(),
-                description: z.string(),
-                createdAt: z.date(),
-                tags: z.array(z.string()).default([]),
-                draft: z.boolean().default(false)
-            })
-            .strict()
-    })
+    ///blog,
+    docs
+    ///oss
 };

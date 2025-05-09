@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,23 +21,23 @@
  * SOFTWARE.
  */
 
-import type { APIRoute } from 'astro';
+export const BASE = 'https://floofy.dev' as const;
 
-export const GET: APIRoute = () =>
-    new Response(
-        `# Disallow GPT to index
-User-agent: GPTBot
-Disallow: /
+export function toBaseUrl(...paths: string[]) {
+    const base = process.env.NODE_ENV === 'development' ? 'http://localhost:4321' : BASE;
+    if (paths.length === 0) {
+        return base;
+    }
 
-# Disallow Google Bard to index
-User-agent: Google-Extended
-Disallow: /
+    const joined = paths
+        .map((f) => `/${f}`)
+        .join('')
+        .replaceAll('//', '/');
 
-# everyone else is ok :)
-User-agent: *
-Allow: /
+    return `${base}${joined}`;
+}
 
-Sitemap: https://floofy.dev/sitemap-index.xml
-`.trim(),
-        { status: 200 }
-    );
+export const credits = {
+    'avatar:furry': 'https://twitter.com/SabikSphinx',
+    wallpaper: 'https://www.pixiv.net/en/artworks/100766079'
+} as const;

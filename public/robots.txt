@@ -1,0 +1,36 @@
+# Disallow ChatGPT
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: claude-web
+Disallow: /
+
+# Google AI
+User-agent: Google-Extended
+Disallow: /
+
+# Meta (FacebookBot)
+User-agent: FacebookBot
+Disallow: /
+
+# Meta (Meta External Fetcher)
+User-agent: meta-externalagent
+Disallow: /
+
+# Allow everything else
+User-agent: *
+Allow: /
+
+Sitemap: https://floofy.dev/sitemap-index.xml

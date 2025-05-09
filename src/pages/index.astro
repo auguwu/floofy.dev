@@ -1,26 +1,43 @@
 ---
-import ProjectCard, { type Props } from '~/components/ProjectCard.astro';
-import Container from '~/components/Container.astro';
-import { age as getAge } from '~/utils/datetime';
-import Navbar from '~/components/Navbar.astro';
-import Head from '~/components/Head.astro';
 import '~/styles/global.css';
 
-const age = getAge(new Date(2004, 2, 24));
-const projects: Props['data'][] = [
+import { credits } from '~/site';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import { age } from '~/util/age';
+import Footer from '~/components/Footer.astro';
+import furry from '../../public/avatars/furry.png';
+import Page from '~/components/Page.astro';
+
+const currentAge = age(new Date(2004, 2, 24));
+
+const socials = [
     {
-        description: '🐻‍❄️💐 Easy, and flexible image host to share with your friends on Discord, Telegram, and more.',
-        language: 'rust',
-        name: 'ume',
-        url: 'https://github.com/auguwu/ume'
+        icon: 'fa-brands:discord',
+        colour: 'bg-discord',
+        uri: 'https://discord.com/users/280158289667555328'
     },
     {
-        description: '💐💚 Collection of Docker images that I use for Coder',
-        language: 'dockerfile',
-        name: 'Coder Images',
-        url: 'https://github.com/auguwu/coder-images'
+        icon: 'fa-brands:github',
+        colour: 'bg-github',
+        uri: 'https://github.com/auguwu'
+    },
+    {
+        icon: 'fa-brands:twitter',
+        colour: 'bg-twitter',
+        uri: 'https://twitter.com/dogwithputer'
+    },
+    {
+        icon: 'fa-brands:steam',
+        colour: 'bg-steam',
+        uri: 'https://steamcommunity.com/id/auguwu'
+    },
+    {
+        icon: 'fa-brands:telegram',
+        colour: 'bg-telegram',
+        uri: 'https://t.me/auguwu'
     }
-];
+] as const;
 
 // if any mutuals I know want to be added, you can DM me on Discord (@auguwu)
 // or submit a PR if you wish :3
@@ -43,52 +60,89 @@ const friends = [
 ] as const;
 ---
 
-<html lang="en">
-    <Head path="/" />
-    <body class="max-lg:px-3 py-2">
-        <Navbar />
-
+<Page title="" description="🐻‍❄️🦋 Full-time polar bear on the internet 🐻‍❄️🦋" path="/">
+    <main class="flex items-center justify-center h-screen">
         <div
-            class="flex flex-col container mt-2.5 mx-auto space-y-4 max-md:justify-center max-md:items-center lg:max-w-screen-xl"
+            class="flex lg:flex-row flex-col flex-1/2 gap-4.5 bg-gray-800/85 py-2 px-1.5 max-w-5xl rounded-lg shadow shadow-pink-400"
         >
-            <h1 class="font-sans text-4xl">Noel Towa [he/him] &bull; {age} years old</h1>
-            <h2 class="font-sans text-3xl text-gray-400">Developer, System Administrator, Polar Bear</h2>
-            <div class="flex flex-row gap-2 mt-1.5">
-                <a href="https://en.pronouns.page/terminology#gay" target="_blank">
-                    <img alt="gay pride" class="w-12 h-8 rounded-sm" src="https://en.pronouns.page/flags/Gay_.png" />
+            <div class="flex flex-col align-middle">
+                <Image src={furry} alt="Noel | Avatar" class="rounded-lg size-fit" draggable="false" />
+                <a class="text-md hover:underline text-center" href={credits['avatar:furry']} target="_blank">
+                    avatar credit
                 </a>
-                <a href="https://en.pronouns.page/terminology#homosexual" target="_blank">
-                    <img alt="homosex ual" class="w-12 h-8 rounded-sm" src="https://en.pronouns.page/flags/Gay.png" />
-                </a>
-                <a href="https://en.pronouns.page/terminology#polyamorous" target="_blank">
-                    <img
-                        alt="poly (i like 2 men)"
-                        class="w-12 h-8 rounded-sm"
-                        src="https://en.pronouns.page/flags/Polyamorous__.png"
-                    />
-                </a>
-            </div>
-            <span class="text-gray-400 font-mono">
-                friends :3 &bull;
-                <a class="hover:underline" href="https://cdn.floofy.dev/images/88x31.gif">webring</a>
-            </span>
-            <hr class="border-gray-600 mt-1.5" />
-            <div class="flex flex-row gap-2 mt-2">
-                {
-                    friends.map(({ friend, img, url }) => (
-                        <a href={url} target="_blank">
-                            <img alt={`${friend}'s 88x31`} class="rounded-sm" src={img} />
-                        </a>
-                    ))
-                }
             </div>
 
-            <Container>
-                <h1 class="text-3xl font-serif">Projects</h1>
-                <div class="mt-2 grid grid-cols-1 lg:grid-cols-3 gap-3 items-center [&>*]:h-full">
-                    {projects.map((data) => <ProjectCard data={data} />)}
+            <div class="flex flex-col gap-1.5">
+                <h1 class="text-2xl">Noel Towa 🐻‍❄️🌺 [he/him]</h1>
+                <h2 class="text-lg -mt-1.5">
+                    {currentAge} year old that is a software engineer at day, polar bear at night
+                </h2>
+
+                <h2 class="text-lg mt-1.5">
+                    Welcome to my corner of the internet! I am a software engineer, system administrator, and full-time
+                    polar bear on the internet.
+                </h2>
+
+                <h2 class="text-lg mt-0.5">
+                    I make software in <a href="https://rust-lang.org" target="_blank" class="hover:underline"
+                        ><Icon name="vscode-icons:file-type-rust" class="inline" /> Rust</a
+                    >, but I am also fluent in <a
+                        href="https://typescriptlang.org"
+                        target="_blank"
+                        class="hover:underline"
+                        ><Icon name="vscode-icons:file-type-typescript-official" class="inline" /> TypeScript</a
+                    >,
+                    <a href="https://kotlin-lang.org" target="_blank" class="hover:underline"
+                        ><Icon name="vscode-icons:file-type-kotlin" class="inline" /> Kotlin</a
+                    >, and
+                    <a href="https://go.dev" target="_blank" class="hover:underline"
+                        ><Icon name="vscode-icons:file-type-go" class="inline" /> Go</a
+                    >.
+                </h2>
+
+                <div class="mt-3 flex flex-row align-middle gap-2">
+                    {
+                        socials.map((social) => (
+                            <a class="mr-3" href={social.uri} id="icon" target="_blank">
+                                <Icon
+                                    class={`text-white ${social.colour} py-1 px-1 rounded-lg`}
+                                    name={social.icon}
+                                    size={48}
+                                />
+                            </a>
+                        ))
+                    }
                 </div>
-            </Container>
+
+                <div class="mt-2.5 flex flex-row gap-2">
+                    {
+                        friends.map((friend) => (
+                            <a href={friend.url}>
+                                <Image
+                                    src={friend.img as any}
+                                    alt={`88x31 | ${friend.friend}`}
+                                    width="128"
+                                    height="128"
+                                />
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
-    </body>
-</html>
+    </main>
+
+    <Footer />
+</Page>
+
+<style>
+    body {
+        background-blend-mode: overlay;
+        background-attachment: fixed;
+        background-position: center;
+        background-image: url('/background.jpeg');
+        background-color: #262336;
+        background-size: cover;
+        color: #fff;
+    }
+</style>

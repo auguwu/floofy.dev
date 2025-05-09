@@ -5,8 +5,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.documentSelectors": ["**/*.astro"],
     "eslint.validate": ["javascript", "typescript", "astro"],
-    "css.lint.unknownAtRules": "ignore",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+    "files.associations": { "*.css": "tailwindcss" },
+    "editor.quickSuggestions": {
+        "strings": "on"
     }
 }

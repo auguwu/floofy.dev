@@ -1,4 +1,4 @@
-# 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+# 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
 # Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,30 +19,22 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 {
-  description = "🐾 Personal site made with Astro";
-  inputs = {
-    nixpkgs.url = github:NixOS/nixpkgs/nixpkgs-unstable;
-    flake-utils.url = github:numtide/flake-utils;
-    flake-compat = {
-      url = github:edolstra/flake-compat;
-      flake = false;
-    };
-  };
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-  outputs = {
-    self,
-    nixpkgs,
-    flake-utils,
-    ...
-  }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {
-        inherit system;
-      };
+  outputs = {nixpkgs, ...}: let
+    eachSystem = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed;
+
+    nixpkgsFor = system: import nixpkgs {inherit system;};
+  in {
+    formatter = eachSystem (system: (nixpkgsFor system).alejandra);
+    devShells = eachSystem (system: let
+      pkgs = nixpkgsFor system;
     in {
-      devShells.default = pkgs.mkShell {
-        LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [pkgs.stdenv.cc.cc];
-        buildInputs = with pkgs; [bun];
+      default = pkgs.mkShell {
+        buildInputs = with pkgs; [
+          bun
+        ];
       };
     });
+  };
 }

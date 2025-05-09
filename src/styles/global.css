@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,23 +23,203 @@
 
 @import '@fontsource/jetbrains-mono';
 @import '@fontsource/cantarell';
-@import '@fontsource/open-sans';
+@import '@fontsource/geist';
 
+@import 'remark-github-alerts/styles/github-colors-light.css';
+@import 'remark-github-alerts/styles/github-colors-dark-media.css';
+
+@import 'tailwindcss';
+@import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-:root {
-    --background: #11111c;
-    --selection: #d961a3;
+@plugin '@tailwindcss/typography';
+
+@theme {
+    /* fonts */
+    --font-sans:
+        Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+
+    --font-serif: Cantarell, ui-serif, Georgia, Cambria, 'Times New Rowan', Times, serif;
+    --font-mono:
+        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+        monospace;
+
+    --color-discord: #5865f2;
+    --color-github: #333333;
+    --color-twitter: #1da1f2;
+    --color-steam: #000000;
+    --color-telegram: #27a7e7;
+}
+
+@utility prose {
+    max-width: 100%;
+
+    /* Removes the `"` tick in blockquotes */
+    blockquote p {
+        &:first-of-type {
+            &::before {
+                content: none;
+            }
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    code {
+        @apply bg-gray-800 text-rose-200;
+
+        /* removes the tick in <code> comments */
+        &::before {
+            content: none;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    h1 {
+        @apply scroll-m-20 font-serif text-5xl font-bold tracking-tight;
+    }
+
+    h2 {
+        @apply scroll-m-20 font-serif text-4xl font-bold tracking-tight first:mt-0;
+    }
+
+    h3 {
+        @apply scroll-m-20 font-serif text-2xl font-bold tracking-tight;
+    }
+
+    h4 {
+        @apply scroll-m-20 text-xl tracking-tight;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    h6 {
+        @apply text-sm;
+    }
+
+    p {
+        @apply text-2xl leading-7 break-words text-zinc-200;
+        &:not(:first-child) {
+            @apply mt-6;
+        }
+    }
+
+    a {
+        @apply font-sans text-rose-200 hover:text-fuchsia-400 hover:underline;
+
+        text-decoration: none;
+    }
+
+    blockquote {
+        @apply border-l-4 border-gray-600 not-italic;
+    }
+
+    li {
+        @apply leading-7 text-zinc-700 dark:text-zinc-200;
+    }
+
+    table {
+        @apply w-full;
+    }
+
+    tr {
+        @apply text-lg text-zinc-700 dark:text-zinc-200;
+    }
+
+    th {
+        @apply text-lg text-zinc-700 dark:text-zinc-200;
+    }
+
+    &:not(pre) code {
+        @apply relative rounded px-[0.3rem] py-[0.2rem];
+    }
+
+    /*
+       ported to tailwind since we only want to use this in markdown content
+       ref: https://github.com/hyoban/remark-github-alerts/blob/a5cec1b96de7fc13d422510146f23780e673eb33/styles/github-base.css
+    */
+    .markdown-alert {
+        @apply mb-4 p-[0.25rem] text-inherit;
+
+        border-left: 0.25em solid #888;
+
+        &:first-child {
+            @apply mt-0;
+        }
+
+        &:last-child {
+            @apply mb-0;
+        }
+    }
+
+    .markdown-alert .markdown-alert-title {
+        @apply flex items-center leading-1 font-medium;
+    }
+
+    .markdown-alert .markdown-alert-title .octicon {
+        @apply mr-2 inline-block h-[1em] w-[1em] !overflow-visible bg-current text-inherit;
+
+        vertical-align: text-bottom;
+        mask-size: 100% 100%;
+        mask: var(--oct-icon) no-repeat;
+    }
+
+    .markdown-alert.markdown-alert-note {
+        @apply border-l-[var(--color-note)];
+    }
+
+    .markdown-alert.markdown-alert-note.markdown-alert-title {
+        @apply text-[var(--color-note)];
+    }
+
+    .markdown-alert.markdown-alert-important {
+        @apply border-l-[var(--color-important)];
+    }
+
+    .markdown-alert.markdown-alert-important.markdown-alert-title {
+        @apply text-[var(--color-important)];
+    }
+
+    .markdown-alert.markdown-alert-warning {
+        @apply border-l-[var(--color-warning)];
+    }
+
+    .markdown-alert.markdown-alert-warning.markdown-alert-title {
+        @apply text-[var(--color-warning)];
+    }
+
+    .markdown-alert.markdown-alert-tip {
+        @apply border-l-[var(--color-tip)];
+    }
+
+    .markdown-alert.markdown-alert-tip.markdown-alert-title {
+        @apply text-[var(--color-tip)];
+    }
+
+    .markdown-alert.markdown-alert-caution {
+        @apply border-l-[var(--color-caution)];
+    }
+
+    .markdown-alert.markdown-alert-caution.markdown-alert-title {
+        @apply text-[var(--color-caution)];
+    }
 }
 
 ::-moz-selection {
-    background: var(--selection);
+    background: #d961a3;
     color: white;
 }
 
 ::selection {
-    background: var(--selection);
+    background: #d961a3;
     color: white;
 }
 
@@ -49,32 +229,4 @@
 
 html {
     @apply font-sans;
-
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: var(--background);
-    color: white;
-}
-
-@theme {
-    --font-sans:
-        'Open Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
-
-    --font-serif: Cantarell, ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-    --font-mono:
-        'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-        monospace;
-
-    /*
-        for some reason, tailwindcss can't find these styles?! even though
-        in documentation, it exists?
-    */
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-
-    --text-5xl: 3rem;
-    --text-5xl--line-height: 1;
 }

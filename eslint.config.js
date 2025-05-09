@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -25,10 +25,6 @@ import { fileURLToPath } from 'url';
 import noel from '@augu/eslint-config';
 
 export default noel({
-    astro: {
-        typescript: true
-    },
-    typescript: {
-        tsconfig: fileURLToPath(new URL('.', import.meta.url))
-    }
+    astro: { typescript: true },
+    typescript: { tsconfig: fileURLToPath(new URL('.', import.meta.url)) }
 });

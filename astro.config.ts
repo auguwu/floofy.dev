@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,28 +22,27 @@
  */
 
 import { defineConfig } from 'astro/config';
-import githubAlerts from 'remark-github-alerts';
+import { toBaseUrl } from './src/site';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
-import twemoji from 'remark-twemoji';
 import node from '@astrojs/node';
 import icon from 'astro-icon';
+import mdx from '@astrojs/mdx';
+
+import githubAlerts from 'remark-github-alerts';
+import emoji from 'remark-emoji';
+import toc from 'remark-toc';
 
 export default defineConfig({
-    integrations: [sitemap(), icon()],
+    integrations: [sitemap(), icon(), mdx()],
     adapter: node({ mode: 'standalone' }),
     output: 'server',
-    site: 'https://floofy.dev',
+    site: toBaseUrl(),
     vite: {
         plugins: [tailwindcss()]
     },
-
     markdown: {
-        remarkPlugins: [twemoji, githubAlerts],
         syntaxHighlight: 'shiki',
-        shikiConfig: {
-            theme: 'poimandres',
-            wrap: true
-        }
+        remarkPlugins: [[toc, { heading: 'toc', maxDepth: 3 }], githubAlerts, emoji]
     }
 });

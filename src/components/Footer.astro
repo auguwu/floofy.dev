@@ -1,0 +1,14 @@
+---
+import { credits } from '~/site';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bottom-0 left-0 -mt-16 text-white text-center">
+    <p class="font-sans text-xl">
+        Copyright (c) 2018-{currentYear}
+        <a href="https://floofy.dev" target="_blank" class="hover:underline">Noel Towa</a> &bull;
+        <a href="https://github.com/auguwu/floofy.dev" target="_blank" class="hover:underline">Source Code</a> &bull;
+        <a href={credits.wallpaper} target="_blank" class="hover:underline">Background Source</a>
+    </p>
+</footer>

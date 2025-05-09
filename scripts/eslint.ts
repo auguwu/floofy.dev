@@ -1,5 +1,5 @@
 /*
- * 🐾 @noel/site: Noel's personal website, blog, and documentation site made with Astro
+ * 🐾 floofy.dev: Noel's personal website, blog, and documentation site made with Astro
  * Copyright (c) 2018-2025 Noel Towa <cutie@floofy.dev>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -32,11 +32,7 @@ async function main() {
     const ROOT = fileURLToPath(new URL('..', import.meta.url));
     log.info(`root directory: ${ROOT}`);
 
-    const linter = new ESLint({
-        allowInlineConfig: true,
-        fix: !log.ci,
-        cwd: ROOT
-    });
+    const linter = new ESLint({ allowInlineConfig: true, fix: !log.ci, cwd: ROOT });
 
     const glob = new Bun.Glob('**/*.{ts,js,astro}');
     const formatter = await linter.loadFormatter('codeframe');
@@ -55,9 +51,7 @@ async function main() {
         );
 
         const contents = await Bun.file(resolve(ROOT, file)).text();
-        const results: ESLint.LintResult[] = await linter.lintText(contents, {
-            filePath: resolve(ROOT, file)
-        });
+        const results: ESLint.LintResult[] = await linter.lintText(contents, { filePath: resolve(ROOT, file) });
 
         if (!log.ci) {
             const shouldPrint = await formatter.format(results);
