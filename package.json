@@ -17,15 +17,15 @@
         "dev": "astro dev"
     },
     "dependencies": {
-        "@astrojs/node": "9.4.0",
+        "@astrojs/node": "9.4.1",
         "@astrojs/rss": "4.0.12",
-        "@astrojs/sitemap": "3.4.2",
+        "@astrojs/sitemap": "3.5.0",
         "@astrojs/tailwind": "6.0.2",
         "@fontsource/cantarell": "5.2.6",
         "@fontsource/jetbrains-mono": "5.2.6",
         "@fontsource/open-sans": "5.2.6",
         "@tailwindcss/typography": "0.5.16",
-        "astro": "5.12.9",
+        "astro": "5.13.0",
         "astro-icon": "1.1.5",
         "autoprefixer": "10.4.21",
         "remark-github-alerts": "0.1.1",
