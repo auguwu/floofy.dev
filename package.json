@@ -17,7 +17,7 @@
         "dev": "astro dev"
     },
     "dependencies": {
-        "@astrojs/node": "9.4.3",
+        "@astrojs/node": "9.4.4",
         "@astrojs/rss": "4.0.12",
         "@astrojs/sitemap": "3.6.0",
         "@astrojs/tailwind": "6.0.2",
@@ -25,7 +25,7 @@
         "@fontsource/jetbrains-mono": "5.2.8",
         "@fontsource/open-sans": "5.2.7",
         "@tailwindcss/typography": "0.5.18",
-        "astro": "5.13.9",
+        "astro": "5.13.10",
         "astro-icon": "1.1.5",
         "autoprefixer": "10.4.21",
         "remark-github-alerts": "0.1.1",
