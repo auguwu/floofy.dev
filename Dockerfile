@@ -19,7 +19,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-FROM oven/bun:1.2-alpine AS build
+FROM oven/bun:1.3-alpine AS build
 
 RUN apk update
 WORKDIR /build
@@ -32,7 +32,7 @@ RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
 
-FROM oven/bun:1.2-alpine
+FROM oven/bun:1.3-alpine
 
 RUN apk update && apk add --no-cache bash tini curl
 WORKDIR /app/noel/site
