@@ -33,7 +33,7 @@
         "twemoji": "14.0.2"
     },
     "devDependencies": {
-        "@actions/core": "2.0.3",
+        "@actions/core": "3.0.0",
         "@augu/eslint-config": "5.3.1",
         "@augu/tsconfig": "1.2.0",
         "@iconify-json/fa-brands": "1.2.2",
