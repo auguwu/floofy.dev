@@ -27,7 +27,7 @@
         "@tailwindcss/typography": "0.5.19",
         "astro": "5.17.1",
         "astro-icon": "1.1.5",
-        "autoprefixer": "10.4.23",
+        "autoprefixer": "10.4.24",
         "remark-github-alerts": "0.1.1",
         "remark-twemoji": "0.1.1",
         "twemoji": "14.0.2"
