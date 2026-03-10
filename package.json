@@ -18,8 +18,8 @@
     },
     "dependencies": {
         "@astrojs/node": "9.5.4",
-        "@astrojs/rss": "4.0.15",
-        "@astrojs/sitemap": "3.7.0",
+        "@astrojs/rss": "4.0.16",
+        "@astrojs/sitemap": "3.7.1",
         "@astrojs/tailwind": "6.0.2",
         "@fontsource/cantarell": "5.2.8",
         "@fontsource/jetbrains-mono": "5.2.8",
