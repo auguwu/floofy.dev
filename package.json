@@ -43,7 +43,7 @@
         "@types/bun": "1.4.2",
         "@types/node": "26.6.2",
         "colorette": "2.0.20",
-        "eslint": "10.10.0",
+        "eslint": "10.11.0",
         "eslint-config-prettier": "10.1.8",
         "eslint-formatter-codeframe": "7.32.2",
         "eslint-plugin-astro": "3.2.1",
